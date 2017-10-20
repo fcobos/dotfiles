@@ -86,7 +86,9 @@ values."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(
+                                    spaceline
+                                    )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
    ;; `used-only' installs only explicitly used packages and uninstall any
@@ -427,9 +429,12 @@ you should place your code here."
   (add-to-list 'c-mode-common-hook
                (lambda () (setq c-syntactic-indentation nil)))
 
-  ;; configure powerline separator
-  (setq powerline-default-separator 'utf-8)
-  (spaceline-compile)
+  ;; configure spaceline powerline separator
+  ;; (setq powerline-default-separator 'utf-8)
+  ;; (spaceline-compile)
+  ;; vanilla powerline
+  ;; (require 'powerline)
+  ;; (powerline-center-evil-theme)
 
   ;; enable editorconfig
   (editorconfig-mode 1)
@@ -467,6 +472,8 @@ you should place your code here."
   ;; setup line numbers
   (require 'nlinum)
   (add-hook 'prog-mode-hook 'nlinum-mode)
+  ;; emacs 26 native line numbers
+  ;; (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
   ;; setup glsl-mode
   (autoload 'glsl-mode "glsl-mode" nil t)
