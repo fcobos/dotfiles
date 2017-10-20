@@ -483,8 +483,8 @@ you should place your code here."
 
   ;; replace mode names
   (require 'diminish)
-  (spacemacs|diminish editorconfig-mode " Ⓔ"  "E")
-  (spacemacs|diminish irony-mode " Ⓘ" "I")
+  (spacemacs|diminish editorconfig-mode " Ⓔ"  " E")
+  (spacemacs|diminish irony-mode " Ⓘ" " I")
 
  )
 
