@@ -428,7 +428,8 @@ you should place your code here."
                (lambda () (setq c-syntactic-indentation nil)))
 
   ;; configure powerline separator
-  (setq powerline-default-separator 'arrow)
+  (setq powerline-default-separator 'utf-8)
+  (spaceline-compile)
 
   ;; enable editorconfig
   (editorconfig-mode 1)
