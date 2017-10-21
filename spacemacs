@@ -64,7 +64,10 @@ values."
      ;;        shell-default-position 'bottom)
      ;; spell-checking
      shell
-     syntax-checking
+     (syntax-checking :variables
+                      syntax-checking-enable-tooltips nil
+                      syntax-checking-use-original-bitmaps t
+                      )
      version-control
      )
    ;; List of additional packages that will be installed without being
@@ -80,7 +83,6 @@ values."
                                       clang-format disaster cmake-mode
                                       semantic srefactor
                                       glsl-mode
-                                      flycheck-clang-analyzer
                                       base16-theme
                                      )
    ;; A list of packages that cannot be updated.
@@ -399,8 +401,6 @@ you should place your code here."
     (require 'flycheck-irony)
     (add-hook 'flycheck-mode-hook #'flycheck-irony-setup)
     (flycheck-add-next-checker 'irony '(warning . c/c++-cppcheck))
-    ;;(require 'flycheck-clang-analyzer)
-    ;;(flycheck-clang-analyzer-setup)
     )
 
   ;; setup rtags
