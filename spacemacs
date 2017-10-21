@@ -450,10 +450,13 @@ you should place your code here."
   ;; setup neo-theme
   (setq neo-theme (if window-system 'icons 'arrow))
 
-  ;; 
+  ;; disable the mouse support in X11 terminals in order to enable copying/pasting with the mouse
+  ;; http://spacemacs.org/doc/FAQ.html#make-copypaste-working-with-the-mouse-in-x11-terminals
   (xterm-mouse-mode -1)
+  ;; fix for text pasted opening links https://github.com/syl20bnr/spacemacs/issues/5435
   (add-hook 'spacemacs-buffer-mode-hook (lambda ()
     (set (make-local-variable 'mouse-1-click-follows-link) nil)))
+  (add-hook 'prog-mode-hook (lambda () (set (make-local-variable 'mouse-1-click-follows-link) nil)))
 
   ;; disable line wrapping
   (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
