@@ -80,9 +80,14 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " enable line numbers
 "set number
+"set relativenumber
 
 colorscheme jellybeans
 " colorscheme monokai
 
 set nowrap
 
+" centered cursor
+:nnoremap j jzz
+:nnoremap k kzz
+  

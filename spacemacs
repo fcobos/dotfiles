@@ -374,7 +374,7 @@ you should place your code here."
     '(add-to-list 'company-backends '(company-irony-c-headers company-irony)))
 
   ;; this keeps the cursor centered
-  ;;(global-centered-cursor-mode)
+  (global-centered-cursor-mode)
 
   ;; magin column (this has bad performance)
   ;; (add-hook 'prog-mode-hook 'fci-mode)
