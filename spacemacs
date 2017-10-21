@@ -336,6 +336,15 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+
+  ;; gc settings
+  ;; increase number of bytes between garbage collections (spacemacs sets this to 100000000, default is 800000)
+  (setq gc-cons-threshold 200000000)
+  ;; call gc on focus lost
+  (add-hook 'focus-out-hook 'garbage-collect)
+  ;; call gc on idle
+  (run-with-idle-timer 2 t (lambda () (garbage-collect)))
+
   )
 
 (defun dotspacemacs/user-config ()
