@@ -54,7 +54,6 @@ values."
                    auto-completion-complete-with-key-sequence nil
                    auto-completion-complete-with-key-sequence-delay 0.1
                    )
-     better-defaults
      emacs-lisp
      git
      (markdown :variables markdown-live-preview-engine 'vmd)
@@ -83,7 +82,6 @@ values."
                                       rtags helm-rtags company-rtags
                                       clang-format disaster cmake-mode
                                       semantic srefactor
-                                      base16-theme
                                      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -158,9 +156,6 @@ values."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
                          spacemacs-dark
-                         base16-eighties
-                         base16-materia
-                         base16-monokai
 			 spacemacs-light
                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
