@@ -69,6 +69,7 @@ values."
                       syntax-checking-use-original-bitmaps t
                       )
      version-control
+     shaders
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -82,7 +83,6 @@ values."
                                       rtags helm-rtags company-rtags
                                       clang-format disaster cmake-mode
                                       semantic srefactor
-                                      glsl-mode
                                       base16-theme
                                      )
    ;; A list of packages that cannot be updated.
@@ -483,13 +483,6 @@ you should place your code here."
   ;; emacs 26 native line numbers
   (add-hook 'prog-mode-hook (lambda () (setq display-line-numbers 'relative)))
 
-  ;; setup glsl-mode
-  (autoload 'glsl-mode "glsl-mode" nil t)
-  (add-to-list 'auto-mode-alist '("\\.glsl\\'" . glsl-mode))
-  (add-to-list 'auto-mode-alist '("\\.vert\\'" . glsl-mode))
-  (add-to-list 'auto-mode-alist '("\\.frag\\'" . glsl-mode))
-  (add-to-list 'auto-mode-alist '("\\.geom\\'" . glsl-mode))
-
   ;; configure gdb
   (setq
    ;; use gdb-many-windows by default when `M-x gdb'
@@ -518,7 +511,7 @@ you should place your code here."
  '(flycheck-cppcheck-standards (quote ("c++14" "c++11")))
  '(package-selected-packages
    (quote
-    (base16-solarflare-theme linum-relative base16-default-theme idea-drakula-theme darkrone-theme helm-core powerline base16-gruvbox-dark-hard-theme jellybeans-theme hy-mode smartparens flycheck yoshi-theme yapfify xterm-color ws-butler winum which-key web-beautify volatile-highlights vmd-mode vi-tilde-fringe uuidgen use-package unfill toml-mode toc-org srefactor spaceline sourcerer-theme smeargle shell-pop restart-emacs rainbow-delimiters racer pyvenv pytest pyenv-mode py-isort popwin pip-requirements phpunit phpcbf php-extras php-auto-yasnippets persp-mode pcre2el paradox orgit org-bullets open-junk-file nlinum-relative neotree mwim multi-term move-text mmm-mode markdown-toc magit-gitflow macrostep lua-mode lorem-ipsum livid-mode live-py-mode link-hint json-mode js2-refactor js-doc irony-eldoc info+ indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-rtags helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio glsl-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md fuzzy flycheck-rust flycheck-pos-tip flycheck-irony flycheck-clang-analyzer flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav editorconfig dumb-jump drupal-mode disaster diff-hl define-word cython-mode company-tern company-statistics company-rtags company-irony-c-headers company-irony company-anaconda column-enforce-mode color-theme-sanityinc-tomorrow coffee-mode cmake-mode clean-aindent-mode clang-format cargo base16-theme auto-yasnippet auto-highlight-symbol auto-compile all-the-icons aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell)))
+    (company-glsl base16-solarflare-theme linum-relative base16-default-theme idea-drakula-theme darkrone-theme helm-core powerline base16-gruvbox-dark-hard-theme jellybeans-theme hy-mode smartparens flycheck yoshi-theme yapfify xterm-color ws-butler winum which-key web-beautify volatile-highlights vmd-mode vi-tilde-fringe uuidgen use-package unfill toml-mode toc-org srefactor spaceline sourcerer-theme smeargle shell-pop restart-emacs rainbow-delimiters racer pyvenv pytest pyenv-mode py-isort popwin pip-requirements phpunit phpcbf php-extras php-auto-yasnippets persp-mode pcre2el paradox orgit org-bullets open-junk-file nlinum-relative neotree mwim multi-term move-text mmm-mode markdown-toc magit-gitflow macrostep lua-mode lorem-ipsum livid-mode live-py-mode link-hint json-mode js2-refactor js-doc irony-eldoc info+ indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-rtags helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio glsl-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md fuzzy flycheck-rust flycheck-pos-tip flycheck-irony flycheck-clang-analyzer flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav editorconfig dumb-jump drupal-mode disaster diff-hl define-word cython-mode company-tern company-statistics company-rtags company-irony-c-headers company-irony company-anaconda column-enforce-mode color-theme-sanityinc-tomorrow coffee-mode cmake-mode clean-aindent-mode clang-format cargo base16-theme auto-yasnippet auto-highlight-symbol auto-compile all-the-icons aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell)))
  '(tramp-syntax (quote default) nil (tramp)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
