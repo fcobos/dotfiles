@@ -441,7 +441,7 @@ you should place your code here."
   (spaceline-compile)
 
   ;; enable editorconfig
-  (editorconfig-mode 1)
+  (add-hook 'prog-mode-hook 'editorconfig-mode)
 
   ;; setup neo-theme
   (setq neo-theme (if window-system 'icons 'arrow))
