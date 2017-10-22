@@ -62,7 +62,7 @@ values."
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
-     shell
+     (shell :variables shell-default-term-shell "/bin/bash")
      (syntax-checking :variables
                       syntax-checking-enable-tooltips nil
                       syntax-checking-use-original-bitmaps t
