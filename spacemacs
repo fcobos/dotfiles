@@ -489,6 +489,8 @@ you should place your code here."
    ;; Non-nil means display source file containing the main routine at startup
    gdb-show-main t)
 
+  (setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
+
   ;; replace mode names
   (require 'diminish)
   (spacemacs|diminish editorconfig-mode " Ⓔ"  " E")
