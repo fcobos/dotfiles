@@ -155,6 +155,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         solarized-dark
                          base16-woodland
                          spacemacs-dark
 			 spacemacs-light
@@ -167,7 +168,7 @@ values."
                                :size 12
                                :weight normal
                                :width normal
-                               :powerline-scale 1.0)
+                               :powerline-scale 1.2)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
@@ -272,7 +273,7 @@ values."
    ;; If non nil show the color guide hint for transient state keys. (default t)
    dotspacemacs-show-transient-state-color-guide t
    ;; If non nil unicode symbols are displayed in the mode line. (default t)
-   dotspacemacs-mode-line-unicode-symbols nil
+   dotspacemacs-mode-line-unicode-symbols t
    ;; If non nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters point
    ;; when it reaches the top or bottom of the screen. (default t)
@@ -437,7 +438,7 @@ you should place your code here."
                (lambda () (setq c-syntactic-indentation nil)))
 
   ;; configure spaceline powerline separator
-  (setq powerline-default-separator 'utf-8)
+  (setq powerline-default-separator 'arrow)
   (spaceline-compile)
 
   ;; enable editorconfig
