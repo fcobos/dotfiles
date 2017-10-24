@@ -82,6 +82,7 @@ values."
                                       rtags helm-rtags company-rtags
                                       clang-format disaster cmake-mode
                                       semantic srefactor
+                                      realgud
                                      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -156,6 +157,7 @@ values."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
                          gotham
+                         base16-grayscale-dark
                          sanityinc-solarized-dark
                          base16-woodland
                          spacemacs-dark
@@ -344,6 +346,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   ;; set custom file to keep Custom from changing .spacemacs
   (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+
+  ;; gotham theme config
+  (setq gotham-tty-extended-palette t)
 
   )
 
