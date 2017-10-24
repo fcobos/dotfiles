@@ -168,7 +168,7 @@ values."
                                :size 12
                                :weight normal
                                :width normal
-                               :powerline-scale 1.0)
+                               :powerline-scale 1.2)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
@@ -438,7 +438,7 @@ you should place your code here."
                (lambda () (setq c-syntactic-indentation nil)))
 
   ;; configure spaceline powerline separator
-  (setq powerline-default-separator nil)
+  (setq powerline-default-separator 'arrow)
   (spaceline-compile)
 
   ;; enable editorconfig
