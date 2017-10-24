@@ -155,7 +155,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         solarized-dark
+                         sanityinc-solarized-dark
                          base16-woodland
                          spacemacs-dark
 			 spacemacs-light
@@ -168,7 +168,7 @@ values."
                                :size 12
                                :weight normal
                                :width normal
-                               :powerline-scale 1.2)
+                               :powerline-scale 1.0)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
@@ -438,7 +438,7 @@ you should place your code here."
                (lambda () (setq c-syntactic-indentation nil)))
 
   ;; configure spaceline powerline separator
-  (setq powerline-default-separator 'arrow)
+  (setq powerline-default-separator 'utf-8)
   (spaceline-compile)
 
   ;; enable editorconfig
