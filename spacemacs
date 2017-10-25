@@ -503,6 +503,8 @@ you should place your code here."
   (spacemacs|diminish editorconfig-mode " Ⓔ"  " E")
   (spacemacs|diminish irony-mode " Ⓘ" " I")
 
+  (set-face-attribute 'region nil :foreground "base1")
+
   ;; load custom file
   (load-file custom-file)
  )
