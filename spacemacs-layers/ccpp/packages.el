@@ -166,7 +166,16 @@ Each entry is either:
             (add-hook 'c-mode-hook 'rtags-start-process-unless-running)
             (add-hook 'c++-mode-hook 'rtags-start-process-unless-running)
             (add-hook 'objc-mode-hook 'rtags-start-process-unless-running)
-            (rtags-enable-standard-keybindings))))
+            (rtags-enable-standard-keybindings)
+            (spacemacs/set-leader-keys-for-major-mode 'c-mode "t." 'rtags-find-symbol-at-point)
+            (spacemacs/set-leader-keys-for-major-mode 'c++-mode "t." 'rtags-find-symbol-at-point)
+            (spacemacs/set-leader-keys-for-major-mode 'c-mode "tI" 'rtags-imenu)
+            (spacemacs/set-leader-keys-for-major-mode 'c++-mode "tI" 'rtags-imenu)
+            (spacemacs/set-leader-keys-for-major-mode 'c-mode "tF" 'rtags-fixit)
+            (spacemacs/set-leader-keys-for-major-mode 'c++-mode "tF" 'rtags-fixit)
+            (spacemacs/set-leader-keys-for-major-mode 'c-mode "tR" 'rtags-rename-symbol)
+            (spacemacs/set-leader-keys-for-major-mode 'c++-mode "tR" 'rtags-rename-symbol)
+            )))
 
 (defun ccpp/init-helm-rtags ()
   (use-package helm-rtags
