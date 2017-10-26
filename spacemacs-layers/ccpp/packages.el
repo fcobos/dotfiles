@@ -45,7 +45,6 @@
     cmake-mode
     semantic
     srefactor
-    realgud
     )
   "The list of Lisp packages required by the ccpp layer.
 
@@ -214,10 +213,6 @@ Each entry is either:
   (add-hook 'c++-mode-hook 'flycheck-mode)
   (add-hook 'c-mode-hook 'flycheck-mode)
   )
-
-(defun ccpp/init-realgud ()
-  (use-package realgud
-    :defer t))
 
 (defun ccpp/init-cmake-mode ()
   (use-package cmake-mode
