@@ -415,7 +415,6 @@ you should place your code here."
   ;; replace mode names
   (require 'diminish)
   (spacemacs|diminish editorconfig-mode " Ⓔ"  " E")
-  (spacemacs|diminish irony-mode " Ⓘ" " I")
 
   ;; fix gotham theme foreground selection color
   (set-face-attribute 'region nil :foreground "base1")
