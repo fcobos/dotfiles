@@ -76,9 +76,18 @@ Each entry is either:
         'c++-mode "ga" 'projectile-find-other-file
         "gA" 'projectile-find-other-file-other-window))))
 
+(defun ccpp/init-cmake-mode ()
+  (use-package cmake-mode
+    :mode (("CMakeLists\\.txt\\'" . cmake-mode)
+           ("\\.cmake\\'" . cmake-mode)):init
+    (
+     ;;push 'company-cmake company-backends-cmake-mode
+     )))
+
 (defun ccpp/post-init-company ()
-  (global-company-mode t)
   ;; setup company backends
+  (global-company-mode t)
+  (spacemacs|add-company-hook cmake-mode)
   (add-hook 'after-init-hook 'global-company-mode)
   (setq company-backends (delete 'company-clang company-backends)))
 
@@ -167,8 +176,8 @@ Each entry is either:
             (add-hook 'c++-mode-hook 'rtags-start-process-unless-running)
             (add-hook 'objc-mode-hook 'rtags-start-process-unless-running)
             (rtags-enable-standard-keybindings)
-            (spacemacs/set-leader-keys-for-major-mode 'c-mode "t." 'rtags-find-symbol-at-point)
-            (spacemacs/set-leader-keys-for-major-mode 'c++-mode "t." 'rtags-find-symbol-at-point)
+            (spacemacs/set-leader-keys-for-major-mode 'c-mode "g." 'rtags-find-symbol-at-point)
+            (spacemacs/set-leader-keys-for-major-mode 'c++-mode "g." 'rtags-find-symbol-at-point)
             (spacemacs/set-leader-keys-for-major-mode 'c-mode "tI" 'rtags-imenu)
             (spacemacs/set-leader-keys-for-major-mode 'c++-mode "tI" 'rtags-imenu)
             (spacemacs/set-leader-keys-for-major-mode 'c-mode "tF" 'rtags-fixit)
@@ -187,14 +196,6 @@ Each entry is either:
   ;; enable flycheck for c-c++
   (add-hook 'c++-mode-hook 'flycheck-mode)
   (add-hook 'c-mode-hook 'flycheck-mode))
-
-(defun ccpp/init-cmake-mode ()
-  (use-package cmake-mode
-    :mode (("CMakeLists\\.txt\\'" . cmake-mode)
-           ("\\.cmake\\'" . cmake-mode)):init
-    (
-     ;;push 'company-cmake company-backends-cmake-mode
-     )))
 
 (defun ccpp/init-disaster ()
   (use-package disaster
