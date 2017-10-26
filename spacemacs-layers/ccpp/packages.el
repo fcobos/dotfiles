@@ -101,7 +101,8 @@ Each entry is either:
 
 (defun ccpp/init-company-irony ()
   (use-package company-irony
-    :config
+    :defer t
+    :init
     (progn
     (eval-after-load 'company
       '(add-to-list 'company-backends '(company-irony)))
@@ -111,7 +112,8 @@ Each entry is either:
 
 (defun ccpp/init-company-irony-c-headers ()
   (use-package company-irony-c-headers
-    :config
+    :defer t
+    :init
     (progn
     (eval-after-load 'company
       '(add-to-list 'company-backends '(company-irony-c-headers)))
@@ -123,7 +125,7 @@ Each entry is either:
 (defun ccpp/init-semantic ()
   (use-package semantic
     :defer t
-    :config
+    :init
     (progn
       ;; setup semantic
       ;; (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
@@ -141,6 +143,16 @@ Each entry is either:
 (defun ccpp/init-srefactor ()
   (use-package srefactor
     :defer t
+    :init
+    (progn
+      (defun spacemacs/lazy-load-srefactor ()
+        "Lazy load the package."
+        (require 'srefactor)
+        ;; currently, evil-mode overrides key mapping of srefactor menu
+        ;; must expplicity enable evil-emacs-state. This is ok since
+        ;; srefactor supports j,k,/ and ? commands when Evil is
+        ;; available
+        (add-hook 'srefactor-ui-menu-mode-hook 'evil-emacs-state)))
     :config
     (progn
   (spacemacs/set-leader-keys-for-major-mode 'c-mode "r" 'srefactor-refactor-at-point)
@@ -151,7 +163,8 @@ Each entry is either:
 
 (defun ccpp/init-irony ()
   (use-package irony
-    :config
+    :defer t
+    :init
     (progn
       ;; setup irony-mode
       (add-hook 'c++-mode-hook 'irony-mode)
@@ -162,13 +175,15 @@ Each entry is either:
 
 (defun ccpp/init-irony-eldoc ()
   (use-package irony-eldoc
-    :config
+    :defer t
+    :init
     (progn
       (add-hook 'irony-mode-hook #'irony-eldoc))))
 
 (defun ccpp/init-flycheck-irony ()
   (use-package flycheck-irony
-    :config
+    :defer t
+    :init
     (progn
       (with-eval-after-load 'flycheck
         (require 'flycheck-irony)
@@ -177,7 +192,8 @@ Each entry is either:
 
 (defun ccpp/init-rtags ()
   (use-package rtags
-    :config
+    :defer t
+    :init
     (progn
   ;; setup rtags
   (add-hook 'c-mode-hook 'rtags-start-process-unless-running)
@@ -188,7 +204,8 @@ Each entry is either:
 
 (defun ccpp/init-helm-rtags ()
   (use-package helm-rtags
-    :config
+    :defer t
+    :init
     (progn
       (setq rtags-display-result-backend 'helm))))
 
