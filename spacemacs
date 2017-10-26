@@ -31,12 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     ;; (c-c++ :variables
-     ;;        c-c++-default-mode-for-headers 'c++-mode
-     ;;        c-c++-enable-clang-support nil
-     ;;        )
-     ;; ycmd
-     ;; semantic
+     ccpp
      rust
      python
      php
@@ -77,12 +72,6 @@ values."
    dotspacemacs-additional-packages '(
                                       editorconfig
                                       all-the-icons
-                                      irony company-irony flycheck-irony irony-eldoc
-                                      company-irony-c-headers
-                                      rtags helm-rtags company-rtags
-                                      clang-format disaster cmake-mode
-                                      semantic srefactor
-                                      realgud
                                      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -365,20 +354,6 @@ you should place your code here."
   ;; enable company-mode
   (global-company-mode)
 
-  ;; ycmd setup
-  ;; (setq ycmd-server-command '("python" "/home/felix/devel/ycmd/ycmd"))
-  ;; (setq ycmd-force-semantic-completion t)
-  ;; (when (not (display-graphic-p))
-  ;;   (setq flycheck-indication-mode nil))
-  ;; (require 'ycmd-eldoc)
-  ;; (add-hook 'ycmd-mode-hook 'ycmd-eldoc-setup)
-
-  ;; setup company backends
-  (add-hook 'after-init-hook 'global-company-mode)
-  (setq company-backends (delete 'company-clang company-backends))
-  (eval-after-load 'company
-    '(add-to-list 'company-backends '(company-irony-c-headers company-irony)))
-
   ;; this keeps the cursor centered
   (global-centered-cursor-mode)
 
@@ -387,61 +362,6 @@ you should place your code here."
   ;; (setq fci-rule-column 120)
   ;; (setq fci-rule-use-dashes t)
   ;; (setq fci-dash-pattern 0.35)
-
-  ;; setup semantic
-  ;; (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
-  (setq srecode-map-save-file (concat spacemacs-cache-directory "srecode-map.el"))
-  (setq semanticdb-default-save-directory (concat spacemacs-cache-directory "semanticdb/"))
-  (setq semanticdb-find-default-throttle '(file local project))
-  (unless (file-exists-p semanticdb-default-save-directory)
-    (make-directory semanticdb-default-save-directory))
-  (semantic-mode 1)
-
-  ;; setup irony-mode
-  (add-hook 'c++-mode-hook 'irony-mode)
-  (add-hook 'c-mode-hook 'irony-mode)
-  (add-hook 'objc-mode-hook 'irony-mode)
-  (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
-  (add-hook 'irony-mode-hook #'irony-eldoc)
-  (with-eval-after-load 'flycheck
-    (require 'flycheck-irony)
-    (add-hook 'flycheck-mode-hook #'flycheck-irony-setup)
-    (flycheck-add-next-checker 'irony '(warning . c/c++-cppcheck))
-    )
-
-  ;; setup rtags
-  (add-hook 'c-mode-hook 'rtags-start-process-unless-running)
-  (add-hook 'c++-mode-hook 'rtags-start-process-unless-running)
-  (add-hook 'objc-mode-hook 'rtags-start-process-unless-running)
-  (rtags-enable-standard-keybindings)
-  (setq rtags-display-result-backend 'helm)
-
-  ;; enable flycheck for c-c++
-  (add-hook 'c++-mode-hook 'flycheck-mode)
-  (add-hook 'c-mode-hook 'flycheck-mode)
-
-  ;; open .h header files as c++
-  (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
-
-  ;; setup disaster keybindings
-  (require 'disaster)
-  (define-key c-mode-base-map (kbd "C-c d") 'disaster)
-
-  ;; enable clang-format on save for projects with a .clang-format file at its root
-  (defun clang-format-buffer-smart ()
-    "Reformat buffer if .clang-format exists in the projectile root."
-    (when (f-exists? (expand-file-name ".clang-format" (projectile-project-root)))
-      (clang-format-buffer)))
-  (defun clang-format-buffer-smart-on-save ()
-    "Add auto-save hook for clang-format-buffer-smart."
-    (add-hook 'before-save-hook 'clang-format-buffer-smart nil t))
-  (spacemacs/add-to-hooks 'clang-format-buffer-smart-on-save
-                          '(c-mode-hook c++-mode-hook))
-
-  ;; disable syntactic-indentation
-  (require 'cc-mode)
-  (add-to-list 'c-mode-common-hook
-               (lambda () (setq c-syntactic-indentation nil)))
 
   ;; configure spaceline powerline separator
   (setq powerline-default-separator 'utf-8)
@@ -489,13 +409,7 @@ you should place your code here."
   ;; emacs 26 native line numbers
   (add-hook 'prog-mode-hook (lambda () (setq display-line-numbers 'relative)))
 
-  ;; configure gdb
-  (setq
-   ;; use gdb-many-windows by default when `M-x gdb'
-   gdb-many-windows t
-   ;; Non-nil means display source file containing the main routine at startup
-   gdb-show-main t)
-
+  ;; use ripgrep instead of ag
   (setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
 
   ;; replace mode names
@@ -503,6 +417,7 @@ you should place your code here."
   (spacemacs|diminish editorconfig-mode " Ⓔ"  " E")
   (spacemacs|diminish irony-mode " Ⓘ" " I")
 
+  ;; fix gotham theme foreground selection color
   (set-face-attribute 'region nil :foreground "base1")
 
   ;; load custom file
