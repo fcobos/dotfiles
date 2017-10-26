@@ -382,7 +382,7 @@ you should place your code here."
   (add-hook 'prog-mode-hook (lambda () (set (make-local-variable 'mouse-1-click-follows-link) nil)))
 
   ;; disable line wrapping
-  (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
+  (set-default 'truncate-lines t)
 
   ;; setup default indentation
   (setq indent-tabs-mode 't)

@@ -31,6 +31,7 @@
 
 (defconst ccpp-packages
   '(
+    cc-mode
     irony
     company-irony
     flycheck
@@ -73,6 +74,24 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
+(defun ccpp/init-cc-mode ()
+  (use-package cc-mode
+    :defer t
+    :init
+    (progn
+      (add-to-list 'auto-mode-alist
+                   `("\\.h\\'" . c++-mode)))
+    :config
+    (progn
+      (require 'compile)
+      (c-toggle-auto-newline 1)
+      (spacemacs/set-leader-keys-for-major-mode 'c-mode
+        "ga" 'projectile-find-other-file
+        "gA" 'projectile-find-other-file-other-window)
+      (spacemacs/set-leader-keys-for-major-mode 'c++-mode
+        "ga" 'projectile-find-other-file
+        "gA" 'projectile-find-other-file-other-window))))
+
 (defun ccpp/post-init-company ()
       (global-company-mode t)
       ;; setup company backends
@@ -113,14 +132,22 @@ Each entry is either:
       (setq semanticdb-find-default-throttle '(file local project))
       (unless (file-exists-p semanticdb-default-save-directory)
         (make-directory semanticdb-default-save-directory))
+      (spacemacs/add-to-hooks 'semantic-mode '(c-mode-hook c++-mode-hook))
       (semantic-mode 1)
       )
     )
   )
 
 (defun ccpp/init-srefactor ()
-  (use-package srfactor
-    :defer t))
+  (use-package srefactor
+    :defer t
+    :config
+    (progn
+  (spacemacs/set-leader-keys-for-major-mode 'c-mode "r" 'srefactor-refactor-at-point)
+  (spacemacs/set-leader-keys-for-major-mode 'c++-mode "r" 'srefactor-refactor-at-point)
+    )
+  )
+)
 
 (defun ccpp/init-irony ()
   (use-package irony
@@ -177,12 +204,21 @@ Each entry is either:
 
 (defun ccpp/init-cmake-mode ()
   (use-package cmake-mode
-    :defer t))
+    :mode (("CMakeLists\\.txt\\'" . cmake-mode) ("\\.cmake\\'" . cmake-mode))
+    :init (
+           ;;push 'company-cmake company-backends-cmake-mode
+                )))
 
 (defun ccpp/init-disaster ()
   (use-package disaster
     :defer t
-      ))
+    :commands (disaster)
+    :init
+    (progn
+      (spacemacs/set-leader-keys-for-major-mode 'c-mode
+        "D" 'disaster)
+      (spacemacs/set-leader-keys-for-major-mode 'c++-mode
+        "D" 'disaster))))
 
 (defun ccpp/init-clang-format ()
   (use-package clang-format

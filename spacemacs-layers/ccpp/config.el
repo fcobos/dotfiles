@@ -1,11 +1,3 @@
-;; setup disaster keybindings
-;;(eval-after-load 'cc-mode
-;;  (require 'disaster)
-;;  (define-key c-mode-base-map (kbd "C-c d") 'disaster))
-
-;; open .h header files as c++
-(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
-
 ;;enable clang-format on save for projects with a .clang-format file at its root
 (defun clang-format-buffer-smart ()
  "Reformat buffer if .clang-format exists in the projectile root."
