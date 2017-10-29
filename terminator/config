@@ -1,0 +1,29 @@
+[global_config]
+  enabled_plugins = ,
+  extra_styling = False
+  inactive_color_offset = 1.0
+  suppress_multiple_term_dialog = True
+  title_transmit_bg_color = "#2e3436"
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#0a0f14"
+    copy_on_selection = True
+    cursor_blink = False
+    cursor_color = "#7b7b7b"
+    font = Hack 9
+    foreground_color = "#98d1ce"
+    login_shell = True
+    palette = "#0a0f14:#c33027:#26a98b:#edb54b:#195465:#4e5165:#33859d:#98d1ce:#416479:#d26939:#26a98b:#245361:#195465:#888ba5:#599caa:#d3ebe9"
+    scrollback_lines = 10000
+    use_system_font = False
