@@ -186,7 +186,15 @@ Each entry is either:
             (spacemacs/set-leader-keys-for-major-mode 'c++-mode "tF" 'rtags-fixit)
             (spacemacs/set-leader-keys-for-major-mode 'c-mode "tR" 'rtags-rename-symbol)
             (spacemacs/set-leader-keys-for-major-mode 'c++-mode "tR" 'rtags-rename-symbol)
-            )))
+
+            (add-hook 'rtags-jump-hook 'evil-set-jump)
+            (add-to-list 'spacemacs-jump-handlers-c++-mode '(rtags-find-symbol-at-point :async t))
+            (add-to-list 'spacemacs-jump-handlers-c-mode '(rtags-find-symbol-at-point :async t))
+            )
+    :config (progn
+              (setq rtags-jump-to-first-match nil)
+              )
+    ))
 
 (defun ccpp/init-helm-rtags ()
   (use-package helm-rtags

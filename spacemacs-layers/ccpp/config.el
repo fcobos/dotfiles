@@ -16,3 +16,7 @@
 (add-to-list 'c-mode-common-hook
              (lambda ()
                (setq c-syntactic-indentation nil)))
+
+;; jump handlers
+(spacemacs|define-jump-handlers c++-mode)
+(spacemacs|define-jump-handlers c-mode)
