@@ -23,7 +23,6 @@
     cursor_color = "#7b7b7b"
     font = Hack 9
     foreground_color = "#98d1ce"
-    login_shell = True
     palette = "#0a0f14:#c33027:#26a98b:#edb54b:#195465:#4e5165:#33859d:#98d1ce:#416479:#d26939:#26a98b:#245361:#195465:#888ba5:#599caa:#d3ebe9"
     scrollback_lines = 10000
     use_system_font = False
