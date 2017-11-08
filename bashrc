@@ -11,21 +11,7 @@ PS1='\[\e[38;5;39m\]\u\[\e[0m\]@\[\e[38;5;208m\]\H \[\e[38;5;39m\]\W \[\e[38;5;3
 
 eval `dircolors /etc/DIR_COLORS`
 # Aliases
-alias ls='ls --color=auto' 2>/dev/null
-alias ll='ls -alF' 2>/dev/null
-alias la='ls -A' 2>/dev/null
-alias l.='ls -d .*' 2>/dev/null
-alias l='ls -CF' 2>/dev/null
-alias grep='grep --color=auto' 2>/dev/null
-alias egrep='egrep --color=auto' 2>/dev/null
-alias fgrep='fgrep --color=auto' 2>/dev/null
-alias xzgrep='xzgrep --color=auto' 2>/dev/null
-alias xzegrep='xzegrep --color=auto' 2>/dev/null
-alias xzfgrep='xzfgrep --color=auto' 2>/dev/null
-alias zgrep='zgrep --color=auto' 2>/dev/null
-alias zfgrep='zfgrep --color=auto' 2>/dev/null
-alias zegrep='zegrep --color=auto' 2>/dev/null
-alias vi='vim' 2>/dev/null
+source $HOME/dotfiles/aliases
 
 # History control
 export HISTSIZE=2000
