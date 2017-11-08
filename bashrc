@@ -9,7 +9,6 @@ alias ls='ls --color=auto'
 #PS1='[\u@\h \W]\$ '
 PS1='\[\e[38;5;39m\]\u\[\e[0m\]@\[\e[38;5;208m\]\H \[\e[38;5;39m\]\W \[\e[38;5;39m\]$ \[\e[0;0m\]'
 
-eval `dircolors /etc/DIR_COLORS`
 # Aliases
 source $HOME/dotfiles/aliases
 
