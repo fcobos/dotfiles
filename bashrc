@@ -19,6 +19,9 @@ export HISTIGNORE="history *:df *:exit:fg:bg:ll:ls:la:l.:l:cd:top:htop:glances:f
 #avoid overwriting history
 #[ $SHELL = "/bin/bash" ]; shopt -s histappend
 
+# dircolors
+eval `dircolors /etc/DIR_COLORS`
+
 # gcc colors
 export GCC_COLORS=error="01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
 
