@@ -146,6 +146,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         spacemacs-dark
                          gotham
                          base16-grayscale-dark
                          sanityinc-solarized-dark
@@ -284,7 +285,7 @@ values."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers 'relative
+   dotspacemacs-line-numbers 't
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -356,7 +357,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
 
   ;; gotham theme config
-  (setq gotham-tty-extended-palette t)
+  ;; (setq gotham-tty-extended-palette t)
 
   )
 
