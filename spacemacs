@@ -436,7 +436,7 @@ you should place your code here."
   (spacemacs|diminish editorconfig-mode " Ⓔ"  " E")
 
   ;; fix gotham theme foreground selection color
-  (set-face-attribute 'region nil :foreground "base1")
+  ;; (set-face-attribute 'region nil :foreground "base1")
 
   ;; load custom file
   (load-file custom-file)
