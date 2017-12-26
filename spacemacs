@@ -64,7 +64,6 @@ values."
                       )
      version-control
      shaders
-     nlinum
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -285,7 +284,7 @@ values."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers 't
+   dotspacemacs-line-numbers nil
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -427,7 +426,7 @@ you should place your code here."
   ;; (require 'nlinum)
   ;; (add-hook 'prog-mode-hook 'nlinum-mode)
   ;; emacs 26 native line numbers
-  ;; (add-hook 'prog-mode-hook (lambda () (setq display-line-numbers 'relative)))
+  (add-hook 'prog-mode-hook (lambda () (setq display-line-numbers 'relative)))
 
   ;; use ripgrep instead of ag
   (setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
