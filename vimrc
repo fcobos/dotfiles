@@ -69,7 +69,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "set number
 "set relativenumber
 
-"colorscheme gotham
+colorscheme base16-woodland
 
 set nowrap
 
