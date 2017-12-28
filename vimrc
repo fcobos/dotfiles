@@ -67,9 +67,9 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " enable line numbers
 "set number
-set relativenumber
+"set relativenumber
 
-colorscheme base16-tomorrow-night
+colorscheme monokai
 
 set nowrap
 
