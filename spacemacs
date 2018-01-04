@@ -212,7 +212,7 @@ values."
    ;; auto-save the file in-place, `cache' to auto-save the file to another
    ;; file stored in the cache directory and `nil' to disable auto-saving.
    ;; (default 'cache)
-   dotspacemacs-auto-save-file-location 'cache
+   dotspacemacs-auto-save-file-location 'original
    ;; Maximum number of rollback slots to keep in the cache. (default 5)
    dotspacemacs-max-rollback-slots 5
    ;; If non nil, `helm' will try to minimize the space it uses. (default nil)
@@ -437,6 +437,10 @@ you should place your code here."
 
   ;; fix gotham theme foreground selection color
   ;; (set-face-attribute 'region nil :foreground "base1")
+
+  ;; set auto-save interval
+  (setq auto-save-inteval 1)
+  (setq auto-save-timeout 1)
 
   ;; load custom file
   (load-file custom-file)
