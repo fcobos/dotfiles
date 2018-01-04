@@ -60,7 +60,7 @@ let &guicursor = &guicursor . ",a:blinkon0"
 " airline config
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:airline_theme='base16_eighties'
+"let g:airline_theme='base16_phd'
 
 " disable autocommenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -69,7 +69,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "set number
 "set relativenumber
 
-colorscheme base16-eighties
+colorscheme base16-default-dark
 
 set nowrap
 
