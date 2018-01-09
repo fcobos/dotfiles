@@ -69,7 +69,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "set number
 "set relativenumber
 
-colorscheme base16-spacemacs
+colorscheme base16-phd
 
 set nowrap
 
