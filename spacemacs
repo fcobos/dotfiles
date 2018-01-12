@@ -74,6 +74,7 @@ values."
    dotspacemacs-additional-packages '(
                                       editorconfig
                                       all-the-icons
+                                      realgud
                                      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
