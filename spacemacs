@@ -52,7 +52,7 @@ values."
                       auto-completion-complete-with-key-sequence nil
                       auto-completion-complete-with-key-sequence-delay 0.1
                       )
-     emacs-lisp
+     ;;emacs-lisp
      git
      (markdown :variables markdown-live-preview-engine 'vmd)
      neotree
