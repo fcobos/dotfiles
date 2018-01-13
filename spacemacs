@@ -480,6 +480,10 @@ you should place your code here."
   (setq auto-save-inteval 1)
   (setq auto-save-timeout 1)
 
+  ;; get the mouse pointer out of my way
+  (mouse-avoidance-mode)
+  (setq mouse-avoidance-mode 'banish)
+
   ;; load custom file
   (load-file custom-file)
 )
