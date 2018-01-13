@@ -412,7 +412,7 @@ you should place your code here."
 ;;  (require 'helm-bookmark)
 
   ;; enable company-mode
-  (global-company-mode)
+  (add-hook 'prog-mode-hook (lambda () (global-company-mode)))
 
   ;; this keeps the cursor centered
   (global-centered-cursor-mode)
