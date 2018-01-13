@@ -55,6 +55,7 @@ values."
      emacs-lisp
      git
      (markdown :variables markdown-live-preview-engine 'vmd)
+     neotree
      org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -79,7 +80,7 @@ values."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(exec-path-from-shell)
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
    ;; `used-only' installs only explicitly used packages and uninstall any
@@ -107,6 +108,13 @@ values."
    dotspacemacs-elpa-https t
    ;; Maximum allowed time in seconds to contact an ELPA repository.
    dotspacemacs-elpa-timeout 5
+   ;; If non-nil then Spacelpa repository is the primary source to install
+   ;; a locked version of packages. If nil then Spacemacs will install the lastest
+   ;; version of packages from MELPA. (default nil)
+   dotspacemacs-use-spacelpa nil
+   ;; If non-nil then verify the signature for downloaded Spacelpa archives.
+   ;; (default nil)
+   dotspacemacs-verify-spacelpa-archives nil
    ;; If non nil then spacemacs will check for updates at startup
    ;; when the current branch is not `develop'. Note that checking for
    ;; new versions works via git commands, thus it calls GitHub services
@@ -139,7 +147,7 @@ values."
    ;; List sizes may be nil, in which case
    ;; `spacemacs-buffer-startup-lists-length' takes effect.
    dotspacemacs-startup-lists '((recents . 10)
-                                (projects . 5))
+                                (projects . 7))
    ;; True if the home buffer should respond to resize events.
    dotspacemacs-startup-buffer-responsive t
    ;; Default major mode of the scratch buffer (default `text-mode')
@@ -150,8 +158,6 @@ values."
    dotspacemacs-themes '(
                          base16-phd
                          spacemacs-dark
-                         monokai
-                         gotham
  			 spacemacs-light
                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
@@ -240,10 +246,17 @@ values."
    ;; right; if there is insufficient space it displays it at the bottom.
    ;; (default 'bottom)
    dotspacemacs-which-key-position 'bottom
+   ;; Control where `switch-to-buffer' displays the buffer. If nil,
+   ;; `switch-to-buffer' displays the buffer in the current window even if
+   ;; another same-purpose window is available. If non-nil, `switch-to-buffer'
+   ;; displays the buffer in a same-purpose window even if the buffer can be
+   ;; displayed in the current window. (default nil)
+   dotspacemacs-switch-to-buffer-prefers-purpose nil
+ 
    ;; If non nil a progress bar is displayed when spacemacs is loading. This
    ;; may increase the boot time on some systems and emacs builds, set it to
    ;; nil to boost the loading time. (default t)
-   dotspacemacs-loading-progress-bar t
+   dotspacemacs-loading-progress-bar nil
    ;; If non nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
    dotspacemacs-fullscreen-at-startup nil
@@ -311,12 +324,40 @@ values."
    ;; specified with an installed package.
    ;; Not used for now. (default nil)
    dotspacemacs-default-package-repository nil
+   ;; Format specification for setting the frame title.
+   ;; %a - the `abbreviated-file-name', or `buffer-name'
+   ;; %t - `projectile-project-name'
+   ;; %I - `invocation-name'
+   ;; %S - `system-name'
+   ;; %U - contents of $USER
+   ;; %b - buffer name
+   ;; %f - visited file name
+   ;; %F - frame name
+   ;; %s - process status
+   ;; %p - percent of buffer above top of window, or Top, Bot or All
+   ;; %P - percent of buffer above bottom of window, perhaps plus Top, or Bot or All
+   ;; %m - mode name
+   ;; %n - Narrow if appropriate
+   ;; %z - mnemonics of buffer, terminal, and keyboard coding systems
+   ;; %Z - like %z, but including the end-of-line format
+   ;; (default "%I@%S")
+   dotspacemacs-frame-title-format "%I@%S"
+   ;; Format specification for setting the icon title format
+   ;; (default nil - same as frame-title-format)
+   dotspacemacs-icon-title-format nil
    ;; Delete whitespace while saving buffer. Possible values are `all'
    ;; to aggressively delete empty line and long sequences of whitespace,
    ;; `trailing' to delete only the whitespace at end of lines, `changed'to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
    dotspacemacs-whitespace-cleanup nil
+   ;; Either nil or a number of seconds. If non-nil zone out after the specified
+   ;; number of seconds. (default nil)
+   dotspacemacs-zone-out-when-idle nil
+   ;; Run `spacemacs/prettify-org-buffer' when
+   ;; visiting README.org files of Spacemacs.
+   ;; (default nil)
+   dotspacemacs-pretty-docs nil
    ))
 
 (defun dotspacemacs/user-init ()
@@ -333,7 +374,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   ;; call gc on focus lost
   (add-hook 'focus-out-hook 'garbage-collect)
   ;; call gc on idle
-  (run-with-idle-timer 2 t (lambda () (garbage-collect)))
+  (run-with-idle-timer 10 t (lambda () (garbage-collect)))
 
   ;; set custom file to keep Custom from changing .spacemacs
   (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
@@ -358,9 +399,6 @@ before packages are loaded. If you are unsure, you should try in setting them in
   ;; disable PATH startup warning
   (setq exec-path-from-shell-check-startup-files nil)
 
-  ;; gotham theme config
-  ;; (setq gotham-tty-extended-palette t)
-
   )
 
 (defun dotspacemacs/user-config ()
@@ -371,10 +409,10 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   ;; this fixes a bug
-  (require 'helm-bookmark)
+;;  (require 'helm-bookmark)
 
   ;; enable company-mode
-  (global-company-mode)
+;;  (global-company-mode)
 
   ;; this keeps the cursor centered
   (global-centered-cursor-mode)
@@ -387,7 +425,6 @@ you should place your code here."
 
   ;; configure spaceline powerline separator
   (setq powerline-default-separator 'utf-8)
-  (spaceline-compile)
 
   ;; enable editorconfig
   (add-hook 'prog-mode-hook 'editorconfig-mode)
@@ -435,11 +472,8 @@ you should place your code here."
   (setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
 
   ;; replace mode names
-  (require 'diminish)
-  (spacemacs|diminish editorconfig-mode " Ⓔ"  " E")
-
-  ;; fix gotham theme foreground selection color
-  ;; (set-face-attribute 'region nil :foreground "base1")
+;;  (require 'diminish)
+;;  (spacemacs|diminish editorconfig-mode " Ⓔ"  " E")
 
   ;; set auto-save interval
   (setq auto-save-inteval 1)
