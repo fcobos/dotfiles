@@ -476,10 +476,6 @@ you should place your code here."
 ;;  (require 'diminish)
 ;;  (spacemacs|diminish editorconfig-mode " Ⓔ"  " E")
 
-  ;; set auto-save interval
-  (setq auto-save-inteval 1)
-  (setq auto-save-timeout 1)
-
   ;; get the mouse pointer out of my way
   (mouse-avoidance-mode)
   (setq mouse-avoidance-mode 'banish)
