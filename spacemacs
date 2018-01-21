@@ -55,7 +55,7 @@ values."
      ;;emacs-lisp
      git
      (markdown :variables markdown-live-preview-engine 'vmd)
-     neotree
+     ;neotree
      org
      ;; (shell :variables
      ;;        shell-default-height 30
