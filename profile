@@ -8,14 +8,9 @@ export ANDROID_NDK_HOME=$HOME/devel/android-ndk
 export ANDROID_NDK=$ANDROID_NDK_HOME
 export NDK_ROOT=$ANDROID_NDK_HOME
 export NDKROOT=$ANDROID_NDK_HOME
-#export KOTLIN_HOME=/usr/share/kotlin
-#export KT_HOME=$KOTLIN_HOME
 
 export MOZ_USE_OMTC=1
 export MOZ_GLX_IGNORE_BLACKLIST=1
-
-# fix couldn't register with accesibility bus warning
-#export NO_AT_BRIDGE=1
 
 # fix for android emulator's old libstdc++
 export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
@@ -23,9 +18,6 @@ export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 if  [[ $TILIX_ID ]]; then
 	source /etc/profile.d/vte.sh
 fi
-
-# set the umask
-#umask 077
 
 # node npm configuration
 export NPM_PACKAGES=/home/felix/.npm-packages
@@ -42,9 +34,6 @@ fi
 
 # Stop wine from creating .desktop entries
 export WINEDLLOVERRIDES=winemenubuilder.exe=d
-
-# fix electron plasma globalmenu
-export ELECTRON_FORCE_WINDOW_MENU_BAR=1
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/felix/.sdkman"
