@@ -31,7 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     ivy
+     ;ivy
      html
      vimscript
      ccpp
@@ -46,7 +46,7 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ;helm
+     helm
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle
@@ -470,6 +470,12 @@ you should place your code here."
 
   ;; use ripgrep instead of ag
   (setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
+
+  ;; use helm with frames
+  (with-eval-after-load 'helm
+    (setq helm-display-function 'helm-display-buffer-in-own-frame
+          helm-display-buffer-reuse-frame t
+          helm-use-undecorated-frame-option t))
 
   ;; replace mode names
 ;;  (require 'diminish)
