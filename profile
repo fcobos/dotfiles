@@ -26,12 +26,6 @@ export PATH="$NPM_PACKAGES/bin:$PATH"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# To enable the keyring for applications run through the terminal, such as SSH
-if [ -z ${DESKTOP_SESSION} ];then
-	eval $(gnome-keyring-daemon --start)
-	export SSH_AUTH_SOCK
-fi
-
 # Stop wine from creating .desktop entries
 export WINEDLLOVERRIDES=winemenubuilder.exe=d
 
