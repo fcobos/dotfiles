@@ -35,7 +35,6 @@ values."
      html
      vimscript
      ccpp
-     java
      rust
      python
      php
