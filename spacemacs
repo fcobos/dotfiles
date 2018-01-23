@@ -472,10 +472,10 @@ you should place your code here."
   (setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
 
   ;; use helm with frames
-  (with-eval-after-load 'helm
-    (setq helm-display-function 'helm-display-buffer-in-own-frame
-          helm-display-buffer-reuse-frame t
-          helm-use-undecorated-frame-option t))
+  ;;(with-eval-after-load 'helm
+  ;;  (setq helm-display-function 'helm-display-buffer-in-own-frame
+  ;;        helm-display-buffer-reuse-frame t
+  ;;        helm-use-undecorated-frame-option t))
 
   ;; replace mode names
 ;;  (require 'diminish)
