@@ -74,8 +74,8 @@ colorscheme base16-phd
 set nowrap
 
 " centered cursor
-:nnoremap j jzz
-:nnoremap k kzz
+":nnoremap j jzz
+":nnoremap k kzz
 
 set termguicolors
 
