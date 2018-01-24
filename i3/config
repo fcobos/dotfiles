@@ -167,14 +167,18 @@ exec --no-startup-id xinput --set-prop 12 "libinput Natural Scrolling Enabled" 1
 # blueberry
 exec --no-startup-id /usr/lib/blueberry/blueberry-obex-agent.py
 exec --no-startup-id blueberry-tray
+# xiccd
+exec --no-startup-id xiccd
+# apply color profile
+exec --no-startup-id displaycal-apply-profiles --force
 
 # hide window borders
 hide_edge_borders smart
 
 # Pulse Audio Controls                                                                                      {{{
-bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute 0 toggle
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioMute        exec --no-startup-id amixer set Master -q toggle
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master -q 5%-
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master -q 5%+
 
 # Media Player Controls                                                                                     {{{
 #bindsym XF86AudioStop exec --no-startup-id mpc clear && /home/reed/scripts/killm.sh ncmpcpp
