@@ -160,7 +160,7 @@ bar {
 # start compton
 exec --no-startup-id compton
 # background
-exec --no-startup-id feh --bg-fill ~/Pictures/os_wars.png
+exec --no-startup-id ~/.fehbg
 # touchpad config
 exec --no-startup-id xinput set-prop 12 "libinput Disable While Typing Enabled" 0
 exec --no-startup-id xinput --set-prop 12 "libinput Natural Scrolling Enabled" 1
