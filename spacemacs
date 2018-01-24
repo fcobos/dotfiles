@@ -481,8 +481,8 @@ you should place your code here."
 ;;  (spacemacs|diminish editorconfig-mode " Ⓔ"  " E")
 
   ;; get the mouse pointer out of my way
-  (mouse-avoidance-mode)
-  (setq mouse-avoidance-mode 'banish)
+  ;;(mouse-avoidance-mode)
+  ;;(setq mouse-avoidance-mode 'banish)
 
   ;; :q should kill the current buffer rather than quitting emacs entirely
   (evil-ex-define-cmd "q" 'kill-this-buffer)
