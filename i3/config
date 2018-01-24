@@ -181,10 +181,10 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master -q 5%-
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master -q 5%+
 
 # Media Player Controls                                                                                     {{{
-#bindsym XF86AudioStop exec --no-startup-id mpc clear && /home/reed/scripts/killm.sh ncmpcpp
-#bindsym XF86AudioNext exec --no-startup-id mpc next
-#bindsym XF86AudioPlay exec --no-startup-id mpc toggle
-#bindsym XF86AudioPrev exec --no-startup-id mpc prev
+bindsym XF86AudioStop exec --no-startup-id cmus-remote -s
+bindsym XF86AudioNext exec --no-startup-id cmus-remote -n
+bindsym XF86AudioPlay exec --no-startup-id cmus-remote -u
+bindsym XF86AudioPrev exec --no-startup-id cmus-remote -r
 
 # lock, shutdown, suspend, reboot
 #set $Locker i3lock && sleep 1
