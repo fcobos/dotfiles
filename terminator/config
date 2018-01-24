@@ -18,6 +18,8 @@
 [plugins]
 [profiles]
   [[default]]
+    background_darkness = 0.95
+    background_type = transparent
     copy_on_selection = True
     cursor_blink = False
     cursor_color = "#7b7b7b"
