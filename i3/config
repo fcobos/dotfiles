@@ -31,7 +31,7 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec terminator
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -157,9 +157,13 @@ bar {
         position top
 }
 
+# start compton
+exec --no-startup-id compton
 # background
 exec --no-startup-id feh --bg-fill ~/Pictures/os_wars.png
 # touchpad config
 exec --no-startup-id xinput set-prop 12 "libinput Disable While Typing Enabled" 0
 exec --no-startup-id xinput --set-prop 12 "libinput Natural Scrolling Enabled" 1
 
+# hide window borders
+hide_edge_borders smart
