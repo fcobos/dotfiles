@@ -187,7 +187,7 @@ bindsym XF86AudioPlay exec --no-startup-id cmus-remote -u
 bindsym XF86AudioPrev exec --no-startup-id cmus-remote -r
 
 # lock, shutdown, suspend, reboot
-set $Locker i3lock && sleep 1
+set $Locker i3lock -i ~/Pictures/i3lockbg.png -t -e -c 3465a4 && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
