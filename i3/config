@@ -187,7 +187,8 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master -q 5%+
 #bindsym XF86AudioPrev exec --no-startup-id mpc prev
 
 # lock, shutdown, suspend, reboot
-set $Locker i3lock && sleep 1
+#set $Locker i3lock && sleep 1
+set $Locker dm-tool lock && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
