@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Hack 10
+font pango:DejaVu Sans 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -155,6 +155,15 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
         position top
+        colors {
+               separator            #98d1ce
+               background           #0a0f14
+               statusline           #98d1ce
+               focused_workspace    #195465 #195465 #98d1ce
+               active_workspace     #26a98b #26a98a #0a0f14
+               inactive_workspace   #195465 #0a0f14 #98d1ce
+               urgent_workspace     #c33027 #d26939 #98d1ce
+        }
 }
 
 # start compton
@@ -167,10 +176,16 @@ exec --no-startup-id xinput --set-prop 12 "libinput Natural Scrolling Enabled" 1
 # blueberry
 exec --no-startup-id /usr/lib/blueberry/blueberry-obex-agent.py
 exec --no-startup-id blueberry-tray
+# NetworkManager applet
+exec --no-startup-id nm-applet
 # xiccd
 exec --no-startup-id xiccd
 # apply color profile
 exec --no-startup-id displaycal-apply-profiles --force
+# pulseaudio systray
+exec --no-startup-id pasystray -a
+# gnome polkit
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # hide window borders
 hide_edge_borders smart
@@ -207,3 +222,14 @@ bindsym $mod+Pause mode "$mode_system"
 # disable window title for browsers
 for_window [class="^Chromium-browser$" title=" - Chromium$"] border none
 for_window [class="^Firefox$" title=" - Mozilla Firefox$"] border none
+
+# colors
+# class                 border  backgr. text    indicator child_border
+client.focused          #195465 #195465 #98d1ce #26a98a   #195465
+client.focused_inactive #4e5165 #4e5165 #888ba5 #484e50   #4e5165
+client.unfocused        #4e5165 #4e5165 #888ba5 #292d2e   #4e5165
+client.urgent           #c33027 #d26939 #98d1ce #d26939   #d26939
+client.placeholder      #0a0f14 #0a0f14 #98d1ce #0a0f14   #0a0f14
+
+client.background       #0a0f14
+
