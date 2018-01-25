@@ -470,6 +470,7 @@ you should place your code here."
   ;; emacs 26 native line numbers
   (add-hook 'prog-mode-hook (lambda () (setq display-line-numbers 'relative)))
   (add-hook 'nxml-mode-hook (lambda () (setq display-line-numbers 'relative)))
+  (add-hook 'conf-mode-hook (lambda () (setq display-line-numbers 'relative)))
 
   ;; use ripgrep instead of ag
   (setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
