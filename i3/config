@@ -186,6 +186,8 @@ exec --no-startup-id displaycal-apply-profiles --force
 exec --no-startup-id pasystray -a
 # power management
 exec --no-startup-id xfce4-power-manager
+# numlock
+exec --no-startup-id numlockx on
 # gnome polkit
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
