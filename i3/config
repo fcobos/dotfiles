@@ -204,7 +204,7 @@ bindsym XF86AudioPlay exec --no-startup-id cmus-remote -u
 bindsym XF86AudioPrev exec --no-startup-id cmus-remote -r
 
 # lock, shutdown, suspend, reboot
-set $Locker i3lock -i ~/Pictures/i3lockbg.png -t -e -c 3465a4 && sleep 1
+set $Locker i3lock -i ~/Pictures/i3lockbg.png -t -e -c 0a0f14 && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -221,9 +221,10 @@ mode "$mode_system" {
 
 bindsym $mod+Pause mode "$mode_system"
 
-# disable window title for browsers
+# disable window title for certain programs
 for_window [class="^Chromium-browser$" title=" - Chromium$"] border none
 for_window [class="^Firefox$" title=" - Mozilla Firefox$"] border none
+for_window [class="^Gimp$"] border none
 
 # colors
 # class                 border  backgr. text    indicator child_border
