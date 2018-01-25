@@ -177,13 +177,13 @@ exec --no-startup-id xinput --set-prop 12 "libinput Natural Scrolling Enabled" 1
 exec --no-startup-id /usr/lib/blueberry/blueberry-obex-agent.py
 exec --no-startup-id blueberry-tray
 # NetworkManager applet
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 # xiccd
 exec --no-startup-id xiccd
 # apply color profile
 exec --no-startup-id displaycal-apply-profiles --force
 # pulseaudio systray
-exec --no-startup-id pasystray -a
+#exec --no-startup-id pasystray -a
 # power management
 exec --no-startup-id xfce4-power-manager
 # numlock
