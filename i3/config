@@ -247,3 +247,4 @@ for_window [class="Lxappearance"] floating enable
 for_window [class="Catfish"] floating enable
 for_window [class="Eog"] floating enable
 for_window [class="Nautilus"] floating enable
+for_window [class="Blueberry.py"] floating enable
