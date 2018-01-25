@@ -18,13 +18,13 @@
 [plugins]
 [profiles]
   [[default]]
-    background_darkness = 0.95
-    background_type = transparent
+    background_color = "#0a0f14"
     copy_on_selection = True
     cursor_blink = False
     cursor_color = "#7b7b7b"
     font = Hack 10
-    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    foreground_color = "#98d1ce"
+    palette = "#0a0f14:#c33027:#26a98b:#edb54b:#195465:#4e5165:#33859d:#98d1ce:#416479:#d26939:#26a98b:#245361:#195465:#888ba5:#599caa:#d3ebe9"
     scrollback_lines = 10000
     scrollbar_position = hidden
     show_titlebar = False
