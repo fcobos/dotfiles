@@ -1,0 +1,81 @@
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+Xft.embeddedbitmap: 0
+Xft.dpi: 96
+
+! URxvt
+URxvt*.depth: 24
+URxvt.scrollBar: false
+!URxvt*font:  xft:Hack\ Nerd\ Font:size=10:antialias=true
+URxvt*font:     xft:Hack:size=10, xfg:FontAwesome:size=10, xft:Droid Sans Fallback:pixelsize=10:antialias=true
+URxvt*boldFont: xft:Hack:bold:size=10, xfg:FontAwesome:size=10, xft:Droid Sans Fallback:pixelsize=10:Bold:antialias=true
+URxvt.letterSpace: -2
+URxvt*selectToClipboard:  true
+URxvt*saveLines:          10000
+URxvt.url-launcher: xdg-open
+
+!URxvt*background:         #000000
+!URxvt*foreground:         #AAAAAA
+!URxvt*cursorColor:        #AAAAAA
+!! foreground color for underline
+!URxvt*colorUL:            #8ae234
+!! line color for underline
+!URxvt*underlineColor:     #92659a
+!! black dark/light
+!URxvt*color0:             #000000
+!URxvt*color8:             #6e706b
+!! red dark/light
+!URxvt*color1:             #cc0000
+!URxvt*color9:             #ef2929
+!! green dark/light
+!URxvt*color2:             #4e9a06
+!URxvt*color10:            #8ae234
+!! yellow dark/light
+!URxvt*color3:             #edd400
+!URxvt*color11:            #fce94f
+!! blue dark/light
+!URxvt*color4:             #3465a4
+!URxvt*color12:            #729fcf
+!! magenta dark/light
+!URxvt*color5:             #92659a
+!URxvt*color13:            #c19fbe
+!! cyan dark/light
+!URxvt*color6:             #07c7ca
+!URxvt*color14:            #63e9e9
+!! white dark/light
+!URxvt*color7:             #d3d7cf
+!URxvt*color15:            #eeeeec
+
+! Colors {{{
+*.foreground:   #98d1ce
+*.background:   #0a0f14
+*.cursorColor:  #98d1ce
+
+*.color0:       #0a0f14
+*.color8:       #416478
+
+*.color1:       #c33027
+*.color9:       #d26939
+
+*.color2:       #26a98b
+*.color10:      #26a98a
+
+*.color3:       #edb54b
+*.color11:      #245361
+
+*.color4:       #195465
+*.color12:      #195465
+
+*.color5:       #4e5165
+*.color13:      #888ba5
+
+*.color6:       #33859d
+*.color14:      #599caa
+
+*.color7:       #98d1ce
+*.color15:      #d3ebe9
+! }}}
