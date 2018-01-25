@@ -156,6 +156,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         gotham
                          base16-phd
                          spacemacs-dark
  			 spacemacs-light
@@ -398,6 +399,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   ;; disable PATH startup warning
   (setq exec-path-from-shell-check-startup-files nil)
+
+  ;; gotham theme config
+  (setq gotham-tty-extended-palette t)
 
   )
 
