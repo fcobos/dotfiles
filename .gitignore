@@ -1,2 +1,6 @@
 # ignore ncmpcpp error log file
 ncmpcpp/error.log
+# ranger
+ranger/bookmarks
+ranger/history
+ranger/tagged
