@@ -29,6 +29,11 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Stop wine from creating .desktop entries
 export WINEDLLOVERRIDES=winemenubuilder.exe=d
 
+# gnome-keyring
+if [ -n "$DESKTOP_SESSION" ];then
+	export $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
+fi
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/felix/.sdkman"
 [[ -s "/home/felix/.sdkman/bin/sdkman-init.sh" ]] && source "/home/felix/.sdkman/bin/sdkman-init.sh"
