@@ -31,7 +31,7 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec --no-startup-id  terminator
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -202,14 +202,10 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master -q 5%-
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master -q 5%+
 
 # Media Player Controls                                                                                     {{{
-#bindsym XF86AudioStop exec --no-startup-id cmus-remote -s
-#bindsym XF86AudioNext exec --no-startup-id cmus-remote -n
-#bindsym XF86AudioPlay exec --no-startup-id cmus-remote -u
-#bindsym XF86AudioPrev exec --no-startup-id cmus-remote -r
-bindsym XF86AudioPlay exec "mpris-ctl pp"
-bindsym XF86AudioStop exec "mpris-ctl stop"
-bindsym XF86AudioNext exec "mpris-ctl next"
-bindsym XF86AudioPrev exec "mpris-ctl prev"
+bindsym XF86AudioPlay exec --no-startup-id "mpris-ctl pp"
+bindsym XF86AudioStop exec --no-startup-id "mpris-ctl stop"
+bindsym XF86AudioNext exec --no-startup-id "mpris-ctl next"
+bindsym XF86AudioPrev exec --no-startup-id "mpris-ctl prev"
 
 # lock, shutdown, suspend, reboot
 #set $Locker i3lock -i ~/Pictures/i3lockbg.png -t -e -c 0a0f14 && sleep 1
