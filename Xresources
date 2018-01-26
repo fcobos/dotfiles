@@ -26,8 +26,8 @@ xterm*boldFont: xft:Hack Bold:size=9:antialias=true
 URxvt*.depth: 24
 URxvt.scrollBar: false
 URxvt.cursorBlink: false
-URxvt*font:     xft:Hack:size=9, xfg:FontAwesome:size=9, xft:Droid Sans Fallback:pixelsize=9:antialias=true
-URxvt*boldFont: xft:Hack:bold:size=9, xfg:FontAwesome:size=9, xft:Droid Sans Fallback:pixelsize=9:Bold:antialias=true
+URxvt*font:     xft:Hack:size=9, xft:Symbola, xft:Noto Emoji, xfg:FontAwesome, xft:Droid Sans Fallback:pixelsize=9:antialias=true
+URxvt*boldFont: xft:Hack:bold:size=9, xft:Symbola, xft:Noto Emoji, xfg:FontAwesome, xft:Droid Sans Fallback:pixelsize=9:Bold:antialias=true
 URxvt.letterSpace: -2
 URxvt*selectToClipboard:  true
 URxvt*saveLines:          10000
