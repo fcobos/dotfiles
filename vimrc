@@ -74,7 +74,7 @@ set nowrap
 ":nnoremap j jzz
 ":nnoremap k kzz
 
-"set termguicolors
+set termguicolors
 colorscheme gotham
-let g:airline_theme = "solarized"
+"let g:airline_theme = "solarized"
 
