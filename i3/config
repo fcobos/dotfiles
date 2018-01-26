@@ -232,6 +232,7 @@ for_window [class="^Firefox$" title=" - Mozilla Firefox$"] border none
 for_window [class="^Gimp$"] border none
 for_window [class="^Inkscape$"] border none
 for_window [class="^Emacs$"] border none
+for_window [class="^Blender$"] border none
 #for_window [class="qutebrowser"] border none
 
 # colors
