@@ -250,13 +250,13 @@ client.background       #0a0f14
 for_window [class="Pavucontrol"] floating enable
 for_window [class="feh"] floating enable
 for_window [class="System-config-printer.py"] floating enable
-for_window [class="Thunar"] floating enable
+#for_window [class="Thunar"] floating enable
 for_window [class="Mirage"] floating enable
 for_window [class="Wpg"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [class="Catfish"] floating enable
 for_window [class="Eog"] floating enable
-for_window [class="Nautilus"] floating enable
+#for_window [class="Nautilus"] floating enable
 for_window [class="Blueberry.py"] floating enable
 
 ## Manual management of external displays
