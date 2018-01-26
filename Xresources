@@ -51,13 +51,13 @@ st.borderpx: 0
 *.color9:       #d26939
 
 *.color2:       #26a98b
-*.color10:      #26a98a
+*.color10:      #478879
 
 *.color3:       #edb54b
 *.color11:      #c5a974
 
 *.color4:       #195465
-*.color12:      #6d8f96
+*.color12:      #195465
 
 *.color5:       #4e5165
 *.color13:      #888ba5
