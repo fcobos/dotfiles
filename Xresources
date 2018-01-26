@@ -7,10 +7,25 @@ Xft.rgba: rgb
 Xft.embeddedbitmap: 0
 Xft.dpi: 96
 
+! xterm
+xterm.termName: xterm-256color
+xterm.vt100.metaSendsEscape: true
+xterm.vt100.saveLines: 10000
+xterm.vt100.scrollBar: false
+!xterm*utf8:   2
+xterm*locale:           true
+xterm*VT100.geometry:   80x25
+xterm*dynamicColors:    true
+xterm*eightBitInput:    false
+xterm*faceName: xft:Hack:size=9:antialias=true
+!xterm*faceNameDoublesize: xft:FontAwesome:size=9
+!xterm.vt100.wideFont: xft:FontAwesome:size=9:antialias=true
+xterm*boldFont: xft:Hack Bold:size=9:antialias=true
+
 ! URxvt
 URxvt*.depth: 24
 URxvt.scrollBar: false
-!URxvt*font:  xft:Hack\ Nerd\ Font:size=10:antialias=true
+URxvt.cursorBlink: false
 URxvt*font:     xft:Hack:size=9, xfg:FontAwesome:size=9, xft:Droid Sans Fallback:pixelsize=9:antialias=true
 URxvt*boldFont: xft:Hack:bold:size=9, xfg:FontAwesome:size=9, xft:Droid Sans Fallback:pixelsize=9:Bold:antialias=true
 URxvt.letterSpace: -2

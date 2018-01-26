@@ -69,8 +69,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "set number
 "set relativenumber
 
-colorscheme gotham
-
 set nowrap
 
 " centered cursor
@@ -78,4 +76,5 @@ set nowrap
 ":nnoremap k kzz
 
 set termguicolors
+colorscheme gotham
 
