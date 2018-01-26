@@ -61,24 +61,24 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: monospace # should be "Menlo" or something on macOS.
+    family: Hack # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    # style: Regular
+    style: Regular
 
   # The bold font face
   bold:
-    family: monospace # should be "Menlo" or something on macOS.
+    family: Hack # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    # style: Bold
+    style: Bold
 
   # The italic font face
   italic:
-    family: monospace # should be "Menlo" or something on macOS.
+    family: Hack # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    # style: Italic
+    style: Italic
 
   # Point size of the font
-  size: 11.0
+  size: 9.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -109,8 +109,8 @@ custom_cursor_colors: false
 colors:
   # Default colors
   primary:
-    background: '0x000000'
-    foreground: '0xeaeaea'
+    background: '0x0a0f14'
+    foreground: '0x98d1ce'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
@@ -119,25 +119,25 @@ colors:
 
   # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xd54e53'
-    green:   '0xb9ca4a'
-    yellow:  '0xe6c547'
-    blue:    '0x7aa6da'
-    magenta: '0xc397d8'
-    cyan:    '0x70c0ba'
-    white:   '0xffffff'
+    black:   '0x0a0f14'
+    red:     '0xc33027'
+    green:   '0x26a98b'
+    yellow:  '0xedb54b'
+    blue:    '0x195465'
+    magenta: '0x4e5165'
+    cyan:    '0x33859d'
+    white:   '0x98d1ce'
 
   # Bright colors
   bright:
-    black:   '0x666666'
-    red:     '0xff3334'
-    green:   '0x9ec400'
-    yellow:  '0xe7c547'
-    blue:    '0x7aa6da'
-    magenta: '0xb77ee0'
-    cyan:    '0x54ced6'
-    white:   '0xffffff'
+    black:   '0x416478'
+    red:     '0xd26939'
+    green:   '0x478879'
+    yellow:  '0xc5a974'
+    blue:    '0x195465'
+    magenta: '0x888ba5'
+    cyan:    '0x599caa'
+    white:   '0xd3ebe9'
 
   # Dim colors (Optional)
   dim:
