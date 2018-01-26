@@ -273,4 +273,6 @@ bindsym $mod+x mode "$mode_display"
 
 # disable focus following mouse
 focus_follows_mouse no
+# disable mouse warping
+mouse_warping none
 
