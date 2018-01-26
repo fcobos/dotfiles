@@ -60,7 +60,6 @@ let &guicursor = &guicursor . ",a:blinkon0"
 " airline config
 set laststatus=2
 let g:airline_powerline_fonts = 1
-"let g:airline_theme='base16_phd'
 
 " disable autocommenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -75,6 +74,7 @@ set nowrap
 ":nnoremap j jzz
 ":nnoremap k kzz
 
-set termguicolors
+"set termguicolors
 colorscheme gotham
+let g:airline_theme = "solarized"
 

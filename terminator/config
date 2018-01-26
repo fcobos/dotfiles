@@ -1,4 +1,5 @@
 [global_config]
+  dbus = False
   enabled_plugins = ,
   extra_styling = False
   inactive_color_offset = 1.0
