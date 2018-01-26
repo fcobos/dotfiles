@@ -33,6 +33,11 @@ URxvt*selectToClipboard:  true
 URxvt*saveLines:          10000
 URxvt.url-launcher: xdg-open
 
+! xst
+st.font: Hack:size=9:antialias=true;
+st.bold_font: 1
+st.borderpx: 0
+
 ! Colors {{{
 *.foreground:   #98d1ce
 *.background:   #0a0f14
