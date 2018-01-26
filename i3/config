@@ -271,3 +271,6 @@ mode "$mode_display" {
 # Declare here the shortcut to bring the display selection menu
 bindsym $mod+x mode "$mode_display"
 
+# disable focus following mouse
+focus_follows_mouse no
+
