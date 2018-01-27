@@ -102,8 +102,8 @@ tray-padding = 2
 tray-transparent = false
 tray-maxsize = 24
 ;tray-offset-x = 21%
-tray-foreground = ${colors.xcolor7}
-tray-background = ${colors.xcolor4}
+tray-foreground = ${colors.background}
+tray-background = ${colors.background}
 
 wm-restack = i3
 ;override-redirect = true
