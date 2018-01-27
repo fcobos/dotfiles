@@ -44,7 +44,7 @@ margin-top = 0
 margin-bottom = 0
 
 [bar/rome]
-monitor = ${env:MONITOR:LVDS-1}
+;monitor = ${env:MONITOR:LVDS-1}
 ;monitor-fallback = ${env:MONITOR:eDP-1}
 ;dpi = ${xrdb:Xft.dpi:136}
 bottom = false
@@ -114,7 +114,7 @@ wm-restack = i3
 
 modules-left = i3 powermenu mpd
 modules-center = MiddleArrowLeft date MiddleArrowRight
-modules-right = arrow1 LeftStripe arrow1 volume arrow2 network ssh vpn arrow3 cpu arrow2 temperature arrow3 battery
+modules-right = arrow1 LeftStripe arrow1 volume arrow2 network eth ssh vpn arrow3 cpu arrow2 temperature arrow3 battery
 
 ; All modules available in this config file:
 ; bspwm text xwindow tray xkeyboard filesystem mpd backlight cpu 
@@ -446,7 +446,7 @@ ramp-signal-7 = █
 [module/eth]
 type = internal/network
 ; To test interface: $ ls -1 /sys/class/net/
-interface = ens5f5
+interface = enp4s0
 interval = 0.5
 
 label-connected = "   %local_ip% %downspeed:8%  %upspeed:8%  "
