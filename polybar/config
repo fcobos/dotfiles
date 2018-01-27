@@ -469,7 +469,8 @@ format-foreground = ${colors.xcolor7}
 format-background = ${colors.xcolor4}
 
 date = ""
-date-alt = "  %Y/%m/%d"
+;date-alt = "  %Y/%m/%d"
+date-alt = "  %a.%e.%b"
 time = "   %I:%M    "
 time-alt = ""
 ;date = "%Y/%m/%d | "
