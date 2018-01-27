@@ -152,22 +152,24 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-        position top
-        colors {
-               separator            #98d1ce
-               background           #0a0f14
-               statusline           #98d1ce
-               focused_workspace    #195465 #195465 #98d1ce
-               active_workspace     #26a98b #26a98a #0a0f14
-               inactive_workspace   #0a0f15 #0a0f14 #98d1ce
-               urgent_workspace     #c33027 #d26939 #98d1ce
-        }
-}
+#bar {
+#        status_command i3status
+#        position top
+#        colors {
+#               separator            #98d1ce
+#               background           #0a0f14
+#               statusline           #98d1ce
+#               focused_workspace    #195465 #195465 #98d1ce
+#               active_workspace     #26a98b #26a98a #0a0f14
+#               inactive_workspace   #0a0f15 #0a0f14 #98d1ce
+#               urgent_workspace     #c33027 #d26939 #98d1ce
+#        }
+#}
 
+# start polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 # start compton
-exec --no-startup-id compton
+exec --no-startup-id compton -cCz
 # background
 exec --no-startup-id ~/.fehbg
 # touchpad config
@@ -236,7 +238,7 @@ for_window [class="^Blender$"] border none
 
 # colors
 # class                 border  backgr. text    indicator child_border
-client.focused          #195465 #195465 #98d1ce #26a98a   #195465
+client.focused          #091F2E #091F2E #98d1ce #26a98a   #195465
 client.focused_inactive #4e5165 #4e5165 #888ba5 #484e50   #4e5165
 client.unfocused        #4e5165 #4e5165 #888ba5 #292d2e   #4e5165
 client.urgent           #c33027 #d26939 #98d1ce #d26939   #d26939
