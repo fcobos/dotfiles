@@ -449,7 +449,8 @@ type = internal/network
 interface = enp4s0
 interval = 0.5
 
-label-connected = "   %local_ip% %downspeed:8%  %upspeed:8%  "
+;label-connected = "   %local_ip% %downspeed:8%  %upspeed:8%  "
+label-connected = "   %downspeed:8%  %upspeed:8%  "
 label-connected-foreground = ${colors.xcolor4}
 label-connected-background = ${colors.xcolor7}
 label-disconnected = "  %ifname% "
