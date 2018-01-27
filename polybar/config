@@ -653,7 +653,7 @@ menu-0-1-foreground = ${colors.xcolor7}
 menu-0-1-background = ${colors.xcolor0}
 ; logout
 menu-0-2 = "  "
-menu-0-2-exec = killall -9 pulseaudio && i3-msg exit
+menu-0-2-exec = killall -9 pulseaudio ; i3-msg exit
 menu-0-2-foreground = ${colors.xcolor7}
 menu-0-2-background = ${colors.xcolor0}
 ; reboot
