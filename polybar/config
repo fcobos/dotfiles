@@ -117,7 +117,7 @@ wm-restack = i3
 
 modules-left = i3 RightStripe RightArrow1 powermenu xwindow
 modules-center = MiddleArrowLeft date MiddleArrowRight
-modules-right = mpd arrow1 LeftStripe arrow1 volume arrow2 network eth ssh vpn arrow3 cpu arrow2 temperature arrow3 battery
+modules-right = mpd arrow1 LeftStripe arrow1 volume arrow2 network eth ssh vpn arrow3 battery
 
 ; All modules available in this config file:
 ; bspwm text xwindow tray xkeyboard filesystem mpd backlight cpu 
@@ -416,7 +416,8 @@ format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
 ;label-connected = "  %downspeed%"
-label-connected = "  %essid%"
+;label-connected = "  %essid%"
+label-connected = " "
 ;label-connected = "  %essid%  %local_ip%  %downspeed:8%  %upspeed:8%"
 label-connected-foreground = ${colors.xcolor4}
 label-connected-background = ${colors.xcolor7}
