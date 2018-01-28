@@ -234,9 +234,9 @@ bindsym XF86AudioPrev exec --no-startup-id "mpris-ctl prev"
 
 # colors
 # class                 border  backgr. text    indicator child_border
-client.focused          #091F2E #091F2E #98d1ce #26a98a   #195465
+client.focused          #091F2E #091F2E #98d1ce #091F2E   #091F2E
 client.focused_inactive #4e5165 #4e5165 #888ba5 #484e50   #4e5165
-client.unfocused        #4e5165 #4e5165 #888ba5 #292d2e   #4e5165
+client.unfocused        #4e5165 #4e5165 #888ba5 #4e5165   #4e5165
 client.urgent           #c33027 #d26939 #98d1ce #d26939   #d26939
 client.placeholder      #0a0f14 #0a0f14 #98d1ce #0a0f14   #0a0f14
 
