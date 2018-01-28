@@ -122,8 +122,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'killall -9 pulseaudio && i3-msg exit'"
-
+bindsym $mod+Shift+e exec "zenity --question --text='Logout?' --icon-name=gnome-logout --default-cancel && (killall -9 pulseaudio ; i3-msg exit)"
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -213,22 +212,22 @@ bindsym XF86AudioNext exec --no-startup-id "mpris-ctl next"
 bindsym XF86AudioPrev exec --no-startup-id "mpris-ctl prev"
 
 # lock, shutdown, suspend, reboot
-set $Locker i3lock -t -e -c 0a0f14 && sleep 1
-
-set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
-mode "$mode_system" {
-    bindsym l exec --no-startup-id $Locker, mode "default"
-    bindsym e exec --no-startup-id killall -9 pulseaudio && i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-bindsym $mod+Pause mode "$mode_system"
+#set $Locker i3lock -t -e -c 0a0f14 && sleep 1
+#
+#set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
+#mode "$mode_system" {
+#    bindsym l exec --no-startup-id $Locker, mode "default"
+#    bindsym e exec --no-startup-id killall -9 pulseaudio && i3-msg exit, mode "default"
+#    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+#    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+#    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+#
+#    # back to normal: Enter or Escape
+#    bindsym Return mode "default"
+#    bindsym Escape mode "default"
+#}
+#
+#bindsym $mod+Pause mode "$mode_system"
 
 # colors
 # class                 border  backgr. text    indicator child_border
@@ -252,7 +251,7 @@ new_float normal
 new_window none
 
 # hide window borders
-hide_edge_borders smart
+#hide_edge_borders smart
 
 #Floating Windows
 for_window [class="Pavucontrol"] floating enable
@@ -266,22 +265,23 @@ for_window [class="Catfish"] floating enable
 for_window [class="Eog"] floating enable
 #for_window [class="Nautilus"] floating enable
 for_window [class="Blueberry.py"] floating enable
+for_window [class="Arandr"] floating enable
 
 ## Manual management of external displays
 # Set the shortcuts and what they do
-set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
-mode "$mode_display" {
-    bindsym v exec --no-startup-id xrandr --output VGA-1 --auto --right-of LVDS-1, mode "default"
-    bindsym h exec --no-startup-id xrandr --output HDMI-1 --auto --right-of LVDS-1, mode "default"
-    bindsym x exec --no-startup-id xrandr --output VGA-1 --auto --off, mode "default"
-    bindsym y exec --no-startup-id xrandr --output HDMI-1 --auto --off, mode "default"
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-# Declare here the shortcut to bring the display selection menu
-bindsym $mod+x mode "$mode_display"
+#set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
+#mode "$mode_display" {
+#    bindsym v exec --no-startup-id xrandr --output VGA-1 --auto --right-of LVDS-1, mode "default"
+#    bindsym h exec --no-startup-id xrandr --output HDMI-1 --auto --right-of LVDS-1, mode "default"
+#    bindsym x exec --no-startup-id xrandr --output VGA-1 --auto --off, mode "default"
+#    bindsym y exec --no-startup-id xrandr --output HDMI-1 --auto --off, mode "default"
+#
+#    # back to normal: Enter or Escape
+#    bindsym Return mode "default"
+#    bindsym Escape mode "default"
+#}
+## Declare here the shortcut to bring the display selection menu
+#bindsym $mod+x mode "$mode_display"
 
 # disable focus following mouse
 focus_follows_mouse no
