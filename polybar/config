@@ -139,7 +139,7 @@ modules-right = powermenu arrow1 arrow2 weather arrow3 mail arrow2 network vpn e
 [module/i3]
 type = internal/i3
 ; Only show workspaces defined on the same output as the bar
-pin-workspaces = true
+;pin-workspaces = true
 
 ; Create click handler used to focus workspace
 ; Default: true
@@ -152,6 +152,8 @@ enable-scroll = true
 ; Set the scroll cycle direction
 ; Default: true
 reverse-scroll = false
+
+index-sort = true;
 
 ;   ● ○
 ;label-focused = %name%
@@ -273,8 +275,8 @@ content-background = ${colors.xcolor0}
 [module/xwindow]
 type = internal/xwindow
 
-format-foreground = ${colors.xcolor4}
-format-background = ${colors.xcolor0}
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
 
 label = "» %title:0:22:...%"
 
@@ -336,7 +338,7 @@ icon-pause = 
 icon-next = 
 label-song-maxlen = 25
 label-song-ellipsis = true
-
+label-song-foreground = ${colors.foreground}
 
 ;----------------------------------------------------------
 ;		     B A C K L I G H T
