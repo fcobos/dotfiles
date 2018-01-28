@@ -100,7 +100,7 @@ font-8 = siji:pixelsize=10;2
 tray-position = left
 tray-padding = 2
 tray-transparent = false
-tray-maxsize = 24
+tray-maxsize = 12
 ;tray-offset-x = 21%
 tray-foreground = ${colors.background}
 tray-background = ${colors.background}
