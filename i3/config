@@ -214,6 +214,10 @@ bindsym XF86AudioStop exec --no-startup-id "mpris-ctl stop"
 bindsym XF86AudioNext exec --no-startup-id "mpris-ctl next"
 bindsym XF86AudioPrev exec --no-startup-id "mpris-ctl prev"
 
+# Screeshots
+bindsym --release Print exec --no-startup-id "scrot -m ~/Pictures/ScreenShots/%s_%H%M_%d.%m.%Y_$wx$h.png"
+bindsym --release Shift+Print exec --no-startup-id "scrot -m -s ~/Pictures/ScreenShots/%s_%H%M_%d.%m.%Y_$wx$h.png"
+
 # lock, shutdown, suspend, reboot
 #set $Locker i3lock -t -e -c 0a0f14 && sleep 1
 #
