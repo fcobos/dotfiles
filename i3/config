@@ -251,7 +251,7 @@ client.background       #0a0f14
 #for_window [class="^Blender$"] border none
 #for_window [class="qutebrowser"] border none
 new_float normal
-new_window none
+new_window pixel 2
 
 # hide window borders
 #hide_edge_borders smart
