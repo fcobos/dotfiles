@@ -645,22 +645,22 @@ menu-0-0-foreground = ${colors.xcolor7}
 menu-0-0-background = ${colors.xcolor0}
 ; sleep
 menu-0-1 = "  "
-menu-0-1-exec = bash xflock4 && systemctl suspend
+menu-0-1-exec = zenity --question --text="Suspend?" --icon-name=system-suspend --default-cancel && xflock4 && systemctl suspend
 menu-0-1-foreground = ${colors.xcolor7}
 menu-0-1-background = ${colors.xcolor0}
 ; logout
 menu-0-2 = "  "
-menu-0-2-exec = killall -9 pulseaudio ; i3-msg exit
+menu-0-2-exec = zenity --question --text="Logout?" --icon-name=gnome-logout --default-cancel && (killall -9 pulseaudio ; i3-msg exit)
 menu-0-2-foreground = ${colors.xcolor7}
 menu-0-2-background = ${colors.xcolor0}
 ; reboot
 menu-0-3 = "  "
-menu-0-3-exec = systemctl reboot
+menu-0-3-exec = zenity --question --text="Reboot?" --icon-name=system-reboot --default-cancel && systemctl reboot
 menu-0-3-foreground = ${colors.xcolor7}
 menu-0-3-background = ${colors.xcolor0}
 ; shutdown
 menu-0-4 = " "
-menu-0-4-exec = systemctl poweroff
+menu-0-4-exec = zenity --question --text="Shutdown?" --icon-name=system-shutdown --default-cancel && systemctl poweroff
 menu-0-4-foreground = ${colors.xcolor7}
 menu-0-4-background = ${colors.xcolor0}
 ; end stripe

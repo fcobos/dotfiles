@@ -167,7 +167,7 @@ bindsym $mod+r mode "resize"
 #}
 
 # start compton
-exec --no-startup-id compton -cCz --inactive-dim=0.5 --use-ewmh-active-win=true
+exec --no-startup-id compton -cCz --inactive-dim=0.5 --use-ewmh-active-win
 # background
 exec --no-startup-id ~/.fehbg
 # touchpad config
