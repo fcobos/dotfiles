@@ -273,6 +273,7 @@ for_window [class="Eog"] floating enable
 #for_window [class="Nautilus"] floating enable
 for_window [class="Blueberry.py"] floating enable
 for_window [class="Arandr"] floating enable
+for_window [class="Nm-connection-editor"] floating enable
 
 ## Manual management of external displays
 # Set the shortcuts and what they do
