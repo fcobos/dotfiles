@@ -100,10 +100,10 @@ font-8 = siji:pixelsize=10;2
 tray-position = left
 tray-padding = 2
 tray-transparent = false
-tray-maxsize = 12
+tray-maxsize = 18
 ;tray-offset-x = 21%
-tray-foreground = ${colors.background}
-tray-background = ${colors.background}
+tray-foreground = ${colors.foreground}
+tray-background = ${colors.foreground}
 
 wm-restack = i3
 ;override-redirect = true
@@ -115,9 +115,9 @@ wm-restack = i3
 ;  	    M O D U L E    L A Y O U T S
 ;----------------------------------------------------------
 
-modules-left = i3 RightStripe RightArrow1 xwindow
+modules-left = i3 RightArrow2 RightArrow1 xwindow
 modules-center = MiddleArrowLeft date MiddleArrowRight
-modules-right = powermenu arrow1 LeftStripe arrow1 volume arrow2 network eth ssh vpn arrow3 battery
+modules-right = powermenu LeftStripe2 LeftStripe3 volume arrow2 network eth ssh vpn arrow3 battery
 
 ; All modules available in this config file:
 ; bspwm text xwindow tray xkeyboard filesystem mpd backlight cpu 
@@ -157,19 +157,13 @@ index-sort = true;
 
 ; ws-icon-[0-9]+ = label;icon
 ; Note that the label needs to correspond with the i3 workspace name
-;ws-icon-0 = code;♚
-;ws-icon-1 = office;♛
-;ws-icon-2 = graphics;♜
-;ws-icon-3 = mail;♝
-;ws-icon-4 = web;♞
-;ws-icon-default = ♟
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-default = 
+;ws-icon-0 = 1;
+;ws-icon-1 = 2;
+;ws-icon-2 = 3;
+;ws-icon-3 = 4;
+;ws-icon-4 = 5;
+;ws-icon-5 = 6;
+;ws-icon-default = 
 
 ; Available tags:
 ;   <label-state> (default) - gets replaced with <label-(focused|unfocused|visible|urgent)>
@@ -185,16 +179,17 @@ format = <label-state> <label-mode>
 label-focused = %index%
 ;label-focused = 
 ;label-focused = %icon%
-label-focused-foreground = ${colors.xcolor7}
-label-focused-background = ${colors.background}
+label-focused-foreground = ${colors.background}
+label-focused-background = ${colors.foreground}
 label-focused-padding = 1
 label-focused-font = 3
+label-focused-underline = ${colors.background}
 
 ;label-visible = ●
 ;label-visible = %icon%
 label-visible = %index%
-label-visible-foreground = ${colors.xcolor0}
-label-visible-background = ${colors.xcolor7}
+label-visible-foreground = ${colors.background}
+label-visible-background = ${colors.foreground}
 label-visible-padding = 1
 label-visible-font = 3
 
@@ -202,15 +197,15 @@ label-visible-font = 3
 ;label-urgent = %icon%
 label-urgent= %index%
 label-urgent-foreground = ${colors.xcolor1}
-label-urgent-background = ${colors.background}
+label-urgent-background = ${colors.foreground}
 label-urgent-padding = 1
 label-urgent-font = 3
 
 ;label-unfocused = 
 ;label-unfocused = %icon%
 label-unfocused = %index%
-label-unfocused-foreground = ${colors.xcolor4}
-label-unfocused-background = ${colors.background}
+label-unfocused-foreground = ${colors.xcolor2}
+label-unfocused-background = ${colors.foreground}
 label-unfocused-padding = 1
 label-unfocused-font = 3
 
@@ -231,6 +226,19 @@ type = custom/text
 content = ""
 content-foreground = ${colors.xcolor0}
 content-background = ${colors.xcolor4}
+
+[module/LeftStripe2]
+type = custom/text
+content = ""
+content-foreground = ${colors.xcolor7}
+content-background = ${colors.xcolor0}
+
+[module/LeftStripe3]
+type = custom/text
+content = ""
+content-foreground = ${colors.xcolor4}
+content-background = ${colors.xcolor7}
+
 
 [module/arrow1]
 type = custom/text
