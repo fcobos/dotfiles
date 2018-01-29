@@ -1,17 +1,17 @@
 * {
-    background-color:      #091F2E;
-    border-color:          #0a0f14;
-    text-color:            #98d1ce;
+    background-color: #091F2E;
+    border-color: #0a0f14;
+    text-color: #98d1ce;
 }
 
 #element selected {
-    background-color:      #195465;
+    background-color: #195465;
 }
 
 #window {
     background-color: @background-color;
-    border:           2;
-    padding:          10;
+    border: 2;
+    padding: 10;
 }
 
 #listview {
