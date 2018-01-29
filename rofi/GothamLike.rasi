@@ -7,3 +7,13 @@
 #element selected {
     background-color:      #195465;
 }
+
+#window {
+    background-color: @background-color;
+    border:           2;
+    padding:          10;
+}
+
+#listview {
+    lines: 8;
+}
