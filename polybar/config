@@ -85,7 +85,7 @@ font-0 = Hack:size=10;3
 font-1 = Hack:size=10;3
 font-2 = FontAwesome:size=10;2
 font-3 = Hack:size=10;3
-font-4 = Hack:size=28;3
+font-4 = Hack:size=10;3
 font-5 = FontAwesome:size=26;7
 font-6 = fixed:pixelsize=10;2
 font-7 = unifont:fontformat=truetype:size=8:antialias=false;0
@@ -115,9 +115,9 @@ wm-restack = i3
 ;  	    M O D U L E    L A Y O U T S
 ;----------------------------------------------------------
 
-modules-left = i3 RightStripe RightArrow1 powermenu xwindow
+modules-left = i3 RightStripe RightArrow1 RightStripe RightArrow1 xwindow
 modules-center = MiddleArrowLeft date MiddleArrowRight
-modules-right = mpd arrow1 LeftStripe arrow1 volume arrow2 network eth ssh vpn arrow3 battery
+modules-right = powermenu arrow1 LeftStripe arrow1 volume arrow2 network eth ssh vpn arrow3 battery
 
 ; All modules available in this config file:
 ; bspwm text xwindow tray xkeyboard filesystem mpd backlight cpu 
@@ -165,6 +165,11 @@ index-sort = true;
 ;ws-icon-default = ♟
 ws-icon-0 = 1;
 ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-default = 
 
 ; Available tags:
 ;   <label-state> (default) - gets replaced with <label-(focused|unfocused|visible|urgent)>
@@ -173,34 +178,37 @@ format = <label-state> <label-mode>
 ; Available tokens:
 ;   %mode%
 ; Default: %mode%
-label-mode = %mode%
+;label-mode = %mode%
 
 ;   ● ○
 ;label-focused = %name%
-;label-focused = %index%
-label-focused = 
-;label-focused = %icon% 
+label-focused = %index%
+;label-focused = 
+;label-focused = %icon%
 label-focused-foreground = ${colors.xcolor7}
 label-focused-background = ${colors.background}
 label-focused-padding = 1
 label-focused-font = 3
 
-label-visible = ●
+;label-visible = ●
 ;label-visible = %icon%
+label-visible = %index%
 label-visible-foreground = ${colors.xcolor0}
 label-visible-background = ${colors.xcolor7}
 label-visible-padding = 1
 label-visible-font = 3
 
-label-urgent = 
+;label-urgent = 
 ;label-urgent = %icon%
+label-urgent= %index%
 label-urgent-foreground = ${colors.xcolor1}
 label-urgent-background = ${colors.background}
 label-urgent-padding = 1
 label-urgent-font = 3
 
-label-unfocused = 
+;label-unfocused = 
 ;label-unfocused = %icon%
+label-unfocused = %index%
 label-unfocused-foreground = ${colors.xcolor4}
 label-unfocused-background = ${colors.background}
 label-unfocused-padding = 1
@@ -291,7 +299,7 @@ type = internal/xwindow
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
-label = "» %title:0:22:...%"
+label = " » %title:0:22:...%"
 
 
 ;----------------------------------------------------------
@@ -343,12 +351,14 @@ label-unmounted-background = ${colors.xcolor4}
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+; 
+;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next> 
+format-online = <label-song> 
+;icon-prev = 
+;icon-stop = 
+;icon-play = 
+;icon-pause = 
+;icon-next = 
 label-song-maxlen = 25
 label-song-ellipsis = true
 label-song-foreground = ${colors.foreground}
@@ -644,8 +654,10 @@ label =  %notifications%
 type = custom/menu
 
 ;      » 
-label-open = " "
-label-open-font = 6
+;label-open = " "
+;label-open-font = 6
+label-open = "    "
+label-open-font = 3
 label-open-foreground = ${colors.xcolor2}
 label-open-background = ${colors.xcolor0}
 label-close = 
@@ -682,7 +694,8 @@ menu-0-4-foreground = ${colors.xcolor7}
 menu-0-4-background = ${colors.xcolor0}
 ; end stripe
 menu-0-5 = " "
-menu-0-5-font = 6
+;menu-0-5-font = 6
+menu-0-5-font = 3
 menu-0-5-foreground = ${colors.xcolor2}
 menu-0-5-background = ${colors.xcolor0}
 
