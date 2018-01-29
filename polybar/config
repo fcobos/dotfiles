@@ -82,13 +82,13 @@ module-margin-right = 0
 ;----------------------------------------------------------
 
 font-0 = Hack:size=10;3
-font-1 = Hack:size=10;3
+font-1 = Hack:size=10;6
 font-2 = FontAwesome:size=10;2
 font-3 = Hack:size=10;3
 font-4 = Hack:size=10;3
 font-5 = FontAwesome:size=26;7
 font-6 = fixed:pixelsize=10;2
-font-7 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-7 = unifont:fontformat=truetype:size=10:antialias=false;0
 font-8 = siji:pixelsize=10;2
 ; Extra symbols: http://fontawesome.io/cheatsheet/
 
@@ -116,8 +116,8 @@ wm-restack = i3
 ;----------------------------------------------------------
 
 modules-left = i3 RightArrow2 RightArrow1 xwindow
-modules-center = MiddleArrowLeft date MiddleArrowRight
-modules-right = powermenu LeftStripe2 LeftStripe3 volume arrow2 network eth ssh vpn arrow3 battery
+modules-center = arrow1 LeftStripe3 date RightArrow2 RightArrow1
+modules-right = powermenu arrow1 LeftStripe3 volume network eth ssh vpn battery
 
 ; All modules available in this config file:
 ; bspwm text xwindow tray xkeyboard filesystem mpd backlight cpu 
@@ -164,6 +164,13 @@ index-sort = true;
 ;ws-icon-4 = 5;
 ;ws-icon-5 = 6;
 ;ws-icon-default = 
+;  ❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ ❿ 
+;ws-icon-0 = 1;❶
+;ws-icon-1 = 2;❷
+;ws-icon-2 = 3;❸
+;ws-icon-3 = 4;❹
+;ws-icon-4 = 5;❺
+;ws-icon-5 = 6;❻
 
 ; Available tags:
 ;   <label-state> (default) - gets replaced with <label-(focused|unfocused|visible|urgent)>
@@ -176,38 +183,34 @@ format = <label-state> <label-mode>
 
 ;   ● ○
 ;label-focused = %name%
-label-focused = %index%
-;label-focused = 
+;label-focused = %index%
+label-focused = 
 ;label-focused = %icon%
-label-focused-foreground = ${colors.background}
+label-focused-foreground = ${colors.xcolor4}
 label-focused-background = ${colors.foreground}
+label-focused-underline = ${colors.xcolor4}
 label-focused-padding = 1
-label-focused-font = 3
-label-focused-underline = ${colors.background}
 
-;label-visible = ●
+label-visible = ●
 ;label-visible = %icon%
-label-visible = %index%
+;label-visible = %index%
 label-visible-foreground = ${colors.background}
 label-visible-background = ${colors.foreground}
 label-visible-padding = 1
-label-visible-font = 3
 
-;label-urgent = 
+label-urgent = 
 ;label-urgent = %icon%
-label-urgent= %index%
+;label-urgent= %index%
 label-urgent-foreground = ${colors.xcolor1}
 label-urgent-background = ${colors.foreground}
 label-urgent-padding = 1
-label-urgent-font = 3
 
-;label-unfocused = 
+label-unfocused = 
 ;label-unfocused = %icon%
-label-unfocused = %index%
-label-unfocused-foreground = ${colors.xcolor2}
+;label-unfocused = %index%
+label-unfocused-foreground = ${colors.xcolor4}
 label-unfocused-background = ${colors.foreground}
 label-unfocused-padding = 1
-label-unfocused-font = 3
 
 
 ;----------------------------------------------------------
@@ -236,8 +239,8 @@ content-background = ${colors.xcolor0}
 [module/LeftStripe3]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor4}
-content-background = ${colors.xcolor7}
+content-foreground = ${colors.xcolor7}
+content-background = ${colors.xcolor4}
 
 
 [module/arrow1]
@@ -288,6 +291,7 @@ type = custom/text
 content = " "
 content-foreground = ${colors.xcolor4}
 content-background = ${colors.xcolor0}
+
 ;◥ ◤◢ ◣
 [module/MiddleArrowRight]
 type = custom/text
@@ -295,7 +299,6 @@ type = custom/text
 content = ""
 content-foreground = ${colors.xcolor4}
 content-background = ${colors.xcolor0}
-
 
 ;----------------------------------------------------------
 ;		       X W I N D O W
@@ -497,8 +500,8 @@ label-disconnected-background = ${colors.xcolor7}
 type = internal/date
 interval = 1
 
-format-foreground = ${colors.xcolor7}
-format-background = ${colors.xcolor4}
+format-foreground = ${colors.xcolor4}
+format-background = ${colors.xcolor7}
 
 date = ""
 ;date-alt = "  %Y/%m/%d"
@@ -528,24 +531,24 @@ format-volume = <ramp-volume><label-volume>
 ;     
 
 label-volume = %percentage%
-label-volume-foreground = ${colors.xcolor7}
-label-volume-background = ${colors.xcolor4}
+label-volume-foreground = ${colors.xcolor4}
+label-volume-background = ${colors.xcolor7}
 label-muted = "  muted"
-label-muted-foreground = ${colors.xcolor7}
-label-muted-background = ${colors.xcolor4}
+label-muted-foreground = ${colors.xcolor4}
+label-muted-background = ${colors.xcolor7}
 
 ramp-volume-0 = "  "
-ramp-volume-0-foreground = ${colors.xcolor7}
-ramp-volume-0-background = ${colors.xcolor4}
+ramp-volume-0-foreground = ${colors.xcolor4}
+ramp-volume-0-background = ${colors.xcolor7}
 ramp-volume-1 = "  "
-ramp-volume-1-foreground = ${colors.xcolor7}
-ramp-volume-1-background = ${colors.xcolor4}
+ramp-volume-1-foreground = ${colors.xcolor4}
+ramp-volume-1-background = ${colors.xcolor7}
 ramp-volume-2 = "  "
-ramp-volume-2-foreground = ${colors.xcolor7}
-ramp-volume-2-background = ${colors.xcolor4}
+ramp-volume-2-foreground = ${colors.xcolor4}
+ramp-volume-2-background = ${colors.xcolor7}
 ramp-volume-3 = "  "
-ramp-volume-3-foreground = ${colors.xcolor7}
-ramp-volume-3-background = ${colors.xcolor4}
+ramp-volume-3-foreground = ${colors.xcolor4}
+ramp-volume-3-background = ${colors.xcolor7}
 
 bar-volume-width = 10
 bar-volume-background = #495858
@@ -574,24 +577,24 @@ adapter = AC0
 full-at = 99
 
 format-charging = <animation-charging> <label-charging>
-format-charging-foreground = ${colors.xcolor7}
-format-charging-background = ${colors.xcolor4}
+format-charging-foreground = ${colors.xcolor4}
+format-charging-background = ${colors.xcolor7}
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-foreground = ${colors.xcolor7}
-format-discharging-background = ${colors.xcolor4}
+format-discharging-foreground = ${colors.xcolor4}
+format-discharging-background = ${colors.xcolor7}
 format-full = <label-full>
-format-full-foreground = ${colors.xcolor7}
-format-full-background = ${colors.xcolor4}
+format-full-foreground = ${colors.xcolor4}
+format-full-background = ${colors.xcolor7}
 
 label-charging = "%percentage%% "
 label-discharging = "%percentage%% "
-label-discharging-foreground = ${colors.xcolor7}
+label-discharging-foreground = ${colors.xcolor4}
 label-full = "  %percentage%% "
 ; 
 ramp-capacity-0 = " "
-ramp-capacity-0-foreground = ${colors.xcolor4}
+ramp-capacity-0-foreground = ${colors.foreground}
 ramp-capacity-1 = " "
-ramp-capacity-1-foreground = ${colors.xcolor4}
+ramp-capacity-1-foreground = ${colors.foreground}
 ramp-capacity-2 = " "
 ramp-capacity-3 = " "
 ramp-capacity-4 = " "
