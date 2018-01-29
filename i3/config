@@ -43,6 +43,7 @@ bindsym $mod+Shift+q kill
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -fn "Hack-9" -nf \#98d1ce -nb \#0a0f14 -sb \#195465'
 bindsym $mod+d exec --no-startup-id rofi -show drun -theme GothamLike
+bindsym Mod1+Tab exec --no-startup-id rofi -show window -theme GothamLike
 
 # change focus
 bindsym $mod+h focus left
