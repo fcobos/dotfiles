@@ -1,5 +1,6 @@
 [global_config]
   enabled_plugins = ,
+  geometry_hinting = True
   handle_size = 4
   inactive_color_offset = 0.5
   suppress_multiple_term_dialog = True
