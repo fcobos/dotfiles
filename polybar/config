@@ -115,7 +115,7 @@ wm-restack = i3
 ;  	    M O D U L E    L A Y O U T S
 ;----------------------------------------------------------
 
-modules-left = i3 RightStripe RightArrow1 RightStripe RightArrow1 xwindow
+modules-left = i3 RightStripe RightArrow1 xwindow
 modules-center = MiddleArrowLeft date MiddleArrowRight
 modules-right = powermenu arrow1 LeftStripe arrow1 volume arrow2 network eth ssh vpn arrow3 battery
 
