@@ -14,23 +14,22 @@ xterm.vt100.saveLines: 10000
 xterm.vt100.scrollBar: false
 !xterm*utf8:   2
 xterm*locale:           true
-xterm*VT100.geometry:   80x25
+xterm*VT100.geometry:   80x24
 xterm*dynamicColors:    true
 xterm*eightBitInput:    false
-xterm*faceName: xft:Hack:size=9:antialias=true
-!xterm*faceNameDoublesize: xft:FontAwesome:size=9
-!xterm.vt100.wideFont: xft:FontAwesome:size=9:antialias=true
-xterm*boldFont: xft:Hack Bold:size=9:antialias=true
+XTerm.vt100*faceName:   Hack
+XTerm*faceSize: 9
+XTerm*renderFont: true
 
 ! URxvt
 URxvt*.depth: 24
 URxvt.scrollBar: false
 URxvt.cursorBlink: false
-URxvt*font:     xft:Hack:size=9, xft:Symbola, xft:Noto Emoji, xfg:FontAwesome, xft:Droid Sans Fallback:pixelsize=9:antialias=true
-URxvt*boldFont: xft:Hack:bold:size=9, xft:Symbola, xft:Noto Emoji, xfg:FontAwesome, xft:Droid Sans Fallback:pixelsize=9:Bold:antialias=true
+URxvt*font:     xft:Hack:size=9
+URxvt*boldFont: xft:Hack:size=9:Bold;
 URxvt.letterSpace: -2
 URxvt*selectToClipboard:  true
-URxvt*saveLines:          10000
+URxvt*saveLines:          2000
 URxvt.url-launcher: xdg-open
 
 ! xst
