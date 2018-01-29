@@ -25,8 +25,9 @@ XTerm*renderFont: true
 URxvt*.depth: 24
 URxvt.scrollBar: false
 URxvt.cursorBlink: false
-URxvt*font:     xft:Hack:size=9
-URxvt*boldFont: xft:Hack:size=9:Bold;
+URxvt.font:     xft:Hack:size=9, xft:Hack\ Nerd\ Font:size=9, xft:Symbola:size=9, xft:Unifont:size=9
+!URxvt.boldFont: xft:Hack:size=9:bold, xft:Symbola, xft:Unifont
+!URxvt.italicFont: xft:Hack:size=9:oblique, xft:Symbola, xft:Unifont
 URxvt.letterSpace: -2
 URxvt*selectToClipboard:  true
 URxvt*saveLines:          2000
