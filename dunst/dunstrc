@@ -11,7 +11,7 @@ font = Hack 9
 # <http://developer.gnome.org/pango/stable/PangoMarkupFormat.html>.
 # If markup is not allowed, those tags will be stripped out of the
 # message.
-markup = yes
+markup = full
 plain_text = no
 
 # The format of the message.  Possible variables are:
@@ -43,7 +43,7 @@ bounce_freq = 0
 # Show age of message if message is older than show_age_threshold
 # seconds.
 # Set to -1 to disable.
-show_age_threshold = 10
+show_age_threshold = 60
 
 # Split notifications into multiple lines if they don't fit into
 # geometry.
@@ -182,19 +182,19 @@ context = ctrl+shift+period
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#3B7C87"
+frame_color = "#26a98b"
 foreground = "#195465"
 background = "#26a98b"
 timeout = 4
 
 [urgency_normal]
-frame_color = "#5B8234"
+frame_color = "#195465"
 foreground = "#98d1ce"
 background = "#195465"
 timeout = 6
 
 [urgency_critical]
-frame_color = "#B7472A"
+frame_color = "#edb54b"
 foreground = "#c33027"
 background = "#edb54b"
 timeout = 8
