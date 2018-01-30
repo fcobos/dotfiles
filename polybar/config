@@ -310,7 +310,7 @@ type = internal/xwindow
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
-label = " » %title:0:22:...%"
+label = " %title:0:22:...%"
 
 
 ;----------------------------------------------------------
