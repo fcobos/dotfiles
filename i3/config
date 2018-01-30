@@ -260,7 +260,7 @@ set_from_resource $bright_cyan color14 #000000
 set_from_resource $bright_white color15 #000000
 #                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
 client.focused          $black      $black      $white      $black      $black
-client.unfocused        $black      $black      $white      $black      $black
+client.unfocused        $black      $bright_black      $green      $black      $black
 client.focused_inactive $black      $black      $white      $black      $black
 client.urgent           $red        $red        $black      $red        $red
 client.background       $black
