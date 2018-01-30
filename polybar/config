@@ -1,8 +1,3 @@
-;=========================================================;
-;                Caligula's polybar config.               ;
-;=========================================================;
-; To refresh while editing do: $ polybar -r rome
-
 ;----------------------------------------------------------
 ;			C O L O R S
 ;----------------------------------------------------------
@@ -43,7 +38,7 @@ foreground = ${xrdb:foreground}
 margin-top = 0
 margin-bottom = 0
 
-[bar/rome]
+[bar/le-bar]
 ;monitor = ${env:MONITOR:LVDS-1}
 ;monitor-fallback = ${env:MONITOR:eDP-1}
 ;dpi = ${xrdb:Xft.dpi:136}
@@ -97,12 +92,12 @@ font-8 = siji:pixelsize=10;2
 ;			  T R A Y
 ;----------------------------------------------------------
 
-tray-position = left
-tray-padding = 2
+tray-position = right
+tray-padding = 0
 tray-transparent = false
 tray-maxsize = 18
 ;tray-offset-x = 21%
-tray-foreground = ${colors.foreground}
+tray-foreground = ${colors.background}
 tray-background = ${colors.foreground}
 
 wm-restack = i3
@@ -125,7 +120,7 @@ modules-right = powermenu arrow1 LeftStripe3 volume network eth ssh vpn battery
 ; appmenu powermenu mail weather music ssh vpn btc etherium
 
 [bar/secondary]
-inherit = bar/rome
+inherit = bar/le-bar
 bottom = true
 modules-left = mpd music github
 modules-center = 

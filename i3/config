@@ -121,6 +121,9 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # move to next workspace
 bindsym $mod+Tab workspace next
+# move back and forth
+bindsym $mod+Control+Left workspace prev
+bindsym $mod+Control+Right workspace next
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
