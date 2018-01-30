@@ -75,6 +75,5 @@ set nowrap
 ":nnoremap k kzz
 
 set termguicolors
-colorscheme gotham
-"let g:airline_theme = "solarized"
+colorscheme base16-grayscale-dark
 

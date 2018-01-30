@@ -1,0 +1,19 @@
+* {
+    background-color: #252525;
+    border-color: #525252;
+    text-color: #b9b9b9;
+}
+
+#element selected {
+    background-color: #686868;
+}
+
+#window {
+    background-color: @background-color;
+    border: 2;
+    padding: 10;
+}
+
+#listview {
+    lines: 8;
+}

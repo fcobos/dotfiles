@@ -5,7 +5,10 @@
   inactive_color_offset = 0.5
   suppress_multiple_term_dialog = True
   title_hide_sizetext = True
-  title_transmit_bg_color = "#2e3436"
+  title_transmit_fg_color = "#b9b9b9"
+  title_transmit_bg_color = "#101010"
+  title_inactive_fg_color = "#b9b9b9"
+  title_inactive_bg_color = "#525252"
 [keybindings]
 [layouts]
   [[default]]
@@ -19,14 +22,14 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#0a0f14"
     copy_on_selection = True
     cursor_blink = False
-    cursor_color = "#7b7b7b"
     font = Hack 9
-    foreground_color = "#98d1ce"
-    palette = "#0a0f14:#c33027:#26a98b:#edb54b:#195465:#4e5165:#33859d:#98d1ce:#416479:#d26939:#478879:#c5a974:#195465:#888ba5:#599caa:#d3ebe9"
     scrollback_lines = 10000
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
+    palette = "#101010:#7c7c7c:#8e8e8e:#a0a0a0:#686868:#747474:#868686:#b9b9b9:#525252:#7c7c7c:#8e8e8e:#a0a0a0:#686868:#747474:#868686:#f7f7f7"
+    foreground_color = "#b9b9b9"
+    background_color = "#101010"
+    cursor_color = "#b9b9b9"

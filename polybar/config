@@ -198,7 +198,7 @@ label-visible-foreground = ${colors.background}
 label-visible-background = ${colors.foreground}
 label-visible-padding = 1
 
-label-urgent = 
+label-urgent = 
 ;label-urgent = %icon%
 ;label-urgent= %index%
 label-urgent-foreground = ${colors.xcolor1}

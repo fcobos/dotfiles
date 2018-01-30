@@ -42,8 +42,8 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -fn "Hack-9" -nf \#98d1ce -nb \#0a0f14 -sb \#195465'
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme GothamLike
-bindsym Mod1+Tab exec --no-startup-id rofi -show window -theme GothamLike
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme dark-gray
+bindsym Mod1+Tab exec --no-startup-id rofi -show window -theme dark-gray
 
 # change focus
 bindsym $mod+h focus left
@@ -239,14 +239,28 @@ bindsym --release Shift+Print exec --no-startup-id "scrot -m -s ~/Pictures/Scree
 #bindsym $mod+Pause mode "$mode_system"
 
 # colors
-# class                 border  backgr. text    indicator child_border
-client.focused          #091F2E #091F2E #98d1ce #091F2E   #091F2E
-client.focused_inactive #4e5165 #4e5165 #888ba5 #484e50   #4e5165
-client.unfocused        #4e5165 #4e5165 #888ba5 #4e5165   #4e5165
-client.urgent           #c33027 #d26939 #98d1ce #d26939   #d26939
-client.placeholder      #0a0f14 #0a0f14 #98d1ce #0a0f14   #0a0f14
-
-client.background       #0a0f14
+set_from_resource $black color0 #000000
+set_from_resource $red color1 #000000
+set_from_resource $green color2 #000000
+set_from_resource $yellow color3 #000000
+set_from_resource $blue color4 #000000
+set_from_resource $magenta color5 #000000
+set_from_resource $cyan color6 #000000
+set_from_resource $white color7 #000000
+set_from_resource $bright_black color8 #000000
+set_from_resource $bright_red color9 #000000
+set_from_resource $bright_green color10 #000000
+set_from_resource $bright_yellow color11 #000000
+set_from_resource $bright_blue color12 #000000
+set_from_resource $bright_magenta color13 #000000
+set_from_resource $bright_cyan color14 #000000
+set_from_resource $bright_white color15 #000000
+#                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
+client.focused          $black      $black      $white      $black      $black
+client.unfocused        $black      $black      $white      $black      $black
+client.focused_inactive $black      $black      $white      $black      $black
+client.urgent           $red        $red        $black      $red        $red
+client.background       $black
 
 # disable window title for certain programs
 #for_window [class="^Chromium-browser$" title=" - Chromium$"] border none
