@@ -112,10 +112,10 @@ wm-restack = i3
 
 modules-left = i3 RightArrow2 RightArrow1 xwindow
 modules-center = arrow1 LeftStripe3 date RightArrow2 RightArrow1
-modules-right = powermenu arrow1 LeftStripe3 volume network eth ssh vpn battery
+modules-right = powermenu arrow1 LeftStripe3 volume network eth vpn battery
 
 ; All modules available in this config file:
-; bspwm text xwindow tray xkeyboard filesystem mpd backlight cpu 
+; i3 text xwindow tray xkeyboard filesystem mpd backlight cpu 
 ; memory network eth date volume battery temperature github 
 ; appmenu powermenu mail weather music ssh vpn btc etherium
 
