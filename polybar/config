@@ -800,7 +800,7 @@ click-left = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/
 [module/ssh]
 type = custom/script
 exec = echo + SSH
-exec-if = pgrep -i ssh
+exec-if = pgrep ssh
 interval = 3.0
 format-foreground = ${colors.xcolor4}
 format-background = ${colors.xcolor7}
@@ -814,7 +814,7 @@ scroll-down = echo scroll down %counter%
 [module/vpn]
 type = custom/script
 exec = echo + VPN
-exec-if = pgrep -i vpn
+exec-if = pgrep vpn
 interval = 3.0
 format-foreground = ${colors.xcolor4}
 format-background = ${colors.xcolor7}
