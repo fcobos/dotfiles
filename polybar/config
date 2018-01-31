@@ -93,8 +93,8 @@ wm-restack = i3
 ;----------------------------------------------------------
 
 modules-left = i3 RightArrow2 RightArrow1 xwindow
-modules-center = arrow1 LeftStripe3 date RightArrow2 RightArrow1
-modules-right = powermenu arrow1 LeftStripe3 volume network eth vpn battery
+;modules-center = arrow1 LeftStripe3 date RightArrow2 RightArrow1
+modules-right = powermenu arrow1 LeftStripe3 volume network eth vpn battery date
 
 ; All modules available in this config file:
 ; i3 text xwindow tray xkeyboard filesystem mpd backlight cpu 
@@ -267,8 +267,9 @@ type = internal/xwindow
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
-label = " %title:0:22:...%"
-
+;label = " %title:0:22:...%"
+label = " %title%"
+label-maxlen = 32
 
 ;----------------------------------------------------------
 ;		    X K E Y B O A R D
@@ -460,16 +461,18 @@ interval = 1
 format-foreground = ${colors.xcolor4}
 format-background = ${colors.xcolor7}
 
-date = ""
+;date = ""
 ;date-alt = "  %Y/%m/%d"
-date-alt = "  %a.%e.%b"
-time = "   %H:%M    "
-time-alt = ""
+;date-alt = "  %a.%e.%b"
+date = " %a.%e.%b"
+;time = "   %H:%M    "
+time = " %H:%M"
+;time-alt = ""
 ;date = "%Y/%m/%d | "
 ;date-alt = "It is day %j, week %V, of year %y of the %Cth century."
 ;time = "%I:%M:%S %p"
 ;time-alt = " %z %Z"
-label = "  %date%%time%  "
+label = "%date%%time% "
 
 
 ;----------------------------------------------------------
