@@ -194,9 +194,9 @@ background = "#525252"
 timeout = 6
 
 [urgency_critical]
-frame_color = "#101010"
+frame_color = "#AB4642"
 foreground = "#b9b9b9"
-background = "#101010"
+background = "#AB4642"
 timeout = 8
 
 

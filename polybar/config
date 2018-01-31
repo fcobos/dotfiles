@@ -175,7 +175,7 @@ label-visible-padding = 1
 label-urgent = 
 ;label-urgent = %icon%
 ;label-urgent= %index%
-label-urgent-foreground = ${colors.xcolor1}
+label-urgent-foreground = ${colors.red}
 label-urgent-background = ${colors.foreground}
 label-urgent-padding = 1
 
@@ -695,13 +695,13 @@ type = custom/menu
 ;       
 label-open = " "
 label-open-font = 6
-label-open-foreground = ${colors.xcolor1}
+label-open-foreground = ${colors.red}
 label-open-background = ${colors.xcolor0}
 label-close = " "
 label-close-foreground = ${colors.xcolor7}
 label-close-background = ${colors.xcolor0}
 label-separator = " "
-label-separator-foreground = ${colors.xcolor1}
+label-separator-foreground = ${colors.red}
 label-separator-background = ${colors.xcolor0}
 
 ;                   
@@ -738,7 +738,7 @@ menu-0-5-background = ${colors.xcolor0}
 ; end stripe
 menu-0-6 = " "
 menu-0-6-font = 6
-menu-0-6-foreground = ${colors.xcolor1}
+menu-0-6-foreground = ${colors.red}
 menu-0-6-background = ${colors.xcolor0}
 
 
@@ -756,14 +756,14 @@ interval = 120
 label = "  %output:0:5:...% "
 ;  
 format-foreground = ${colors.xcolor7}
-format-background = ${colors.xcolor1}
+format-background = ${colors.red}
 
 [module/weather]
 type = custom/script
 exec = $HOME/.config/polybar/weather.py
 interval = 120
 label = "  %output:0:22:...% "
-format-foreground = ${colors.xcolor1}
+format-foreground = ${colors.red}
 format-background = ${colors.xcolor7}
 
 [module/music]
@@ -773,7 +773,7 @@ exec-if = pgrep -x spotify
 interval = 3
 label = "  %output:0:30:% "
 format-foreground = ${colors.xcolor7}
-format-background = ${colors.xcolor1}
+format-background = ${colors.red}
 click-left = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
 [module/ssh]
@@ -808,7 +808,7 @@ scroll-down = echo scroll down %counter%
 type = custom/script
 exec = curl -s https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD | python -c "import json, sys; print(json.load(sys.stdin)['last'])"
 interval = 60.0
-format-foreground = ${colors.xcolor1}
+format-foreground = ${colors.red}
 format-background = ${colors.xcolor7}
 label = " $%output:0:10% "
 ;label = " BTC:$%output:0:10% "
@@ -818,7 +818,7 @@ type = custom/script
 exec = curl -s https://apiv2.bitcoinaverage.com/indices/global/ticker/ETHUSD | python -c "import json, sys; print(json.load(sys.stdin)['last'])"
 interval = 60.0
 format-foreground = ${colors.xcolor7}
-format-background = ${colors.xcolor1}
+format-background = ${colors.red}
 label = " $%output:0:7% "
 ;label = " ETH:$%output:0:7% "
 

@@ -39,78 +39,41 @@ st.font: Hack:size=9:antialias=true;
 st.bold_font: 1
 st.borderpx: 0
 
-! Colors {{{
-!*.foreground:   #98d1ce
-!*.background:   #0a0f14
-!*.cursorColor:  #98d1ce
-!
-!*.color0:       #0a0f14
-!*.color8:       #416478
-!
-!*.color1:       #c33027
-!*.color9:       #d26939
-!
-!*.color2:       #26a98b
-!*.color10:      #478879
-!
-!*.color3:       #edb54b
-!*.color11:      #c5a974
-!
-!*.color4:       #195465
-!*.color12:      #195465
-!
-!*.color5:       #4e5165
-!*.color13:      #888ba5
-!
-!*.color6:       #33859d
-!*.color14:      #599caa
-!
-!*.color7:       #98d1ce
-!*.color15:      #d3ebe9
-! }}}
+! colors
+! special
+*.foreground:   #d8d8d8
+*.background:   #181818
+*.cursorColor:  #d8d8d8
 
-! Base16 Default Dark
-! Scheme: Chris Kempson (http://chriskempson.com)
+! black
+*.color0:       #181818
+*.color8:       #585858
 
-#define base00 #181818
-#define base01 #282828
-#define base02 #383838
-#define base03 #585858
-#define base04 #b8b8b8
-#define base05 #d8d8d8
-#define base06 #e8e8e8
-#define base07 #f8f8f8
-#define base08 #ab4642
-#define base09 #dc9656
-#define base0A #f7ca88
-#define base0B #a1b56c
-#define base0C #86c1b9
-#define base0D #7cafc2
-#define base0E #ba8baf
-#define base0F #a16946
+! red
+*.color1:       #ab4642
+*.color9:       #dc9656
 
-*foreground:   base05
-#ifdef background_opacity
-*background:   [background_opacity]base00
-#else
-*background:   base00
-#endif
-*cursorColor:  base05
+! green
+*.color2:       #a1b56c
+*.color10:      #c5d59b
 
-*color0:       base00
-*color1:       base08
-*color2:       base0B
-*color3:       base0A
-*color4:       base0D
-*color5:       base0E
-*color6:       base0C
-*color7:       base05
+! yellow
+*.color3:       #f7ca88
+*.color11:      #f0c674
 
-*color8:       base03
-*color9:       base09
-*color10:      base01
-*color11:      base02
-*color12:      base04
-*color13:      base06
-*color14:      base0F
-*color15:      base07
+! blue
+*.color4:       #7cafc2
+*.color12:      #81a2be
+
+! magenta
+*.color5:       #ba8baf
+*.color13:      #b294bb
+
+! cyan
+*.color6:       #86c1b9
+*.color14:      #8abeb7
+
+! white
+*.color7:       #d8d8d8
+*.color15:      #c5c8c6
+
