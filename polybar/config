@@ -3,13 +3,6 @@
 ;----------------------------------------------------------
 
 [colors]
-peach = #FFCD98
-lime = #CADC79
-salmon = #d97464
-darkgrey = #2e2e2e
-lightgrey = #444444
-alert = #bd2c40
-
 xcolor0 = ${xrdb:color0}
 xcolor1 = ${xrdb:color1}
 xcolor2 = ${xrdb:color2}
@@ -51,19 +44,6 @@ fixed-center = true
 background = ${colors.xcolor0}
 foreground = ${colors.xcolor4}
 
-overline-size = 0
-overline-color = ${colors.xcolor4}
-underline-size = 0
-underline-color = ${colors.xcolor4}
-;label-name-overline = ${colors.colorname}
-;format-param-underline = ${colors.colorname}
-
-border-bottom-size = 0
-border-bottom-color = ${colors.xcolor4}
-border-top-size = 0
-border-top-color = ${colors.xcolor4}
-border-color-foreground = ${colors.peach}
-
 spacing = 0
 padding-left = 0
 padding-right = 0
@@ -102,9 +82,6 @@ tray-background = ${colors.foreground}
 
 wm-restack = i3
 ;override-redirect = true
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
 
 ;----------------------------------------------------------
 ;  	    M O D U L E    L A Y O U T S
@@ -215,7 +192,7 @@ label-unfocused-padding = 1
 [module/pipe]
 type = custom/text
 content = "|"
-content-foreground = ${colors.darkgrey}
+content-foreground = ${colors.foreground}
 content-background = ${colors.xcolor0}
 content-padding = 1
 
@@ -322,7 +299,7 @@ format-background = ${colors.xcolor0}
 
 label-layout =  %layout%
 label-indicator-padding = 1
-label-indicator-background = ${colors.salmon}
+label-indicator-background = ${colors.background}
 
 
 ;----------------------------------------------------------
