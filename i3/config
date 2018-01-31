@@ -266,6 +266,8 @@ client.background       $black
 #for_window [class="qutebrowser"] border none
 new_float normal
 new_window pixel 8
+# firefox does not like that big border and fucks up right click menu.
+for_window [class="^Firefox$" title=" - Mozilla Firefox$"] border pixel 2
 
 # hide window borders
 #hide_edge_borders smart
