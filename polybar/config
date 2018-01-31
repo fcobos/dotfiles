@@ -41,10 +41,10 @@ margin-bottom = 0
 bottom = false
 width = 100%
 height = 17
-offset-x = 0%
-offset-y = 0%
+;offset-x = 0%
+;offset-y = 0%
 fixed-center = true
-background = ${colors.xcolor0}
+background = ${colors.background}
 foreground = ${colors.xcolor4}
 
 spacing = 0
@@ -53,6 +53,7 @@ padding-right = 0
 ;label-padding = 2
 module-margin-left = 0
 module-margin-right = 0
+line-size = 3
 
 
 ;----------------------------------------------------------
@@ -68,6 +69,7 @@ font-5 = FontAwesome:size=26;7
 font-6 = fixed:pixelsize=10;2
 font-7 = unifont:fontformat=truetype:size=10:antialias=false;0
 font-8 = siji:pixelsize=10;2
+
 ; Extra symbols: http://fontawesome.io/cheatsheet/
 
 
@@ -113,22 +115,9 @@ modules-right = powermenu arrow1 arrow2 weather arrow3 mail arrow2 network vpn e
 
 [module/i3]
 type = internal/i3
-; Only show workspaces defined on the same output as the bar
-;pin-workspaces = true
-
-; Create click handler used to focus workspace
-; Default: true
-enable-click = true
-
-; Create scroll handlers used to cycle workspaces
-; Default: true
-enable-scroll = true
-
-; Set the scroll cycle direction
-; Default: true
-reverse-scroll = false
-
+format = <label-state> <label-mode>
 index-sort = true;
+wrapping-scroll = false
 
 ; ws-icon-[0-9]+ = label;icon
 ; Note that the label needs to correspond with the i3 workspace name
@@ -147,42 +136,35 @@ index-sort = true;
 ;ws-icon-4 = 5;❺
 ;ws-icon-5 = 6;❻
 
-; Available tags:
-;   <label-state> (default) - gets replaced with <label-(focused|unfocused|visible|urgent)>
-;   <label-mode> (default)
-format = <label-state> <label-mode>
-; Available tokens:
-;   %mode%
-; Default: %mode%
-;label-mode = %mode%
-
 ;   ● ○
 ;label-focused = %name%
-;label-focused = %index%
-label-focused = 
+label-focused = %index%
+;label-focused = 
 ;label-focused = %icon%
-label-focused-foreground = ${colors.xcolor4}
+;label-focused-foreground = ${colors.xcolor4}
 label-focused-background = ${colors.foreground}
 label-focused-underline = ${colors.xcolor4}
 label-focused-padding = 1
 
-label-visible = ●
+;label-visible = ●
 ;label-visible = %icon%
-;label-visible = %index%
-label-visible-foreground = ${colors.background}
+label-visible = %index%
+;label-visible-foreground = ${colors.background}
 label-visible-background = ${colors.foreground}
+label-visible-underline = ${colors.xcolor4}
 label-visible-padding = 1
 
-label-urgent = 
+;label-urgent = 
 ;label-urgent = %icon%
-;label-urgent= %index%
+label-urgent= %index%
 label-urgent-foreground = ${colors.red}
 label-urgent-background = ${colors.foreground}
+label-urgent-underline = ${colors.red}
 label-urgent-padding = 1
 
-label-unfocused = 
+;label-unfocused = 
 ;label-unfocused = %icon%
-;label-unfocused = %index%
+label-unfocused = %index%
 label-unfocused-foreground = ${colors.xcolor4}
 label-unfocused-background = ${colors.foreground}
 label-unfocused-padding = 1
