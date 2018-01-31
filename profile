@@ -37,3 +37,28 @@ fi
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/felix/.sdkman"
 [[ -s "/home/felix/.sdkman/bin/sdkman-init.sh" ]] && source "/home/felix/.sdkman/bin/sdkman-init.sh"
+
+# linux console colors
+if [ "$TERM" = "linux" ]; then
+  /bin/echo -e "
+  \e]P0181818
+  \e]P1ab4642
+  \e]P2a1b56c
+  \e]P3f7ca88
+  \e]P47cafc2
+  \e]P5ba8baf
+  \e]P686c1b9
+  \e]P7d8d8d8
+  \e]P8585858
+  \e]P9dc9656
+  \e]PAc5d59b
+  \e]PBf0c674
+  \e]PC81a2be
+  \e]PDb294bb
+  \e]PE8abeb7
+  \e]PFc5c8c6
+  "
+  # get rid of artifacts
+  clear
+fi
+

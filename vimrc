@@ -60,6 +60,9 @@ let &guicursor = &guicursor . ",a:blinkon0"
 " airline config
 set laststatus=2
 let g:airline_powerline_fonts = 1
+if &term=~'linux'
+	let g:airline_powerline_fonts = 0
+endif
 
 " disable autocommenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -73,7 +76,8 @@ set nowrap
 " centered cursor
 ":nnoremap j jzz
 ":nnoremap k kzz
-
-set termguicolors
+if &t_Co == 256 || has("gui_running")
+	set termguicolors
+endif
 colorscheme base16-default-dark
 
