@@ -404,7 +404,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq exec-path-from-shell-check-startup-files nil)
 
   ;; gotham theme config
-  (setq gotham-tty-extended-palette t)
+  ;;(setq gotham-tty-extended-palette t)
 
   )
 
