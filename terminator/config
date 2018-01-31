@@ -5,10 +5,10 @@
   inactive_color_offset = 0.5
   suppress_multiple_term_dialog = True
   title_hide_sizetext = True
-  title_transmit_fg_color = "#b9b9b9"
-  title_transmit_bg_color = "#101010"
-  title_inactive_fg_color = "#b9b9b9"
-  title_inactive_bg_color = "#525252"
+  title_transmit_fg_color = "#d8d8d8"
+  title_transmit_bg_color = "#181818"
+  title_inactive_fg_color = "#d8d8d8"
+  title_inactive_bg_color = "#585858"
 [keybindings]
 [layouts]
   [[default]]
@@ -29,7 +29,8 @@
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
-    palette = "#101010:#7c7c7c:#8e8e8e:#a0a0a0:#686868:#747474:#868686:#b9b9b9:#525252:#7c7c7c:#8e8e8e:#a0a0a0:#686868:#747474:#868686:#f7f7f7"
-    foreground_color = "#b9b9b9"
-    background_color = "#101010"
-    cursor_color = "#b9b9b9"
+    palette = "#181818:#ab4642:#a1b56c:#f7ca88:#7cafc2:#ba8baf:#86c1b9:#d8d8d8:#585858:#dc9656:#282828:#383838:#b8b8b8:#e8e8e8:#a16946:#f8f8f8"
+    foreground_color = "#d8d8d8"
+    background_color = "#181818"
+    cursor_color = "#d8d8d8"
+

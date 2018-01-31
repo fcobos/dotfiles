@@ -69,25 +69,25 @@ st.borderpx: 0
 !*.color15:      #d3ebe9
 ! }}}
 
-! Base16 Grayscale Dark
-! Scheme: Alexandre Gavioli (https://github.com/Alexx2/)
+! Base16 Default Dark
+! Scheme: Chris Kempson (http://chriskempson.com)
 
-#define base00 #101010
-#define base01 #252525
-#define base02 #464646
-#define base03 #525252
-#define base04 #ababab
-#define base05 #b9b9b9
-#define base06 #e3e3e3
-#define base07 #f7f7f7
-#define base08 #7c7c7c
-#define base09 #999999
-#define base0A #a0a0a0
-#define base0B #8e8e8e
-#define base0C #868686
-#define base0D #686868
-#define base0E #747474
-#define base0F #5e5e5e
+#define base00 #181818
+#define base01 #282828
+#define base02 #383838
+#define base03 #585858
+#define base04 #b8b8b8
+#define base05 #d8d8d8
+#define base06 #e8e8e8
+#define base07 #f8f8f8
+#define base08 #ab4642
+#define base09 #dc9656
+#define base0A #f7ca88
+#define base0B #a1b56c
+#define base0C #86c1b9
+#define base0D #7cafc2
+#define base0E #ba8baf
+#define base0F #a16946
 
 *foreground:   base05
 #ifdef background_opacity
@@ -114,4 +114,3 @@ st.borderpx: 0
 *color13:      base06
 *color14:      base0F
 *color15:      base07
-

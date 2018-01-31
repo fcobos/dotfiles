@@ -3,25 +3,27 @@
 ;----------------------------------------------------------
 
 [colors]
-xcolor0 = ${xrdb:color0}
-xcolor1 = ${xrdb:color1}
-xcolor2 = ${xrdb:color2}
-xcolor3 = ${xrdb:color3}
-xcolor4 = ${xrdb:color4}
-xcolor5 = ${xrdb:color5}
-xcolor6 = ${xrdb:color6}
-xcolor7 = ${xrdb:color7}
-xcolor8 = ${xrdb:color8}
-xcolor9 = ${xrdb:color9}
-xcolor10 = ${xrdb:color10}
-xcolor11 = ${xrdb:color11}
-xcolor12 = ${xrdb:color12}
-xcolor13 = ${xrdb:color13}
-xcolor14 = ${xrdb:color14}
-xcolor15 = ${xrdb:color15}
-background = ${xrdb:background}
-foreground = ${xrdb:foreground}
-
+xcolor0 = #101010
+xcolor1 = #252525
+xcolor2 = #464646
+xcolor3 = #525252
+;xcolor4 = #ababab
+xcolor4 = #686868
+xcolor5 = #b9b9b9
+xcolor6 = #e3e3e3
+;xcolor7 = #f7f7f7
+xcolor7 = #b9b9b9
+xcolor8 = #7c7c7c
+xcolor9 = #999999
+xcolor10 = #a0a0a0
+xcolor11 = #8e8e8e
+xcolor12 = #868686
+xcolor13 = #686868
+xcolor14 = #747474
+xcolor15 = #5e5e5e
+red = #AB4642
+background = ${colors.xcolor0}
+foreground = ${colors.xcolor7}
 
 ;----------------------------------------------------------
 ;			G L O B A L

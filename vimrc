@@ -75,5 +75,5 @@ set nowrap
 ":nnoremap k kzz
 
 set termguicolors
-colorscheme base16-grayscale-dark
+colorscheme base16-default-dark
 

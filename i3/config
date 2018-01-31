@@ -242,27 +242,18 @@ bindsym --release Shift+Print exec --no-startup-id "scrot -m -s ~/Pictures/Scree
 #bindsym $mod+Pause mode "$mode_system"
 
 # colors
-set_from_resource $black color0 #000000
-set_from_resource $red color1 #000000
-set_from_resource $green color2 #000000
-set_from_resource $yellow color3 #000000
-set_from_resource $blue color4 #000000
-set_from_resource $magenta color5 #000000
-set_from_resource $cyan color6 #000000
-set_from_resource $white color7 #000000
-set_from_resource $bright_black color8 #000000
-set_from_resource $bright_red color9 #000000
-set_from_resource $bright_green color10 #000000
-set_from_resource $bright_yellow color11 #000000
-set_from_resource $bright_blue color12 #000000
-set_from_resource $bright_magenta color13 #000000
-set_from_resource $bright_cyan color14 #000000
-set_from_resource $bright_white color15 #000000
+set $black #101010
+set $focus_black #202020
+set $bright_black #525252
+set $white #b9b9b9
+set $unfocused #8e8e8e
+set $unfocused_text #686868
+set $urgent #AB4642
 #                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
-client.focused          $black      $black      $white      $black      $black
-client.unfocused        $green      $green      $blue       $black      $black
-client.focused_inactive $black      $black      $white      $black      $black
-client.urgent           $red        $red        $black      $red        $red
+client.focused          $focus_black $focus_black  $white   $focus_black      $focus_black
+client.unfocused        $unfocused  $unfocused  $unfocused_text       $black      $black
+client.focused_inactive $bright_black      $bright_black      $white      $bright_black      $bright_black
+client.urgent           $urgent        $urgent        $black      $urgent        $urgent
 client.background       $black
 
 # disable window title for certain programs
