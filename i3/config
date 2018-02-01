@@ -290,6 +290,8 @@ for_window [class="Arandr"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
 for_window [class="Google-musicmanager"] floating enable
 for_window [class="Emacs" title="Helm"] floating enable
+for_window [title="About Nightly"] floating enable
+for_window [title="About Mozilla Firefox"] floating enable
 
 ## Manual management of external displays
 # Set the shortcuts and what they do
