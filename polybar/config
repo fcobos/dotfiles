@@ -536,6 +536,8 @@ battery = BAT0
 adapter = AC0
 full-at = 99
 
+time-format = %H:%M
+
 format-charging = <animation-charging> <label-charging>
 format-charging-foreground = ${colors.xcolor4}
 format-charging-background = ${colors.xcolor7}
@@ -547,7 +549,8 @@ format-full-foreground = ${colors.xcolor4}
 format-full-background = ${colors.xcolor7}
 
 label-charging = "%percentage%% "
-label-discharging = "%percentage%% "
+;label-discharging = "%percentage%% "
+label-discharging = "%time% "
 label-discharging-foreground = ${colors.xcolor4}
 label-full = "  %percentage%% "
 ; 
