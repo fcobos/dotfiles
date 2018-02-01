@@ -405,7 +405,8 @@ label = %percentage_used%%
 type = internal/network
 ; To test interface: $ ls -1 /sys/class/net/
 interface = wls1
-interval = 0.3
+;interval = 0.3
+interval = 5
 
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
@@ -438,7 +439,8 @@ ramp-signal-7 = █
 type = internal/network
 ; To test interface: $ ls -1 /sys/class/net/
 interface = enp4s0
-interval = 0.5
+;interval = 0.5
+interval = 5
 
 ;label-connected = "   %local_ip% %downspeed:8%  %upspeed:8%  "
 ;label-connected = "   %downspeed:8%  %upspeed:8%  "
@@ -465,7 +467,8 @@ format-background = ${colors.xcolor7}
 ;date = ""
 ;date-alt = "  %Y/%m/%d"
 ;date-alt = "  %a.%e.%b"
-date = " %a.%e.%b"
+;date = " %a.%e.%b"
+date = " %y/%m/%d"
 ;time = "   %H:%M    "
 time = " %H:%M"
 ;time-alt = ""
