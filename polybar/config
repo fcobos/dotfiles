@@ -53,7 +53,7 @@ padding-right = 0
 ;label-padding = 2
 module-margin-left = 0
 module-margin-right = 0
-line-size = 3
+line-size = 2
 
 
 ;----------------------------------------------------------
@@ -322,7 +322,7 @@ label-unmounted-background = ${colors.xcolor4}
 type = internal/mpd
 ; 
 ;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next> 
-format-online = <label-song> 
+format-online = <label-song>  
 ;icon-prev = 
 ;icon-stop = 
 ;icon-play = 
