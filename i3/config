@@ -251,7 +251,7 @@ set $unfocused_text #686868
 set $urgent #AB4642
 #                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
 client.focused          $focus_black $focus_black  $white   $focus_black      $focus_black
-client.unfocused        $unfocused  $unfocused  $unfocused_text       $unfocuesd $unfocused
+client.unfocused        $unfocused  $unfocused  $unfocused_text       $unfocused $unfocused
 client.focused_inactive $bright_black      $bright_black      $white      $bright_black      $bright_black
 client.urgent           $urgent        $urgent        $black      $urgent        $urgent
 client.background       $black
@@ -287,6 +287,7 @@ for_window [class="Blueberry.py"] floating enable
 for_window [class="Arandr"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
 for_window [class="Google-musicmanager"] floating enable
+for_window [class="Emacs" title="Helm"] floating enable
 
 ## Manual management of external displays
 # Set the shortcuts and what they do
