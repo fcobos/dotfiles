@@ -278,7 +278,7 @@ for_window [class="Nightly" title=" - Nightly"] border none
 for_window [class="Navigator" title=" - Nightly"] border none
 
 # hide window borders
-#hide_edge_borders smart
+hide_edge_borders smart
 
 #Floating Windows
 for_window [class="Pavucontrol"] floating enable
