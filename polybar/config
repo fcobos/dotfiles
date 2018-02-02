@@ -477,7 +477,7 @@ time = "%H:%M"
 ;time = "%I:%M:%S %p"
 ;time-alt = " %z %Z"
 ;label = "%date%%time% "
-label = "%time% "
+label = " %time% "
 
 
 ;----------------------------------------------------------
