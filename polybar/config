@@ -476,7 +476,8 @@ time = " %H:%M"
 ;date-alt = "It is day %j, week %V, of year %y of the %Cth century."
 ;time = "%I:%M:%S %p"
 ;time-alt = " %z %Z"
-label = "%date%%time% "
+;label = "%date%%time% "
+label = "%time% "
 
 
 ;----------------------------------------------------------
