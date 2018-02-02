@@ -188,7 +188,7 @@ exec --no-startup-id dunst
 #exec --no-startup-id /usr/lib/blueberry/blueberry-obex-agent.py
 #exec --no-startup-id blueberry-tray
 # NetworkManager applet
-#exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 # xiccd
 exec --no-startup-id xiccd
 # apply color profile

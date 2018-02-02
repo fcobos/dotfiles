@@ -94,7 +94,7 @@ wm-restack = i3
 
 modules-left = i3 RightArrow2 RightArrow1 xwindow
 ;modules-center = arrow1 LeftStripe3 date RightArrow2 RightArrow1
-modules-right = mpd powermenu arrow1 LeftStripe3 volume network eth vpn battery date
+modules-right = mpd powermenu arrow1 LeftStripe3 volume battery date
 
 ; All modules available in this config file:
 ; i3 text xwindow tray xkeyboard filesystem mpd backlight cpu 
