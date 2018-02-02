@@ -270,9 +270,10 @@ client.background       $black
 new_float normal
 new_window pixel 8
 # firefox does not like that big border and fucks up right click menu.
-for_window [class="^Firefox$" title=" - Mozilla Firefox$"] border none
-for_window [class="Nightly" title=" - Nightly$"] border none
-for_window [class="Navigator" title=" - Nightly$"] border none
+#for_window [class="^Firefox$" title=" - Mozilla Firefox$"] border none
+for_window [class="^Firefox$" title=" - Mozilla Firefox"] border none
+for_window [class="Nightly" title=" - Nightly"] border none
+for_window [class="Navigator" title=" - Nightly"] border none
 
 # hide window borders
 #hide_edge_borders smart
