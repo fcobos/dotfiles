@@ -219,6 +219,9 @@ bindsym XF86AudioStop exec --no-startup-id "mpris-ctl stop"
 bindsym XF86AudioNext exec --no-startup-id "mpris-ctl next"
 bindsym XF86AudioPrev exec --no-startup-id "mpris-ctl prev"
 
+# calculator
+bindsym XF86Calculator exec --no-startup-id qalculate-gtk
+
 # Screeshots
 bindsym --release Print exec --no-startup-id "scrot -m ~/Pictures/ScreenShots/%s_%H%M_%d.%m.%Y_$wx$h.png"
 bindsym --release Shift+Print exec --no-startup-id "scrot -m -s ~/Pictures/ScreenShots/%s_%H%M_%d.%m.%Y_$wx$h.png"
@@ -292,6 +295,7 @@ for_window [class="Google-musicmanager"] floating enable
 for_window [class="Emacs" title="Helm"] floating enable
 for_window [title="About Nightly"] floating enable
 for_window [title="About Mozilla Firefox"] floating enable
+for_window [class="Qalculate-gtk"] floating enable
 
 ## Manual management of external displays
 # Set the shortcuts and what they do
