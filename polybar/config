@@ -94,7 +94,7 @@ wm-restack = i3
 
 modules-left = i3 RightArrow2 RightArrow1 xwindow
 ;modules-center = arrow1 LeftStripe3 date RightArrow2 RightArrow1
-modules-right = mpd powermenu arrow1 LeftStripe3 volume battery date
+modules-right = mpd powermenu arrow1 LeftStripe3 volume date
 
 ; All modules available in this config file:
 ; i3 text xwindow tray xkeyboard filesystem mpd backlight cpu 
@@ -476,8 +476,7 @@ time = "%H:%M"
 ;date-alt = "It is day %j, week %V, of year %y of the %Cth century."
 ;time = "%I:%M:%S %p"
 ;time-alt = " %z %Z"
-;label = "%date%%time% "
-label = " %time% "
+label = " %date% %time% "
 
 
 ;----------------------------------------------------------
