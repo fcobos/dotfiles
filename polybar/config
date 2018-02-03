@@ -3,28 +3,15 @@
 ;----------------------------------------------------------
 
 [colors]
-xcolor0 = #101010
-xcolor1 = #252525
-xcolor2 = #464646
-xcolor3 = #525252
-;xcolor4 = #ababab
-;xcolor4 = #686868
 xcolor4 = #464646
-xcolor5 = #b9b9b9
-xcolor6 = #e3e3e3
-;xcolor7 = #f7f7f7
-xcolor7 = #b9b9b9
-xcolor8 = #7c7c7c
-xcolor9 = #999999
-xcolor10 = #a0a0a0
-xcolor11 = #8e8e8e
-xcolor12 = #868686
-xcolor13 = #686868
-xcolor14 = #747474
-xcolor15 = #5e5e5e
 red = #AB4642
-background = ${colors.xcolor0}
-foreground = ${colors.xcolor7}
+blue = #47a4de
+white = #b9b9b9
+black = #101010
+dark_gray = #28313b
+light_gray = #838d98
+background = ${colors.black}
+foreground = ${colors.light_gray}
 
 ;----------------------------------------------------------
 ;			G L O B A L
@@ -45,7 +32,7 @@ height = 18
 ;offset-y = 0%
 fixed-center = false
 background = ${colors.background}
-foreground = ${colors.xcolor4}
+foreground = ${colors.foreground}
 
 spacing = 0
 padding-left = 0
@@ -79,7 +66,7 @@ tray-padding = 0
 tray-transparent = false
 tray-maxsize = 14
 ;tray-offset-x = 21%
-tray-foreground = ${colors.background}
+tray-foreground = ${colors.black}
 tray-background = ${colors.foreground}
 
 wm-restack = i3
@@ -138,9 +125,9 @@ wrapping-scroll = false
 label-focused = %index%
 ;label-focused = 
 ;label-focused = %icon%
-;label-focused-foreground = ${colors.xcolor4}
+label-focused-foreground = ${colors.black}
 label-focused-background = ${colors.foreground}
-label-focused-underline = ${colors.xcolor4}
+label-focused-underline = ${colors.blue}
 label-focused-padding = 1
 label-focused-font = 2
 
@@ -149,7 +136,7 @@ label-focused-font = 2
 label-visible = %index%
 ;label-visible-foreground = ${colors.background}
 label-visible-background = ${colors.foreground}
-label-visible-underline = ${colors.xcolor4}
+label-visible-underline = ${colors.blue}
 label-visible-padding = 1
 label-visible-font = 2
 
@@ -179,84 +166,84 @@ label-unfocused-font = 2
 type = custom/text
 content = "|"
 content-foreground = ${colors.foreground}
-content-background = ${colors.xcolor0}
+content-background = ${colors.black}
 content-padding = 1
 
 [module/LeftStripe]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor0}
-content-background = ${colors.xcolor4}
+content-foreground = ${colors.black}
+content-background = ${colors.dark_gray}
 
 [module/LeftStripe2]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor7}
-content-background = ${colors.xcolor0}
+content-foreground = ${colors.light_gray}
+content-background = ${colors.black}
 
 [module/LeftStripe3]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor7}
-content-background = ${colors.xcolor4}
+content-foreground = ${colors.light_gray}
+content-background = ${colors.dark_gray}
 
 
 [module/arrow1]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor4}
-content-background = ${colors.xcolor0}
+content-foreground = ${colors.dark_gray}
+content-background = ${colors.black}
 
 [module/arrow2]
 type = custom/text
 content = " "
-content-foreground = ${colors.xcolor7}
-content-background = ${colors.xcolor4}
+content-foreground = ${colors.light_gray}
+content-background = ${colors.dark_gray}
 
 [module/arrow3]
 type = custom/text
 content = " "
-content-foreground = ${colors.xcolor4}
-content-background = ${colors.xcolor7}
+content-foreground = ${colors.dark_gray}
+content-background = ${colors.light_gray}
 
 [module/RightStripe]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor0}
-content-background = ${colors.xcolor4}
+content-foreground = ${colors.black}
+content-background = ${colors.dark_gray}
 
 [module/RightArrow1]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor4}
-content-background = ${colors.xcolor0}
+content-foreground = ${colors.dark_gray}
+content-background = ${colors.black}
 
 [module/RightArrow2]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor7}
-content-background = ${colors.xcolor4}
+content-foreground = ${colors.light_gray}
+content-background = ${colors.dark_gray}
 
 [module/RightArrow3]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor4}
-content-background = ${colors.xcolor7}
+content-foreground = ${colors.dark_gray}
+content-background = ${colors.light_gray}
 
 [module/MiddleArrowLeft]
 type = custom/text
 ;content = "◥"
 content = " "
-content-foreground = ${colors.xcolor4}
-content-background = ${colors.xcolor0}
+content-foreground = ${colors.dark_gray}
+content-background = ${colors.black}
 
 ;◥ ◤◢ ◣
 [module/MiddleArrowRight]
 type = custom/text
 ;content = "◢"
 content = ""
-content-foreground = ${colors.xcolor4}
-content-background = ${colors.xcolor0}
+content-foreground = ${colors.dark_gray}
+content-background = ${colors.black}
 
 ;----------------------------------------------------------
 ;		       X W I N D O W
@@ -265,7 +252,7 @@ content-background = ${colors.xcolor0}
 [module/xwindow]
 type = internal/xwindow
 
-format-foreground = ${colors.foreground}
+format-foreground = ${colors.white}
 format-background = ${colors.background}
 
 ;label = " %title:0:22:...%"
@@ -283,7 +270,7 @@ blacklist-0 = num lock
 
 ;   
 format-foreground = ${colors.xcolor4}
-format-background = ${colors.xcolor0}
+format-background = ${colors.black}
 
 label-layout =  %layout%
 label-indicator-padding = 1
@@ -303,16 +290,16 @@ mount-0 = /
 ;mount-1 = /home
 
 format-mounted = <label-mounted>
-format-mounted-foreground = ${colors.xcolor7}
+format-mounted-foreground = ${colors.light_gray}
 format-mounted-background = ${colors.xcolor4}
 
 ;  
 label-mounted = "  %percentage_used%%"
 ; %free%% %percentage_used%% %used%
-label-mounted-foreground = ${colors.xcolor7}
+label-mounted-foreground = ${colors.light_gray}
 label-mounted-background = ${colors.xcolor4}
 label-unmounted =   %mountpoint%
-label-unmounted-foreground = ${colors.xcolor7}
+label-unmounted-foreground = ${colors.light_gray}
 label-unmounted-background = ${colors.xcolor4}
 
 
@@ -333,7 +320,8 @@ format-stopped =
 ;icon-next = 
 label-song-maxlen = 25
 label-song-ellipsis = true
-label-song-foreground = ${colors.foreground}
+label-song-foreground = ${colors.white}
+label-song-font = 2
 
 ;----------------------------------------------------------
 ;		     B A C K L I G H T
@@ -366,7 +354,7 @@ interval = 1.0
 format = <label>
 ;format = <ramp-coreload><label> 
 format-prefix = " "
-format-foreground = ${colors.xcolor7}
+format-foreground = ${colors.light_gray}
 format-background = ${colors.xcolor4}
 
 label = %percentage:3%%
@@ -393,7 +381,7 @@ interval = 1
 format-prefix = "  "
 ;format-prefix = ram
 format-foreground = ${colors.xcolor4}
-format-background = ${colors.xcolor7}
+format-background = ${colors.light_gray}
 format-margin-top = -5
 
 label = %percentage_used%%
@@ -418,10 +406,10 @@ format-disconnected = <label-disconnected>
 label-connected = " "
 ;label-connected = "  %essid%  %local_ip%  %downspeed:8%  %upspeed:8%"
 label-connected-foreground = ${colors.xcolor4}
-label-connected-background = ${colors.xcolor7}
+label-connected-background = ${colors.light_gray}
 label-disconnected = " "
 label-disconnected-foreground = ${colors.xcolor4}
-label-disconnected-background = ${colors.xcolor7}
+label-disconnected-background = ${colors.light_gray}
 
 ramp-signal-0 = ▁
 ramp-signal-1 = ▂
@@ -448,11 +436,11 @@ interval = 5
 ;label-connected = "   %downspeed:8%  %upspeed:8%  "
 label-connected = "  "
 label-connected-foreground = ${colors.xcolor4}
-label-connected-background = ${colors.xcolor7}
+label-connected-background = ${colors.light_gray}
 ;label-disconnected = "  %ifname% "
 label-disconnected = "  "
 label-disconnected-foreground = ${colors.xcolor4}
-label-disconnected-background = ${colors.xcolor7}
+label-disconnected-background = ${colors.light_gray}
 
 
 ;----------------------------------------------------------
@@ -463,8 +451,8 @@ label-disconnected-background = ${colors.xcolor7}
 type = internal/date
 interval = 1
 
-format-foreground = ${colors.xcolor4}
-format-background = ${colors.xcolor7}
+format-foreground = ${colors.black}
+format-background = ${colors.light_gray}
 
 ;date = ""
 ;date-alt = "  %Y/%m/%d"
@@ -498,26 +486,26 @@ format-volume = <ramp-volume><label-volume>
 ;     
 
 label-volume = %percentage%
-label-volume-foreground = ${colors.xcolor4}
-label-volume-background = ${colors.xcolor7}
+label-volume-foreground = ${colors.black}
+label-volume-background = ${colors.light_gray}
 label-volume-font = 2
 label-muted = "  muted"
-label-muted-foreground = ${colors.xcolor4}
-label-muted-background = ${colors.xcolor7}
+label-muted-foreground = ${colors.black}
+label-muted-background = ${colors.light_gray}
 label-muted-font = 2
 
 ramp-volume-0 = "  "
-ramp-volume-0-foreground = ${colors.xcolor4}
-ramp-volume-0-background = ${colors.xcolor7}
+ramp-volume-0-foreground = ${colors.black}
+ramp-volume-0-background = ${colors.light_gray}
 ramp-volume-1 = "  "
-ramp-volume-1-foreground = ${colors.xcolor4}
-ramp-volume-1-background = ${colors.xcolor7}
+ramp-volume-1-foreground = ${colors.black}
+ramp-volume-1-background = ${colors.light_gray}
 ramp-volume-2 = "  "
-ramp-volume-2-foreground = ${colors.xcolor4}
-ramp-volume-2-background = ${colors.xcolor7}
+ramp-volume-2-foreground = ${colors.black}
+ramp-volume-2-background = ${colors.light_gray}
 ramp-volume-3 = "  "
-ramp-volume-3-foreground = ${colors.xcolor4}
-ramp-volume-3-background = ${colors.xcolor7}
+ramp-volume-3-foreground = ${colors.black}
+ramp-volume-3-background = ${colors.light_gray}
 
 bar-volume-width = 10
 bar-volume-background = #495858
@@ -549,13 +537,13 @@ time-format = %H:%M
 
 format-charging = <animation-charging> <label-charging>
 format-charging-foreground = ${colors.xcolor4}
-format-charging-background = ${colors.xcolor7}
+format-charging-background = ${colors.light_gray}
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-foreground = ${colors.xcolor4}
-format-discharging-background = ${colors.xcolor7}
+format-discharging-background = ${colors.light_gray}
 format-full = <label-full>
 format-full-foreground = ${colors.xcolor4}
-format-full-background = ${colors.xcolor7}
+format-full-background = ${colors.light_gray}
 
 label-charging = "%percentage%% "
 ;label-discharging = "%percentage%% "
@@ -592,9 +580,9 @@ format = <ramp> <label>
 format-warn = <ramp> <label-warn>
 format-prefix = " "
 format-foreground = ${colors.xcolor4}
-format-background = ${colors.xcolor7}
+format-background = ${colors.light_gray}
 format-warn-foreground = ${colors.xcolor4}
-format-warn-background = ${colors.xcolor7}
+format-warn-background = ${colors.light_gray}
 
 label = %temperature%
 label-warn = %temperature%
@@ -644,43 +632,43 @@ label-open-font = 3
 label-open-foreground = ${colors.foreground}
 label-open-background = ${colors.background}
 label-close = 
-label-close-foreground = ${colors.xcolor7}
-label-close-background = ${colors.xcolor0}
+label-close-foreground = ${colors.light_gray}
+label-close-background = ${colors.black}
 label-separator = " "
-label-separator-foreground = ${colors.xcolor2}
-label-separator-background = ${colors.xcolor0}
+label-separator-foreground = ${colors.white}
+label-separator-background = ${colors.black}
 
 ; lock
 menu-0-0 = "  "
 menu-0-0-exec = xflock4
-menu-0-0-foreground = ${colors.xcolor7}
-menu-0-0-background = ${colors.xcolor0}
+menu-0-0-foreground = ${colors.light_gray}
+menu-0-0-background = ${colors.black}
 ; sleep
 menu-0-1 = "  "
 menu-0-1-exec = zenity --question --text="Suspend?" --icon-name=system-suspend --default-cancel && xflock4 && systemctl suspend
-menu-0-1-foreground = ${colors.xcolor7}
-menu-0-1-background = ${colors.xcolor0}
+menu-0-1-foreground = ${colors.light_gray}
+menu-0-1-background = ${colors.black}
 ; logout
 menu-0-2 = "  "
 menu-0-2-exec = zenity --question --text="Logout?" --icon-name=gnome-logout --default-cancel && (killall -9 pulseaudio ; i3-msg exit)
-menu-0-2-foreground = ${colors.xcolor7}
-menu-0-2-background = ${colors.xcolor0}
+menu-0-2-foreground = ${colors.light_gray}
+menu-0-2-background = ${colors.black}
 ; reboot
 menu-0-3 = "  "
 menu-0-3-exec = zenity --question --text="Reboot?" --icon-name=system-reboot --default-cancel && systemctl reboot
-menu-0-3-foreground = ${colors.xcolor7}
-menu-0-3-background = ${colors.xcolor0}
+menu-0-3-foreground = ${colors.light_gray}
+menu-0-3-background = ${colors.black}
 ; shutdown
 menu-0-4 = " "
 menu-0-4-exec = zenity --question --text="Shutdown?" --icon-name=system-shutdown --default-cancel && systemctl poweroff
-menu-0-4-foreground = ${colors.xcolor7}
-menu-0-4-background = ${colors.xcolor0}
+menu-0-4-foreground = ${colors.light_gray}
+menu-0-4-background = ${colors.black}
 ; end stripe
 menu-0-5 = " "
 ;menu-0-5-font = 6
 menu-0-5-font = 3
-menu-0-5-foreground = ${colors.xcolor2}
-menu-0-5-background = ${colors.xcolor0}
+menu-0-5-foreground = ${colors.white}
+menu-0-5-background = ${colors.black}
 
 
 ;----------------------------------------------------------
@@ -694,50 +682,50 @@ type = custom/menu
 label-open = " "
 label-open-font = 6
 label-open-foreground = ${colors.red}
-label-open-background = ${colors.xcolor0}
+label-open-background = ${colors.black}
 label-close = " "
-label-close-foreground = ${colors.xcolor7}
-label-close-background = ${colors.xcolor0}
+label-close-foreground = ${colors.light_gray}
+label-close-background = ${colors.black}
 label-separator = " "
 label-separator-foreground = ${colors.red}
-label-separator-background = ${colors.xcolor0}
+label-separator-background = ${colors.black}
 
 ;                   
 ; terminal
 menu-0-0 = "  "
 menu-0-0-exec = alacritty &
-menu-0-0-foreground = ${colors.xcolor7}
-menu-0-0-background = ${colors.xcolor0}
+menu-0-0-foreground = ${colors.light_gray}
+menu-0-0-background = ${colors.black}
 ; filemanager
 menu-0-1 = "  "
 menu-0-1-exec = nautilus &
-menu-0-1-foreground = ${colors.xcolor7}
-menu-0-1-background = ${colors.xcolor0}
+menu-0-1-foreground = ${colors.light_gray}
+menu-0-1-background = ${colors.black}
 ; browser
 menu-0-2 = "  "
 menu-0-2-exec = firefox &
-menu-0-2-foreground = ${colors.xcolor7}
-menu-0-2-background = ${colors.xcolor0}
+menu-0-2-foreground = ${colors.light_gray}
+menu-0-2-background = ${colors.black}
 ; editor
 menu-0-3 = "  "
 menu-0-3-exec = emacs &
-menu-0-3-foreground = ${colors.xcolor7}
-menu-0-3-background = ${colors.xcolor0}
+menu-0-3-foreground = ${colors.light_gray}
+menu-0-3-background = ${colors.black}
 ; chat client
 menu-0-4 = "  "
 menu-0-4-exec = flatpak run org.gnome.Fractal &
-menu-0-4-foreground = ${colors.xcolor7}
-menu-0-4-background = ${colors.xcolor0}
+menu-0-4-foreground = ${colors.light_gray}
+menu-0-4-background = ${colors.black}
 ; media player
 menu-0-5 = "  "
 menu-0-5-exec = vlc &
-menu-0-5-foreground = ${colors.xcolor7}
-menu-0-5-background = ${colors.xcolor0}
+menu-0-5-foreground = ${colors.light_gray}
+menu-0-5-background = ${colors.black}
 ; end stripe
 menu-0-6 = " "
 menu-0-6-font = 6
 menu-0-6-foreground = ${colors.red}
-menu-0-6-background = ${colors.xcolor0}
+menu-0-6-background = ${colors.black}
 
 
 ;----------------------------------------------------------
@@ -753,7 +741,7 @@ exec = $HOME/.config/polybar/mail.py
 interval = 120
 label = "  %output:0:5:...% "
 ;  
-format-foreground = ${colors.xcolor7}
+format-foreground = ${colors.light_gray}
 format-background = ${colors.red}
 
 [module/weather]
@@ -762,7 +750,7 @@ exec = $HOME/.config/polybar/weather.py
 interval = 120
 label = "  %output:0:22:...% "
 format-foreground = ${colors.red}
-format-background = ${colors.xcolor7}
+format-background = ${colors.light_gray}
 
 [module/music]
 type = custom/script
@@ -770,7 +758,7 @@ exec = $HOME/.config/polybar/mediaplayer.py
 exec-if = pgrep -x spotify
 interval = 3
 label = "  %output:0:30:% "
-format-foreground = ${colors.xcolor7}
+format-foreground = ${colors.light_gray}
 format-background = ${colors.red}
 click-left = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
@@ -780,7 +768,7 @@ exec = echo + SSH
 exec-if = pgrep ssh
 interval = 3.0
 format-foreground = ${colors.xcolor4}
-format-background = ${colors.xcolor7}
+format-background = ${colors.light_gray}
 label = " %output:0:5%"
 click-left = echo left %counter%
 click-middle = echo middle %counter%
@@ -794,7 +782,7 @@ exec = echo + VPN
 exec-if = pgrep vpn
 interval = 3.0
 format-foreground = ${colors.xcolor4}
-format-background = ${colors.xcolor7}
+format-background = ${colors.light_gray}
 label = " %output:0:5%"
 click-left = echo left %counter%
 click-middle = echo middle %counter%
@@ -807,7 +795,7 @@ type = custom/script
 exec = curl -s https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD | python -c "import json, sys; print(json.load(sys.stdin)['last'])"
 interval = 60.0
 format-foreground = ${colors.red}
-format-background = ${colors.xcolor7}
+format-background = ${colors.light_gray}
 label = " $%output:0:10% "
 ;label = " BTC:$%output:0:10% "
 
@@ -815,7 +803,7 @@ label = " $%output:0:10% "
 type = custom/script
 exec = curl -s https://apiv2.bitcoinaverage.com/indices/global/ticker/ETHUSD | python -c "import json, sys; print(json.load(sys.stdin)['last'])"
 interval = 60.0
-format-foreground = ${colors.xcolor7}
+format-foreground = ${colors.light_gray}
 format-background = ${colors.red}
 label = " $%output:0:7% "
 ;label = " ETH:$%output:0:7% "
