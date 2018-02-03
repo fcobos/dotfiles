@@ -248,14 +248,14 @@ bindsym --release Shift+Print exec --no-startup-id "scrot -m -s ~/Pictures/Scree
 
 # colors
 set $black #101010
-set $focus_black #202020
+set $focused #202020
 set $bright_black #525252
 set $white #b9b9b9
 set $unfocused #525252
 set $unfocused_text #686868
 set $urgent #AB4642
 #                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
-client.focused          $focus_black $focus_black  $white   $focus_black      $focus_black
+client.focused          $focused    $focused    $white      $focused    $focused
 client.unfocused        $unfocused  $unfocused  $unfocused_text       $unfocused $unfocused
 client.focused_inactive $bright_black      $bright_black      $white      $bright_black      $bright_black
 client.urgent           $urgent        $urgent        $black      $urgent        $urgent
