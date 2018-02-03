@@ -3,7 +3,7 @@
 ;----------------------------------------------------------
 
 [colors]
-xcolor4 = #464646
+gray = #464646
 red = #AB4642
 blue = #47a4de
 white = #b9b9b9
@@ -53,6 +53,7 @@ font-2 = FontAwesome:size=9;3
 font-3 = fixed:pixelsize=9;3
 font-4 = unifont:fontformat=truetype:size=9:antialias=false;0
 font-5 = siji:pixelsize=9;3
+font-6 = Hack:size=9:weight=bold;3
 
 ; Extra symbols: http://fontawesome.io/cheatsheet/
 
@@ -129,7 +130,7 @@ label-focused-foreground = ${colors.black}
 label-focused-background = ${colors.foreground}
 label-focused-underline = ${colors.dark_gray}
 label-focused-padding = 1
-label-focused-font = 2
+label-focused-font = 7
 
 ;label-visible = ●
 ;label-visible = %icon%
@@ -152,7 +153,7 @@ label-urgent-font = 2
 ;label-unfocused = 
 ;label-unfocused = %icon%
 label-unfocused = %index%
-label-unfocused-foreground = ${colors.xcolor4}
+label-unfocused-foreground = ${colors.gray}
 label-unfocused-background = ${colors.foreground}
 label-unfocused-padding = 1
 label-unfocused-font = 2
@@ -269,7 +270,7 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 
 ;   
-format-foreground = ${colors.xcolor4}
+format-foreground = ${colors.gray}
 format-background = ${colors.black}
 
 label-layout =  %layout%
@@ -291,16 +292,16 @@ mount-0 = /
 
 format-mounted = <label-mounted>
 format-mounted-foreground = ${colors.light_gray}
-format-mounted-background = ${colors.xcolor4}
+format-mounted-background = ${colors.gray}
 
 ;  
 label-mounted = "  %percentage_used%%"
 ; %free%% %percentage_used%% %used%
 label-mounted-foreground = ${colors.light_gray}
-label-mounted-background = ${colors.xcolor4}
+label-mounted-background = ${colors.gray}
 label-unmounted =   %mountpoint%
 label-unmounted-foreground = ${colors.light_gray}
-label-unmounted-background = ${colors.xcolor4}
+label-unmounted-background = ${colors.gray}
 
 
 ;----------------------------------------------------------
@@ -355,7 +356,7 @@ format = <label>
 ;format = <ramp-coreload><label> 
 format-prefix = " "
 format-foreground = ${colors.light_gray}
-format-background = ${colors.xcolor4}
+format-background = ${colors.gray}
 
 label = %percentage:3%%
 ;   
@@ -380,7 +381,7 @@ interval = 1
 
 format-prefix = "  "
 ;format-prefix = ram
-format-foreground = ${colors.xcolor4}
+format-foreground = ${colors.gray}
 format-background = ${colors.light_gray}
 format-margin-top = -5
 
@@ -405,10 +406,10 @@ format-disconnected = <label-disconnected>
 ;label-connected = "  %essid%"
 label-connected = " "
 ;label-connected = "  %essid%  %local_ip%  %downspeed:8%  %upspeed:8%"
-label-connected-foreground = ${colors.xcolor4}
+label-connected-foreground = ${colors.gray}
 label-connected-background = ${colors.light_gray}
 label-disconnected = " "
-label-disconnected-foreground = ${colors.xcolor4}
+label-disconnected-foreground = ${colors.gray}
 label-disconnected-background = ${colors.light_gray}
 
 ramp-signal-0 = ▁
@@ -435,11 +436,11 @@ interval = 5
 ;label-connected = "   %local_ip% %downspeed:8%  %upspeed:8%  "
 ;label-connected = "   %downspeed:8%  %upspeed:8%  "
 label-connected = "  "
-label-connected-foreground = ${colors.xcolor4}
+label-connected-foreground = ${colors.gray}
 label-connected-background = ${colors.light_gray}
 ;label-disconnected = "  %ifname% "
 label-disconnected = "  "
-label-disconnected-foreground = ${colors.xcolor4}
+label-disconnected-foreground = ${colors.gray}
 label-disconnected-background = ${colors.light_gray}
 
 
@@ -536,19 +537,19 @@ full-at = 99
 time-format = %H:%M
 
 format-charging = <animation-charging> <label-charging>
-format-charging-foreground = ${colors.xcolor4}
+format-charging-foreground = ${colors.gray}
 format-charging-background = ${colors.light_gray}
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-foreground = ${colors.xcolor4}
+format-discharging-foreground = ${colors.gray}
 format-discharging-background = ${colors.light_gray}
 format-full = <label-full>
-format-full-foreground = ${colors.xcolor4}
+format-full-foreground = ${colors.gray}
 format-full-background = ${colors.light_gray}
 
 label-charging = "%percentage%% "
 ;label-discharging = "%percentage%% "
 label-discharging = "%time% "
-label-discharging-foreground = ${colors.xcolor4}
+label-discharging-foreground = ${colors.gray}
 label-full = "  %percentage%% "
 ; 
 ramp-capacity-0 = " "
@@ -579,9 +580,9 @@ interval = 2
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
 format-prefix = " "
-format-foreground = ${colors.xcolor4}
+format-foreground = ${colors.gray}
 format-background = ${colors.light_gray}
-format-warn-foreground = ${colors.xcolor4}
+format-warn-foreground = ${colors.gray}
 format-warn-background = ${colors.light_gray}
 
 label = %temperature%
@@ -767,7 +768,7 @@ type = custom/script
 exec = echo + SSH
 exec-if = pgrep ssh
 interval = 3.0
-format-foreground = ${colors.xcolor4}
+format-foreground = ${colors.gray}
 format-background = ${colors.light_gray}
 label = " %output:0:5%"
 click-left = echo left %counter%
@@ -781,7 +782,7 @@ type = custom/script
 exec = echo + VPN
 exec-if = pgrep vpn
 interval = 3.0
-format-foreground = ${colors.xcolor4}
+format-foreground = ${colors.gray}
 format-background = ${colors.light_gray}
 label = " %output:0:5%"
 click-left = echo left %counter%
