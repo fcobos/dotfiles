@@ -127,7 +127,7 @@ label-focused = %index%
 ;label-focused = %icon%
 label-focused-foreground = ${colors.black}
 label-focused-background = ${colors.foreground}
-label-focused-underline = ${colors.blue}
+label-focused-underline = ${colors.dark_gray}
 label-focused-padding = 1
 label-focused-font = 2
 
@@ -136,7 +136,7 @@ label-focused-font = 2
 label-visible = %index%
 ;label-visible-foreground = ${colors.background}
 label-visible-background = ${colors.foreground}
-label-visible-underline = ${colors.blue}
+label-visible-underline = ${colors.dark_gray}
 label-visible-padding = 1
 label-visible-font = 2
 
