@@ -40,7 +40,7 @@ margin-bottom = 0
 ;dpi = ${xrdb:Xft.dpi:136}
 bottom = false
 width = 100%
-height = 14
+height = 18
 ;offset-x = 0%
 ;offset-y = 0%
 fixed-center = false
@@ -53,22 +53,19 @@ padding-right = 0
 ;label-padding = 2
 module-margin-left = 0
 module-margin-right = 0
-line-size = 2
+line-size = 4
 
 
 ;----------------------------------------------------------
 ;			F O N T S
 ;----------------------------------------------------------
 
-font-0 = Hack:size=9;2
-font-1 = Hack:size=9;6
+font-0 = Hack:size=12;3
+font-1 = Hack:size=9;2
 font-2 = FontAwesome:size=9;2
-font-3 = Hack:size=9;2
-font-4 = Hack:size=9;2
-font-5 = FontAwesome:size=26;7
-font-6 = fixed:pixelsize=9;2
-font-7 = unifont:fontformat=truetype:size=9:antialias=false;0
-font-8 = siji:pixelsize=9;2
+font-3 = fixed:pixelsize=9;2
+font-4 = unifont:fontformat=truetype:size=9:antialias=false;0
+font-5 = siji:pixelsize=9;2
 
 ; Extra symbols: http://fontawesome.io/cheatsheet/
 
@@ -145,6 +142,7 @@ label-focused = %index%
 label-focused-background = ${colors.foreground}
 label-focused-underline = ${colors.xcolor4}
 label-focused-padding = 1
+label-focused-font = 2
 
 ;label-visible = ●
 ;label-visible = %icon%
@@ -153,6 +151,7 @@ label-visible = %index%
 label-visible-background = ${colors.foreground}
 label-visible-underline = ${colors.xcolor4}
 label-visible-padding = 1
+label-visible-font = 2
 
 ;label-urgent = 
 ;label-urgent = %icon%
@@ -161,6 +160,7 @@ label-urgent-foreground = ${colors.red}
 label-urgent-background = ${colors.foreground}
 label-urgent-underline = ${colors.red}
 label-urgent-padding = 1
+label-urgent-font = 2
 
 ;label-unfocused = 
 ;label-unfocused = %icon%
@@ -168,6 +168,7 @@ label-unfocused = %index%
 label-unfocused-foreground = ${colors.xcolor4}
 label-unfocused-background = ${colors.foreground}
 label-unfocused-padding = 1
+label-unfocused-font = 2
 
 
 ;----------------------------------------------------------
@@ -270,6 +271,7 @@ format-background = ${colors.background}
 ;label = " %title:0:22:...%"
 label = " %title%"
 label-maxlen = 32
+label-font = 2
 
 ;----------------------------------------------------------
 ;		    X K E Y B O A R D
@@ -477,6 +479,7 @@ time = "%H:%M"
 ;time = "%I:%M:%S %p"
 ;time-alt = " %z %Z"
 label = " %date% %time% "
+label-font = 2
 
 
 ;----------------------------------------------------------
@@ -497,9 +500,11 @@ format-volume = <ramp-volume><label-volume>
 label-volume = %percentage%
 label-volume-foreground = ${colors.xcolor4}
 label-volume-background = ${colors.xcolor7}
+label-volume-font = 2
 label-muted = "  muted"
 label-muted-foreground = ${colors.xcolor4}
 label-muted-background = ${colors.xcolor7}
+label-muted-font = 2
 
 ramp-volume-0 = "  "
 ramp-volume-0-foreground = ${colors.xcolor4}
