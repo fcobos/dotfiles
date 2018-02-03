@@ -34,10 +34,6 @@ if [ -n "$DESKTOP_SESSION" ];then
 	export $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
 fi
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/felix/.sdkman"
-[[ -s "/home/felix/.sdkman/bin/sdkman-init.sh" ]] && source "/home/felix/.sdkman/bin/sdkman-init.sh"
-
 # linux console colors
 if [ "$TERM" = "linux" ]; then
   /bin/echo -e "
@@ -62,3 +58,6 @@ if [ "$TERM" = "linux" ]; then
   clear
 fi
 
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/felix/.sdkman"
+[[ -s "/home/felix/.sdkman/bin/sdkman-init.sh" ]] && source "/home/felix/.sdkman/bin/sdkman-init.sh"
