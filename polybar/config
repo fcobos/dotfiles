@@ -77,7 +77,7 @@ font-5 = siji:pixelsize=9;2
 tray-position = right
 tray-padding = 0
 tray-transparent = false
-tray-maxsize = 18
+tray-maxsize = 14
 ;tray-offset-x = 21%
 tray-foreground = ${colors.background}
 tray-background = ${colors.foreground}
