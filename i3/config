@@ -176,7 +176,7 @@ bindsym $mod+r mode "resize"
 # start polkit auth agent
 exec --no-startup-id lxpolkit &
 # start compton
-exec --no-startup-id compton -bcCz
+exec --no-startup-id compton -b
 # background
 exec --no-startup-id ~/.fehbg
 # touchpad config
