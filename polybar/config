@@ -40,7 +40,7 @@ padding-right = 0
 ;label-padding = 2
 module-margin-left = 0
 module-margin-right = 0
-line-size = 3
+line-size = 2
 
 
 ;----------------------------------------------------------
@@ -54,6 +54,7 @@ font-3 = fixed:pixelsize=9;3
 font-4 = unifont:fontformat=truetype:size=9:antialias=false;0
 font-5 = siji:pixelsize=9;3
 font-6 = Hack:size=9:weight=bold;3
+font-7 = Hack:size=6;0
 
 ; Extra symbols: http://fontawesome.io/cheatsheet/
 
@@ -106,13 +107,13 @@ wrapping-scroll = false
 
 ; ws-icon-[0-9]+ = label;icon
 ; Note that the label needs to correspond with the i3 workspace name
-;ws-icon-0 = 1;
-;ws-icon-1 = 2;
-;ws-icon-2 = 3;
-;ws-icon-3 = 4;
-;ws-icon-4 = 5;
-;ws-icon-5 = 6;
-;ws-icon-default = 
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-default = 
 ;  ❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ ❿ 
 ;ws-icon-0 = 1;❶
 ;ws-icon-1 = 2;❷
@@ -123,40 +124,44 @@ wrapping-scroll = false
 
 ;   ● ○
 ;label-focused = %name%
-label-focused = %index%
+;label-focused = %index%
 ;label-focused = 
 ;label-focused = %icon%
 label-focused-foreground = ${colors.black}
 label-focused-background = ${colors.foreground}
 label-focused-underline = ${colors.dark_gray}
 label-focused-padding = 1
-label-focused-font = 7
+label-focused-font = 8
+icon-focused-font = 7
 
 ;label-visible = ●
 ;label-visible = %icon%
-label-visible = %index%
+;label-visible = %index%
 ;label-visible-foreground = ${colors.background}
 label-visible-background = ${colors.foreground}
 label-visible-underline = ${colors.dark_gray}
 label-visible-padding = 1
-label-visible-font = 2
+label-visible-font = 8
+icon-visible-font = 7
 
 ;label-urgent = 
 ;label-urgent = %icon%
-label-urgent= %index%
+;label-urgent= %index%
 label-urgent-foreground = ${colors.red}
 label-urgent-background = ${colors.foreground}
 label-urgent-underline = ${colors.red}
 label-urgent-padding = 1
-label-urgent-font = 2
+label-urgent-font = 8
+icon-urgent-font = 2
 
 ;label-unfocused = 
 ;label-unfocused = %icon%
-label-unfocused = %index%
+;label-unfocused = %index%
 label-unfocused-foreground = ${colors.gray}
 label-unfocused-background = ${colors.foreground}
 label-unfocused-padding = 1
-label-unfocused-font = 2
+label-unfocused-font = 8
+icon-unfocused-font = 2
 
 
 ;----------------------------------------------------------
@@ -312,7 +317,7 @@ label-unmounted-background = ${colors.gray}
 type = internal/mpd
 ; 
 ;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next> 
-format-online = <label-song>  
+format-online = "<label-song>  "
 format-stopped = 
 ;icon-prev = 
 ;icon-stop = 
@@ -627,7 +632,6 @@ type = custom/menu
 
 ;      » 
 ;label-open = " "
-;label-open-font = 6
 label-open = "    "
 label-open-font = 3
 label-open-foreground = ${colors.foreground}
@@ -640,33 +644,32 @@ label-separator-foreground = ${colors.white}
 label-separator-background = ${colors.black}
 
 ; lock
-menu-0-0 = "  "
+menu-0-0 = ""
 menu-0-0-exec = xflock4
 menu-0-0-foreground = ${colors.light_gray}
 menu-0-0-background = ${colors.black}
 ; sleep
-menu-0-1 = "  "
+menu-0-1 = ""
 menu-0-1-exec = zenity --question --text="Suspend?" --icon-name=system-suspend --default-cancel && xflock4 && systemctl suspend
 menu-0-1-foreground = ${colors.light_gray}
 menu-0-1-background = ${colors.black}
 ; logout
-menu-0-2 = "  "
+menu-0-2 = ""
 menu-0-2-exec = zenity --question --text="Logout?" --icon-name=gnome-logout --default-cancel && (killall -9 pulseaudio ; i3-msg exit)
 menu-0-2-foreground = ${colors.light_gray}
 menu-0-2-background = ${colors.black}
 ; reboot
-menu-0-3 = "  "
+menu-0-3 = ""
 menu-0-3-exec = zenity --question --text="Reboot?" --icon-name=system-reboot --default-cancel && systemctl reboot
 menu-0-3-foreground = ${colors.light_gray}
 menu-0-3-background = ${colors.black}
 ; shutdown
-menu-0-4 = " "
+menu-0-4 = ""
 menu-0-4-exec = zenity --question --text="Shutdown?" --icon-name=system-shutdown --default-cancel && systemctl poweroff
 menu-0-4-foreground = ${colors.light_gray}
 menu-0-4-background = ${colors.black}
 ; end stripe
 menu-0-5 = " "
-;menu-0-5-font = 6
 menu-0-5-font = 3
 menu-0-5-foreground = ${colors.white}
 menu-0-5-background = ${colors.black}
