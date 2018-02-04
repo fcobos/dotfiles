@@ -1,11 +1,11 @@
 * {
-    background-color: #28313b;
-    /*border-color: #101010;*/
+    background-color: #252525;
+    border-color: #525252;
     text-color: #b9b9b9;
 }
 
 #element selected {
-    background-color: #838d98;
+    background-color: #686868;
     text-color: #101010;
 }
 
@@ -20,11 +20,11 @@
 }
 
 inputbar {
-    children:   [ textbox-prompt-colon,entry,case-indicator ];
+    children: [ textbox-prompt-colon, entry, case-indicator];
 }
 
 textbox-prompt-colon {
-    expand:     false;
-    str:        "";
-    margin:     0px 0.3em 0em 0em ;
+    expand: false;
+    str: "";
+    margin: 0px 0.3em 0em 0em;
 }
