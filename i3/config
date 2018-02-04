@@ -209,6 +209,8 @@ exec --no-startup-id xset +fp /home/felix/.local/share/fonts
 exec --no-startup-id xset fp rehash
 # start polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+# gnome gsd-xsettings (to make flatpak apps use the right theme)
+exec --no-startup-id /usr/libexec/gsd-xsettings
 
 # Pulse Audio Controls                                                                                      {{{
 bindsym XF86AudioMute        exec --no-startup-id amixer set Master -q toggle
