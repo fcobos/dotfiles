@@ -81,3 +81,6 @@ if &t_Co == 256 || has("gui_running")
 endif
 colorscheme base16-default-dark
 
+" mutt config
+au BufRead /tmp/mutt-* set tw=72
+
