@@ -37,22 +37,22 @@ fi
 # linux console colors
 if [ "$TERM" = "linux" ]; then
   /bin/echo -e "
-  \e]P0181818
-  \e]P1ab4642
-  \e]P2a1b56c
-  \e]P3f7ca88
-  \e]P47cafc2
-  \e]P5ba8baf
-  \e]P686c1b9
-  \e]P7d8d8d8
-  \e]P8585858
-  \e]P9dc9656
-  \e]PAc5d59b
-  \e]PBf0c674
-  \e]PC81a2be
-  \e]PDb294bb
-  \e]PE8abeb7
-  \e]PFc5c8c6
+  \e]P0061229
+  \e]P1d07346
+  \e]P299bf52
+  \e]P3fbd461
+  \e]P45299bf
+  \e]P59989cc
+  \e]P672b9bf
+  \e]P7b8bbc2
+  \e]P8717885
+  \e]P9d07346
+  \e]PA99bf52
+  \e]PBfbd461
+  \e]PC5299bf
+  \e]PD9989cc
+  \e]PE72b9bf
+  \e]PFffffff
   "
   # get rid of artifacts
   clear
