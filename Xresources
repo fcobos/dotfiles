@@ -40,42 +40,43 @@ st.bold_font: 1
 st.borderpx: 0
 
 ! colors
+
 ! special
-*.foreground:   #d8d8d8
-*.background:   #181818
-*.cursorColor:  #d8d8d8
+*.foreground:   #b8bbc2
+*.background:   #061229
+*.cursorColor:  #b8bbc2
 
 ! black
-*.color0:       #181818
-*.color8:       #585858
+*.color0:       #061229
+*.color8:       #717885
 
 ! red
-*.color1:       #ab4642
-*.color9:       #dc9656
+*.color1:       #d07346
+*.color9:       #d07346
 
 ! green
-*.color2:       #a1b56c
-*.color10:      #c5d59b
+*.color2:       #99bf52
+*.color10:      #99bf52
 
 ! yellow
-*.color3:       #f7ca88
-*.color11:      #f0c674
+*.color3:       #fbd461
+*.color11:      #fbd461
 
 ! blue
-*.color4:       #7cafc2
-*.color12:      #81a2be
+*.color4:       #5299bf
+*.color12:      #5299bf
 
 ! magenta
-*.color5:       #ba8baf
-*.color13:      #b294bb
+*.color5:       #9989cc
+*.color13:      #9989cc
 
 ! cyan
-*.color6:       #86c1b9
-*.color14:      #8abeb7
+*.color6:       #72b9bf
+*.color14:      #72b9bf
 
 ! white
-*.color7:       #d8d8d8
-*.color15:      #c5c8c6
+*.color7:       #b8bbc2
+*.color15:      #ffffff
 
 *color16:      #dc9656
 *color17:      #a16946
