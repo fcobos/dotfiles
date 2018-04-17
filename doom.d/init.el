@@ -122,3 +122,22 @@
        ;; your own modules.
        (default +bindings +snippets +evil-commands))
 
+       ;; Set the font
+       (setq doom-font (font-spec :family "Hack" :size 12)
+             doom-big-font (font-spec :family "Hack" :size 24)
+             doom-variable-pitch-font (font-spec :family "Noto Sans")
+             doom-unicode-font (font-spec :family "DejaVu Sans Mono"))
+       ;; Set the theme
+       (setq doom-theme 'doom-vibrant)
+       ;; Set line numbers style
+       (setq doom-line-numbers-style 'relative)
+       ;; Disable blinking cursor
+       (blink-cursor-mode 0)
+       (setq visible-cursor nil)
+       ;; setup default indentation
+       (setq indent-tabs-mode 't)
+       (setq-default tab-width 8)
+       (setq default-tab-width 8)
+       (setq c-basic-offset 8)
+       (c-set-offset 'case-label '+)
+ 
