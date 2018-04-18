@@ -176,7 +176,7 @@ bindsym $mod+Shift+e exec "zenity --question --text='Logout?' --icon-name=gnome-
 # start polkit auth agent
 exec --no-startup-id lxpolkit &
 # start compton
-exec --no-startup-id compton -b
+exec --no-startup-id env allow_rgb10_configs=false compton -b
 # background
 exec --no-startup-id ~/.fehbg
 # touchpad config
