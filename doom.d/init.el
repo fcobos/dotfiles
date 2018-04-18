@@ -128,7 +128,7 @@
              doom-variable-pitch-font (font-spec :family "Noto Sans")
              doom-unicode-font (font-spec :family "DejaVu Sans Mono"))
        ;; Set the theme
-       (setq doom-theme 'doom-vibrant)
+       (setq doom-theme 'doom-dracula)
        ;; Set line numbers style
        (setq doom-line-numbers-style 'relative)
        ;; Disable cursor blinking
