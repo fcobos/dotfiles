@@ -41,47 +41,23 @@ st.borderpx: 0
 
 ! colors
 
-! special
-*.foreground:   #b8bbc2
-*.background:   #061229
-*.cursorColor:  #b8bbc2
 
-! black
-*.color0:       #061229
-*.color8:       #717885
-
-! red
-*.color1:       #d07346
-*.color9:       #d07346
-
-! green
-*.color2:       #99bf52
-*.color10:      #99bf52
-
-! yellow
-*.color3:       #fbd461
-*.color11:      #fbd461
-
-! blue
-*.color4:       #5299bf
-*.color12:      #5299bf
-
-! magenta
-*.color5:       #9989cc
-*.color13:      #9989cc
-
-! cyan
-*.color6:       #72b9bf
-*.color14:      #72b9bf
-
-! white
-*.color7:       #b8bbc2
-*.color15:      #ffffff
-
-*color16:      #dc9656
-*color17:      #a16946
-*color18:      #282828
-*color19:      #383838
-*color20:      #b8b8b8
-*color21:      #e8e8e8
-
+! Dracula Xresources palette
+*.foreground: #F8F8F2
+*.background: #282A36
+*.color0:     #000000
+*.color8:     #4D4D4D
+*.color1:     #FF5555
+*.color9:     #FF6E67
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+*.color3:     #F1FA8C
+*.color11:    #F4F99D
+*.color4:     #BD93F9
+*.color12:    #CAA9FA
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+*.color7:     #BFBFBF
+*.color15:    #E6E6E6
