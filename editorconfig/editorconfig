@@ -13,7 +13,7 @@ insert_final_newline = true
 indent_style = space
 indent_size = 2
 
-[*.{el,rb,cr,y{a,}ml,json,toml,nim,coffee,css,s{a,c}ss,styl,slim,jade,pug,html]
+[*.{el,rb,cr,y{a,}ml,json,toml,nim,coffee,css,s{a,c}ss,styl,slim,jade,pug,html}]
 indent_style = space
 indent_size = 2
 
