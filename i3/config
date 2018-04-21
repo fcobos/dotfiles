@@ -42,8 +42,8 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -fn "Hack-9" -nf \#98d1ce -nb \#0a0f14 -sb \#195465'
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme dracula
-bindsym Mod1+Tab exec --no-startup-id rofi -show window -theme dracula
+bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi -theme dracula"
+#bindsym Mod1+Tab exec --no-startup-id rofi -show window -theme dracula
 
 # change focus
 bindsym $mod+h focus left
