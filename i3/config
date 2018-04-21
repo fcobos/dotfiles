@@ -256,7 +256,7 @@ bindsym $mod+Pause exec --no-startup-id $Locker
 
 # colors
 set $black #101010
-set $focused #202020
+set $focused #282a36
 set $bright_black #525252
 set $white #b9b9b9
 set $unfocused #525252
