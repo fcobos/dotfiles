@@ -42,7 +42,7 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -fn "Hack-9" -nf \#98d1ce -nb \#0a0f14 -sb \#195465'
-bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi -theme dracula"
+bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi -theme onedark"
 #bindsym Mod1+Tab exec --no-startup-id rofi -show window -theme dracula
 
 # change focus
@@ -256,7 +256,7 @@ bindsym $mod+Pause exec --no-startup-id $Locker
 
 # colors
 set $black #101010
-set $focused #282a36
+set $focused #202020
 set $bright_black #525252
 set $white #b9b9b9
 set $unfocused #525252
