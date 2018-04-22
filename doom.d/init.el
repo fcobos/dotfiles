@@ -120,7 +120,8 @@
        ;; a Spacemacs-inspired keybinding scheme, a custom yasnippet library,
        ;; and additional ex commands for evil-mode. Use it as a reference for
        ;; your own modules.
-       (default +bindings +snippets +evil-commands))
+       (default +bindings +snippets +evil-commands)
+       :private custom)
 
 ;; Set the font
 (setq doom-font (font-spec :family "Hack" :size 12)
@@ -131,9 +132,6 @@
 (setq doom-theme 'doom-one)
 ;; Set line numbers style
 (setq doom-line-numbers-style 'relative)
-;; Disable cursor blinking
-(blink-cursor-mode 0)
-(setq visible-cursor nil)
 ;; setup default indentation
 (setq indent-tabs-mode 't)
 (setq-default tab-width 8)
