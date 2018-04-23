@@ -256,14 +256,16 @@ bindsym $mod+Pause exec --no-startup-id $Locker
 
 # colors
 set $black #101010
-set $focused #202020
+#set $focused #202020
+set $focused #98c379
 set $bright_black #525252
 set $white #b9b9b9
 set $unfocused #525252
-set $unfocused_text #686868
+set $unfocused_text #abb2bf
 set $urgent #AB4642
 #                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
-client.focused          $focused    $focused    $white      $focused    $focused
+#client.focused          $focused    $focused    $white      $focused    $focused
+client.focused          $focused    $focused    $black      $focused    $focused
 client.unfocused        $unfocused  $unfocused  $unfocused_text       $unfocused $unfocused
 client.focused_inactive $bright_black      $bright_black      $white      $bright_black      $bright_black
 client.urgent           $urgent        $urgent        $black      $urgent        $urgent
@@ -278,7 +280,7 @@ client.background       $black
 #for_window [class="^Blender$"] border none
 #for_window [class="qutebrowser"] border none
 new_float normal
-new_window pixel 8
+new_window pixel 4
 # firefox does not like that big border and fucks up right click menu.
 #for_window [class="^Firefox$" title=" - Mozilla Firefox$"] border none
 for_window [class="^Firefox$" title=" - Mozilla Firefox"] border none
