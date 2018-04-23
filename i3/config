@@ -263,12 +263,12 @@ set $white #b9b9b9
 set $unfocused #525252
 set $unfocused_text #abb2bf
 set $urgent #AB4642
-#                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
-#client.focused          $focused    $focused    $white      $focused    $focused
-client.focused          $focused    $focused    $black      $focused    $focused
-client.unfocused        $unfocused  $unfocused  $unfocused_text       $unfocused $unfocused
-client.focused_inactive $bright_black      $bright_black      $white      $bright_black      $bright_black
-client.urgent           $urgent        $urgent        $black      $urgent        $urgent
+#                       BORDER         BACKGROUND      TEXT              INDICATOR       CHILD_BORDER
+#client.focused          $focused       $focused        $white            $focused        $focused
+client.focused          $focused       $focused        $black            $focused        $focused
+client.unfocused        $unfocused     $unfocused      $unfocused_text   $unfocused      $unfocused
+client.focused_inactive $bright_black  $bright_black   $white            $bright_black   $bright_black
+client.urgent           $urgent        $urgent         $black            $urgent         $urgent
 client.background       $black
 
 # disable window title for certain programs
