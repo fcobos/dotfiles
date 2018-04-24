@@ -138,4 +138,6 @@
 (setq default-tab-width 8)
 (setq c-basic-offset 8)
 (c-set-offset 'case-label '+)
+;; Maximize frame
+(toggle-frame-maximized)
 
