@@ -132,7 +132,7 @@
       doom-variable-pitch-font (font-spec :family "Noto Sans")
       doom-unicode-font (font-spec :family "DejaVu Sans Mono"))
 ;; Set the theme
-(setq doom-theme 'doom-tomorrow-night)
+(setq doom-theme 'doom-molokai)
 ;; Set line numbers style
 (setq doom-line-numbers-style 'relative)
 ;; setup default indentation
