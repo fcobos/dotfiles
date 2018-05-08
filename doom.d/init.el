@@ -126,21 +126,3 @@
        (default +bindings +snippets +evil-commands)
        :private custom)
 
-;; Set the font
-(setq doom-font (font-spec :family "Hack" :size 12)
-      doom-big-font (font-spec :family "Hack" :size 24)
-      doom-variable-pitch-font (font-spec :family "Noto Sans")
-      doom-unicode-font (font-spec :family "DejaVu Sans Mono"))
-;; Set the theme
-(setq doom-theme 'doom-molokai)
-;; Set line numbers style
-(setq doom-line-numbers-style 'relative)
-;; setup default indentation
-(setq indent-tabs-mode 't)
-(setq-default tab-width 8)
-(setq default-tab-width 8)
-(setq c-basic-offset 8)
-(c-set-offset 'case-label '+)
-;; Maximize frame
-(toggle-frame-maximized)
-
