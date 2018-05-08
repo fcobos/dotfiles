@@ -1,6 +1,6 @@
 set selection-clipboard clipboard
 set smooth-scroll true
-set guioptions sv
+set guioptions s
 #set recolor-keephue true
 set recolor true
 
