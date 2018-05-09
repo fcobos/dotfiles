@@ -15,7 +15,8 @@
        services          ; TODO managing external services & code builders
        snippets          ; my elves. They type so I don't have to
        spellcheck        ; tasing you for misspelling mispelling
-       syntax-checker    ; tasing you for every semicolon you forget
+       (syntax-checker   ; tasing you for every semicolon you forget
+        +childframe)     ; use childframes for error popups (Emacs 26+ only)
        version-control   ; remember, remember that commit in November
        workspaces        ; tab emulation, persistence & separate workspaces
 
@@ -84,6 +85,7 @@
        ;ledger            ; an accounting system in Emacs
        lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
+       ;nim               ; python + lisp at the speed of c
        ;nix               ; I hereby declare "nix geht mehr!"
        ;ocaml             ; an objective camel
        (org              ; organize your plain life in plain text
