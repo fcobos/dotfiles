@@ -22,27 +22,28 @@
        :completion
        (company          ; the ultimate code completion backend
         +auto            ; as-you-type code completion
-        +childframe)     ; a nicer company UI. Emacs +26 only!
+        +childframe)     ; a nicer company UI (Emacs 26+ only)
       ;helm              ; the *other* search engine for love and life
       ;ido               ; the other *other* search engine...
-       ivy               ; a search engine for love and life
+       (ivy              ; a search engine for love and life
+        +childframe)     ; uses childframes for popups (Emacs 26+ only)
 
        :ui
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
        doom-modeline     ; a snazzy Atom-inspired mode-line
-       ;doom-quit         ; DOOM quit-message prompts when you quit Emacs
+       doom-quit         ; DOOM quit-message prompts when you quit Emacs
        evil-goggles      ; display visual hints when editing in evil
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        nav-flash         ; blink the current line after jumping
-       posframe          ; use child frames where possible (Emacs 26+ only)
-       ;tabbar           ; FIXME an (incomplete) tab bar for Emacs
-       ;unicode          ; extended unicode support for various languages
+      ;tabbar            ; FIXME an (incomplete) tab bar for Emacs
+      ;unicode           ; extended unicode support for various languages
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
 
        :tools
        dired             ; making dired pretty [functional]
+       editorconfig      ; let someone else argue about tabs vs spaces
        ein               ; tame Jupyter notebooks with emacs
        electric-indent   ; smarter, keyword-based electric-indent
        eshell            ; a consistent, cross-platform shell (WIP)
@@ -110,13 +111,13 @@
        ;; toward a specific purpose. They may have additional dependencies and
        ;; should be loaded late.
        :app
-       ;(email +gmail)    ; emacs as an email client
-       ;irc               ; how neckbeards socialize
-       ;(rss +org)        ; emacs as an RSS reader
-       ;twitter           ; twitter client https://twitter.com/vnought
-       ;(write            ; emacs as a word processor (latex + org + markdown)
-       ; +wordnut         ; wordnet (wn) search
-       ; +langtool)       ; a proofreader (grammar/style check) for Emacs
+      ;(email +gmail)    ; emacs as an email client
+      ;irc               ; how neckbeards socialize
+      ;(rss +org)        ; emacs as an RSS reader
+      ;twitter           ; twitter client https://twitter.com/vnought
+      ;(write            ; emacs as a word processor (latex + org + markdown)
+      ; +wordnut         ; wordnet (wn) search
+      ; +langtool)       ; a proofreader (grammar/style check) for Emacs
 
        :config
        ;; The default module set reasonable defaults for Emacs. It also provides
