@@ -26,7 +26,7 @@
 
 ;; Disable whitespace-mode
 (add-hook 'doom-post-init-hook (lambda ()
-  (remove-hook 'editorconfig-custom-hooks 'doom|editorconfig-whitespace-mode-maybe)))
+  (remove-hook 'after-change-major-mode-hook 'doom|show-whitespace-maybe)))
 
 ;; Change dashboard banner
 (defun custom-dashboard-widget-banner ()
