@@ -229,13 +229,4 @@ Each entry is either:
            ;; Non-nil means display source file containing the main routine at startup
            gdb-show-main t)))
 
-(defun ccpp/init-realgud ()
-   (require 'realgud)
-   (add-hook 'c++mode-hook (lambda () (load-library realgud)))
-   (add-hook 'c-mode-hook (lambda () (load-library realgud))))
-
-
-
-
-
 ;;; packages.el ends here
