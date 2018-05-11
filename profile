@@ -41,15 +41,15 @@ if [ "$TERM" = "linux" ]; then
   \e]P1ff0044
   \e]P282b414
   \e]P3fd971f
-  \e]P4266c98
+  \e]P42686d6
   \e]P5ac0cb1
-  \e]P6ae81ff
+  \e]P666d9ef
   \e]P7cccccc
   \e]P8808080
   \e]P9f92672
   \e]PAa6e22e
   \e]PBe6db74
-  \e]PC7070f0
+  \e]PC268bd2
   \e]PDd63ae1
   \e]PE66d9ef
   \e]PFf8f8f2
