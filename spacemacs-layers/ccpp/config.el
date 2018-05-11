@@ -1,3 +1,6 @@
+(defconst c-c++-modes '(c-mode c++-mode)
+"Primary major modes of the `c-c++' layer.")
+
 ;;enable clang-format on save for projects with a .clang-format file at its root
 (defun clang-format-buffer-smart ()
   "Reformat buffer if .clang-format exists in the projectile root."
