@@ -236,7 +236,6 @@ unset color20
 unset color21
 unset color_foreground
 unset color_background
-clear
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/felix/.sdkman"
