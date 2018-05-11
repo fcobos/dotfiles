@@ -62,15 +62,15 @@ st.borderpx: 0
 *.color11:      #e6db74
 
 ! blue
-*.color4:       #266c98
-*.color12:      #7070f0
+*.color4:       #2686d6
+*.color12:      #268bd2
 
 ! magenta
 *.color5:       #ac0cb1
 *.color13:      #d63ae1
 
 ! cyan
-*.color6:       #ae81ff
+*.color6:       #66d9ef
 *.color14:      #66d9ef
 
 ! white
