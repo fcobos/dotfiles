@@ -32,7 +32,7 @@ values."
    dotspacemacs-configuration-layers
    '(
      yaml
-     ;ivy
+     ivy
      html
      vimscript
      ccpp
@@ -46,7 +46,7 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     helm
+     ;helm
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle
@@ -76,7 +76,7 @@ values."
    dotspacemacs-additional-packages '(
                                       editorconfig
                                       all-the-icons
-                                      realgud
+                                      ivy-posframe
                                      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -473,13 +473,13 @@ you should place your code here."
   (add-hook 'conf-mode-hook (lambda () (setq display-line-numbers 'relative)))
 
   ;; use ripgrep instead of ag
-  (setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
+  ;(setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
 
   ;; use helm with frames
-  (with-eval-after-load 'helm
-    (setq helm-display-function 'helm-display-buffer-in-own-frame
-          helm-display-buffer-reuse-frame t
-          helm-use-undecorated-frame-option t))
+  ;(with-eval-after-load 'helm
+  ;  (setq helm-display-function 'helm-display-buffer-in-own-frame
+  ;        helm-display-buffer-reuse-frame t
+  ;        helm-use-undecorated-frame-option t))
 
   ;; replace mode names
 ;;  (require 'diminish)
@@ -493,6 +493,25 @@ you should place your code here."
   ;;(evil-ex-define-cmd "q" 'kill-this-buffer)
   ;; Need to type out :quit to close emacs
   ;;(evil-ex-define-cmd "quit" 'evil-quit)
+
+  ;; ivy-posframe
+  (require 'ivy-posframe)
+ ; (setq ivy-display-function #'ivy-posframe-display)
+ ; (setq ivy-display-function #'ivy-posframe-display-at-frame-center)
+ ; (setq ivy-display-function #'ivy-posframe-display-at-window-center)
+ ; (setq ivy-display-function #'ivy-posframe-display-at-frame-bottom-left)
+ ; (setq ivy-display-function #'ivy-posframe-display-at-window-bottom-left)
+  (setq ivy-display-function #'ivy-posframe-display-at-point)
+ ; (setq ivy-display-function #'ivy-posframe-display-at-frame-bottom-window-center)
+
+  (setq ivy-height 16
+           ivy-fixed-height-minibuffer nil
+           ivy-posframe-parameters `((min-width . 90)
+                                     (min-height . ,ivy-height)
+                                     (internal-border-width . 10)))
+
+  (ivy-posframe-enable)
+
 
   ;; load custom file
   (load-file custom-file)

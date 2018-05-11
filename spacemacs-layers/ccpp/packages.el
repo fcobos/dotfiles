@@ -32,7 +32,7 @@
 (defconst ccpp-packages '(cc-mode irony company-irony flycheck flycheck-irony
                                   irony-eldoc company-irony-c-headers rtags
                                   helm-rtags clang-format disaster cmake-mode
-                                  semantic srefactor gdb-mi)
+                                  semantic srefactor gdb-mi realgud)
   "The list of Lisp packages required by the ccpp layer.
 
 Each entry is either:
@@ -228,5 +228,14 @@ Each entry is either:
            gdb-many-windows t
            ;; Non-nil means display source file containing the main routine at startup
            gdb-show-main t)))
+
+(defun ccpp/init-realgud ()
+   (require 'realgud)
+   (add-hook 'c++mode-hook (lambda () (load-library realgud)))
+   (add-hook 'c-mode-hook (lambda () (load-library realgud))))
+
+
+
+
 
 ;;; packages.el ends here
