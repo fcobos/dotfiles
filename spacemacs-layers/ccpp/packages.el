@@ -229,7 +229,7 @@ Each entry is either:
            ;; Non-nil means display source file containing the main routine at startup
            gdb-show-main t)))
 
-(defun c-c++/init-realgud()
+(defun ccpp/init-realgud()
   (use-package realgud
     :defer t
     :commands (realgud:gdb)
