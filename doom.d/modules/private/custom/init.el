@@ -49,3 +49,6 @@
 dashboard. These functions take no arguments and the dashboard buffer is current
 while they run.")
 
+;; Enable gdb many windows.
+(setq gdb-many-windows t)
+
