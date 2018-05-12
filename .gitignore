@@ -1,3 +1,5 @@
+# emacs byte-compiled stuff
+*.elc
 # ignore ncmpcpp error log file
 ncmpcpp/error.log
 # ranger
