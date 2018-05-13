@@ -8,15 +8,15 @@ Xft.embeddedbitmap: 0
 !Xft.dpi: 96
 
 ! xterm
-Xterm.termName: xterm-256color
+XTerm.termName: xterm-256color
 xterm.vt100.metaSendsEscape: true
 xterm.vt100.saveLines: 2000
 xterm.vt100.scrollBar: false
 !xterm*utf8:   2
-Xterm*locale:           true
-Xterm*VT100.geometry:   80x24
-Xterm*dynamicColors:    true
-Xterm*eightBitInput:    false
+XTerm*locale:           true
+XTerm*VT100.geometry:   80x24
+XTerm*dynamicColors:    true
+XTerm*eightBitInput:    false
 XTerm.vt100*faceName:   Hack
 XTerm*faceSize: 9
 XTerm*renderFont: true
