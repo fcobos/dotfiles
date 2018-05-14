@@ -25,3 +25,10 @@
   ;; available
   :config
   (add-hook! 'srefactor-ui-menu-mode-hook 'evil-emacs-state))
+
+;; Custom keybindings
+(add-hook! 'after-init-hook
+  (map!
+    (:leader
+      :desc "M-x" :n "SPC" #'execute-extended-command)))
+
