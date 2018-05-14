@@ -13,7 +13,7 @@ insert_final_newline = true
 indent_style = space
 indent_size = 2
 
-[*.{el,rb,cr,y{a,}ml,json,toml,nim,coffee,css,s{a,c}ss,styl,slim,jade,pug,html}]
+[*.{el,rb,cr,y{a,}ml,json,toml,nim,coffee,css,s{a,c}ss,styl,slim,jade,pug,html,xml}]
 indent_style = space
 indent_size = 2
 
@@ -31,3 +31,8 @@ indent_size = 4
 
 [{Makefile,gitconfig}]
 indent_style = tab
+
+[*.qml]
+indent_style = space
+indent_size = 4
+
