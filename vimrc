@@ -79,7 +79,7 @@ set nowrap
 if &t_Co == 256 || has("gui_running")
 	set termguicolors
 endif
-colorscheme molokai
+colorscheme base16-onedark
 
 " mutt config
 au BufRead /tmp/mutt-* set tw=72
