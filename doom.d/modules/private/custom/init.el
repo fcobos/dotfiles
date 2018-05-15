@@ -1,5 +1,5 @@
 ;; Maximize frame
-(toggle-frame-maximized)
+(add-hook 'doom-init-hook (lambda () (toggle-frame-maximized)))
 
 ;; Set the font
 (setq doom-font (font-spec :family "Hack" :size 12)
@@ -8,7 +8,7 @@
       doom-unicode-font (font-spec :family "DejaVu Sans Mono"))
 
 ;; Set the theme
-(setq doom-theme 'doom-molokai)
+;(setq doom-theme 'doom-molokai)
 
 ;; Set line numbers style
 (setq doom-line-numbers-style 'relative)
