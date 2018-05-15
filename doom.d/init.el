@@ -53,7 +53,7 @@
        imenu             ; an imenu sidebar and searchable code index
       ;macos             ; MacOS-specific commands
        make              ; run make tasks from Emacs
-      ;magit             ;
+       magit             ;
        password-store    ; password manager for nerds
        pdf               ; pdf enhancements
        rgb               ; creating color strings

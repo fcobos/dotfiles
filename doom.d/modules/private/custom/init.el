@@ -21,11 +21,11 @@
 (c-set-offset 'case-label '+)
 
 ;; Disable cursor blink
-(add-hook 'doom-post-init-hook (lambda () (blink-cursor-mode 0)))
+(add-hook 'window-setup-hook (lambda () (blink-cursor-mode 0)))
 (setq visible-cursor nil)
 
 ;; Disable whitespace-mode
-(add-hook 'doom-post-init-hook (lambda ()
+(add-hook 'after-init-hook (lambda ()
   (remove-hook 'after-change-major-mode-hook 'doom|show-whitespace-maybe)))
 
 ;; Change dashboard banner
