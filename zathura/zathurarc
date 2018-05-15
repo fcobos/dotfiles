@@ -4,36 +4,36 @@ set guioptions s
 #set recolor-keephue true
 set recolor true
 
-# Base16 Grayscale Dark
-# Author: Alexandre Gavioli (https://github.com/Alexx2/)
+# Base16 OneDark
+# Author: Lalit Magant (http://github.com/tilal6991)
 
-set default-bg                  "#101010"
-set default-fg                  "#252525"
+set default-bg                  "#282c34"
+set default-fg                  "#353b45"
 
-set statusbar-fg                "#ababab"
-set statusbar-bg                "#464646"
+set statusbar-fg                "#565c64"
+set statusbar-bg                "#3e4451"
 
-set inputbar-bg                 "#101010"
-set inputbar-fg                 "#f7f7f7"
+set inputbar-bg                 "#282c34"
+set inputbar-fg                 "#c8ccd4"
 
-set notification-bg             "#101010"
-set notification-fg             "#f7f7f7"
+set notification-bg             "#282c34"
+set notification-fg             "#c8ccd4"
 
-set notification-error-bg       "#101010"
-set notification-error-fg       "#7c7c7c"
+set notification-error-bg       "#282c34"
+set notification-error-fg       "#e06c75"
 
-set notification-warning-bg     "#101010"
-set notification-warning-fg     "#7c7c7c"
+set notification-warning-bg     "#282c34"
+set notification-warning-fg     "#e06c75"
 
-set highlight-color             "#a0a0a0"
-set highlight-active-color      "#686868"
+set highlight-color             "#e5c07b"
+set highlight-active-color      "#61afef"
 
-set completion-bg               "#252525"
-set completion-fg               "#686868"
+set completion-bg               "#353b45"
+set completion-fg               "#61afef"
 
-set completion-highlight-fg     "#f7f7f7"
-set completion-highlight-bg     "#686868"
+set completion-highlight-fg     "#c8ccd4"
+set completion-highlight-bg     "#61afef"
 
-set recolor-lightcolor          "#101010"
-set recolor-darkcolor           "#e3e3e3"
+set recolor-lightcolor          "#282c34"
+set recolor-darkcolor           "#b6bdca"
 
