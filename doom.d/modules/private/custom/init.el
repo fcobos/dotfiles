@@ -6,6 +6,7 @@
       doom-big-font (font-spec :family "Hack" :size 24)
       doom-variable-pitch-font (font-spec :family "Noto Sans")
       doom-unicode-font (font-spec :family "DejaVu Sans Mono"))
+(setq-default line-spacing 0)
 
 ;; Set the theme
 ;(setq doom-theme 'doom-molokai)
