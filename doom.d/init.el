@@ -35,7 +35,7 @@
        doom-quit         ; DOOM quit-message prompts when you quit Emacs
        evil-goggles      ; display visual hints when editing in evil
        hl-todo           ; highlight TODO/FIXME/NOTE tags
-       ;nav-flash         ; blink the current line after jumping
+       nav-flash         ; blink the current line after jumping
        neotree           ; a project drawer, like NERDTree for vim
       ;tabbar            ; FIXME an (incomplete) tab bar for Emacs
       ;unicode           ; extended unicode support for various languages
