@@ -501,3 +501,8 @@ config.bind('t', 'set-cmd-text -s :open -t')
 
 # Bindings for command mode
 config.bind('<Ctrl+Return>', 'set-cmd-text --append .com ;; command-accept', mode='command')
+
+# start page
+c.url.default_page = '~/.config/qutebrowser/start/start.html'
+c.url.start_pages = '~/.config/qutebrowser/start/start.html'
+
