@@ -176,7 +176,8 @@ bindsym $mod+Shift+e exec "zenity --question --text='Logout?' --icon-name=gnome-
 #}
 
 # start polkit auth agent
-exec --no-startup-id lxpolkit &
+#exec --no-startup-id lxpolkit &
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # start compton
 exec --no-startup-id env allow_rgb10_configs=false compton -b
 # background
@@ -216,7 +217,8 @@ exec --no-startup-id xset fp rehash
 # start polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 # gnome gsd-xsettings (to make flatpak apps use the right theme)
-exec --no-startup-id /usr/libexec/gsd-xsettings
+#exec --no-startup-id /usr/libexec/gsd-xsettings
+exec --no-startup-id /usr/lib/gsd-xsettings
 
 # Pulse Audio Controls                                                                                      {{{
 bindsym XF86AudioMute        exec --no-startup-id amixer set Master -q toggle
