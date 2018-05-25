@@ -69,8 +69,8 @@ tray-padding = 0
 tray-transparent = false
 tray-maxsize = 14
 ;tray-offset-x = 21%
-tray-foreground = ${colors.background}
-tray-background = ${colors.foreground}
+tray-foreground = ${colors.foreground}
+tray-background = ${colors.dark_gray}
 
 wm-restack = i3
 ;override-redirect = true
@@ -84,15 +84,15 @@ modules-left = i3 RightArrow2 RightArrow1 xwindow
 modules-right = mpd powermenu arrow1 LeftStripe3 volume date
 
 ; All modules available in this config file:
-; i3 text xwindow tray xkeyboard filesystem mpd backlight cpu 
-; memory network eth date volume battery temperature github 
+; i3 text xwindow tray xkeyboard filesystem mpd backlight cpu
+; memory network eth date volume battery temperature github
 ; appmenu powermenu mail weather music ssh vpn btc etherium
 
 [bar/secondary]
 inherit = bar/le-bar
 bottom = true
 modules-left = mpd music github
-modules-center = 
+modules-center =
 modules-right = powermenu arrow1 arrow2 weather arrow3 mail arrow2 network vpn eth
 
 
@@ -115,7 +115,7 @@ ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
 ws-icon-default = 
-;  ❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ ❿ 
+;  ❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ ❿
 ;ws-icon-0 = 1;❶
 ;ws-icon-1 = 2;❷
 ;ws-icon-2 = 3;❸
@@ -128,9 +128,9 @@ ws-icon-default = 
 ;label-focused = %index%
 ;label-focused = 
 ;label-focused = %icon%
-label-focused-foreground = ${colors.dark_gray}
-label-focused-background = ${colors.foreground}
-label-focused-underline = ${colors.dark_gray}
+label-focused-foreground = ${colors.foreground}
+label-focused-background = ${colors.dark_gray}
+label-focused-underline = ${colors.foreground}
 label-focused-padding = 1
 label-focused-font = 8
 icon-focused-font = 7
@@ -139,8 +139,8 @@ icon-focused-font = 7
 ;label-visible = %icon%
 ;label-visible = %index%
 ;label-visible-foreground = ${colors.background}
-label-visible-background = ${colors.foreground}
-label-visible-underline = ${colors.dark_gray}
+label-visible-background = ${colors.dark_gray}
+label-visible-underline = ${colors.foreground}
 label-visible-padding = 1
 label-visible-font = 8
 icon-visible-font = 7
@@ -149,7 +149,7 @@ icon-visible-font = 7
 ;label-urgent = %icon%
 ;label-urgent= %index%
 label-urgent-foreground = ${colors.red}
-label-urgent-background = ${colors.foreground}
+label-urgent-background = ${colors.dark_gray}
 label-urgent-underline = ${colors.red}
 label-urgent-padding = 1
 label-urgent-font = 8
@@ -159,7 +159,7 @@ icon-urgent-font = 2
 ;label-unfocused = %icon%
 ;label-unfocused = %index%
 label-unfocused-foreground = ${colors.gray}
-label-unfocused-background = ${colors.foreground}
+label-unfocused-background = ${colors.dark_gray}
 label-unfocused-padding = 1
 label-unfocused-font = 8
 icon-unfocused-font = 2
@@ -191,14 +191,14 @@ content-background = ${colors.black}
 [module/LeftStripe3]
 type = custom/text
 content = ""
-content-foreground = ${colors.foreground}
-content-background = ${colors.dark_gray}
+content-foreground = ${colors.dark_gray}
+content-background = ${colors.gray}
 
 
 [module/arrow1]
 type = custom/text
 content = ""
-content-foreground = ${colors.dark_gray}
+content-foreground = ${colors.gray}
 content-background = ${colors.black}
 
 [module/arrow2]
@@ -222,14 +222,14 @@ content-background = ${colors.dark_gray}
 [module/RightArrow1]
 type = custom/text
 content = ""
-content-foreground = ${colors.dark_gray}
+content-foreground = ${colors.gray}
 content-background = ${colors.black}
 
 [module/RightArrow2]
 type = custom/text
 content = ""
-content-foreground = ${colors.foreground}
-content-background = ${colors.dark_gray}
+content-foreground = ${colors.dark_gray}
+content-background = ${colors.gray}
 
 [module/RightArrow3]
 type = custom/text
@@ -317,9 +317,9 @@ label-unmounted-background = ${colors.gray}
 [module/mpd]
 type = internal/mpd
 ; 
-;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next> 
+;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
 format-online = "<label-song>  "
-format-stopped = 
+format-stopped =
 ;icon-prev = 
 ;icon-stop = 
 ;icon-play = 
@@ -359,7 +359,7 @@ type = internal/cpu
 interval = 1.0
 
 format = <label>
-;format = <ramp-coreload><label> 
+;format = <ramp-coreload><label>
 format-prefix = " "
 format-foreground = ${colors.foreground}
 format-background = ${colors.gray}
@@ -458,8 +458,8 @@ label-disconnected-background = ${colors.foreground}
 type = internal/date
 interval = 1
 
-format-foreground = ${colors.dark_gray}
-format-background = ${colors.foreground}
+format-foreground = ${colors.foreground}
+format-background = ${colors.dark_gray}
 
 ;date = ""
 ;date-alt = "  %Y/%m/%d"
@@ -493,26 +493,26 @@ format-volume = <ramp-volume><label-volume>
 ;     
 
 label-volume = %percentage%
-label-volume-foreground = ${colors.dark_gray}
-label-volume-background = ${colors.foreground}
+label-volume-foreground = ${colors.foreground}
+label-volume-background = ${colors.dark_gray}
 label-volume-font = 2
 label-muted = "  muted"
-label-muted-foreground = ${colors.dark_gray}
-label-muted-background = ${colors.foreground}
+label-muted-foreground = ${colors.foreground}
+label-muted-background = ${colors.dark_gray}
 label-muted-font = 2
 
 ramp-volume-0 = "  "
-ramp-volume-0-foreground = ${colors.dark_gray}
-ramp-volume-0-background = ${colors.foreground}
+ramp-volume-0-foreground = ${colors.foreground}
+ramp-volume-0-background = ${colors.dark_gray}
 ramp-volume-1 = "  "
-ramp-volume-1-foreground = ${colors.dark_gray}
-ramp-volume-1-background = ${colors.foreground}
+ramp-volume-1-foreground = ${colors.foreground}
+ramp-volume-1-background = ${colors.dark_gray}
 ramp-volume-2 = "  "
-ramp-volume-2-foreground = ${colors.dark_gray}
-ramp-volume-2-background = ${colors.foreground}
+ramp-volume-2-foreground = ${colors.foreground}
+ramp-volume-2-background = ${colors.dark_gray}
 ramp-volume-3 = "  "
-ramp-volume-3-foreground = ${colors.dark_gray}
-ramp-volume-3-background = ${colors.foreground}
+ramp-volume-3-foreground = ${colors.foreground}
+ramp-volume-3-background = ${colors.dark_gray}
 
 bar-volume-width = 10
 bar-volume-background = #495858
@@ -617,7 +617,7 @@ token = ${env:GITHUB_ACCESS_TOKEN}
 ; Whether empty notifications should be displayed or not
 empty-notifications = false
 
-;    
+;   
 ; Available tokens:
 ;   %notifications% (default)
 ; Default: Notifications: %notifications%
@@ -631,13 +631,13 @@ label =  %notifications%
 [module/powermenu]
 type = custom/menu
 
-;      » 
+;      »
 ;label-open = " "
 label-open = "    "
 label-open-font = 3
 label-open-foreground = ${colors.foreground}
 label-open-background = ${colors.background}
-label-close = 
+label-close =
 label-close-foreground = ${colors.foreground}
 label-close-background = ${colors.black}
 label-separator = " "
@@ -683,7 +683,7 @@ menu-0-5-background = ${colors.black}
 [module/appmenu]
 type = custom/menu
 
-;       
+;      
 label-open = " "
 label-open-font = 6
 label-open-foreground = ${colors.red}
