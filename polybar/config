@@ -3,14 +3,14 @@
 ;----------------------------------------------------------
 
 [colors]
-gray = #868686
+gray = #545862
 red = #e06c75
 green = #98c379
 blue = #61afef
 yellow = #d19a66
 white = #abb2bf
-black = #1e2127
-dark_gray = #464646
+black = #181818
+dark_gray = #282c34
 background = ${colors.black}
 foreground = ${colors.white}
 

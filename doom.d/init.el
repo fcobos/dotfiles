@@ -103,7 +103,8 @@
        rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;scala             ; java, but good
        sh                ; she sells (ba|z)sh shells on the C xor
-       ;swift             ; who asked for emoji variables?
+      ;solidity          ; do you need a blockchain? No.
+      ;swift             ; who asked for emoji variables?
        web               ; the tubes
 
        ;; Applications are complex and opinionated modules that transform Emacs
