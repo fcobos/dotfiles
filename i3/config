@@ -45,7 +45,6 @@ bindsym $mod+Shift+q kill
 set $rofi_command "rofi -combi-modi window,drun -show combi -modi combi -theme onedark"
 bindsym $mod+d exec --no-startup-id $rofi_command
 bindsym Mod1+space exec --no-startup-id $rofi_command
-#bindsym Mod1+Tab exec --no-startup-id rofi -show window -theme dracula
 
 # change focus
 bindsym $mod+h focus left
