@@ -6,3 +6,7 @@ ncmpcpp/error.log
 ranger/bookmarks
 ranger/history
 ranger/tagged
+# qutebrowser
+qutebrowser/bookmarks/
+qutebrowser/quickmarks
+
