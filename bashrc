@@ -13,7 +13,7 @@ PS1='\[\e[38;5;39m\]\u\[\e[0m\]@\[\e[38;5;208m\]\H \[\e[38;5;39m\]\W \[\e[38;5;3
 source $HOME/dotfiles/aliases
 
 # History control
-export HISTSIZE=2000
+export HISTSIZE=10000
 export HISTCONTROL=erasedups:ignoreboth
 export HISTIGNORE="history *:df *:exit:fg:bg:ll:ls:la:l.:l:cd:top:htop:glances:free *:clear"
 #avoid overwriting history
@@ -21,6 +21,9 @@ export HISTIGNORE="history *:df *:exit:fg:bg:ll:ls:la:l.:l:cd:top:htop:glances:f
 
 # gcc colors
 export GCC_COLORS=error="01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
+
+# case insensitive tab completion
+bind "set completion-ignore-case on"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/felix/.sdkman"
