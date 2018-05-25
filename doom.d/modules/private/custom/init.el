@@ -1,5 +1,5 @@
 ;; Maximize frame
-(add-hook 'doom-init-hook (lambda () (toggle-frame-maximized)))
+;(add-hook 'doom-init-hook (lambda () (toggle-frame-maximized)))
 
 ;; Set the font
 (setq doom-font (font-spec :family "Hack" :size 12)
