@@ -9,4 +9,5 @@ ranger/tagged
 # qutebrowser
 qutebrowser/bookmarks/
 qutebrowser/quickmarks
+qutebrowser/autoconfig.yml
 
