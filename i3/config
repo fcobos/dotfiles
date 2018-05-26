@@ -260,14 +260,13 @@ set $Locker lock-screen
 bindsym $mod+Pause exec --no-startup-id $Locker
 
 # colors
-set $black #101010
-#set $focused #202020
-set $focused #61afef
-set $bright_black #525252
-set $white #b9b9b9
-set $unfocused #525252
-set $unfocused_text #abb2bf
-set $urgent #AB4642
+set_from_resource $black          i3wm.color0 #101010
+set_from_resource $focused        i3wm.color4 #61afef
+set_from_resource $bright_black   i3wm.color8 #525252
+set_from_resource $white          i3wm.color7 #b9b9b9
+set_from_resource $unfocused      i3wm.color8 #525252
+set_from_resource $unfocused_text i3wm.color7 #abb2bf
+set_from_resource $urgent         i3wm.color1 #AB4642
 #                       BORDER         BACKGROUND      TEXT              INDICATOR       CHILD_BORDER
 #client.focused          $focused       $focused        $white            $focused        $focused
 client.focused          $focused       $focused        $black            $focused        $focused
@@ -284,8 +283,8 @@ client.background       $black
 #for_window [class="^Emacs$"] border none
 #for_window [class="^Blender$"] border none
 #for_window [class="qutebrowser"] border none
-new_float normal
-new_window pixel 4
+default_floating_border normal
+default_border pixel 4
 # firefox does not like that big border and fucks up right click menu.
 #for_window [class="^Firefox$" title=" - Mozilla Firefox$"] border none
 for_window [class="^Firefox$" title=" - Mozilla Firefox"] border none
