@@ -317,6 +317,7 @@ for_window [class="Qalculate-gtk"] floating enable
 for_window [class="Displaycal"] floating enable
 for_window [class="Corebird"] floating enable
 for_window [class="Setroubleshoot"] floating enable
+for_window [title="Preferences"] floating enable
 
 ## Manual management of external displays
 # Set the shortcuts and what they do
