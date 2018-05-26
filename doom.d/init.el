@@ -120,6 +120,7 @@
       ; +langtool)       ; a proofreader (grammar/style check) for Emacs
 
        :collab
+      ;floobits          ; peer programming for a price
       ;impatient-mode    ; show off code over HTTP
 
        :config
@@ -128,5 +129,6 @@
        ;; and additional ex commands for evil-mode. Use it as a reference for
        ;; your own modules.
        (default +bindings +snippets +evil-commands)
+
        :private custom)
 
