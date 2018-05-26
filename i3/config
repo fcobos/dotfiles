@@ -268,7 +268,6 @@ set_from_resource $unfocused      i3wm.color8 #525252
 set_from_resource $unfocused_text i3wm.color7 #abb2bf
 set_from_resource $urgent         i3wm.color1 #AB4642
 #                       BORDER         BACKGROUND      TEXT              INDICATOR       CHILD_BORDER
-#client.focused          $focused       $focused        $white            $focused        $focused
 client.focused          $focused       $focused        $black            $focused        $focused
 client.unfocused        $unfocused     $unfocused      $unfocused_text   $unfocused      $unfocused
 client.focused_inactive $bright_black  $bright_black   $white            $bright_black   $bright_black
