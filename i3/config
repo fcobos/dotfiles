@@ -186,8 +186,6 @@ exec --no-startup-id ~/.fehbg
 # touchpad config
 exec --no-startup-id xinput set-prop 12 "libinput Disable While Typing Enabled" 0
 exec --no-startup-id xinput set-prop 12 "libinput Natural Scrolling Enabled" 1
-# dunst notification daemon
-exec --no-startup-id dunst
 # blueberry
 #exec --no-startup-id /usr/lib/blueberry/blueberry-obex-agent.py
 #exec --no-startup-id blueberry-tray
@@ -220,6 +218,8 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # gnome gsd-xsettings (to make flatpak apps use the right theme)
 #exec --no-startup-id /usr/libexec/gsd-xsettings
 exec --no-startup-id /usr/lib/gsd-xsettings
+# dunst notification daemon
+exec --no-startup-id dunst
 
 # Pulse Audio Controls                                                                                      {{{
 bindsym XF86AudioMute        exec --no-startup-id amixer set Master -q toggle
