@@ -283,7 +283,7 @@ client.background       $black
 #for_window [class="^Emacs$"] border none
 #for_window [class="^Blender$"] border none
 #for_window [class="qutebrowser"] border none
-default_floating_border normal
+default_floating_border normal 4
 default_border pixel 4
 # firefox does not like that big border and fucks up right click menu.
 #for_window [class="^Firefox$" title=" - Mozilla Firefox$"] border none
