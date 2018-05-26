@@ -130,7 +130,7 @@ ws-icon-default = 
 ;label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.dark_gray}
-label-focused-underline = ${colors.foreground}
+label-focused-underline = ${colors.blue}
 label-focused-padding = 1
 label-focused-font = 8
 icon-focused-font = 7
@@ -192,13 +192,13 @@ content-background = ${colors.black}
 type = custom/text
 content = ""
 content-foreground = ${colors.dark_gray}
-content-background = ${colors.gray}
+content-background = ${colors.foreground}
 
 
 [module/arrow1]
 type = custom/text
 content = ""
-content-foreground = ${colors.gray}
+content-foreground = ${colors.foreground}
 content-background = ${colors.black}
 
 [module/arrow2]
@@ -222,14 +222,14 @@ content-background = ${colors.dark_gray}
 [module/RightArrow1]
 type = custom/text
 content = ""
-content-foreground = ${colors.gray}
+content-foreground = ${colors.foreground}
 content-background = ${colors.black}
 
 [module/RightArrow2]
 type = custom/text
 content = ""
 content-foreground = ${colors.dark_gray}
-content-background = ${colors.gray}
+content-background = ${colors.foreground}
 
 [module/RightArrow3]
 type = custom/text
