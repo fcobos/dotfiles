@@ -81,7 +81,7 @@ wm-restack = i3
 
 modules-left = i3 RightArrow2 RightArrow1 xwindow
 ;modules-center = arrow1 LeftStripe3 date RightArrow2 RightArrow1
-modules-right = mpd powermenu arrow1 LeftStripe3 volume date
+modules-right = mpd powermenu arrow1 LeftStripe3 volume pipe date pipe
 
 ; All modules available in this config file:
 ; i3 text xwindow tray xkeyboard filesystem mpd backlight cpu
@@ -173,8 +173,8 @@ icon-unfocused-font = 2
 type = custom/text
 content = "|"
 content-foreground = ${colors.foreground}
-content-background = ${colors.black}
-content-padding = 1
+content-background = ${colors.dark_gray}
+content-padding = 0
 
 [module/LeftStripe]
 type = custom/text
@@ -473,7 +473,7 @@ time = "%H:%M"
 ;date-alt = "It is day %j, week %V, of year %y of the %Cth century."
 ;time = "%I:%M:%S %p"
 ;time-alt = " %z %Z"
-label = " %date% %time% "
+label = "%date% %time%"
 label-font = 2
 
 
@@ -496,21 +496,21 @@ label-volume = %percentage%
 label-volume-foreground = ${colors.foreground}
 label-volume-background = ${colors.dark_gray}
 label-volume-font = 2
-label-muted = "  muted"
+label-muted = " muted"
 label-muted-foreground = ${colors.foreground}
 label-muted-background = ${colors.dark_gray}
 label-muted-font = 2
 
-ramp-volume-0 = "  "
+ramp-volume-0 = " "
 ramp-volume-0-foreground = ${colors.foreground}
 ramp-volume-0-background = ${colors.dark_gray}
-ramp-volume-1 = "  "
+ramp-volume-1 = " "
 ramp-volume-1-foreground = ${colors.foreground}
 ramp-volume-1-background = ${colors.dark_gray}
-ramp-volume-2 = "  "
+ramp-volume-2 = " "
 ramp-volume-2-foreground = ${colors.foreground}
 ramp-volume-2-background = ${colors.dark_gray}
-ramp-volume-3 = "  "
+ramp-volume-3 = " "
 ramp-volume-3-foreground = ${colors.foreground}
 ramp-volume-3-background = ${colors.dark_gray}
 
