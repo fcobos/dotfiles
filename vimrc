@@ -74,7 +74,6 @@ set number
 set nowrap
 
 set ttyfast
-set lazyredraw
 
 " centered cursor
 ":nnoremap j jzz
