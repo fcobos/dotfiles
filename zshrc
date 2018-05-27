@@ -1,114 +1,55 @@
-POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs background_jobs root_indicator status)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_STATUS_VERBOSE=true
-POWERLEVEL9K_STATUS_OK_BACKGROUND="black"
-POWERLEVEL9K_STATUS_OK_FOREGROUND="green"
-POWERLEVEL9K_STATUS_ERROR_BACKGROUND="black"
-POWERLEVEL9K_STATUS_ERROR_FOREGROUND="red"
-POWERLEVEL9K_TIME_FORMAT="%D{%H:%M \uF073 %d.%m.%y}"
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=" \uf054 "
-export DEFAULT_USER=$USER
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-#if [ "$TERM" = "linux" ]; then
-ZSH_THEME="mortalscumbag"
-#else
-#	ZSH_THEME="powerlevel9k/powerlevel9k"
-#fi
-#ZSH_THEME_RANDOM_CANDIDATES=("af-magic" "bira" "steeef" "kolo")
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+# see http://www.joshuad.net/zshrc-config/
+# https://github.com/sindresorhus/pure
+[ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 HIST_STAMPS="yyyy-mm-dd"
+SAVEHIST=10000
+HISTSIZE=50000
+setopt hist_save_no_dups
+setopt hist_ignore_all_dups
+setopt hist_find_no_dups
+setopt extended_history       # record timestamp of command in HISTFILE
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_ignore_dups       # ignore duplicated commands history list
+setopt hist_ignore_space      # ignore commands that start with space
+setopt hist_verify            # show command with history expansion to user before running it
+setopt inc_append_history     # add commands to HISTFILE in order of execution
+setopt share_history          # share command history data
+setopt append_history         # Allow multiple terminal sessions to all append to one zsh command history
+setopt hist_reduce_blanks     # Remove extra blanks from each command line being added to history
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+setopt ZLE # Enable the ZLE line editor, which is default behavior, but to be sure
+unsetopt NO_HUP # Kill all child processes when we exit, do not leave them running
+setopt INTERACTIVE_COMMENTS # Allows comments in interactive shell.
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(safe-paste zsh-syntax-highlighting)
+# Autoload auto completion
+autoload -U compinit
+compinit -i
+zstyle ':completion:*' menu select # Have the menu highlight as we cycle through options
+## case-insensitive (uppercase from lowercase) completion
+#zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+## case-insensitive (all) completion
+#zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+## case-insensitive,partial-word and then substring completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+setopt COMPLETE_IN_WORD # Allow completion from within a word/phrase
+setopt ALWAYS_TO_END # When completing from the middle of a word, move cursor to end of word
+unsetopt MENU_COMPLETE # When using auto-complete, put the first option on the line immediately
+setopt COMPLETE_ALIASES # Turn on completion for aliases as well
+setopt LIST_ROWS_FIRST  # Cycle through menus horizontally instead of vertically
+setopt NO_CASE_GLOB # Case insensitive globbing
+setopt EXTENDED_GLOB # Allow the powerful zsh globbing features
+setopt NUMERIC_GLOB_SORT # Sort globs that expand to numbers numerically, not by letter (i.e. 01 2 03)
 
-# User configuration
-#if [ -f ~/.profile ]; then
-#	. ~/.profile
-#fi
+# key bindings
+bindkey '^r' history-incremental-pattern-search-backward
 
-setopt HIST_IGNORE_DUPS
-setopt HIST_SAVE_NO_DUPS
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_FIND_NO_DUPS
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+fpath=( "$HOME/dotfiles/zsh-themes/pure" $fpath )
+autoload -U promptinit; promptinit
+#PURE_GIT_PULL=0
+if [ "$TERM" = "linux" ]; then
+	PURE_PROMPT_SYMBOL="$"
+fi
+prompt pure
 
 # Aliases
 source $HOME/dotfiles/aliases
