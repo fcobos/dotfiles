@@ -68,10 +68,12 @@ endif
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " enable line numbers
-"set number
-set relativenumber
+set number
+"set relativenumber
 
 set nowrap
+
+set ttyfast
 
 " centered cursor
 ":nnoremap j jzz
