@@ -4,8 +4,9 @@
 ;; Set the font
 (setq doom-font (font-spec :family "Hack" :size 12)
       doom-big-font (font-spec :family "Hack" :size 24)
-      doom-variable-pitch-font (font-spec :family "Noto Sans")
-      doom-unicode-font (font-spec :family "DejaVu Sans Mono"))
+      ;doom-variable-pitch-font (font-spec :family "Noto Sans")
+      ;doom-unicode-font (font-spec :family "DejaVu Sans Mono")
+      )
 (setq-default line-spacing 0)
 
 ;; Set the theme
