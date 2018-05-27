@@ -1,5 +1,3 @@
-# see http://www.joshuad.net/zshrc-config/
-# https://github.com/sindresorhus/pure
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 HIST_STAMPS="yyyy-mm-dd"
 SAVEHIST=10000
