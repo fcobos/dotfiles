@@ -19,7 +19,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #if [ "$TERM" = "linux" ]; then
-ZSH_THEME="steeef"
+ZSH_THEME="kolo"
 #else
 #	ZSH_THEME="powerlevel9k/powerlevel9k"
 #fi
