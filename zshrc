@@ -28,7 +28,8 @@ zstyle ':completion:*' menu select # Have the menu highlight as we cycle through
 ## case-insensitive (all) completion
 #zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 ## case-insensitive,partial-word and then substring completion
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+#zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 setopt COMPLETE_IN_WORD # Allow completion from within a word/phrase
 setopt ALWAYS_TO_END # When completing from the middle of a word, move cursor to end of word
 unsetopt MENU_COMPLETE # When using auto-complete, put the first option on the line immediately
