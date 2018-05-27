@@ -36,6 +36,7 @@ alias vi=vim
 alias vim=nvim
 alias which='(alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot'
 alias which-command=whence
+alias grep='grep --color=auto'
 alias xzegrep='xzegrep --color=auto'
 alias xzfgrep='xzfgrep --color=auto'
 alias xzgrep='xzgrep --color=auto'
