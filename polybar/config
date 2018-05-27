@@ -125,43 +125,43 @@ wrapping-scroll = false
 
 ;   ● ○
 ;label-focused = %name%
-;label-focused = %index%
-label-focused = 
+label-focused = %index%
+;label-focused = 
 ;label-focused = %icon%
-label-focused-foreground = ${colors.green}
+label-focused-foreground = ${colors.blue}
 label-focused-background = ${colors.dark_gray}
-;label-focused-underline = ${colors.green}
+label-focused-underline = ${colors.blue}
 label-focused-padding = 1
-label-focused-font = 8
+label-focused-font = 7
 icon-focused-font = 7
 
-label-visible = ●
+;label-visible = ●
 ;label-visible = %icon%
-;label-visible = %index%
+label-visible = %index%
 ;label-visible-foreground = ${colors.background}
 label-visible-background = ${colors.dark_gray}
 ;label-visible-underline = ${colors.foreground}
 label-visible-padding = 1
-label-visible-font = 8
+label-visible-font = 2
 icon-visible-font = 7
 
-label-urgent = 
+;label-urgent = 
 ;label-urgent = %icon%
-;label-urgent= %index%
+label-urgent= %index%
 label-urgent-foreground = ${colors.red}
 label-urgent-background = ${colors.dark_gray}
 ;label-urgent-underline = ${colors.red}
 label-urgent-padding = 1
-label-urgent-font = 8
+label-urgent-font = 7
 icon-urgent-font = 2
 
-label-unfocused = 
+;label-unfocused = 
 ;label-unfocused = %icon%
-;label-unfocused = %index%
+label-unfocused = %index%
 label-unfocused-foreground = ${colors.foreground}
 label-unfocused-background = ${colors.dark_gray}
 label-unfocused-padding = 1
-label-unfocused-font = 8
+label-unfocused-font = 2
 icon-unfocused-font = 2
 
 
