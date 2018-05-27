@@ -51,6 +51,8 @@ fi
 PURE_GIT_UP_ARROW="↑"
 PURE_GIT_DOWN_ARROW="↓"
 prompt pure
+# Show number of background jobs
+PROMPT='%(1j.[%j] .)%(?.%F{magenta}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
 
 # Aliases
 source $HOME/dotfiles/aliases
