@@ -49,6 +49,8 @@ autoload -U promptinit; promptinit
 if [ "$TERM" = "linux" ]; then
 	PURE_PROMPT_SYMBOL="$"
 fi
+PURE_GIT_UP_ARROW="↑"
+PURE_GIT_DOWN_ARROW="↓"
 prompt pure
 
 # Aliases
