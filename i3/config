@@ -183,6 +183,8 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id env allow_rgb10_configs=false compton -b
 # background
 exec --no-startup-id ~/.fehbg
+# start polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 # touchpad config
 exec --no-startup-id xinput set-prop 12 "libinput Disable While Typing Enabled" 0
 exec --no-startup-id xinput set-prop 12 "libinput Natural Scrolling Enabled" 1
@@ -213,8 +215,6 @@ exec --no-startup-id mpDris2
 # fonts stuff
 exec --no-startup-id xset +fp ~/.local/share/fonts
 exec --no-startup-id xset fp rehash
-# start polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
 # gnome gsd-xsettings (to make flatpak apps use the right theme)
 #exec --no-startup-id /usr/libexec/gsd-xsettings
 exec --no-startup-id /usr/lib/gsd-xsettings
