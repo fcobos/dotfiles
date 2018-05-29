@@ -1,3 +1,4 @@
+# History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 HIST_STAMPS="yyyy-mm-dd"
 SAVEHIST=10000
@@ -18,6 +19,9 @@ setopt hist_reduce_blanks     # Remove extra blanks from each command line being
 setopt ZLE                    # Enable the ZLE line editor, which is default behavior, but to be sure
 unsetopt NO_HUP               # Kill all child processes when we exit, do not leave them running
 setopt INTERACTIVE_COMMENTS   # Allows comments in interactive shell.
+
+# ls colors
+eval $(dircolors)
 
 # Autoload auto completion
 autoload -U compinit
@@ -133,9 +137,6 @@ PROMPT='%(1j.[%j] .)%(?.%F{magenta}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
 
 # Aliases
 source $HOME/dotfiles/aliases
-
-# ls colors
-eval $(dircolors)
 
 # termite needs this
 source /etc/profile.d/vte.sh
