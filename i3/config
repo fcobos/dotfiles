@@ -292,7 +292,7 @@ for_window [class="Nightly" title=" - Nightly"] border none
 for_window [class="Navigator" title=" - Nightly"] border none
 
 # hide window borders
-#hide_edge_borders smart
+hide_edge_borders smart
 
 #Floating Windows
 for_window [class="Pavucontrol"] floating enable
@@ -340,6 +340,7 @@ focus_follows_mouse no
 mouse_warping none
 
 # gaps
-gaps inner 4
+gaps inner 6
 gaps outer 0
+smart_gaps on
 
