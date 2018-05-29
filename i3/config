@@ -221,12 +221,12 @@ exec --no-startup-id /usr/lib/gsd-xsettings
 # dunst notification daemon
 exec --no-startup-id dunst
 
-# Pulse Audio Controls                                                                                      {{{
+# Pulse Audio Controls
 bindsym XF86AudioMute        exec --no-startup-id amixer set Master -q toggle
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master -q 5%-
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master -q 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master -q 2%-
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master -q 2%+
 
-# Media Player Controls                                                                                     {{{
+# Media Player Controls
 bindsym XF86AudioPlay exec --no-startup-id "mpris-ctl pp"
 bindsym XF86AudioStop exec --no-startup-id "mpris-ctl stop"
 bindsym XF86AudioNext exec --no-startup-id "mpris-ctl next"
