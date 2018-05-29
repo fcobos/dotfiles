@@ -465,7 +465,8 @@ format-background = ${colors.dark_gray}
 ;date-alt = "  %Y/%m/%d"
 ;date-alt = "  %a.%e.%b"
 ;date = " %a.%e.%b"
-date = "%d/%m/%y"
+;date = "%d/%m/%y"
+date = " %d %b - %a"
 ;time = "   %H:%M    "
 time = "%H:%M"
 ;time-alt = ""
@@ -473,7 +474,7 @@ time = "%H:%M"
 ;date-alt = "It is day %j, week %V, of year %y of the %Cth century."
 ;time = "%I:%M:%S %p"
 ;time-alt = " %z %Z"
-label = "%date% %time%"
+label = "%date%   %time%"
 label-font = 2
 
 
