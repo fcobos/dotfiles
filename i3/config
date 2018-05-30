@@ -297,6 +297,7 @@ hide_edge_borders smart
 #Floating Windows
 for_window [class="Pavucontrol"] floating enable
 for_window [class="feh"] floating enable
+for_window [class="imv"] floating enable
 for_window [class="System-config-printer.py"] floating enable
 #for_window [class="Thunar"] floating enable
 for_window [class="Mirage"] floating enable
