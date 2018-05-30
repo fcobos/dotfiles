@@ -23,8 +23,8 @@
 (c-set-offset 'case-label '+)
 
 ;; Disable cursor blink
-(add-hook 'window-setup-hook (lambda () (blink-cursor-mode 0)))
-(setq visible-cursor nil)
+;(add-hook 'window-setup-hook (lambda () (blink-cursor-mode 0)))
+;(setq visible-cursor nil)
 
 ;; Disable whitespace-mode
 (add-hook 'after-init-hook (lambda ()
