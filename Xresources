@@ -25,10 +25,10 @@ XTerm*renderFont: true
 URxvt*.depth: 24
 URxvt.scrollBar: false
 URxvt.cursorBlink: false
-URxvt.font:     xft:Hack:size=9, xft:Hack\ Nerd\ Font:size=9, xft:Symbola:size=9, xft:Unifont:size=9
+URxvt.font:     xft:Hack:size=9, xft:FontAwesome:size=9, xft:Symbola:size=9, xft:Unifont:size=9
 !URxvt.boldFont: xft:Hack:size=9:bold, xft:Symbola, xft:Unifont
 !URxvt.italicFont: xft:Hack:size=9:oblique, xft:Symbola, xft:Unifont
-URxvt.letterSpace: -2
+URxvt.letterSpace: -1
 URxvt*selectToClipboard:  true
 URxvt*saveLines:          2000
 URxvt.url-launcher: xdg-open
@@ -39,59 +39,33 @@ st.font: Hack:size=9:antialias=true;
 st.bold_font: 1
 st.borderpx: 0
 
-! colors
-! Base16 OneDark
-! Scheme: Lalit Magant (http://github.com/tilal6991)
+! special
+*.foreground:   #abb2bf
+*.background:   #282c34
+*.cursorColor:  #abb2bf
 
-#define base00 #282c34
-#define base01 #353b45
-#define base02 #3e4451
-#define base03 #545862
-#define base04 #565c64
-#define base05 #abb2bf
-#define base06 #b6bdca
-#define base07 #c8ccd4
-#define base08 #e06c75
-#define base09 #d19a66
-#define base0A #e5c07b
-#define base0B #98c379
-#define base0C #56b6c2
-#define base0D #61afef
-#define base0E #c678dd
-#define base0F #be5046
-
-*foreground:   base05
-#ifdef background_opacity
-*background:   [background_opacity]base00
-#else
-*background:   base00
-#endif
-*cursorColor:  base05
-
-*color0:       base00
-*color1:       base08
-*color2:       base0B
-*color3:       base0A
-*color4:       base0D
-*color5:       base0E
-*color6:       base0C
-*color7:       base05
-
-*color8:       base03
-*color9:       base08
-*color10:      base0B
-*color11:      base0A
-*color12:      base0D
-*color13:      base0E
-*color14:      base0C
-*color15:      base07
-
-! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! use 'shell' template to set these if necessary
-*color16:      base09
-*color17:      base0F
-*color18:      base01
-*color19:      base02
-*color20:      base04
-*color21:      base06
+! black
+*.color0:        #1d1f21
+*.color8:        #686868
+! red
+*.color1:        #DA4939
+*.color9:        #DA4939
+! green
+*.color2:        #60AC39
+*.color10:       #60AC39
+! yellow
+*.color3:        #fba922
+*.color11:       #fba922
+! blue
+*.color4:        #3971ed
+*.color12:       #3971ed
+! magenta
+*.color5:        #a36ac7
+*.color13:       #a36ac7
+! cyan
+*.color6:        #6FC2EF
+*.color14:       #6FC2EF
+! white
+*.color7:        #c5c8c6
+*.color15:       #ffffff
 
