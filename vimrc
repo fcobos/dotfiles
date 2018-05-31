@@ -60,7 +60,6 @@ let &guicursor = &guicursor . ",a:blinkon0"
 " airline config
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'base16'
 if &term=~'linux'
 	let g:airline_powerline_fonts = 0
 endif
