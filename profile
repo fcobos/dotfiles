@@ -36,8 +36,9 @@ fi
 
 # qt themeing under i3
 if [ "$XDG_CURRENT_DESKTOP" = "i3" ]; then
-    #export QT_QPA_PLATFORMTHEME="qt5ct"
-    export QT_QPA_PLATFORMTHEME="gtk2"
+	#export QT_QPA_PLATFORMTHEME="qt5ct"
+	#export QT_QPA_PLATFORMTHEME="gtk2"
+	export QT_STYLE_OVERRIDE=adwaita-dark
 fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
