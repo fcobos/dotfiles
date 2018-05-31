@@ -4,7 +4,7 @@ endif
 
 set nocompatible	" Use Vim defaults (much better!)
 set bs=indent,eol,start		" allow backspacing over everything in insert mode
-"set ai			" always set autoindenting on
+set ai			" always set autoindenting on
 "set backup		" keep a backup file
 set viminfo='20,\"50	" read/write a .viminfo file, don't store more
 			" than 50 lines of registers
@@ -60,6 +60,7 @@ let &guicursor = &guicursor . ",a:blinkon0"
 " airline config
 set laststatus=2
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'base16'
 if &term=~'linux'
 	let g:airline_powerline_fonts = 0
 endif
@@ -81,7 +82,10 @@ set ttyfast
 if &t_Co == 256 || has("gui_running")
 	set termguicolors
 endif
-colorscheme onedark
+colorscheme darktooth
+
+" hightlight current line
+"set cursorline
 
 " mutt config
 au BufRead /tmp/mutt-* set tw=72

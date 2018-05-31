@@ -11,6 +11,7 @@
 
 ;; Set the theme
 ;(setq doom-theme 'doom-molokai)
+(load-theme 'darktooth)
 
 ;; Set line numbers style
 (setq doom-line-numbers-style 'relative)

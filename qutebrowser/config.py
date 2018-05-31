@@ -137,306 +137,6 @@ c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'g': 'https://
 # Type: Perc
 c.zoom.default = '100%'
 
-# Text color of the completion widget. May be a single color to use for
-# all columns or a list of three colors, one for each column.
-# Type: List of QtColor, or QtColor
-c.colors.completion.fg = '#abb2bf'
-
-# Background color of the completion widget for odd rows.
-# Type: QssColor
-c.colors.completion.odd.bg = '#545862'
-
-# Background color of the completion widget for even rows.
-# Type: QssColor
-c.colors.completion.even.bg = '#282c34'
-
-# Foreground color of completion widget category headers.
-# Type: QtColor
-c.colors.completion.category.fg = '#e5c07b'
-
-# Background color of the completion widget category headers.
-# Type: QssColor
-c.colors.completion.category.bg = '#282c34'
-
-# Top border color of the completion widget category headers.
-# Type: QssColor
-c.colors.completion.category.border.top = '#282c34'
-
-# Bottom border color of the completion widget category headers.
-# Type: QssColor
-c.colors.completion.category.border.bottom = '#282c34'
-
-# Foreground color of the selected completion item.
-# Type: QtColor
-c.colors.completion.item.selected.fg = '#353b45'
-
-# Background color of the selected completion item.
-# Type: QssColor
-c.colors.completion.item.selected.bg = '#e5c07b'
-
-# Top border color of the completion widget category headers.
-# Type: QssColor
-c.colors.completion.item.selected.border.top = '#e5c07b'
-
-# Bottom border color of the selected completion item.
-# Type: QssColor
-c.colors.completion.item.selected.border.bottom = '#e5c07b'
-
-# Foreground color of the matched text in the completion.
-# Type: QssColor
-c.colors.completion.match.fg = '#98c379'
-
-# Color of the scrollbar handle in the completion view.
-# Type: QssColor
-c.colors.completion.scrollbar.fg = '#abb2bf'
-
-# Color of the scrollbar in the completion view.
-# Type: QssColor
-c.colors.completion.scrollbar.bg = '#282c34'
-
-# Background color for the download bar.
-# Type: QssColor
-c.colors.downloads.bar.bg = '#282c34'
-
-# Color gradient start for download text.
-# Type: QtColor
-c.colors.downloads.start.fg = '#282c34'
-
-# Color gradient start for download backgrounds.
-# Type: QtColor
-c.colors.downloads.start.bg = '#61afef'
-
-# Color gradient end for download text.
-# Type: QtColor
-c.colors.downloads.stop.fg = '#282c34'
-
-# Color gradient stop for download backgrounds.
-# Type: QtColor
-c.colors.downloads.stop.bg = '#56b6c2'
-
-# Foreground color for downloads with errors.
-# Type: QtColor
-c.colors.downloads.error.fg = '#e06c75'
-
-# Font color for hints.
-# Type: QssColor
-c.colors.hints.fg = '#282c34'
-
-# Background color for hints. Note that you can use a `rgba(...)` value
-# for transparency.
-# Type: QssColor
-c.colors.hints.bg = '#e5c07b'
-
-# Font color for the matched part of hints.
-# Type: QssColor
-c.colors.hints.match.fg = '#abb2bf'
-
-# Text color for the keyhint widget.
-# Type: QssColor
-c.colors.keyhint.fg = '#abb2bf'
-
-# Highlight color for keys to complete the current keychain.
-# Type: QssColor
-c.colors.keyhint.suffix.fg = '#abb2bf'
-
-# Background color of the keyhint widget.
-# Type: QssColor
-c.colors.keyhint.bg = '#282c34'
-
-# Foreground color of an error message.
-# Type: QssColor
-c.colors.messages.error.fg = '#282c34'
-
-# Background color of an error message.
-# Type: QssColor
-c.colors.messages.error.bg = '#e06c75'
-
-# Border color of an error message.
-# Type: QssColor
-c.colors.messages.error.border = '#e06c75'
-
-# Foreground color of a warning message.
-# Type: QssColor
-c.colors.messages.warning.fg = '#282c34'
-
-# Background color of a warning message.
-# Type: QssColor
-c.colors.messages.warning.bg = '#c678dd'
-
-# Border color of a warning message.
-# Type: QssColor
-c.colors.messages.warning.border = '#c678dd'
-
-# Foreground color of an info message.
-# Type: QssColor
-c.colors.messages.info.fg = '#abb2bf'
-
-# Background color of an info message.
-# Type: QssColor
-c.colors.messages.info.bg = '#282c34'
-
-# Border color of an info message.
-# Type: QssColor
-c.colors.messages.info.border = '#282c34'
-
-# Foreground color for prompts.
-# Type: QssColor
-c.colors.prompts.fg = '#abb2bf'
-
-# Border used around UI elements in prompts.
-# Type: String
-c.colors.prompts.border = '#282c34'
-
-# Background color for prompts.
-# Type: QssColor
-c.colors.prompts.bg = '#282c34'
-
-# Background color for the selected item in filename prompts.
-# Type: QssColor
-c.colors.prompts.selected.bg = '#e5c07b'
-
-# Foreground color of the statusbar.
-# Type: QssColor
-c.colors.statusbar.normal.fg = '#98c379'
-
-# Background color of the statusbar.
-# Type: QssColor
-c.colors.statusbar.normal.bg = '#282c34'
-
-# Foreground color of the statusbar in insert mode.
-# Type: QssColor
-c.colors.statusbar.insert.fg = '#282c34'
-
-# Background color of the statusbar in insert mode.
-# Type: QssColor
-c.colors.statusbar.insert.bg = '#61afef'
-
-# Foreground color of the statusbar in passthrough mode.
-# Type: QssColor
-c.colors.statusbar.passthrough.fg = '#282c34'
-
-# Background color of the statusbar in passthrough mode.
-# Type: QssColor
-c.colors.statusbar.passthrough.bg = '#56b6c2'
-
-# Foreground color of the statusbar in private browsing mode.
-# Type: QssColor
-c.colors.statusbar.private.fg = '#282c34'
-
-# Background color of the statusbar in private browsing mode.
-# Type: QssColor
-c.colors.statusbar.private.bg = '#545862'
-
-# Foreground color of the statusbar in command mode.
-# Type: QssColor
-c.colors.statusbar.command.fg = '#abb2bf'
-
-# Background color of the statusbar in command mode.
-# Type: QssColor
-c.colors.statusbar.command.bg = '#282c34'
-
-# Foreground color of the statusbar in private browsing + command mode.
-# Type: QssColor
-c.colors.statusbar.command.private.fg = '#abb2bf'
-
-# Background color of the statusbar in private browsing + command mode.
-# Type: QssColor
-c.colors.statusbar.command.private.bg = '#282c34'
-
-# Foreground color of the statusbar in caret mode.
-# Type: QssColor
-c.colors.statusbar.caret.fg = '#282c34'
-
-# Background color of the statusbar in caret mode.
-# Type: QssColor
-c.colors.statusbar.caret.bg = '#c678dd'
-
-# Foreground color of the statusbar in caret mode with a selection.
-# Type: QssColor
-c.colors.statusbar.caret.selection.fg = '#282c34'
-
-# Background color of the statusbar in caret mode with a selection.
-# Type: QssColor
-c.colors.statusbar.caret.selection.bg = '#61afef'
-
-# Background color of the progress bar.
-# Type: QssColor
-c.colors.statusbar.progress.bg = '#61afef'
-
-# Default foreground color of the URL in the statusbar.
-# Type: QssColor
-c.colors.statusbar.url.fg = '#abb2bf'
-
-# Foreground color of the URL in the statusbar on error.
-# Type: QssColor
-c.colors.statusbar.url.error.fg = '#e06c75'
-
-# Foreground color of the URL in the statusbar for hovered links.
-# Type: QssColor
-c.colors.statusbar.url.hover.fg = '#abb2bf'
-
-# Foreground color of the URL in the statusbar on successful load
-# (http).
-# Type: QssColor
-c.colors.statusbar.url.success.http.fg = '#56b6c2'
-
-# Foreground color of the URL in the statusbar on successful load
-# (https).
-# Type: QssColor
-c.colors.statusbar.url.success.https.fg = '#98c379'
-
-# Foreground color of the URL in the statusbar when there's a warning.
-# Type: QssColor
-c.colors.statusbar.url.warn.fg = '#c678dd'
-
-# Background color of the tab bar.
-# Type: QtColor
-c.colors.tabs.bar.bg = '#282c34'
-
-# Color gradient start for the tab indicator.
-# Type: QtColor
-c.colors.tabs.indicator.start = '#61afef'
-
-# Color gradient end for the tab indicator.
-# Type: QtColor
-c.colors.tabs.indicator.stop = '#56b6c2'
-
-# Color for the tab indicator on errors.
-# Type: QtColor
-c.colors.tabs.indicator.error = '#e06c75'
-
-# Foreground color of unselected odd tabs.
-# Type: QtColor
-c.colors.tabs.odd.fg = '#abb2bf'
-
-# Background color of unselected odd tabs.
-# Type: QtColor
-c.colors.tabs.odd.bg = '#545862'
-
-# Foreground color of unselected even tabs.
-# Type: QtColor
-c.colors.tabs.even.fg = '#abb2bf'
-
-# Background color of unselected even tabs.
-# Type: QtColor
-c.colors.tabs.even.bg = '#282c34'
-
-# Foreground color of selected odd tabs.
-# Type: QtColor
-c.colors.tabs.selected.odd.fg = '#282c34'
-
-# Background color of selected odd tabs.
-# Type: QtColor
-c.colors.tabs.selected.odd.bg = '#abb2bf'
-
-# Foreground color of selected even tabs.
-# Type: QtColor
-c.colors.tabs.selected.even.fg = '#282c34'
-
-# Background color of selected even tabs.
-# Type: QtColor
-c.colors.tabs.selected.even.bg = '#abb2bf'
-
 # Default monospace fonts. Whenever "monospace" is used in a font
 # setting, it's replaced with the fonts listed here.
 # Type: Font
@@ -489,6 +189,106 @@ c.fonts.statusbar = '9pt monospace'
 # Font used in the tab bar.
 # Type: QtFont
 c.fonts.tabs = '9pt monospace'
+
+# base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
+# Base16 qutebrowser template by theova
+# Darktooth scheme by Jason Milkins (https://github.com/jasonm23)
+
+
+base00 = "#1D2021"
+base01 = "#32302F"
+base02 = "#504945"
+base03 = "#665C54"
+base04 = "#928374"
+base05 = "#A89984"
+base06 = "#D5C4A1"
+base07 = "#FDF4C1"
+base08 = "#FB543F"
+base09 = "#FE8625"
+base0A = "#FAC03B"
+base0B = "#95C085"
+base0C = "#8BA59B"
+base0D = "#0D6678"
+base0E = "#8F4673"
+base0F = "#A87322"
+
+
+# set qutebrowser colors
+c.colors.completion.category.bg = base00
+c.colors.completion.category.border.bottom= base00
+c.colors.completion.category.border.top= base00
+c.colors.completion.category.fg = base0A
+c.colors.completion.fg = base05
+c.colors.completion.item.selected.bg = base0A
+c.colors.completion.item.selected.border.bottom = base0A
+c.colors.completion.item.selected.border.top = base0A
+c.colors.completion.item.selected.fg = base01
+c.colors.completion.match.fg = base0B
+c.colors.completion.odd.bg = base03
+c.colors.completion.even.bg = base00
+c.colors.completion.scrollbar.bg = base00
+c.colors.completion.scrollbar.fg = base05
+c.colors.downloads.bar.bg = base00
+c.colors.downloads.error.fg = base08
+c.colors.downloads.start.bg = base0D
+c.colors.downloads.start.fg = base00
+c.colors.downloads.stop.bg = base0C
+c.colors.downloads.stop.fg = base00
+c.colors.hints.bg = base0A
+c.colors.hints.fg = base00
+c.colors.hints.match.fg = base05
+c.colors.keyhint.bg = base00
+c.colors.keyhint.fg = base05
+c.colors.keyhint.suffix.fg = base05
+c.colors.messages.error.fg = base00
+c.colors.messages.error.bg = base08
+c.colors.messages.error.border = base08
+c.colors.messages.info.bg = base00
+c.colors.messages.info.border = base00
+c.colors.messages.info.fg = base05
+c.colors.messages.warning.bg = base0E
+c.colors.messages.warning.border = base0E
+c.colors.messages.warning.fg = base00
+c.colors.prompts.bg = base00
+c.colors.prompts.border = base00
+c.colors.prompts.fg = base05
+c.colors.prompts.selected.bg = base0A
+c.colors.statusbar.caret.bg = base0E
+c.colors.statusbar.caret.fg = base00
+c.colors.statusbar.caret.selection.bg = base0D
+c.colors.statusbar.caret.selection.fg = base00
+c.colors.statusbar.command.bg = base00
+c.colors.statusbar.command.fg = base05
+c.colors.statusbar.command.private.bg = base00
+c.colors.statusbar.command.private.fg = base05
+c.colors.statusbar.insert.bg = base0D
+c.colors.statusbar.insert.fg = base00
+c.colors.statusbar.normal.bg = base00
+c.colors.statusbar.normal.fg = base0B
+c.colors.statusbar.passthrough.bg = base0C
+c.colors.statusbar.passthrough.fg = base00
+c.colors.statusbar.private.bg = base03
+c.colors.statusbar.private.fg = base00
+c.colors.statusbar.progress.bg = base0D
+c.colors.statusbar.url.error.fg = base08
+c.colors.statusbar.url.fg = base05
+c.colors.statusbar.url.hover.fg = base05
+c.colors.statusbar.url.success.http.fg = base0C
+c.colors.statusbar.url.success.https.fg =base0B
+c.colors.statusbar.url.warn.fg = base0E
+c.colors.tabs.bar.bg = base00
+c.colors.tabs.even.bg = base00
+c.colors.tabs.even.fg = base05
+c.colors.tabs.indicator.error = base08
+c.colors.tabs.indicator.start = base0D
+c.colors.tabs.indicator.stop = base0C
+c.colors.tabs.odd.bg = base03
+c.colors.tabs.odd.fg = base05
+c.colors.tabs.selected.even.bg = base05
+c.colors.tabs.selected.even.fg = base00
+c.colors.tabs.selected.odd.bg = base05
+c.colors.tabs.selected.odd.fg = base00
+# c.colors.webpage.bg = base00
 
 # Bindings for normal mode
 config.bind(',n', 'config-cycle content.user_stylesheets solarized.css ""')
