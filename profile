@@ -35,9 +35,10 @@ if [ -n "$DESKTOP_SESSION" ];then
 fi
 
 # qt themeing under i3
-#if [ "$XDG_CURRENT_DESKTOP" = "i3" ]; then
-#    export QT_QPA_PLATFORMTHEME="qt5ct"
-#fi
+if [ "$XDG_CURRENT_DESKTOP" = "i3" ]; then
+    #export QT_QPA_PLATFORMTHEME="qt5ct"
+    export QT_QPA_PLATFORMTHEME="gtk2"
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/felix/.sdkman"
