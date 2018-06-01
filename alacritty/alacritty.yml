@@ -128,40 +128,34 @@ render_timer: false
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: false
 
-# Base16 Tomorrow Night 256 - alacritty color config
-# Chris Kempson (http://chriskempson.com)
 colors:
   # Default colors
   primary:
-    background: '0x1d1f21'
-    foreground: '0xc5c8c6'
-
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text: '0x1d1f21'
-    cursor: '0xc5c8c6'
+    background: '0x282828'
+    foreground: '0xa89984'
 
   # Normal colors
   normal:
-    black:   '0x1d1f21'
-    red:     '0xcc6666'
-    green:   '0xb5bd68'
-    yellow:  '0xf0c674'
-    blue:    '0x81a2be'
-    magenta: '0xb294bb'
-    cyan:    '0x8abeb7'
-    white:   '0xc5c8c6'
+    black:   '0x282828'
+    red:     '0xfb543f'
+    green:   '0x95c085'
+    yellow:  '0xfac03b'
+    blue:    '0x0d6678'
+    magenta: '0x8f4673'
+    cyan:    '0x8ba59b'
+    white:   '0xa89984'
 
   # Bright colors
   bright:
-    black:   '0x969896'
-    red:     '0xcc6666'
-    green:   '0xb5bd68'
-    yellow:  '0xf0c674'
-    blue:    '0x81a2be'
-    magenta: '0xb294bb'
-    cyan:    '0x8abeb7'
-    white:   '0xc5c8c6'
+    black:   '0x665c54'
+    red:     '0xfb543f'
+    green:   '0x95c085'
+    yellow:  '0xfac03b'
+    blue:    '0x0d6678'
+    magenta: '0x8f4673'
+    cyan:    '0x8ba59b'
+    white:   '0xfdf4c1'
+
   # Dim colors (Optional)
 #  dim:
 #    black:   '0x333333'
