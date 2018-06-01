@@ -81,7 +81,7 @@ wm-restack = i3
 
 modules-left = i3 RightArrow2 RightArrow1 xwindow
 ;modules-center = arrow1 LeftStripe3 date RightArrow2 RightArrow1
-modules-right = mpd powermenu arrow1 LeftStripe3 volume date network eth battery
+modules-right = mpd powermenu arrow1 LeftStripe3 volume network eth battery date
 
 ; All modules available in this config file:
 ; i3 text xwindow tray xkeyboard filesystem mpd backlight cpu
@@ -465,7 +465,7 @@ format-background = ${colors.dark_gray}
 
 time = " %H:%M"
 time-alt = " %d %b - %a"
-label = " %time%"
+label = "%time% "
 
 label-font = 2
 
