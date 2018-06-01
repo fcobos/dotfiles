@@ -261,7 +261,7 @@ bindsym $mod+Pause exec --no-startup-id $Locker
 
 # colors
 set_from_resource $black          i3wm.color0 #101010
-set_from_resource $focused        i3wm.color2 #61afef
+set_from_resource $focused        i3wm.color6 #61afef
 set_from_resource $bright_black   i3wm.color8 #525252
 set_from_resource $white          i3wm.color7 #b9b9b9
 set_from_resource $unfocused      i3wm.color8 #525252
