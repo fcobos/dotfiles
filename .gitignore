@@ -8,6 +8,7 @@ ranger/history
 ranger/tagged
 # qutebrowser
 qutebrowser/bookmarks/
+qutebrowser/qsettings
 qutebrowser/quickmarks
 qutebrowser/autoconfig.yml
 
