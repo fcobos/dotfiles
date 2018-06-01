@@ -180,7 +180,7 @@ bindsym $mod+Shift+e exec "zenity --question --text='Logout?' --icon-name=gnome-
 #exec --no-startup-id lxpolkit &
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # start compton
-exec --no-startup-id env allow_rgb10_configs=false compton -b
+exec --no-startup-id env allow_rgb10_configs=false compton -b -d :0
 # background
 exec --no-startup-id ~/.fehbg
 # start polybar
