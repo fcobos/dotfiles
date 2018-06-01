@@ -606,7 +606,7 @@ type = custom/menu
 
 ;      »
 ;label-open = " "
-label-open = "  "
+label-open = "   "
 label-open-font = 3
 label-open-foreground = ${colors.foreground}
 label-open-background = ${colors.dark_gray}
@@ -647,6 +647,7 @@ menu-0-5 = " "
 menu-0-5-font = 3
 menu-0-5-foreground = ${colors.foreground}
 menu-0-5-background = ${colors.dark_gray}
+
 
 [module/ssh]
 type = custom/script
