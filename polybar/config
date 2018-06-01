@@ -81,7 +81,7 @@ wm-restack = i3
 
 modules-left = i3 RightArrow2 RightArrow1 xwindow
 ;modules-center = arrow1 LeftStripe3 date RightArrow2 RightArrow1
-modules-right = mpd powermenu arrow1 LeftStripe3 volume date network battery
+modules-right = mpd powermenu arrow1 LeftStripe3 volume date network eth battery
 
 ; All modules available in this config file:
 ; i3 text xwindow tray xkeyboard filesystem mpd backlight cpu
@@ -436,18 +436,20 @@ ramp-signal-7 = █
 type = internal/network
 ; To test interface: $ ls -1 /sys/class/net/
 interface = enp4s0
-;interval = 0.5
-interval = 5
+interval = 0.5
+;interval = 5
 
 ;label-connected = "   %local_ip% %downspeed:8%  %upspeed:8%  "
-;label-connected = "   %downspeed:8%  %upspeed:8%  "
-label-connected = "  "
+label-connected = "  %downspeed:8%  %upspeed:8% "
+;label-connected = "  "
 label-connected-foreground = ${colors.foreground}
 label-connected-background = ${colors.dark_gray}
-;label-disconnected = "  %ifname% "
-label-disconnected = "  "
+label-disconnected = "  %ifname% "
+;label-disconnected = "  "
 label-disconnected-foreground = ${colors.foreground}
 label-disconnected-background = ${colors.dark_gray}
+label-connected-font = 2
+label-disconnected-font = 2
 
 
 ;----------------------------------------------------------
