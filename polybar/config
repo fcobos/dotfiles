@@ -81,7 +81,7 @@ wm-restack = i3
 
 modules-left = i3 RightArrow2 RightArrow1 xwindow
 ;modules-center = arrow1 LeftStripe3 date RightArrow2 RightArrow1
-modules-right = mpd powermenu arrow1 LeftStripe3 volume network eth battery date
+modules-right = mpd arrow1 LeftStripe3 volume network eth battery date powermenu
 
 ; All modules available in this config file:
 ; i3 text xwindow tray xkeyboard filesystem mpd backlight cpu
@@ -598,29 +598,6 @@ ramp-4 = 
 
 
 ;----------------------------------------------------------
-;		       G I T H U B
-;----------------------------------------------------------
-
-[module/github]
-type = internal/github
-
-format = <label>
-
-; Accessing an access token stored in file
-;token = ${file:/path/to/file/containing/github/access.token}
-; Accessing an access token stored in an environment variable
-token = ${env:GITHUB_ACCESS_TOKEN}
-; Whether empty notifications should be displayed or not
-empty-notifications = false
-
-;   
-; Available tokens:
-;   %notifications% (default)
-; Default: Notifications: %notifications%
-label =  %notifications%
-
-
-;----------------------------------------------------------
 ;		      P O W E R   M E N U
 ;----------------------------------------------------------
 
@@ -629,139 +606,47 @@ type = custom/menu
 
 ;      »
 ;label-open = " "
-label-open = "    "
+label-open = "  "
 label-open-font = 3
 label-open-foreground = ${colors.foreground}
-label-open-background = ${colors.background}
+label-open-background = ${colors.dark_gray}
 label-close =
 label-close-foreground = ${colors.foreground}
-label-close-background = ${colors.black}
+label-close-background = ${colors.dark_gray}
 label-separator = " "
-label-separator-foreground = ${colors.white}
-label-separator-background = ${colors.black}
+label-separator-foreground = ${colors.foreground}
+label-separator-background = ${colors.dark_gray}
 
 ; lock
 menu-0-0 = ""
 menu-0-0-exec = xflock4
 menu-0-0-foreground = ${colors.foreground}
-menu-0-0-background = ${colors.black}
+menu-0-0-background = ${colors.dark_gray}
 ; sleep
 menu-0-1 = ""
 menu-0-1-exec = zenity --question --text="Suspend?" --icon-name=system-suspend --default-cancel && xflock4 && systemctl suspend
 menu-0-1-foreground = ${colors.foreground}
-menu-0-1-background = ${colors.black}
+menu-0-1-background = ${colors.dark_gray}
 ; logout
 menu-0-2 = ""
 menu-0-2-exec = zenity --question --text="Logout?" --icon-name=gnome-logout --default-cancel && (killall -9 pulseaudio ; i3-msg exit)
 menu-0-2-foreground = ${colors.foreground}
-menu-0-2-background = ${colors.black}
+menu-0-2-background = ${colors.dark_gray}
 ; reboot
 menu-0-3 = ""
 menu-0-3-exec = zenity --question --text="Reboot?" --icon-name=system-reboot --default-cancel && systemctl reboot
 menu-0-3-foreground = ${colors.foreground}
-menu-0-3-background = ${colors.black}
+menu-0-3-background = ${colors.dark_gray}
 ; shutdown
 menu-0-4 = ""
 menu-0-4-exec = zenity --question --text="Shutdown?" --icon-name=system-shutdown --default-cancel && systemctl poweroff
 menu-0-4-foreground = ${colors.foreground}
-menu-0-4-background = ${colors.black}
+menu-0-4-background = ${colors.dark_gray}
 ; end stripe
 menu-0-5 = " "
 menu-0-5-font = 3
-menu-0-5-foreground = ${colors.white}
-menu-0-5-background = ${colors.black}
-
-
-;----------------------------------------------------------
-;		       R U N    M E N U
-;----------------------------------------------------------
-
-[module/appmenu]
-type = custom/menu
-
-;      
-label-open = " "
-label-open-font = 6
-label-open-foreground = ${colors.red}
-label-open-background = ${colors.black}
-label-close = " "
-label-close-foreground = ${colors.foreground}
-label-close-background = ${colors.black}
-label-separator = " "
-label-separator-foreground = ${colors.red}
-label-separator-background = ${colors.black}
-
-;                   
-; terminal
-menu-0-0 = "  "
-menu-0-0-exec = alacritty &
-menu-0-0-foreground = ${colors.foreground}
-menu-0-0-background = ${colors.black}
-; filemanager
-menu-0-1 = "  "
-menu-0-1-exec = nautilus &
-menu-0-1-foreground = ${colors.foreground}
-menu-0-1-background = ${colors.black}
-; browser
-menu-0-2 = "  "
-menu-0-2-exec = firefox &
-menu-0-2-foreground = ${colors.foreground}
-menu-0-2-background = ${colors.black}
-; editor
-menu-0-3 = "  "
-menu-0-3-exec = emacs &
-menu-0-3-foreground = ${colors.foreground}
-menu-0-3-background = ${colors.black}
-; chat client
-menu-0-4 = "  "
-menu-0-4-exec = flatpak run org.gnome.Fractal &
-menu-0-4-foreground = ${colors.foreground}
-menu-0-4-background = ${colors.black}
-; media player
-menu-0-5 = "  "
-menu-0-5-exec = vlc &
 menu-0-5-foreground = ${colors.foreground}
-menu-0-5-background = ${colors.black}
-; end stripe
-menu-0-6 = " "
-menu-0-6-font = 6
-menu-0-6-foreground = ${colors.red}
-menu-0-6-background = ${colors.black}
-
-
-;----------------------------------------------------------
-;		      S C R I P T    M O D U L E S
-;    https://github.com/jaagr/polybar/wiki/Module:-script
-;----------------------------------------------------------
-
-; Example json files for mail, weather, & music: https://github.com/Chaosteil/dotfiles/tree/master/polybar/.config/polybar
-
-[module/mail]
-type = custom/script
-exec = $HOME/.config/polybar/mail.py
-interval = 120
-label = "  %output:0:5:...% "
-;  
-format-foreground = ${colors.foreground}
-format-background = ${colors.red}
-
-[module/weather]
-type = custom/script
-exec = $HOME/.config/polybar/weather.py
-interval = 120
-label = "  %output:0:22:...% "
-format-foreground = ${colors.red}
-format-background = ${colors.foreground}
-
-[module/music]
-type = custom/script
-exec = $HOME/.config/polybar/mediaplayer.py
-exec-if = pgrep -x spotify
-interval = 3
-label = "  %output:0:30:% "
-format-foreground = ${colors.foreground}
-format-background = ${colors.red}
-click-left = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+menu-0-5-background = ${colors.dark_gray}
 
 [module/ssh]
 type = custom/script
@@ -790,26 +675,3 @@ click-middle = echo middle %counter%
 click-right = echo right %counter%
 scroll-up = echo scroll up %counter%
 scroll-down = echo scroll down %counter%
-
-[module/btc]
-type = custom/script
-exec = curl -s https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD | python -c "import json, sys; print(json.load(sys.stdin)['last'])"
-interval = 60.0
-format-foreground = ${colors.red}
-format-background = ${colors.foreground}
-label = " $%output:0:10% "
-;label = " BTC:$%output:0:10% "
-
-[module/etherium]
-type = custom/script
-exec = curl -s https://apiv2.bitcoinaverage.com/indices/global/ticker/ETHUSD | python -c "import json, sys; print(json.load(sys.stdin)['last'])"
-interval = 60.0
-format-foreground = ${colors.foreground}
-format-background = ${colors.red}
-label = " $%output:0:7% "
-;label = " ETH:$%output:0:7% "
-
-
-;#########################################################;
-;                 E N D    O F    F I L E                 :
-;#########################################################;
