@@ -461,20 +461,10 @@ interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.dark_gray}
 
-;date = ""
-;date-alt = "  %Y/%m/%d"
-;date-alt = "  %a.%e.%b"
-;date = " %a.%e.%b"
-;date = "%d/%m/%y"
-date = " %d %b - %a"
-;time = "   %H:%M    "
-time = "%H:%M"
-;time-alt = ""
-;date = "%Y/%m/%d | "
-;date-alt = "It is day %j, week %V, of year %y of the %Cth century."
-;time = "%I:%M:%S %p"
-;time-alt = " %z %Z"
-label = " %date%   %time%"
+time = " %H:%M"
+time-alt = " %d %b - %a"
+label = " %time%"
+
 label-font = 2
 
 
