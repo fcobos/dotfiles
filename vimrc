@@ -84,7 +84,7 @@ endif
 colorscheme darktooth
 
 " hightlight current line
-"set cursorline
+set cursorline
 
 " mutt config
 au BufRead /tmp/mutt-* set tw=72
