@@ -86,6 +86,9 @@ colorscheme darktooth
 " hightlight current line
 set cursorline
 
+" use cache folder for .netrwhist
+let g:netrw_home=$XDG_CACHE_HOME.'/vim'
+
 " mutt config
 au BufRead /tmp/mutt-* set tw=72
 
