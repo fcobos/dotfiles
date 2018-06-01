@@ -1,0 +1,9 @@
+* {
+  -webkit-filter: sepia(.05) brightness(90%);
+  filter: sepia(.05) brightness(90%);
+}
+
+body {
+  background: #d8d8d8
+}
+
