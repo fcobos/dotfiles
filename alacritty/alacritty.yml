@@ -26,8 +26,8 @@ window:
   # Units are physical pixels; this is not DPI aware.
   # (change requires restart)
   padding:
-    x: 0
-    y: 0
+    x: 2
+    y: 2
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
@@ -157,15 +157,15 @@ colors:
     white:   '0xfdf4c1'
 
   # Dim colors (Optional)
-#  dim:
-#    black:   '0x333333'
-#    red:     '0xf2777a'
-#    green:   '0x99cc99'
-#    yellow:  '0xffcc66'
-#    blue:    '0x6699cc'
-#    magenta: '0xcc99cc'
-#    cyan:    '0x66cccc'
-#    white:   '0xdddddd'
+  dim:
+    black:   '0x333333'
+    red:     '0xf2777a'
+    green:   '0x99cc99'
+    yellow:  '0xffcc66'
+    blue:    '0x6699cc'
+    magenta: '0xcc99cc'
+    cyan:    '0x66cccc'
+    white:   '0xdddddd'
 
 # Visual Bell
 #
