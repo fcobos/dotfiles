@@ -74,6 +74,9 @@ set number
 set nowrap
 
 set ttyfast
+set lazyredraw
+syntax sync minlines=256
+set synmaxcol=200
 
 " centered cursor
 ":nnoremap j jzz
@@ -84,7 +87,7 @@ endif
 colorscheme darktooth
 
 " hightlight current line
-set cursorline
+"set cursorline
 
 " use cache folder for .netrwhist
 let g:netrw_home=$XDG_CACHE_HOME.'/vim'
