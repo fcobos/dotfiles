@@ -15,7 +15,7 @@ body {
 
 main {
   display: block;
-  font-family: 'Roboto Condensed';
+  font-family: 'Hack', monospace;
   /* left: 50%; */
   position: absolute;
   top: 30%;
@@ -67,6 +67,7 @@ a:hover {
 input {
   width: 600px;
   font-size: 1.2em;
+  font-family: 'Hack', monospace;
   background: none;
   border: none;
   color: #fdf4c1;
