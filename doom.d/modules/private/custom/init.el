@@ -55,7 +55,3 @@ while they run.")
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
 
-;; qml-mode
-(autoload 'qml-mode "qml-mode" "Editing Qt Declarative." t)
-(add-to-list 'auto-mode-alist '("\\.qml$" . qml-mode))
-
