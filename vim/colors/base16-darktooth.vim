@@ -15,7 +15,7 @@ if !has('gui_running')
 endif
 
 " GUI color definitions
-let s:gui00 = "1D2021"
+let s:gui00 = "282828"
 let s:gui01 = "32302F"
 let s:gui02 = "504945"
 let s:gui03 = "665C54"
@@ -61,7 +61,7 @@ endif
 
 " Neovim terminal colours
 if has("nvim")
-  let g:terminal_color_0 =  "#1D2021"
+  let g:terminal_color_0 =  "#282828"
   let g:terminal_color_1 =  "#FB543F"
   let g:terminal_color_2 =  "#95C085"
   let g:terminal_color_3 =  "#FAC03B"
