@@ -3,15 +3,12 @@
 
 ;; Set the font
 (setq doom-font (font-spec :family "Hack" :size 12)
-      doom-big-font (font-spec :family "Hack" :size 24)
-      ;doom-variable-pitch-font (font-spec :family "Noto Sans")
-      ;doom-unicode-font (font-spec :family "DejaVu Sans Mono")
-      )
-(setq-default line-spacing 0)
+      doom-big-font (font-spec :family "Hack" :size 24))
 
 ;; Set the theme
 ;(setq doom-theme 'doom-molokai)
-(load-theme 'darktooth)
+;(load-theme 'darktooth)
+(load-theme 'base16-default-dark t)
 
 ;; Set line numbers style
 (setq doom-line-numbers-style 'relative)

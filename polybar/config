@@ -6,7 +6,7 @@
 gray = ${xrdb:color8:#545862}
 red = ${xrdb:color1:#e06c75}
 green = ${xrdb:color2:#98c379}
-blue = ${xrdb:color6:#61afef}
+blue = ${xrdb:color4:#61afef}
 yellow = ${xrdb:color3:#d19a66}
 white = ${xrdb:color7:#abb2bf}
 black = #bb181818

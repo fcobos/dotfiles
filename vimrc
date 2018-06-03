@@ -84,7 +84,7 @@ set synmaxcol=200
 if &t_Co == 256 || has("gui_running")
 	set termguicolors
 endif
-colorscheme base16-darktooth
+colorscheme base16-default-dark
 
 " hightlight current line
 "set cursorline
