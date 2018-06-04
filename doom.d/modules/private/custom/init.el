@@ -8,6 +8,7 @@
 ;; Set the theme
 ;(setq doom-theme 'doom-molokai)
 ;(load-theme 'darktooth)
+(setq base16-theme-256-color-source "colors")
 (load-theme 'base16-default-dark t)
 
 ;; Set line numbers style
