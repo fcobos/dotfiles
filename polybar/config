@@ -106,6 +106,10 @@ format = <label-state> <label-mode>
 index-sort = true;
 wrapping-scroll = false
 
+label-mode-font = 2
+label-mode-foreground = ${colors.foreground}
+label-mode-background = ${colors.dark_gray}
+
 ; ws-icon-[0-9]+ = label;icon
 ; Note that the label needs to correspond with the i3 workspace name
 ;ws-icon-0 = 1;
