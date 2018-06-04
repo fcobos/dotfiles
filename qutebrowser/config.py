@@ -291,7 +291,7 @@ c.colors.tabs.selected.odd.fg = base00
 # c.colors.webpage.bg = base00
 
 # Bindings for normal mode
-config.bind(',n', 'config-cycle content.user_stylesheets nightmode.css solarized.css ""')
+config.bind(',n', 'config-cycle content.user_stylesheets nightmode.css nightmode2.css ""')
 config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
 config.bind('O', 'set-cmd-text :open {url:pretty}')
