@@ -5,6 +5,12 @@ endif
 set nocompatible	" Use Vim defaults (much better!)
 set bs=indent,eol,start		" allow backspacing over everything in insert mode
 set ai			" always set autoindenting on
+set smartindent
+set scrolloff=1
+set display+=lastline
+set sidescrolloff=5
+set autoread
+set incsearch
 "set backup		" keep a backup file
 set viminfo='20,\"50	" read/write a .viminfo file, don't store more
 			" than 50 lines of registers
@@ -74,8 +80,20 @@ set number
 set nowrap
 
 set ttyfast
+set lazyredraw
+"autocmd VimEnter * redrawstatus!
 syntax sync minlines=256
 set synmaxcol=200
+
+" Allow color schemes to do bright colors without forcing bold.
+if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
+  set t_Co=16
+endif
+
+" Load matchit.vim, but only if the user hasn't installed a newer version.
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+  runtime! macros/matchit.vim
+endif
 
 " centered cursor
 ":nnoremap j jzz
