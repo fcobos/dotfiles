@@ -74,7 +74,6 @@ set number
 set nowrap
 
 set ttyfast
-set lazyredraw
 syntax sync minlines=256
 set synmaxcol=200
 
