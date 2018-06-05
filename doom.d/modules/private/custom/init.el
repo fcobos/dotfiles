@@ -52,4 +52,6 @@ while they run.")
 
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
+;; python debugger
+(setq gud-pdb-command-name "python -m pdb")
 
