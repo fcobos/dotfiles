@@ -56,5 +56,5 @@ while they run.")
 (setq gud-pdb-command-name "python -m pdb")
 
 ;; modeline height
-(setq +doom-modeline-height 18)
+(setq +doom-modeline-height 20)
 
