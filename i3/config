@@ -344,6 +344,7 @@ for_window [class="Displaycal"] floating enable
 for_window [class="Corebird"] floating enable
 for_window [class="Setroubleshoot"] floating enable
 for_window [title="Preferences$"] floating enable
+for_window [class="matplotlib"] floating enable
 
 ## Manual management of external displays
 # Set the shortcuts and what they do
