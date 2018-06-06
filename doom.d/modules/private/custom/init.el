@@ -55,3 +55,6 @@ while they run.")
 ;; python debugger
 (setq gud-pdb-command-name "python -m pdb")
 
+;; modeline height
+(setq +doom-modeline-height 18)
+
