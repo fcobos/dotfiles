@@ -81,7 +81,6 @@ set nowrap
 
 set ttyfast
 set lazyredraw
-autocmd VimEnter * redrawstatus!
 syntax sync minlines=256
 set synmaxcol=200
 
@@ -102,6 +101,8 @@ if &t_Co == 256 || has("gui_running")
 	set termguicolors
 endif
 colorscheme base16-default-dark
+
+autocmd VimEnter * redrawstatus!
 
 " hightlight current line
 "set cursorline
