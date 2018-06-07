@@ -6,8 +6,8 @@
       doom-big-font (font-spec :family "Hack" :size 24))
 
 ;; Set the theme
-;(setq doom-theme 'doom-tomorrow-night)
-;(solaire-mode 1)
+(setq doom-theme 'doom-tomorrow-night)
+(solaire-mode 1)
 ;;; Background and foreground like base16-default-dark
 ;(custom-set-faces
 ; '(default ((t (:background "#181818" :foreground "#d8d8d8"))))
@@ -15,11 +15,11 @@
 ; '(solaire-hl-line-face ((t (:background "#282828"))))
 ; )
 ;(load-theme 'darktooth)
-(setq base16-theme-256-color-source "colors")
-(load-theme 'base16-default-dark t)
-(doom-themes-neotree-config)
-;(doom-themes-visual-bell-config)
-(doom-themes-org-config)
+;(setq base16-theme-256-color-source "colors")
+;(load-theme 'base16-default-dark t)
+;(doom-themes-neotree-config)
+;;(doom-themes-visual-bell-config)
+;(doom-themes-org-config)
 
 ;; Set line numbers style
 (setq doom-line-numbers-style 'relative)

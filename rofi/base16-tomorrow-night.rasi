@@ -1,0 +1,30 @@
+* {
+    background-color: #1d1f21;
+    border-color: #81a2be;
+    text-color: #c5c8c6;
+}
+
+#element selected {
+    background-color: @border-color;
+    text-color: @background-color;
+}
+
+#window {
+    background-color: @background-color;
+    border: 2;
+    padding: 10;
+}
+
+#listview {
+    lines: 8;
+}
+
+inputbar {
+    children: [ textbox-prompt-colon, entry, case-indicator];
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: "";
+    margin: 0px 0.3em 0em 0em;
+}
