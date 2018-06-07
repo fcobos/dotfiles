@@ -107,6 +107,9 @@ autocmd VimEnter * redrawstatus!
 " hightlight current line
 "set cursorline
 
+" column indicator
+set colorcolumn=80
+
 " use cache folder for .netrwhist
 let g:netrw_home=$XDG_CACHE_HOME.'/vim'
 
