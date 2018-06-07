@@ -8,6 +8,9 @@
 ;; Set the theme
 (setq doom-theme 'doom-tomorrow-night)
 (solaire-mode 1)
+(unless (display-graphic-p)
+  (setq base16-theme-256-color-source "colors")
+  (load-theme 'base16-default-dark t))
 ;;; Background and foreground like base16-default-dark
 ;(custom-set-faces
 ; '(default ((t (:background "#181818" :foreground "#d8d8d8"))))
