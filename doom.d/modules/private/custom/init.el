@@ -71,3 +71,7 @@
 ;; modeline height
 (setq +doom-modeline-height 20)
 
+;; fill column indicator
+(add-hook 'prog-mode-hook (lambda ()
+                            (turn-on-fci-mode)))
+

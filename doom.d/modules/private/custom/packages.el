@@ -9,4 +9,6 @@
 (package! base16-theme)
 ;; format-all autoformat multiple languages
 (package! format-all)
+;; fill column indicator
+(package! fill-column-indicator)
 
