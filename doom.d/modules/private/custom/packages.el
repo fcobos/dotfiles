@@ -2,6 +2,8 @@
 ;;;
 ;; emacs-traad for python refactoring
 (package! traad)
+;; pipenv
+(package! pipenv)
 ;; themes
 (package! darktooth-theme)
 (package! base16-theme)
