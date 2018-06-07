@@ -81,7 +81,7 @@ set nowrap
 
 set ttyfast
 set lazyredraw
-"autocmd VimEnter * redrawstatus!
+autocmd VimEnter * redrawstatus!
 syntax sync minlines=256
 set synmaxcol=200
 
