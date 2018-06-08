@@ -63,14 +63,6 @@
     (fci-mode 0))
   )
 
-;; gc settings
-(defun my-scroll-hook(_)
-  "Increase gc-threshold before scroll and set it back after."
-  (setq gc-cons-threshold most-positive-fixnum)
-  (run-with-idle-timer 3 nil (lambda () (setq gc-cons-threshold (* 16 1024 1024)))))
-(advice-add 'scroll-up-line :before 'my-scroll-hook)
-(advice-add 'scroll-down-line :before 'my-scroll-hook)
-
 ;; open *rc files as conf-mode
 (add-to-list 'auto-mode-alist '("\\rc$" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\vimrc$" . vimrc-mode))
