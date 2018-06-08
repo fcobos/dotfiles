@@ -51,16 +51,6 @@
 ;; modeline height
 (setq +doom-modeline-height 20)
 
-;; fill column indicator
-(add-hook 'prog-mode-hook 'auto-fci-mode)
-(add-hook 'window-size-change-functions 'auto-fci-mode)
-(defun auto-fci-mode (&optional unused)
-  (if (> (frame-width) 80)
-      (if (derived-mode-p 'prog-mode)
-          (fci-mode 1))
-    (fci-mode 0))
-  )
-
 ;; open *rc files as conf-mode
 (add-to-list 'auto-mode-alist '("\\rc$" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\vimrc$" . vimrc-mode))
