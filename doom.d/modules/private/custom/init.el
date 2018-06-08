@@ -52,8 +52,6 @@
 (setq +doom-modeline-height 20)
 
 ;; fill column indicator
-(setq fci-handle-truncate-lines nil)
-(setq fci-always-use-textual-rule t)
 (add-hook 'prog-mode-hook 'auto-fci-mode)
 (add-hook 'window-size-change-functions 'auto-fci-mode)
 (defun auto-fci-mode (&optional unused)
