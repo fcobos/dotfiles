@@ -24,6 +24,10 @@
 ;; ;(doom-themes-visual-bell-config)
 ;; (doom-themes-org-config)
 
+;; disable bold and italic fonts
+(setq doom-themes-enable-bold nil)
+(setq doom-themes-enable-italic nil)
+
 ;; Set line numbers style
 (setq doom-line-numbers-style 'relative)
 
