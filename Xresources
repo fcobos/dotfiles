@@ -34,7 +34,7 @@ URxvt*saveLines:          2000
 URxvt.url-launcher: xdg-open
 
 ! xst
-st.termname: st-256color
+st.termname: xterm-256color
 st.font: Hack:size=9:antialias=true;
 st.bold_font: 1
 st.borderpx: 0
