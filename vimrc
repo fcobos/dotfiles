@@ -61,7 +61,7 @@ filetype plugin on
 
 " Don't wake up system with blinking cursor:
 " http://www.linuxpowertop.org/known.php
-"let &guicursor = &guicursor . ",a:blinkon0"
+let &guicursor = &guicursor . ",a:blinkon0"
 
 " airline config
 set laststatus=2
