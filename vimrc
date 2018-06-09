@@ -102,7 +102,8 @@ if &t_Co == 256 || has("gui_running")
 endif
 colorscheme base16-tomorrow-night
 
-autocmd VimEnter * redrawstatus!
+" this is needed for termite
+"autocmd VimEnter * redrawstatus!
 
 " hightlight current line
 "set cursorline
