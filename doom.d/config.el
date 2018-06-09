@@ -1,10 +1,10 @@
 ;; Custom keybindings
 (add-hook! 'after-init-hook
   (map!
-    (:leader
-      :desc "M-x" :n "SPC" #'execute-extended-command
-      (:desc "code" :prefix "c"
-        :desc "Format buffer" :n "f" #'format-all-buffer))))
+   (:leader
+     :desc "M-x" :n "SPC" #'execute-extended-command
+     (:desc "code" :prefix "c"
+       :desc "Format buffer" :n "f" #'format-all-buffer))))
 
 ;; pipenv config
 (use-package pipenv
@@ -78,3 +78,13 @@
 (add-hook 'flycheck-mode-hook (lambda ()
                                 (setq posframe-mouse-banish nil)))
 
+;; fix python repl
+(defun python-repl-config ()
+  (setq python-shell-interpreter "python"
+        python-shell-interpreter-args "-i"
+        python-shell-prompt-regexp nil
+        python-shell-prompt-block-regexp nil
+        python-shell-prompt-output-regexp nil
+        python-shell-completion-setup-code nil
+        python-shell-completion-string-code nil))
+(add-hook 'python-mode-hook #'python-repl-config)
