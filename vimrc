@@ -103,7 +103,7 @@ endif
 colorscheme base16-tomorrow-night
 
 " this is needed for termite
-"autocmd VimEnter * redrawstatus!
+autocmd VimEnter * redrawstatus!
 
 " hightlight current line
 "set cursorline
