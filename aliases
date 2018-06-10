@@ -33,7 +33,6 @@ alias pu=pushd
 alias rd=rmdir
 alias run-help=man
 alias vi=vim
-#alias vim=nvim
 alias which='(alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot'
 alias which-command=whence
 alias grep='grep --color=auto'
@@ -43,3 +42,5 @@ alias xzgrep='xzgrep --color=auto'
 alias zegrep='zegrep --color=auto'
 alias zfgrep='zfgrep --color=auto'
 alias zgrep='zgrep --color=auto'
+alias glances='glances --disable-bg'
+

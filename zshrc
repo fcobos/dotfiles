@@ -6,19 +6,19 @@ HISTSIZE=50000
 setopt hist_save_no_dups
 setopt hist_ignore_all_dups
 setopt hist_find_no_dups
-setopt extended_history       # record timestamp of command in HISTFILE
-setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
-setopt hist_ignore_dups       # ignore duplicated commands history list
-setopt hist_ignore_space      # ignore commands that start with space
-setopt hist_verify            # show command with history expansion to user before running it
-setopt inc_append_history     # add commands to HISTFILE in order of execution
-setopt share_history          # share command history data
-setopt append_history         # Allow multiple terminal sessions to all append to one zsh command history
-setopt hist_reduce_blanks     # Remove extra blanks from each command line being added to history
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history
+setopt share_history
+setopt append_history
+setopt hist_reduce_blanks
 
-setopt ZLE                    # Enable the ZLE line editor, which is default behavior, but to be sure
-unsetopt NO_HUP               # Kill all child processes when we exit, do not leave them running
-setopt INTERACTIVE_COMMENTS   # Allows comments in interactive shell.
+setopt ZLE
+unsetopt NO_HUP
+setopt INTERACTIVE_COMMENTS
 
 # ls colors
 eval $(dircolors)
@@ -26,25 +26,19 @@ eval $(dircolors)
 # Autoload auto completion
 autoload -U compinit
 compinit -i
-zstyle ':completion:*' menu select # Have the menu highlight as we cycle through options
-## case-insensitive (uppercase from lowercase) completion
-#zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-## case-insensitive (all) completion
-#zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-## case-insensitive,partial-word and then substring completion
-#zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 # Color completion for some things.
 # http://linuxshellaccount.blogspot.com/2008/12/color-completion-using-zsh-modules-on.html
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-setopt COMPLETE_IN_WORD       # Allow completion from within a word/phrase
-setopt ALWAYS_TO_END          # When completing from the middle of a word, move cursor to end of word
-unsetopt MENU_COMPLETE        # When using auto-complete, put the first option on the line immediately
-setopt COMPLETE_ALIASES       # Turn on completion for aliases as well
-setopt LIST_ROWS_FIRST        # Cycle through menus horizontally instead of vertically
-setopt NO_CASE_GLOB           # Case insensitive globbing
-setopt EXTENDED_GLOB          # Allow the powerful zsh globbing features
-setopt NUMERIC_GLOB_SORT      # Sort globs that expand to numbers numerically, not by letter (i.e. 01 2 03)
+setopt COMPLETE_IN_WORD
+setopt ALWAYS_TO_END
+unsetopt MENU_COMPLETE
+setopt COMPLETE_ALIASES
+setopt LIST_ROWS_FIRST
+setopt NO_CASE_GLOB
+setopt EXTENDED_GLOB
+setopt NUMERIC_GLOB_SORT
 
 # key bindings
 # http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html
@@ -64,19 +58,17 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
 	zle -N zle-line-finish
 fi
 
-bindkey -e                                            # Use emacs key bindings
+bindkey -e # Use emacs key bindings
 #bindkey -v # vim keybindings
 
-bindkey '\ew' kill-region                             # [Esc-w] - Kill from the cursor to the mark
-bindkey -s '\el' 'ls\n'                               # [Esc-l] - run command: ls
-bindkey '^r' history-incremental-search-backward      # [Ctrl-r] - Search backward incrementally for a specified string.
-						      # The string may begin with ^ to anchor the search to the beginning of the line.
-#bindkey '^r' history-incremental-pattern-search-backward
+bindkey '\ew' kill-region
+bindkey -s '\el' 'ls\n'
+bindkey '^r' history-incremental-search-backward
 if [[ "${terminfo[kpp]}" != "" ]]; then
-	bindkey "${terminfo[kpp]}" up-line-or-history       # [PageUp] - Up a line of history
+	bindkey "${terminfo[kpp]}" up-line-or-history
 fi
 if [[ "${terminfo[knp]}" != "" ]]; then
-	bindkey "${terminfo[knp]}" down-line-or-history     # [PageDown] - Down a line of history
+	bindkey "${terminfo[knp]}" down-line-or-history
 fi
 
 # start typing + [Up-Arrow] - fuzzy find history forward
@@ -93,24 +85,24 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
 fi
 
 if [[ "${terminfo[khome]}" != "" ]]; then
-	bindkey "${terminfo[khome]}" beginning-of-line      # [Home] - Go to beginning of line
+	bindkey "${terminfo[khome]}" beginning-of-line
 fi
 if [[ "${terminfo[kend]}" != "" ]]; then
-	bindkey "${terminfo[kend]}"  end-of-line            # [End] - Go to end of line
+	bindkey "${terminfo[kend]}"  end-of-line
 fi
 
-bindkey ' ' magic-space                               # [Space] - do history expansion
+bindkey ' ' magic-space
 
-bindkey '^[[1;5C' forward-word                        # [Ctrl-RightArrow] - move forward one word
-bindkey '^[[1;5D' backward-word                       # [Ctrl-LeftArrow] - move backward one word
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
 
 if [[ "${terminfo[kcbt]}" != "" ]]; then
-	bindkey "${terminfo[kcbt]}" reverse-menu-complete   # [Shift-Tab] - move through the completion menu backwards
+	bindkey "${terminfo[kcbt]}" reverse-menu-complete
 fi
 
-bindkey '^?' backward-delete-char                     # [Backspace] - delete backward
+bindkey '^?' backward-delete-char
 if [[ "${terminfo[kdch1]}" != "" ]]; then
-	bindkey "${terminfo[kdch1]}" delete-char            # [Delete] - delete forward
+	bindkey "${terminfo[kdch1]}" delete-char
 else
 	bindkey "^[[3~" delete-char
 	bindkey "^[3;5~" delete-char
