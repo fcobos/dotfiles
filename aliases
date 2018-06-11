@@ -33,7 +33,7 @@ alias pu=pushd
 alias rd=rmdir
 alias run-help=man
 alias vi=vim
-alias which='(alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot'
+#alias which='(alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot'
 alias which-command=whence
 alias grep='grep --color=auto'
 alias xzegrep='xzegrep --color=auto'
