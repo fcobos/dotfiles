@@ -18,13 +18,11 @@
 
        :completion
        (company          ; the ultimate code completion backend
-       ;+childframe      ; a nicer company UI (Emacs 26+ only)
         +auto)           ; as-you-type code completion
       ;(helm             ; the *other* search engine for love and life
       ; +fuzzy)          ; enable fuzzy search backend for helm
       ;ido               ; the other *other* search engine...
        (ivy              ; a search engine for love and life
-       ;+childframe      ; uses childframes for popups (Emacs 26+ only)
         +fuzzy)          ; enable fuzzy search backend for ivy
 
        :ui
@@ -73,9 +71,9 @@
        :lang
        assembly          ; assembly for fun or debugging
        (cc +irony)       ; C/C++/Obj-C madness
-       ;crystal           ; ruby at the speed of c
-       ;clojure           ; java with a lisp
-       ;csharp            ; unity, .NET, and mono shenanigans
+      ;crystal           ; ruby at the speed of c
+      ;clojure           ; java with a lisp
+      ;csharp            ; unity, .NET, and mono shenanigans
        data              ; config/data formats
       ;erlang            ; an elegant language for a more civilized age
       ;elixir            ; erlang done right
@@ -103,14 +101,14 @@
         +present)        ; Emacs for presentations
        perl              ; write code no one else can comprehend
        php               ; perl's insecure younger brother
-       ;plantuml          ; diagrams for confusing people more
+      ;plantuml          ; diagrams for confusing people more
        purescript        ; javascript, but functional
        python            ; beautiful is better than ugly
        qt                ; the 'cutest' gui framework ever
        rest              ; Emacs as a REST client
-       ;ruby              ; 1.step do {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
+      ;ruby              ; 1.step do {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
        rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
-       ;scala             ; java, but good
+      ;scala             ; java, but good
        sh                ; she sells (ba|z)sh shells on the C xor
       ;solidity          ; do you need a blockchain? No.
       ;swift             ; who asked for emoji variables?
