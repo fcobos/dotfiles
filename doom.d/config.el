@@ -67,6 +67,7 @@
 (add-to-list 'auto-mode-alist '("\\vimrc$" . vimrc-mode))
 (add-to-list 'auto-mode-alist '("\\zshrc$" . shell-script-mode))
 (add-to-list 'auto-mode-alist '("\\bashrc$" . shell-script-mode))
+(add-to-list 'auto-mode-alist '("PKGBUILD" . shell-script-mode))
 
 ;; make postframe stop moving my mouse pointer, kthxbai
 (add-hook 'flycheck-mode-hook (lambda ()
