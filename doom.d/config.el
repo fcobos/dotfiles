@@ -74,7 +74,7 @@
 (add-hook 'flycheck-mode-hook (lambda ()
                                 (setq posframe-mouse-banish nil)))
 
-;; fix python repl
+;; use python as repl insted of ipython
 (defun python-repl-config ()
   (setq python-shell-interpreter "python"
         python-shell-interpreter-args "-i"
@@ -87,43 +87,3 @@
 
 ;; better scrolling performance maybe...
 (setq auto-window-vscroll nil)
-
-;; modeline configuration
-(use-package telephone-line
-  :demand t
-  :config
-  (setq telephone-line-primary-left-separator 'telephone-line-abs-left
-        telephone-line-primary-right-separator 'telephone-line-abs-right)
-
-  (telephone-line-defsegment my-vc-info ()
-    (when vc-mode
-      (cond
-       ((string-match "Git[:-]" vc-mode)
-        (let ((branch (mapconcat 'concat (cdr (split-string vc-mode "[:-]")) "-")))
-          (concat "" (format " %s" branch))))
-       ((string-match "SVN-" vc-mode)
-        (let ((revision (cadr (split-string vc-mode "-"))))
-          (concat "" (format "SVN-%s" revision))))
-       (t (format "%s" vc-mode)))))
-
-  (telephone-line-defsegment* my-airline-position-segment (&optional lines columns)
-    (let* ((l (number-to-string (if lines lines 1)))
-           (c (number-to-string (if columns columns 2))))
-      (if (eq major-mode 'paradox-menu-mode)
-          (telephone-line-raw mode-line-front-space t)
-        `((-3 "%p") ,(concat "  " "%" l "l:%" c "c")))))
-
-  (setq telephone-line-rhs
-        '((nil    . (telephone-line-flycheck-segment
-                     telephone-line-misc-info-segment))
-          (accent . (telephone-line-major-mode-segment))
-          (evil   . (my-airline-position-segment))))
-
-  (setq telephone-line-lhs
-        '((evil   . (telephone-line-evil-tag-segment))
-          (accent . (my-vc-info
-                     telephone-line-process-segment))
-          (nil    . (telephone-line-buffer-segment
-                     telephone-line-projectile-segment))))
-
-  (telephone-line-mode 1))
