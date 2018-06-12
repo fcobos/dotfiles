@@ -9,4 +9,5 @@
 (package! base16-theme)
 ;; format-all autoformat multiple languages
 (package! format-all)
-
+;; telephone-line modeline
+(package! telephone-line)
