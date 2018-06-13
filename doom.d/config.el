@@ -32,6 +32,8 @@
   ;; (so it's visible when selected)
   (custom-set-faces '(font-lock-comment-delimiter-face
                       ((t (:foreground "#585858"))))
+                    ;; make doc strings darker so they don't look too much like
+                    ;; regular text
                     '(font-lock-doc-face
                       ((t (:foreground "honeydew4")))))
   (doom-themes-neotree-config)
