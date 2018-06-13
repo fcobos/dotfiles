@@ -319,20 +319,11 @@ label-unmounted-background = ${colors.gray}
 ;----------------------------------------------------------
 
 [module/mpd]
-type = internal/mpd
-; 
-;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-format-online = "<label-song>  "
-format-stopped =
-;icon-prev = 
-;icon-stop = 
-;icon-play = 
-;icon-pause = 
-;icon-next = 
-label-song-maxlen = 25
-label-song-ellipsis = true
-label-song-foreground = ${colors.white}
-label-song-font = 2
+type = custom/script
+exec = $HOME/dotfiles/scripts/scroll_music_title
+tail = true
+label-foreground = ${colors.white}
+label-font = 2
 
 ;----------------------------------------------------------
 ;		     B A C K L I G H T
