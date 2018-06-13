@@ -7,7 +7,6 @@ set bs=indent,eol,start		" allow backspacing over everything in insert mode
 set ai			" always set autoindenting on
 set smartindent
 set scrolloff=1
-set sj=30
 set display+=lastline
 set sidescrolloff=5
 set autoread
