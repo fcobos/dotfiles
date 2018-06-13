@@ -31,13 +31,15 @@
   ;; better looking comment delimiter face on base16
   ;; (so it's visible when selected)
   (custom-set-faces '(font-lock-comment-delimiter-face
-                      ((t (:foreground "#585858")))))
+                      ((t (:foreground "#585858"))))
+                    '(font-lock-doc-face
+                      ((t (:foreground "SlateGrey")))))
   (doom-themes-neotree-config)
   (doom-themes-org-config))
 
 ;; disable bold and italic fonts
-(setq doom-themes-enable-bold nil)
-(setq doom-themes-enable-italic nil)
+;; (setq doom-themes-enable-bold nil)
+;; (setq doom-themes-enable-italic nil)
 
 ;; Set line numbers style
 (setq doom-line-numbers-style 'relative)

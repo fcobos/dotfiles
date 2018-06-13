@@ -5,7 +5,6 @@
 ;; pipenv
 (package! pipenv)
 ;; themes
-(package! darktooth-theme)
 (package! base16-theme)
 ;; format-all autoformat multiple languages
 (package! format-all)
