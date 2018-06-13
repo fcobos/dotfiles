@@ -22,15 +22,18 @@
 ;; Set the theme
 ;; (setq doom-theme 'doom-tomorrow-night)
 ;; (solaire-mode 1)
-(unless (display-graphic-p)
-  (setq base16-theme-256-color-source "colors"))
-(load-theme 'base16-default-dark t)
-;; better looking comment delimiter face on base16
-;; (so it's visible when selected)
-(custom-set-faces '(font-lock-comment-delimiter-face
-                    ((t (:foreground "#585858")))))
-(doom-themes-neotree-config)
-(doom-themes-org-config)
+(use-package base16-theme
+  :config
+  (unless (display-graphic-p)
+    (setq base16-theme-256-color-source "colors"))
+  (load-theme 'base16-default-dark t)
+  (enable-theme 'base16-default-dark)
+  ;; better looking comment delimiter face on base16
+  ;; (so it's visible when selected)
+  (custom-set-faces '(font-lock-comment-delimiter-face
+                      ((t (:foreground "#585858")))))
+  (doom-themes-neotree-config)
+  (doom-themes-org-config))
 
 ;; disable bold and italic fonts
 (setq doom-themes-enable-bold nil)
@@ -62,6 +65,8 @@
 
 ;; modeline height
 (setq +doom-modeline-height 20)
+;; just show the file name (don't waste cpu cycles truncating paths)
+(setq +doom-modeline-buffer-file-name-style 'file-name)
 
 ;; open *rc files as conf-mode
 (add-to-list 'auto-mode-alist '("\\rc$" . conf-mode))
