@@ -33,7 +33,7 @@
   (custom-set-faces '(font-lock-comment-delimiter-face
                       ((t (:foreground "#585858"))))
                     '(font-lock-doc-face
-                      ((t (:foreground "SlateGrey")))))
+                      ((t (:foreground "honeydew4")))))
   (doom-themes-neotree-config)
   (doom-themes-org-config))
 
