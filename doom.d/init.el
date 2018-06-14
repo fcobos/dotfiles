@@ -73,7 +73,8 @@
 
        :lang
        assembly          ; assembly for fun or debugging
-       (cc +irony)       ; C/C++/Obj-C madness
+      (cc +irony)        ; C/C++/Obj-C madness
+      ;common-lisp       ; if you've seen one lisp, you've seen them all
       ;crystal           ; ruby at the speed of c
        clojure           ; java with a lisp
       ;csharp            ; unity, .NET, and mono shenanigans
