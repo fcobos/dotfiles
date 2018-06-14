@@ -1,4 +1,5 @@
-;; -*- lexical-binding: t -*-
+;;; config.el -*- lexical-binding: t; -*-
+
 ;; Custom keybindings
 (add-hook! 'after-init-hook
   (map!
@@ -8,9 +9,7 @@
        :desc "Format buffer" :n "f" #'format-all-buffer))))
 
 ;; pipenv config
-(use-package pipenv
-  :hook (python-mode . pipenv-mode))
-
+(add-hook 'python-mode-hook #'pipenv-mode)
 
 ;; Maximize frame
 ;; (add-hook 'doom-init-hook (lambda () (toggle-frame-maximized)))
@@ -35,7 +34,14 @@
                     ;; make doc strings darker so they don't look too much like
                     ;; regular text
                     '(font-lock-doc-face
-                      ((t (:foreground "honeydew4")))))
+                      ((t (:foreground "honeydew4"))))
+                    ;; flycheck configuration
+                    '(flycheck-posframe-error-face
+                      ((t (:background "#ab4642"))))
+                    '(flycheck-posframe-warning-face
+                      ((t (:background "#A16946"))))
+                    '(flycheck-posframe-info-face
+                      ((t (:background "#585858")))))
   (doom-themes-neotree-config)
   (doom-themes-org-config))
 
@@ -100,3 +106,5 @@
       scroll-conservatively 0
       scroll-up-aggressively 0.01
       scroll-down-aggressively 0.01)
+
+;;; config.el ends here
