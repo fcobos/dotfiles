@@ -119,7 +119,7 @@ bindkey "^[m" copy-prev-shell-word
 
 fpath=( "$HOME/dotfiles/zsh-themes/pure" $fpath )
 autoload -U promptinit; promptinit
-PURE_GIT_PULL=0
+#PURE_GIT_PULL=0
 if [ "$TERM" = "linux" ]; then
 	PURE_PROMPT_SYMBOL="$"
 fi
