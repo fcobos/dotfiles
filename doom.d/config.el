@@ -96,7 +96,7 @@
 
 ;; better scrolling performance maybe...
 (setq auto-window-vscroll nil)
-(setq scroll-margin 1
+(setq scroll-margin 0
       scroll-conservatively 0
       scroll-up-aggressively 0.01
       scroll-down-aggressively 0.01)
