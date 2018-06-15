@@ -19,7 +19,7 @@
       doom-big-font (font-spec :family "Hack" :size 24))
 
 ;; Set the theme
-;; (setq doom-theme 'doom-tomorrow-night)
+;; (setq doom-theme 'doom-one)
 ;; (solaire-mode 1)
 (use-package base16-theme
   :config
