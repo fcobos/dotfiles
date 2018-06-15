@@ -5,10 +5,7 @@
  (:leader
    :desc "M-x" :n "SPC" #'execute-extended-command
    (:prefix "c"
-     :desc "Format buffer" :n "f" #'format-all-buffer)
-   (:prefix "o"
-     :desc "Treemacs" :n "n" #'+treemacs/toggle
-     :desc "Treemacs find file" :n "N" #'treemacs-find-file)))
+     :desc "Format buffer" :n "f" #'format-all-buffer)))
 
 ;; pipenv config
 (add-hook 'python-mode-hook #'pipenv-mode)
