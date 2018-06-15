@@ -20,7 +20,12 @@
 
 ;; Set the theme
 (setq doom-theme 'doom-one)
-;; (solaire-mode 1)
+(unless (display-graphic-p)
+  (add-hook 'after-change-major-mode-hook (lambda ()
+                                            (solaire-mode 0)))
+  (custom-set-faces '(region ((t (:background "#3e4451"))))
+                    '(hl-line ((t (:background "#565c64"))))
+                    '(mode-line ((t (:background "#1f1f1f"))))))
 ;; (use-package base16-theme
 ;;   :config
 ;;   (unless (display-graphic-p)
