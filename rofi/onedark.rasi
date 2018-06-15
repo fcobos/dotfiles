@@ -1,12 +1,12 @@
 * {
-    background-color: #1e2127;
+    background-color: #282c34;
     border-color: #61afef;
     text-color: #abb2bf;
 }
 
 #element selected {
     background-color: #61afef;
-    text-color: #1e2127;
+    text-color: #282c34;
 }
 
 #window {
