@@ -23,6 +23,8 @@
 (unless (display-graphic-p)
   (add-hook 'after-change-major-mode-hook (lambda ()
                                             (solaire-mode 0)))
+  (add-hook 'after-change-major-mode-hook (lambda ()
+                                            (hl-line-mode 0)))
   (custom-set-faces '(region ((t (:background "color-18"))))
 		    '(hl-line ((t (:background "color-18"))))
                     '(font-lock-comment-delimiter-face
