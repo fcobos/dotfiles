@@ -23,8 +23,12 @@
 (unless (display-graphic-p)
   (add-hook 'after-change-major-mode-hook (lambda ()
                                             (solaire-mode 0)))
-  (custom-set-faces '(region ((t (:background "#3e4451"))))
-                    '(hl-line ((t (:background "#1f1f1f"))))
+  (custom-set-faces '(region ((t (:background "color-18"))))
+		    '(hl-line ((t (:background "color-18"))))
+                    '(font-lock-comment-delimiter-face
+                      ((t (:foreground "color-20"))))
+                    '(font-lock-comment-face
+                      ((t (:foreground "color-20"))))
                     '(mode-line ((t (:background "#1f1f1f"))))))
 ;; (use-package base16-theme
 ;;   :config
