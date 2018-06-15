@@ -1,12 +1,14 @@
 ;;; config.el -*- lexical-binding: t; -*-
 
 ;; Custom keybindings
-(add-hook! 'after-init-hook
-  (map!
-   (:leader
-     :desc "M-x" :n "SPC" #'execute-extended-command
-     (:desc "code" :prefix "c"
-       :desc "Format buffer" :n "f" #'format-all-buffer))))
+(map!
+ (:leader
+   :desc "M-x" :n "SPC" #'execute-extended-command
+   (:prefix "c"
+     :desc "Format buffer" :n "f" #'format-all-buffer)
+   (:prefix "o"
+     :desc "Treemacs" :n "n" #'+treemacs/toggle
+     :desc "Treemacs find file" :n "N" #'treemacs-find-file)))
 
 ;; pipenv config
 (add-hook 'python-mode-hook #'pipenv-mode)
@@ -77,7 +79,7 @@
 (add-hook 'flycheck-mode-hook (lambda ()
                                 (setq posframe-mouse-banish nil)))
 
-;; use python as repl insted of ipython
+;; use python as repl instead of ipython
 (defun python-repl-config ()
   (setq python-shell-interpreter "python"
         python-shell-interpreter-args "-i"
