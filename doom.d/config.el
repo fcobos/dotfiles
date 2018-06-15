@@ -32,37 +32,6 @@
                     '(font-lock-comment-face
                       ((t (:foreground "color-20"))))
                     '(mode-line ((t (:background "#1f1f1f"))))))
-;; (use-package base16-theme
-;;   :config
-;;   (unless (display-graphic-p)
-;;     (setq base16-theme-256-color-source "colors"))
-;;   (load-theme 'base16-default-dark t)
-;;   (enable-theme 'base16-default-dark)
-;;   ;; better looking comment delimiter face on base16
-;;   ;; (so it's visible when selected)
-;;   (custom-set-faces '(font-lock-comment-delimiter-face
-;;                       ((t (:foreground "#585858"))))
-;;                     ;; make doc strings darker so they don't look too much like
-;;                     ;; regular text
-;;                     '(font-lock-doc-face
-;;                       ((t (:foreground "honeydew4"))))
-;;                     ;; flycheck configuration
-;;                     '(flycheck-posframe-error-face
-;;                       ((t (:background "#ab4642"))))
-;;                     '(flycheck-posframe-warning-face
-;;                       ((t (:background "#A16946"))))
-;;                     '(flycheck-posframe-info-face
-;;                       ((t (:background "#585858")))))
-;;   ;; Set the cursor color based on the evil state
-;;   ;; (defvar my/base16-colors base16-default-dark-colors)
-;;   ;; (setq evil-emacs-state-cursor   `(,(plist-get my/base16-colors :base0B) box)
-;;   ;;       evil-insert-state-cursor  `(,(plist-get my/base16-colors :base0D) bar)
-;;   ;;       evil-motion-state-cursor  `(,(plist-get my/base16-colors :base0E) box)
-;;   ;;       evil-normal-state-cursor  `(,(plist-get my/base16-colors :base0B) box)
-;;   ;;       evil-replace-state-cursor `(,(plist-get my/base16-colors :base08) hbar)
-;;   ;;       evil-visual-state-cursor  `(,(plist-get my/base16-colors :base09) hollow))
-;;   (doom-themes-neotree-config)
-;;   (doom-themes-org-config))
 
 ;; disable bold and italic fonts
 ;; (setq doom-themes-enable-bold nil)
