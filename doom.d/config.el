@@ -7,9 +7,6 @@
    (:prefix "c"
      :desc "Format buffer" :n "f" #'format-all-buffer)))
 
-;; pipenv config
-(add-hook 'python-mode-hook #'pipenv-mode)
-
 ;; Maximize frame
 ;; (defun maximize-frame ()
 ;;   (toggle-frame-maximized))
@@ -99,6 +96,9 @@
         python-shell-completion-setup-code nil
         python-shell-completion-string-code nil))
 (add-hook 'python-mode-hook #'python-repl-config)
+
+;; pipenv config
+(add-hook 'python-mode-hook #'pipenv-mode)
 
 ;; better scrolling performance maybe...
 (setq auto-window-vscroll nil)
