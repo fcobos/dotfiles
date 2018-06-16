@@ -614,7 +614,7 @@ label-separator-background = ${colors.dark_gray}
 
 ; lock
 menu-0-0 = ""
-menu-0-0-exec = xflock4
+menu-0-0-exec = lock-screen
 menu-0-0-foreground = ${colors.foreground}
 menu-0-0-background = ${colors.dark_gray}
 ; sleep
