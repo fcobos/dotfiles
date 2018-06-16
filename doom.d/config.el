@@ -11,7 +11,9 @@
 (add-hook 'python-mode-hook #'pipenv-mode)
 
 ;; Maximize frame
-;; (add-hook 'doom-init-hook (lambda () (toggle-frame-maximized)))
+;; (defun maximize-frame ()
+;;   (toggle-frame-maximized))
+;; (add-hook 'doom-init-hook #'maximize-frame)
 
 ;; Set the font
 (setq doom-font (font-spec :family "Hack" :size 12)
