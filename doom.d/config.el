@@ -20,10 +20,12 @@
 ;; Set the theme
 (setq doom-theme 'doom-one)
 (unless (display-graphic-p)
-  (add-hook 'after-change-major-mode-hook (lambda ()
-                                            (solaire-mode 0)))
-  (add-hook 'after-change-major-mode-hook (lambda ()
-                                            (hl-line-mode 0)))
+  (defun disable-solaire-mode ()
+    (solaire-mode 0))
+  (defun disable-hl-line-mode ()
+    (hl-line-mode 0))
+  (add-hook 'after-change-major-mode-hook #'disable-solaire-mode)
+  (add-hook 'after-change-major-mode-hook #'disable-hl-line-mode)
   (custom-set-faces '(region ((t (:background "color-18"))))
                     '(hl-line ((t (:background "color-18"))))
                     '(font-lock-comment-delimiter-face
