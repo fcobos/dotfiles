@@ -76,8 +76,9 @@
 (add-to-list 'auto-mode-alist '("PKGBUILD" . shell-script-mode))
 
 ;; make postframe stop moving my mouse pointer, kthxbai
-(add-hook 'flycheck-mode-hook (lambda ()
-                                (setq posframe-mouse-banish nil)))
+(defun disable-posframe-mouse-banish ()
+  (setq posframe-mouse-banish nil))
+(add-hook 'flycheck-mode-hook #'disable-posframe-mouse-banish)
 
 ;; use python as repl instead of ipython
 (defun python-repl-config ()
