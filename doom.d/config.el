@@ -30,6 +30,8 @@
                       ((t (:foreground "color-20"))))
                     '(font-lock-comment-face
                       ((t (:foreground "color-20"))))
+                    '(show-paren-match
+                      ((t (:foreground "red" :background "color-20"))))
                     '(mode-line ((t (:background "#1f1f1f"))))))
 
 ;; disable bold and italic fonts
