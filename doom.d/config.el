@@ -25,7 +25,7 @@
   (add-hook 'after-change-major-mode-hook (lambda ()
                                             (hl-line-mode 0)))
   (custom-set-faces '(region ((t (:background "color-18"))))
-		    '(hl-line ((t (:background "color-18"))))
+                    '(hl-line ((t (:background "color-18"))))
                     '(font-lock-comment-delimiter-face
                       ((t (:foreground "color-20"))))
                     '(font-lock-comment-face
