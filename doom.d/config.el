@@ -49,7 +49,9 @@
 (c-set-offset 'case-label '+)
 
 ;; Disable cursor blink
-(add-hook 'window-setup-hook (lambda () (blink-cursor-mode 0)))
+(defun disable-cursor-blink ()
+  (blink-cursor-mode 0))
+(add-hook 'window-setup-hook #'disable-cursor-blink)
 (setq visible-cursor nil)
 
 ;; Disable whitespace-mode
