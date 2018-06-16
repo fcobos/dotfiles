@@ -15,6 +15,11 @@
 ;;   (toggle-frame-maximized))
 ;; (add-hook 'doom-init-hook #'maximize-frame)
 
+;; Disable exit confirmation dialog
+(setq confirm-kill-emacs nil)
+;; Don't ask if processes should be killed
+(setq confirm-kill-processes nil)
+
 ;; Set the font
 (setq doom-font (font-spec :family "Hack" :size 12)
       doom-big-font (font-spec :family "Hack" :size 24))
