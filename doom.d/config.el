@@ -28,16 +28,17 @@
     (solaire-mode 0))
   (defun disable-hl-line-mode ()
     (hl-line-mode 0))
+  (solaire-mode 0)
   (add-hook 'after-change-major-mode-hook #'disable-solaire-mode)
   (add-hook 'after-change-major-mode-hook #'disable-hl-line-mode)
-  (custom-set-faces '(region ((t (:background "color-18"))))
-                    '(hl-line ((t (:background "color-18"))))
+  (custom-set-faces '(region ((t (:background "#404040"))))
+                    '(hl-line ((t (:background "#404040"))))
                     '(font-lock-comment-delimiter-face
-                      ((t (:foreground "color-20"))))
+                      ((t (:foreground "#565c64"))))
                     '(font-lock-comment-face
-                      ((t (:foreground "color-20"))))
+                      ((t (:foreground "#565c64"))))
                     '(show-paren-match
-                      ((t (:foreground "red" :background "color-20"))))
+                      ((t (:foreground "red" :background "#565c64"))))
                     '(mode-line ((t (:background "#1f1f1f"))))))
 
 ;; disable bold and italic fonts

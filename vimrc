@@ -1,5 +1,5 @@
 if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
-   set fileencodings=ucs-bom,utf-8,latin1
+  set fileencodings=ucs-bom,utf-8,latin1
 endif
 
 set nocompatible	" Use Vim defaults (much better!)
@@ -37,18 +37,18 @@ if has("autocmd")
 endif
 
 if has("cscope") && filereadable("/usr/bin/cscope")
-   set csprg=/usr/bin/cscope
-   set csto=0
-   set cst
-   set nocsverb
-   " add any database in current directory
-   if filereadable("cscope.out")
-      cs add $PWD/cscope.out
-   " else add database pointed to by environment
-   elseif $CSCOPE_DB != ""
-      cs add $CSCOPE_DB
-   endif
-   set csverb
+  set csprg=/usr/bin/cscope
+  set csto=0
+  set cst
+  set nocsverb
+  " add any database in current directory
+  if filereadable("cscope.out")
+     cs add $PWD/cscope.out
+  " else add database pointed to by environment
+  elseif $CSCOPE_DB != ""
+     cs add $CSCOPE_DB
+  endif
+  set csverb
 endif
 
 " Switch syntax highlighting on, when the terminal has colors
@@ -99,7 +99,7 @@ endif
 ":nnoremap j jzz
 ":nnoremap k kzz
 if &t_Co == 256 || has("gui_running")
-	set termguicolors
+  set termguicolors
 endif
 colorscheme base16-onedark
 
