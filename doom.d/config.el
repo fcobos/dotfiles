@@ -107,4 +107,10 @@
       scroll-up-aggressively 0.01
       scroll-down-aggressively 0.01)
 
+;; disable fci-mode for markdown modes
+(defun disable-fci-mode ()
+  (fci-mode 0))
+(add-hook 'markdown-mode-hook #'disable-fci-mode)
+(add-hook 'gfm-mode-hook #'disable-fci-mode)
+
 ;;; config.el ends here
