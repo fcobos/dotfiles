@@ -68,7 +68,7 @@ let &guicursor = &guicursor . ",a:blinkon0"
 set laststatus=2
 let g:airline_powerline_fonts = 1
 if &term=~'linux'
-	let g:airline_powerline_fonts = 0
+  let g:airline_powerline_fonts = 0
 endif
 
 " disable autocommenting
