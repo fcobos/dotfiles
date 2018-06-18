@@ -1,0 +1,7 @@
+alias l ls -lah
+alias ll ls -lh
+alias q exit
+alias z cd =$1
+alias bd eshell-up $1
+alias rg rg --color=always
+alias ag ag --color=always
