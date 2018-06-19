@@ -71,7 +71,7 @@
 (setq gud-pdb-command-name "python -m pdb")
 
 ;; modeline height
-(setq +doom-modeline-height 20)
+(setq +doom-modeline-height 22)
 ;; just show the file name (don't waste cpu cycles truncating paths)
 (setq +doom-modeline-buffer-file-name-style 'file-name)
 
