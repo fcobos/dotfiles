@@ -101,7 +101,7 @@ endif
 if &t_Co == 256 || has("gui_running")
   set termguicolors
 endif
-colorscheme base16-onedark
+colorscheme onedark
 
 " this is needed for termite
 autocmd VimEnter * redrawstatus!
