@@ -1,5 +1,5 @@
-alias l ls -lah
-alias ll ls -lh
+alias l ls -lah $1
+alias ll ls -lh $1
 alias q exit
 alias z cd =$1
 alias bd eshell-up $1
