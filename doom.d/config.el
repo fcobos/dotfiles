@@ -114,4 +114,7 @@
 (add-hook 'markdown-mode-hook #'disable-fci-mode)
 (add-hook 'gfm-mode-hook #'disable-fci-mode)
 
+;; enable rainbow delimiters for programming modes
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
 ;;; config.el ends here
