@@ -1,5 +1,13 @@
 ;;; config.el -*- lexical-binding: t; -*-
 
+;; this validates the cert, I have no idea why it's nil by default
+(setq gnutls-verify-error t)
+;; probably too high for general usage,
+;; but have no effect in the tests regardless
+(setq gnutls-min-prime-bits 2048)
+(setq network-security-level 'high)
+(setq nsm-save-host-names t)
+
 ;; Custom keybindings
 (map!
  (:leader
