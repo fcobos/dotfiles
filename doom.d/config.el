@@ -1,5 +1,6 @@
 ;;; config.el -*- lexical-binding: t; -*-
 
+;; https://www.reddit.com/r/emacs/comments/8sykl1/emacs_tls_defaults_are_downright_dangerous/
 ;; this validates the cert, I have no idea why it's nil by default
 (setq gnutls-verify-error t)
 ;; probably too high for general usage,
