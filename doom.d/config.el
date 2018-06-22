@@ -109,10 +109,10 @@
       scroll-down-aggressively 0.01)
 
 ;; disable fci-mode for markdown modes
-(defun disable-fci-mode ()
-  (fci-mode 0))
-(add-hook 'markdown-mode-hook #'disable-fci-mode)
-(add-hook 'gfm-mode-hook #'disable-fci-mode)
+;; (defun disable-fci-mode ()
+;;   (fci-mode 0))
+;; (add-hook 'markdown-mode-hook #'disable-fci-mode)
+;; (add-hook 'gfm-mode-hook #'disable-fci-mode)
 
 ;; enable rainbow delimiters for programming modes
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
