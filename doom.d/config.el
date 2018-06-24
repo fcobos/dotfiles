@@ -6,7 +6,7 @@
 (setq network-security-level 'high)
 (setq nsm-save-host-names t)
 (setq tls-program
-       '("gnutls-cli -p %p --dh-bits=2048 --x509cafile=%t \
+       '("gnutls-cli -p %p --dh-bits=2048 --ocsp --x509cafile=%t \
             --priority='SECURE192:+SECURE128:-VERS-ALL:+VERS-TLS1.2:%PROFILE_MEDIUM' %h"))
 (setq tls-checktrust t)
 
