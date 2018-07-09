@@ -272,7 +272,7 @@ format-background = ${colors.background}
 
 ;label = " %title:0:22:...%"
 label = " %title%"
-label-maxlen = 32
+label-maxlen = 42
 label-font = 2
 
 ;----------------------------------------------------------
