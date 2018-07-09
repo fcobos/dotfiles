@@ -110,7 +110,7 @@ let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 let g:rainbow#blacklist = [7, 8, 15, 18, 19, 20, 21, '#3e4451']
 
 " this is needed for termite
-autocmd VimEnter * redrawstatus!
+"autocmd VimEnter * redrawstatus!
 
 " hightlight current line
 "set cursorline
