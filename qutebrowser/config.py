@@ -302,3 +302,6 @@ config.bind('<Ctrl+Return>', 'set-cmd-text --append .com ;; command-accept', mod
 c.url.default_page = '~/.config/qutebrowser/start/start.html'
 c.url.start_pages = '~/.config/qutebrowser/start/start.html'
 
+# Disable reading from canvas
+c.content.canvas_reading = False
+
