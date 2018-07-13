@@ -14,7 +14,7 @@ max_line_length = 79
 indent_style = space
 indent_size = 2
 
-[*.{el,rb,cr,y{a,}ml,json,toml,nim,coffee,css,s{a,c}ss,styl,slim,jade,pug,html,xml}]
+[*.{el,rb,cr,y{a,}ml,json,toml,coffee,css,s{a,c}ss,styl,slim,jade,pug,html,xml}]
 indent_style = space
 indent_size = 2
 
@@ -40,5 +40,10 @@ indent_size = 4
 [*.py]
 indent_style = space
 indent_size = 4
-insert_final_newline = true
+insert_final_newline = false
+
+[*.nim]
+indent_style = space
+indent_size = 2
+insert_final_newline = false
 
