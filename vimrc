@@ -113,7 +113,7 @@ let g:rainbow#blacklist = [7, 8, 15, 18, 19, 20, 21, '#3e4451']
 "autocmd VimEnter * redrawstatus!
 
 " hightlight current line
-"set cursorline
+set cursorline
 
 " column indicator
 set colorcolumn=80
