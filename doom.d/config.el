@@ -6,7 +6,7 @@
 (setq network-security-level 'high)
 (setq nsm-save-host-names t)
 (setq tls-program
-       '("gnutls-cli -p %p --dh-bits=2048 --ocsp --x509cafile=%t \
+      '("gnutls-cli -p %p --dh-bits=2048 --ocsp --x509cafile=%t \
             --priority='SECURE192:+SECURE128:-VERS-ALL:+VERS-TLS1.2:%PROFILE_MEDIUM' %h"))
 (setq tls-checktrust t)
 
@@ -32,24 +32,44 @@
       doom-big-font (font-spec :family "Hack" :size 24))
 
 ;; Set the theme
-(setq doom-theme 'doom-one)
+;;(setq doom-theme 'doom-one)
+;;(unless (display-graphic-p)
+;;  (defun disable-solaire-mode ()
+;;    (solaire-mode 0))
+;;  (defun disable-hl-line-mode ()
+;;    (hl-line-mode 0))
+;;  (solaire-mode 0)
+;;  (add-hook 'after-change-major-mode-hook #'disable-solaire-mode)
+;;  (add-hook 'after-change-major-mode-hook #'disable-hl-line-mode)
+;;  (custom-set-faces '(region ((t (:background "#404040"))))
+;;                    '(hl-line ((t (:background "#404040"))))
+;;                    '(font-lock-comment-delimiter-face
+;;                      ((t (:foreground "#565c64"))))
+;;                    '(font-lock-comment-face
+;;                      ((t (:foreground "#565c64"))))
+;;                    '(show-paren-match
+;;                      ((t (:foreground "red" :background "#565c64"))))
+;;                    '(mode-line ((t (:background "#1f1f1f"))))))
 (unless (display-graphic-p)
-  (defun disable-solaire-mode ()
-    (solaire-mode 0))
-  (defun disable-hl-line-mode ()
-    (hl-line-mode 0))
-  (solaire-mode 0)
-  (add-hook 'after-change-major-mode-hook #'disable-solaire-mode)
-  (add-hook 'after-change-major-mode-hook #'disable-hl-line-mode)
-  (custom-set-faces '(region ((t (:background "#404040"))))
-                    '(hl-line ((t (:background "#404040"))))
-                    '(font-lock-comment-delimiter-face
-                      ((t (:foreground "#565c64"))))
-                    '(font-lock-comment-face
-                      ((t (:foreground "#565c64"))))
-                    '(show-paren-match
-                      ((t (:foreground "red" :background "#565c64"))))
-                    '(mode-line ((t (:background "#1f1f1f"))))))
+  (setq base16-theme-256-color-source "colors"))
+(load-theme 'base16-default-dark t)
+                                        ; better looking comment delimiter face on base16
+;; (so it's visible when selected)
+(custom-set-faces '(font-lock-comment-delimiter-face
+                    ((t (:foreground "#585858"))))
+                  ;; make doc strings darker so they don't look too much like
+                  ;; regular text
+                  '(font-lock-doc-face
+                    ((t (:foreground "honeydew4"))))
+                  ;; flycheck configuration
+                  '(flycheck-posframe-error-face
+                    ((t (:background "#ab4642"))))
+                  '(flycheck-posframe-warning-face
+                    ((t (:background "#A16946"))))
+                  '(flycheck-posframe-info-face
+                    ((t (:background "#585858")))))
+(doom-themes-treemacs-config)
+(doom-themes-org-config)
 
 ;; disable bold and italic fonts
 ;; (setq doom-themes-enable-bold nil)
@@ -113,10 +133,10 @@
 
 ;; better scrolling performance maybe...
 (setq auto-window-vscroll nil)
-;(setq scroll-margin 0
-;      scroll-conservatively 0
-;      scroll-up-aggressively 0.01
-;      scroll-down-aggressively 0.01)
+                                        ;(setq scroll-margin 0
+                                        ;      scroll-conservatively 0
+                                        ;      scroll-up-aggressively 0.01
+                                        ;      scroll-down-aggressively 0.01)
 
 ;; disable fci-mode for markdown modes
 ;; (defun disable-fci-mode ()

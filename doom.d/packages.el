@@ -5,3 +5,5 @@
 (package! pipenv)
 ;; format-all autoformat multiple languages
 (package! format-all)
+;; base16
+(package! base16-theme)
