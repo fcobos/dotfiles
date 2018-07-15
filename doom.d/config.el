@@ -69,6 +69,7 @@
                   '(flycheck-posframe-info-face
                     ((t (:background "#585858")))))
 (doom-themes-treemacs-config)
+(doom-themes-neotree-config)
 (doom-themes-org-config)
 
 ;; disable bold and italic fonts
