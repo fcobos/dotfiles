@@ -53,7 +53,7 @@
 (unless (display-graphic-p)
   (setq base16-theme-256-color-source "colors"))
 (load-theme 'base16-default-dark t)
-                                        ; better looking comment delimiter face on base16
+;; better looking comment delimiter face on base16
 ;; (so it's visible when selected)
 (custom-set-faces '(font-lock-comment-delimiter-face
                     ((t (:foreground "#585858"))))
