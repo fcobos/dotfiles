@@ -95,8 +95,8 @@
 (setq visible-cursor nil)
 
 ;; Disable whitespace-mode
-(remove-hook 'after-change-major-mode-hook
-             'doom|show-whitespace-maybe)
+;;(remove-hook 'after-change-major-mode-hook
+;;             'doom|show-whitespace-maybe)
 
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
