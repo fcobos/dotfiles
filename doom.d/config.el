@@ -146,6 +146,9 @@
   (fci-mode 0))
 (add-hook 'markdown-mode-hook #'disable-fci-mode)
 (add-hook 'gfm-mode-hook #'disable-fci-mode)
+;; fci-rule-color
+(setq +fci-rule-color-function nil)
+(setq fci-rule-color "#383838")
 
 ;; enable rainbow delimiters for programming modes
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
