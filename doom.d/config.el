@@ -67,7 +67,9 @@
                   '(flycheck-posframe-warning-face
                     ((t (:background "#A16946"))))
                   '(flycheck-posframe-info-face
-                    ((t (:background "#585858")))))
+                    ((t (:background "#585858"))))
+                  '(rainbow-delimiters-depth-3-face
+                    ((t (:foreground "#A16946")))))
 (doom-themes-treemacs-config)
 (doom-themes-neotree-config)
 (doom-themes-org-config)
@@ -134,10 +136,10 @@
 
 ;; better scrolling performance maybe...
 (setq auto-window-vscroll nil)
-                                        ;(setq scroll-margin 0
-                                        ;      scroll-conservatively 0
-                                        ;      scroll-up-aggressively 0.01
-                                        ;      scroll-down-aggressively 0.01)
+;;(setq scroll-margin 0
+;;      scroll-conservatively 0
+;;      scroll-up-aggressively 0.01
+;;      scroll-down-aggressively 0.01)
 
 ;; disable fci-mode for markdown modes
 ;; (defun disable-fci-mode ()
