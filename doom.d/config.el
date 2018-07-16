@@ -68,8 +68,11 @@
                     ((t (:background "#A16946"))))
                   '(flycheck-posframe-info-face
                     ((t (:background "#585858"))))
+                  '(rainbow-delimiters-depth-2-face
+                    ((t (:foreground "#A16946"))))
                   '(rainbow-delimiters-depth-3-face
-                    ((t (:foreground "#A16946")))))
+                    ((t (:foreground "#7CAFC2"))))
+                  )
 ;;(doom-themes-treemacs-config)
 (doom-themes-neotree-config)
 (doom-themes-org-config)
