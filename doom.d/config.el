@@ -70,8 +70,8 @@
                     ((t (:background "#585858"))))
                   '(rainbow-delimiters-depth-3-face
                     ((t (:foreground "#A16946")))))
-(doom-themes-treemacs-config)
-;;(doom-themes-neotree-config)
+;;(doom-themes-treemacs-config)
+(doom-themes-neotree-config)
 (doom-themes-org-config)
 
 ;; disable bold and italic fonts
