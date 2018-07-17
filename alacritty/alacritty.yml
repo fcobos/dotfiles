@@ -139,6 +139,7 @@ colors:
   primary:
     background: '0x181818'
     foreground: '0xd8d8d8'
+    bright_foreground: '0xd8d8d8'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
@@ -234,6 +235,16 @@ mouse:
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
 
+  # Faux Scrollback
+  #
+  # The `faux_scrollback_lines` setting controls the number
+  # of lines the terminal should scroll when the alternate
+  # screen buffer is active. This is used to allow mouse
+  # scrolling for applications like `man`.
+  #
+  # To disable this completely, set `faux_scrollback_lines` to 0.
+  faux_scrollback_lines: 1
+
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
@@ -248,6 +259,9 @@ hide_cursor_when_typing: true
 # - Underline
 # - Beam
 cursor_style: Block
+
+# Whether the cursor should be a hollow block on window focus loss
+unfocused_hollow_cursor: true
 
 # Live config reload (changes require restart)
 live_config_reload: true
