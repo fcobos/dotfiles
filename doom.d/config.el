@@ -68,11 +68,15 @@
                     ((t (:background "#A16946"))))
                   '(flycheck-posframe-info-face
                     ((t (:background "#585858"))))
+                  ;; rainbow delimiters colors
                   '(rainbow-delimiters-depth-2-face
                     ((t (:foreground "#A16946"))))
                   '(rainbow-delimiters-depth-3-face
                     ((t (:foreground "#7CAFC2"))))
                   )
+(unless (display-graphic-p)
+  (custom-set-faces '(show-paren-match ((t (:foreground "#d8d8d8"
+                                            :background "#585858"))))))
 (doom-themes-treemacs-config)
 ;;(doom-themes-neotree-config)
 (doom-themes-org-config)
