@@ -72,6 +72,8 @@
                   '(rainbow-delimiters-depth-2-face
                     ((t (:foreground "#A16946"))))
                   '(rainbow-delimiters-depth-3-face
+                    ((t (:foreground "#a1b56c"))))
+                  '(rainbow-delimiters-depth-4-face
                     ((t (:foreground "#7CAFC2"))))
                   )
 (unless (display-graphic-p)
@@ -158,6 +160,9 @@
 (setq fci-rule-color "#383838")
 
 ;; enable rainbow delimiters for programming modes
+(defun set-rainbow-max-face-count ()
+  (setq rainbow-delimiters-max-face-count 7))
+(add-hook 'rainbow-delimiters-mode-hook #'set-rainbow-max-face-count)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;;; config.el ends here
