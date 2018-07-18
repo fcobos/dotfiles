@@ -26,6 +26,9 @@ export PATH="$NPM_PACKAGES/bin:$PATH"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# nim configuration
+export PATH="$HOME/.nimble/bin:$PATH"
+
 # Stop wine from creating .desktop entries
 export WINEDLLOVERRIDES=winemenubuilder.exe=d
 
