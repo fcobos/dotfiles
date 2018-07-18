@@ -165,4 +165,8 @@
 (add-hook 'rainbow-delimiters-mode-hook #'set-rainbow-max-face-count)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
+;; use treemacs git deferred mode
+(after! treemacs
+  (treemacs-git-mode 'deferred))
+
 ;;; config.el ends here
