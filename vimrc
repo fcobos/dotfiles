@@ -104,7 +104,7 @@ colorscheme base16-default-dark
 
 " rainbow parentheses
 autocmd VimEnter * RainbowParentheses
-"let g:rainbow#max_level = 16
+let g:rainbow#max_level = 8
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 " List of colors that you do not want. ANSI code or #RRGGBB
 let g:rainbow#blacklist = [7, 8, 15, 18, 19, 20, 21, '#3e4451']
