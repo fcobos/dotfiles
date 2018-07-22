@@ -36,6 +36,17 @@ default_position = 'top'
 default_height = 30
 
 [[layers]]
+  name = "lsp"
+  filetypes = [
+    "rust",
+    "javascript",
+    "python",
+    "c",
+    "cpp"
+  ]
+
+
+[[layers]]
 name = "VersionControl"
 
 [[layers]]
