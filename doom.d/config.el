@@ -144,9 +144,9 @@
 (add-hook 'python-mode-hook #'pipenv-mode)
 
 ;; run pylint after flake8
-(add-hook 'python-mode-hook #'(lambda ()
-                                       (flycheck-add-next-checker
-                                        'python-flake8 'python-pylint)))
+(defun pylint-after-flake8 ()
+  (flycheck-add-next-checker 'python-flake8 'python-pylint))
+(add-hook 'python-mode-hook #'pylint-after-flake8)
 
 
 ;; better scrolling performance maybe...
