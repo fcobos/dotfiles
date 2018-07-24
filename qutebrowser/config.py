@@ -303,4 +303,6 @@ c.url.start_pages = '~/.config/qutebrowser/start/start.html'
 
 # Disable reading from canvas
 c.content.canvas_reading = False
+# Don't expose lan address via webrtc
+c.content.webrtc_public_interfaces_only = True
 
