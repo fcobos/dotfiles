@@ -28,8 +28,8 @@
 (setq confirm-kill-processes nil)
 
 ;; Set the font
-(setq doom-font (font-spec :family "Iosevka" :size 12)
-      doom-big-font (font-spec :family "Iosevka" :size 24))
+(setq doom-font (font-spec :family "Iosevka Light" :size 12)
+      doom-big-font (font-spec :family "Iosevka Light" :size 24))
 
 ;; Set the theme
 ;;(setq doom-theme 'doom-one)
