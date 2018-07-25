@@ -49,12 +49,12 @@ line-size = 2
 ;----------------------------------------------------------
 
 font-0 = Hack:size=12;3
-font-1 = Hack:size=9;3
+font-1 = Iosevka:size=9;3
 font-2 = FontAwesome:size=9;3
 font-3 = fixed:pixelsize=9;3
 font-4 = unifont:fontformat=truetype:size=9:antialias=true;3
 font-5 = siji:pixelsize=9;3
-font-6 = Hack:size=9:weight=bold;3
+font-6 = Iosevka:size=9:weight=bold;3
 font-7 = Hack:size=6;0
 
 ; Extra symbols: http://fontawesome.io/cheatsheet/

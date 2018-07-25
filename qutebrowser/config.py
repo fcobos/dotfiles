@@ -140,7 +140,7 @@ c.zoom.default = '100%'
 # Default monospace fonts. Whenever "monospace" is used in a font
 # setting, it's replaced with the fonts listed here.
 # Type: Font
-c.fonts.monospace = 'Hack'
+c.fonts.monospace = 'Iosevka'
 
 # Font used in the completion widget.
 # Type: Font
