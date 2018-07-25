@@ -75,6 +75,9 @@
                     ((t (:foreground "#a1b56c"))))
                   '(rainbow-delimiters-depth-4-face
                     ((t (:foreground "#7CAFC2"))))
+                  ;; evil-ex-substitute-replacement
+                  '(evil-ex-substitute-replacement
+                    ((t (:foreground "#ab4642"))))
                   )
 (unless (display-graphic-p)
   (custom-set-faces '(show-paren-match ((t (:foreground "#d8d8d8"
