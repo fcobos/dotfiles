@@ -24,7 +24,7 @@
   [[default]]
     copy_on_selection = True
     cursor_blink = True
-    font = Iosevka 9
+    font = "Iosevka SS04" 9
     scrollback_lines = 10000
     scrollbar_position = hidden
     show_titlebar = False

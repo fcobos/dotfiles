@@ -15,7 +15,7 @@ body {
 
 main {
   display: block;
-  font-family: 'Iosevka', monospace;
+  font-family: 'Iosevka SS04', monospace;
   /* left: 50%; */
   position: absolute;
   top: 30%;
@@ -66,7 +66,7 @@ a:hover {
 input {
   width: 300%;
   font-size: 1.2em;
-  font-family: 'Iosevka', monospace;
+  font-family: 'Iosevka SS04', monospace;
   background: none;
   border: none;
   color: #181818;
