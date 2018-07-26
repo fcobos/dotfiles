@@ -55,6 +55,14 @@
 (load-theme 'base16-default-dark t)
 ;; better looking comment delimiter face on base16
 ;; (so it's visible when selected)
+(setq my-gray "#585858")
+(setq my-dark-gray "#d8d8d8")
+(setq my-green "#a1b56c")
+(setq my-red "#ab4642")
+(setq my-orange "#a16946")
+(setq my-blue "#7cafc2")
+(setq my-light-blue "#86c1b9")
+(setq my-yellow "#f7ca88")
 (custom-set-faces '(font-lock-comment-delimiter-face
                     ((t (:foreground "#585858"))))
                   ;; make doc strings darker so they don't look too much like
@@ -78,6 +86,15 @@
                   ;; evil-ex-substitute-replacement
                   '(evil-ex-substitute-replacement
                     ((t (:foreground "#ab4642"))))
+                  ;; imenu faces
+                  '(imenu-list-entry-face-0
+                    ((t (:foreground "#f7ca88"))))
+                  '(imenu-list-entry-face-1
+                    ((t (:foreground "#a1b56c"))))
+                  '(imenu-list-entry-face-2
+                    ((t (:foreground "#86c1b9"))))
+                  '(imenu-list-entry-face-3
+                    ((t (:foreground "#a16946"))))
                   )
 (unless (display-graphic-p)
   (custom-set-faces '(show-paren-match ((t (:foreground "#d8d8d8"

@@ -17,7 +17,7 @@ XTerm*locale:           true
 XTerm*VT100.geometry:   80x24
 XTerm*dynamicColors:    true
 XTerm*eightBitInput:    false
-XTerm.vt100*faceName:   Iosevka
+XTerm.vt100*faceName:   Iosevka SS04
 XTerm*faceSize: 9
 XTerm*renderFont: true
 
@@ -35,7 +35,7 @@ URxvt.url-launcher: xdg-open
 
 ! xst
 st.termname: xterm-256color
-st.font: Iosevka:size=9:antialias=true;
+st.font: Iosevka SS04:size=9:antialias=true;
 st.bold_font: 1
 st.borderpx: 0
 !st.cursorshape:       1
