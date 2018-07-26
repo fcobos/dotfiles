@@ -55,29 +55,33 @@
 (load-theme 'base16-default-dark t)
 ;; better looking comment delimiter face on base16
 ;; (so it's visible when selected)
-(set-face-attribute 'font-lock-comment-delimiter-face nil :foreground "#585858")
-;; make doc strings darker so they don't look too much like
-;; regular text
-(set-face-attribute 'font-lock-doc-face nil :foreground "honeydew4")
-;; flycheck font configuration
-(custom-set-faces '(flycheck-posframe-error-face
+(custom-set-faces '(font-lock-comment-delimiter-face
+                    ((t (:foreground "#585858"))))
+                  ;; make doc strings darker so they don't look too much like
+                  ;; regular text
+                  '(font-lock-doc-face
+                    ((t (:foreground "honeydew4"))))
+                  ;; flycheck configuration
+                  '(flycheck-posframe-error-face
                     ((t (:background "#ab4642"))))
                   '(flycheck-posframe-warning-face
                     ((t (:background "#A16946"))))
                   '(flycheck-posframe-info-face
-                    ((t (:background "#585858")))))
-;; rainbow delimiters colors
-(after! rainbow-delimiters
-  (set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "#a16946")
-  (set-face-attribute 'rainbow-delimiters-depth-3-face nil :foreground "#a1b56c")
-  (set-face-attribute 'rainbow-delimiters-depth-4-face nil :foreground "#7cafc2"))
-;; evil-ex-substitute-replacement face
-(set-face-attribute 'evil-ex-substitute-replacement nil :foreground "#ab4642")
-;; fix parent matching colors under terminal emacs
+                    ((t (:background "#585858"))))
+                  ;; rainbow delimiters colors
+                  '(rainbow-delimiters-depth-2-face
+                    ((t (:foreground "#A16946"))))
+                  '(rainbow-delimiters-depth-3-face
+                    ((t (:foreground "#a1b56c"))))
+                  '(rainbow-delimiters-depth-4-face
+                    ((t (:foreground "#7CAFC2"))))
+                  ;; evil-ex-substitute-replacement
+                  '(evil-ex-substitute-replacement
+                    ((t (:foreground "#ab4642"))))
+                  )
 (unless (display-graphic-p)
-  (set-face-attribute 'show-paren-match nil
-                      :foreground "#d8d8d8"
-                      :background "#585858"))
+  (custom-set-faces '(show-paren-match ((t (:foreground "#d8d8d8"
+                                            :background "#585858"))))))
 ;;(doom-themes-treemacs-config)
 ;;(doom-themes-neotree-config)
 (doom-themes-org-config)
