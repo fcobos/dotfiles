@@ -167,7 +167,20 @@
 (defun pylint-after-flake8 ()
   (flycheck-add-next-checker 'python-flake8 'python-pylint))
 (add-hook 'python-mode-hook #'pylint-after-flake8)
-
+;; run mypy after pylint
+(defun mypy-after-pylint ()
+  (flycheck-define-checker
+      python-mypy ""
+      :command ("mypy"
+                "--ignore-missing-imports" "--fast-parser"
+                ;; "--python-version" "3.6"
+                source-original)
+      :error-patterns
+      ((error line-start (file-name) ":" line ": error:" (message) line-end))
+      :modes python-mode)
+  (add-to-list 'flycheck-checkers 'python-mypy t)
+  (flycheck-add-next-checker 'python-pylint 'python-mypy t))
+(add-hook 'python-mode-hook #'mypy-after-pylint)
 
 ;; better scrolling performance maybe...
 (setq auto-window-vscroll nil)
