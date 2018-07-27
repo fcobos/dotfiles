@@ -173,7 +173,6 @@
       python-mypy ""
       :command ("mypy"
                 "--ignore-missing-imports" "--fast-parser"
-                ;; "--python-version" "3.6"
                 source-original)
       :error-patterns
       ((error line-start (file-name) ":" line ": error:" (message) line-end))
