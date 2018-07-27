@@ -209,4 +209,9 @@
   ;; use the same font for treemacs
   (setq doom-treemacs-enable-variable-pitch nil))
 
+;; check for errors on buffer load and save
+(add-hook 'flycheck-mode-hook '(lambda ()
+                                 (setq flycheck-check-syntax-automatically
+                                       '(save mode-enabled))))
+
 ;;; config.el ends here
