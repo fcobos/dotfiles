@@ -214,4 +214,8 @@
                                  (setq flycheck-check-syntax-automatically
                                        '(save mode-enabled))))
 
+;; eshell maximum lines of scrollback
+(setq eshell-buffer-maximum-lines 1000)
+(add-hook 'eshell-output-filter-functions #'eshell-truncate-buffer)
+
 ;;; config.el ends here
