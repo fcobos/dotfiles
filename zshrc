@@ -117,17 +117,9 @@ bindkey '\C-x\C-e' edit-command-line
 # file rename magick
 bindkey "^[m" copy-prev-shell-word
 
-fpath=( "$HOME/dotfiles/zsh-themes/pure" $fpath )
+fpath=( "$HOME/dotfiles/zsh-themes" $fpath )
 autoload -U promptinit; promptinit
-#PURE_GIT_PULL=0
-if [ "$TERM" = "linux" ]; then
-	PURE_PROMPT_SYMBOL="$"
-fi
-PURE_GIT_UP_ARROW="↑"
-PURE_GIT_DOWN_ARROW="↓"
-prompt pure
-# Show number of background jobs
-PROMPT='%(1j.[%j] .)%(?.%F{green}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
+prompt spaceship
 
 # Aliases
 source $HOME/dotfiles/aliases
