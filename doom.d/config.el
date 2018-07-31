@@ -134,8 +134,6 @@
 
 ;; modeline height
 (setq +doom-modeline-height 22)
-;; just show the file name (don't waste cpu cycles truncating paths)
-(setq +doom-modeline-buffer-file-name-style 'file-name)
 
 ;; open *rc files as conf-mode
 (add-to-list 'auto-mode-alist '("\\rc$" . conf-mode))
@@ -148,20 +146,6 @@
 (defun disable-posframe-mouse-banish ()
   (setq posframe-mouse-banish nil))
 (add-hook 'flycheck-mode-hook #'disable-posframe-mouse-banish)
-
-;; use python as repl instead of ipython
-(defun python-repl-config ()
-  (setq python-shell-interpreter "python"
-        python-shell-interpreter-args "-i"
-        python-shell-prompt-regexp nil
-        python-shell-prompt-block-regexp nil
-        python-shell-prompt-output-regexp nil
-        python-shell-completion-setup-code nil
-        python-shell-completion-string-code nil))
-(add-hook 'python-mode-hook #'python-repl-config)
-
-;; pipenv config
-(add-hook 'python-mode-hook #'pipenv-mode)
 
 ;; run pylint after flake8
 (defun pylint-after-flake8 ()
