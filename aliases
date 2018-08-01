@@ -41,3 +41,13 @@ alias zfgrep='zfgrep --color=auto'
 alias zgrep='zgrep --color=auto'
 alias glances='glances --disable-bg'
 
+# emacs ediff
+function ediff() {
+	if [ "X${2}" = "X" ]; then
+		echo "USAGE: ediff <FILE 1> <FILE 2>"
+	else
+		# The --eval flag takes lisp code and evaluates it with EMACS
+		emacs -nw --eval "(ediff-files \"$1\" \"$2\")"
+	fi
+}
+
