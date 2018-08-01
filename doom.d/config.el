@@ -197,6 +197,12 @@
 (add-hook 'flycheck-mode-hook '(lambda ()
                                  (setq flycheck-check-syntax-automatically
                                        '(save mode-enabled))))
+;; show flycheck indicators on the right side
+(after! flycheck
+  (setq flycheck-indication-mode 'right-fringe)
+  ;; left arrow
+  (define-fringe-bitmap 'flycheck-fringe-bitmap-double-arrow
+    [16 48 112 240 112 48 16] nil nil 'center))
 
 ;; eshell maximum lines of scrollback
 (setq eshell-buffer-maximum-lines 1000)

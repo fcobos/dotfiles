@@ -43,8 +43,8 @@
       ;tabbar            ; FIXME an (incomplete) tab bar for Emacs
       ;unicode           ; extended unicode support for various languages
        vc-gutter         ; vcs diff in the fringe
-       vi-tilde-fringe   ; fringe tildes to mark beyond EOB
-       window-select     ; visually switch windows
+      ;vi-tilde-fringe   ; fringe tildes to mark beyond EOB
+      ;window-select     ; visually switch windows
 
        :editor
       ;parinfer          ; turn lisp into python, sort of
