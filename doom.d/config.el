@@ -99,7 +99,7 @@
 (unless (display-graphic-p)
   (custom-set-faces '(show-paren-match ((t (:foreground "#d8d8d8"
                                             :background "#585858"))))))
-;;(doom-themes-treemacs-config)
+(doom-themes-treemacs-config)
 ;;(doom-themes-neotree-config)
 (doom-themes-org-config)
 
@@ -189,8 +189,9 @@
 
 ;; use treemacs git deferred mode
 (after! treemacs
-  (treemacs-git-mode 'deferred)
-  ;; use the same font for treemacs
+  (treemacs-git-mode 'deferred))
+;; don't use variable pitch font for treemacs
+(after! doom-themes
   (setq doom-treemacs-enable-variable-pitch nil))
 
 ;; check for errors on buffer load and save
