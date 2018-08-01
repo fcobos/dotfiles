@@ -208,4 +208,9 @@
 (setq eshell-buffer-maximum-lines 1000)
 (add-hook 'eshell-output-filter-functions #'eshell-truncate-buffer)
 
+;; imenu on the left side
+(after! imenu-list
+  (set-popup-rule! "^\\*Ilist"
+    :side 'left :size 35 :quit nil :select nil :ttl 0))
+
 ;;; config.el ends here
