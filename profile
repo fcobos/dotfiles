@@ -42,6 +42,10 @@ if [ "$XDG_CURRENT_DESKTOP" = "i3" ]; then
 	export QT_QPA_PLATFORMTHEME="qt5ct"
 fi
 
+# go paths
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$GOPATH/bin
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/felix/.sdkman"
 [[ -s "/home/felix/.sdkman/bin/sdkman-init.sh" ]] && source "/home/felix/.sdkman/bin/sdkman-init.sh"
