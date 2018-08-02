@@ -179,7 +179,7 @@
 (add-hook 'gfm-mode-hook #'disable-fci-mode)
 ;; fci-rule-color
 (setq +fci-rule-color-function nil)
-(setq fci-rule-color "#383838")
+;;(setq fci-rule-color "#383838")
 
 ;; enable rainbow delimiters for programming modes
 (defun set-rainbow-max-face-count ()
