@@ -29,7 +29,8 @@
 
 ;; Set the font
 (setq doom-font (font-spec :family "Iosevka SS04" :size 12)
-      doom-big-font (font-spec :family "Iosevka SS04" :size 24))
+      doom-big-font (font-spec :family "Iosevka SS04" :size 24)
+      doom-variable-pitch-font (font-spec :family "IBM Plex Sans Condensed" :size 12))
 
 ;; Set the theme
 (setq doom-theme 'doom-one)
