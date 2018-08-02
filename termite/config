@@ -39,7 +39,7 @@ cursor_blink = off
 scrollbar = off
 
 [colors]
-foreground          = #abb2bf
+foreground          = #d8d8d8
 foreground_bold     = #b6bdca
 cursor              = #b6bdca
 cursor_foreground   = #282c34
