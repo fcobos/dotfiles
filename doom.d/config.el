@@ -32,76 +32,76 @@
       doom-big-font (font-spec :family "Iosevka SS04" :size 24))
 
 ;; Set the theme
-;;(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-one)
+(unless (display-graphic-p)
+  (defun disable-solaire-mode ()
+    (solaire-mode 0))
+  (defun disable-hl-line-mode ()
+    (hl-line-mode 0))
+  (solaire-mode 0)
+  (add-hook 'after-change-major-mode-hook #'disable-solaire-mode)
+  (add-hook 'after-change-major-mode-hook #'disable-hl-line-mode)
+  (custom-set-faces '(region ((t (:background "#404040"))))
+                    '(hl-line ((t (:background "#404040"))))
+                    '(font-lock-comment-delimiter-face
+                      ((t (:foreground "#565c64"))))
+                    '(font-lock-comment-face
+                      ((t (:foreground "#565c64"))))
+                    '(show-paren-match
+                      ((t (:foreground "red" :background "#565c64"))))
+                    '(mode-line ((t (:background "#1f1f1f"))))))
 ;;(unless (display-graphic-p)
-;;  (defun disable-solaire-mode ()
-;;    (solaire-mode 0))
-;;  (defun disable-hl-line-mode ()
-;;    (hl-line-mode 0))
-;;  (solaire-mode 0)
-;;  (add-hook 'after-change-major-mode-hook #'disable-solaire-mode)
-;;  (add-hook 'after-change-major-mode-hook #'disable-hl-line-mode)
-;;  (custom-set-faces '(region ((t (:background "#404040"))))
-;;                    '(hl-line ((t (:background "#404040"))))
-;;                    '(font-lock-comment-delimiter-face
-;;                      ((t (:foreground "#565c64"))))
-;;                    '(font-lock-comment-face
-;;                      ((t (:foreground "#565c64"))))
-;;                    '(show-paren-match
-;;                      ((t (:foreground "red" :background "#565c64"))))
-;;                    '(mode-line ((t (:background "#1f1f1f"))))))
-(unless (display-graphic-p)
-  (setq base16-theme-256-color-source "colors"))
-(load-theme 'base16-default-dark t)
-;; better looking comment delimiter face on base16
-;; (so it's visible when selected)
-(setq my-gray "#585858")
-(setq my-dark-gray "#d8d8d8")
-(setq my-green "#a1b56c")
-(setq my-red "#ab4642")
-(setq my-orange "#a16946")
-(setq my-blue "#7cafc2")
-(setq my-light-blue "#86c1b9")
-(setq my-yellow "#f7ca88")
-(custom-set-faces '(font-lock-comment-delimiter-face
-                    ((t (:foreground "#585858"))))
-                  ;; make doc strings darker so they don't look too much like
-                  ;; regular text
-                  '(font-lock-doc-face
-                    ((t (:foreground "honeydew4"))))
-                  ;; flycheck configuration
-                  '(flycheck-posframe-error-face
-                    ((t (:background "#ab4642"))))
-                  '(flycheck-posframe-warning-face
-                    ((t (:background "#A16946"))))
-                  '(flycheck-posframe-info-face
-                    ((t (:background "#585858"))))
-                  ;; rainbow delimiters colors
-                  '(rainbow-delimiters-depth-2-face
-                    ((t (:foreground "#A16946"))))
-                  '(rainbow-delimiters-depth-3-face
-                    ((t (:foreground "#a1b56c"))))
-                  '(rainbow-delimiters-depth-4-face
-                    ((t (:foreground "#7CAFC2"))))
-                  ;; evil-ex-substitute-replacement
-                  '(evil-ex-substitute-replacement
-                    ((t (:foreground "#ab4642"))))
-                  ;; imenu faces
-                  '(imenu-list-entry-face-0
-                    ((t (:foreground "#f7ca88"))))
-                  '(imenu-list-entry-face-1
-                    ((t (:foreground "#a1b56c"))))
-                  '(imenu-list-entry-face-2
-                    ((t (:foreground "#86c1b9"))))
-                  '(imenu-list-entry-face-3
-                    ((t (:foreground "#a16946"))))
-                  )
-(unless (display-graphic-p)
-  (custom-set-faces '(show-paren-match ((t (:foreground "#d8d8d8"
-                                            :background "#585858"))))))
-(doom-themes-treemacs-config)
-;;(doom-themes-neotree-config)
-(doom-themes-org-config)
+;;  (setq base16-theme-256-color-source "colors"))
+;;(load-theme 'base16-default-dark t)
+;;;; better looking comment delimiter face on base16
+;;;; (so it's visible when selected)
+;;(setq my-gray "#585858")
+;;(setq my-dark-gray "#d8d8d8")
+;;(setq my-green "#a1b56c")
+;;(setq my-red "#ab4642")
+;;(setq my-orange "#a16946")
+;;(setq my-blue "#7cafc2")
+;;(setq my-light-blue "#86c1b9")
+;;(setq my-yellow "#f7ca88")
+;;(custom-set-faces '(font-lock-comment-delimiter-face
+;;                    ((t (:foreground "#585858"))))
+;;                  ;; make doc strings darker so they don't look too much like
+;;                  ;; regular text
+;;                  '(font-lock-doc-face
+;;                    ((t (:foreground "honeydew4"))))
+;;                  ;; flycheck configuration
+;;                  '(flycheck-posframe-error-face
+;;                    ((t (:background "#ab4642"))))
+;;                  '(flycheck-posframe-warning-face
+;;                    ((t (:background "#A16946"))))
+;;                  '(flycheck-posframe-info-face
+;;                    ((t (:background "#585858"))))
+;;                  ;; rainbow delimiters colors
+;;                  '(rainbow-delimiters-depth-2-face
+;;                    ((t (:foreground "#A16946"))))
+;;                  '(rainbow-delimiters-depth-3-face
+;;                    ((t (:foreground "#a1b56c"))))
+;;                  '(rainbow-delimiters-depth-4-face
+;;                    ((t (:foreground "#7CAFC2"))))
+;;                  ;; evil-ex-substitute-replacement
+;;                  '(evil-ex-substitute-replacement
+;;                    ((t (:foreground "#ab4642"))))
+;;                  ;; imenu faces
+;;                  '(imenu-list-entry-face-0
+;;                    ((t (:foreground "#f7ca88"))))
+;;                  '(imenu-list-entry-face-1
+;;                    ((t (:foreground "#a1b56c"))))
+;;                  '(imenu-list-entry-face-2
+;;                    ((t (:foreground "#86c1b9"))))
+;;                  '(imenu-list-entry-face-3
+;;                    ((t (:foreground "#a16946"))))
+;;                  )
+;;(unless (display-graphic-p)
+;;  (custom-set-faces '(show-paren-match ((t (:foreground "#d8d8d8"
+;;                                            :background "#585858"))))))
+;;(doom-themes-treemacs-config)
+;;;;(doom-themes-neotree-config)
+;;(doom-themes-org-config)
 
 ;; disable bold and italic fonts
 ;; (setq doom-themes-enable-bold nil)
