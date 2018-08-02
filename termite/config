@@ -48,7 +48,7 @@ background          = rgba(40, 44, 52)
 # Black, Gray, Silver, White
 color0  = #282c34
 color8  = #545862
-color7  = #abb2bf
+color7  = #D8D8D8
 color15 = #c8ccd4
 # Red
 color1  = #e06c75
