@@ -136,7 +136,9 @@ source $HOME/dotfiles/aliases
 source /etc/profile.d/vte.sh
 
 # load autopair plugin
-source ~/dotfiles/zsh-plugins/autopair.zsh
+source ~/dotfiles/zsh-plugins/zsh-autopair/autopair.zsh
+# load syntax highlighting plugin
+source ~/dotfiles/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/felix/.sdkman"
