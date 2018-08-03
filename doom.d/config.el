@@ -61,7 +61,6 @@
 (defun disable-cursor-blink ()
   (blink-cursor-mode 0))
 (add-hook 'window-setup-hook #'disable-cursor-blink)
-(setq visible-cursor nil)
 
 ;; Disable whitespace-mode
 (remove-hook 'after-change-major-mode-hook
