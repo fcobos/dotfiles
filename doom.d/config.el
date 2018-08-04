@@ -30,11 +30,11 @@
 ;; Set the theme
 (setq doom-theme 'doom-tomorrow-night)
 (unless (display-graphic-p)
-  (custom-set-faces '(region ((t (:background "#404040"))))
+  (custom-set-faces '(region ((t (:background "#303030"))))
                     '(hl-line ((t (:background "#303030"))))
-                    '(ivy-current-match ((t (:background "#585858"))))
-                    '(company-tooltip-selection ((t (:background "#404040"))))
-                    '(show-paren-match ((t (:foreground "red" :background "#585858"))))))
+                    '(ivy-current-match ((t (:background "#101010"))))
+                    '(company-tooltip-selection ((t (:background "#101010"))))
+                    '(show-paren-match ((t (:foreground "red" :background "#101010"))))))
 
 ;; Set line numbers style
 (setq doom-line-numbers-style 'relative)
