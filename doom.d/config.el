@@ -81,16 +81,8 @@
 (add-hook 'python-mode-hook #'pylint-after-flake8)
 ;; run mypy after pylint
 (defun mypy-after-pylint ()
-  (flycheck-define-checker
-      python-mypy ""
-      :command ("mypy"
-                "--ignore-missing-imports" "--fast-parser"
-                source-original)
-      :error-patterns
-      ((error line-start (file-name) ":" line ": error:" (message) line-end))
-      :modes python-mode)
-  (add-to-list 'flycheck-checkers 'python-mypy t)
-  (flycheck-add-next-checker 'python-pylint 'python-mypy t))
+  (flycheck-add-next-checker 'python-pylint 'python-mypy t)
+  (flycheck-add-next-checker 'python-mypy 'python-pycompile))
 (add-hook 'python-mode-hook #'mypy-after-pylint)
 
 ;; disable fci-mode for markdown modes
