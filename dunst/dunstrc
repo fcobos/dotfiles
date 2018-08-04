@@ -181,20 +181,20 @@ context = ctrl+shift+period
 
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#abb2bf"
-separator_color = "#abb2bf"
+frame_color = "#c5c8c6"
+separator_color = "#c5c8c6"
 [base16_low]
     msg_urgency = low
-    background = "#353b45"
-    foreground = "#545862"
+    background = "#282a2e"
+    foreground = "#585858"
 [base16_normal]
     msg_urgency = normal
-    background = "#3e4451"
-    foreground = "#abb2bf"
+    background = "#373b41"
+    foreground = "#c5c8c6"
 [base16_critical]
     msg_urgency = critical
-    background = "#e06c75"
-    foreground = "#b6bdca"
+    background = "#cc6666"
+    foreground = "#e0e0e0"
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.

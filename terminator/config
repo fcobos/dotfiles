@@ -7,7 +7,7 @@
   title_transmit_fg_color = "#c5c8c6"
   title_transmit_bg_color = "#1d1f21"
   title_inactive_fg_color = "#c5c8c6"
-  title_inactive_bg_color = "#969896"
+  title_inactive_bg_color = "#585858"
 
   [keybindings]
 [layouts]
@@ -29,7 +29,7 @@
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
-    palette = "#1d1f21:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#c5c8c6:#969896:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff"
+    palette = "#1d1f21:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#c5c8c6:#585858:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff"
     foreground_color = "#c5c8c6"
     background_color = "#1d1f21"
     cursor_color = "#c5c8c6"

@@ -39,42 +39,42 @@ cursor_blink = off
 scrollbar = off
 
 [colors]
-foreground          = #d8d8d8
-foreground_bold     = #b6bdca
-cursor              = #b6bdca
-cursor_foreground   = #282c34
-background          = rgba(40, 44, 52)
+foreground          = #c5c8c6
+foreground_bold     = #e0e0e0
+cursor              = #e0e0e0
+cursor_foreground   = #1d1f21
+background          = rgba(29, 31, 33)
 # 16 color space
 # Black, Gray, Silver, White
-color0  = #282c34
-color8  = #545862
-color7  = #D8D8D8
-color15 = #c8ccd4
+color0  = #1d1f21
+color8  = #585858
+color7  = #c5c8c6
+color15 = #ffffff
 # Red
-color1  = #e06c75
-color9  = #e06c75
+color1  = #cc6666
+color9  = #cc6666
 # Green
-color2  = #98c379
-color10 = #98c379
+color2  = #b5bd68
+color10 = #b5bd68
 # Yellow
-color3  = #e5c07b
-color11 = #e5c07b
+color3  = #f0c674
+color11 = #f0c674
 # Blue
-color4  = #61afef
-color12 = #61afef
+color4  = #81a2be
+color12 = #81a2be
 # Purple
-color5  = #c678dd
-color13 = #c678dd
+color5  = #b294bb
+color13 = #b294bb
 # Teal
-color6  = #56b6c2
-color14 = #56b6c2
+color6  = #8abeb7
+color14 = #8abeb7
 # Extra colors
-color16 = #d19a66
-color17 = #be5046
-color18 = #353b45
-color19 = #3e4451
-color20 = #565c64
-color21 = #b6bdca
+color16 = #de935f
+color17 = #a3685a
+color18 = #282a2e
+color19 = #373b41
+color20 = #b4b7b4
+color21 = #e0e0e0
 
 [hints]
 #font = Monospace 12

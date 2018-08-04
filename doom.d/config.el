@@ -28,24 +28,13 @@
       doom-variable-pitch-font (font-spec :family "IBM Plex Sans Condensed" :size 12))
 
 ;; Set the theme
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-tomorrow-night)
 (unless (display-graphic-p)
-  (defun disable-solaire-mode ()
-    (solaire-mode 0))
-  (defun disable-hl-line-mode ()
-    (hl-line-mode 0))
-  (solaire-mode 0)
-  (add-hook 'after-change-major-mode-hook #'disable-solaire-mode)
-  (add-hook 'after-change-major-mode-hook #'disable-hl-line-mode)
   (custom-set-faces '(region ((t (:background "#404040"))))
-                    '(hl-line ((t (:background "#404040"))))
-                    '(font-lock-comment-delimiter-face
-                      ((t (:foreground "#565c64"))))
-                    '(font-lock-comment-face
-                      ((t (:foreground "#565c64"))))
-                    '(show-paren-match
-                      ((t (:foreground "red" :background "#565c64"))))
-                    '(mode-line ((t (:background "#1f1f1f"))))))
+                    '(hl-line ((t (:background "#303030"))))
+                    '(ivy-current-match ((t (:background "#585858"))))
+                    '(company-tooltip-selection ((t (:background "#404040"))))
+                    '(show-paren-match ((t (:foreground "red" :background "#585858"))))))
 
 ;; Set line numbers style
 (setq doom-line-numbers-style 'relative)
