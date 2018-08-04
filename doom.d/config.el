@@ -75,15 +75,11 @@
   (setq posframe-mouse-banish nil))
 (add-hook 'flycheck-mode-hook #'disable-posframe-mouse-banish)
 
-;; run pylint after flake8
-(defun pylint-after-flake8 ()
-  (flycheck-add-next-checker 'python-flake8 'python-pylint))
-(add-hook 'python-mode-hook #'pylint-after-flake8)
-;; run mypy after pylint
-(defun mypy-after-pylint ()
-  (flycheck-add-next-checker 'python-pylint 'python-mypy t)
+;; run mypy after flake8
+(defun mypy-after-flake8 ()
+  (flycheck-add-next-checker 'python-flake8 'python-mypy)
   (flycheck-add-next-checker 'python-mypy 'python-pycompile))
-(add-hook 'python-mode-hook #'mypy-after-pylint)
+(add-hook 'python-mode-hook #'mypy-after-flake8)
 
 ;; disable fci-mode for markdown modes
 (defun disable-fci-mode ()
@@ -104,10 +100,6 @@
 (after! doom-themes
   (setq doom-treemacs-enable-variable-pitch nil))
 
-;; check for errors on buffer load and save
-(add-hook 'flycheck-mode-hook '(lambda ()
-                                 (setq flycheck-check-syntax-automatically
-                                       '(save mode-enabled))))
 ;; show flycheck indicators on the right side
 (after! flycheck
   (setq flycheck-indication-mode 'right-fringe)
