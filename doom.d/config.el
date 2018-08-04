@@ -76,22 +76,21 @@
 (add-hook 'flycheck-mode-hook #'disable-posframe-mouse-banish)
 
 ;; config python linters
-
-(defun config-python-linters ()
-  (flycheck-define-checker
-      python-mypy "Mypy syntax and type checker.  Requires mypy>=0.580.
-
-See URL `http://mypy-lang.org/'."
-      :command ("mypy" "--ignore-missing-imports" "--fast-parser"
-                "--python-version" "3.6" source-original)
-      :error-patterns
-      ((error line-start (file-name) ":" line ": error:" (message) line-end)
-       (warning line-start (file-name) ":" line ": warning:" (message) line-end))
-      :modes python-mode
-      :predicate flycheck-buffer-saved-p)
-  (flycheck-add-next-checker 'python-flake8 'python-mypy)
-  (flycheck-add-next-checker 'python-mypy 'python-pylint))
-(add-hook 'python-mode-hook #'config-python-linters)
+;;(defun config-python-linters ()
+;;  (flycheck-define-checker
+;;      python-mypy "Mypy syntax and type checker.  Requires mypy>=0.580.
+;;
+;;See URL `http://mypy-lang.org/'."
+;;      :command ("mypy" "--ignore-missing-imports" "--fast-parser"
+;;                "--python-version" "3.6" source-original)
+;;      :error-patterns
+;;      ((error line-start (file-name) ":" line ": error:" (message) line-end)
+;;       (warning line-start (file-name) ":" line ": warning:" (message) line-end))
+;;      :modes python-mode
+;;      :predicate flycheck-buffer-saved-p)
+;;  (flycheck-add-next-checker 'python-flake8 'python-mypy)
+;;  (flycheck-add-next-checker 'python-mypy 'python-pylint))
+;;(add-hook 'python-mode-hook #'config-python-linters)
 
 ;; disable fci-mode for markdown modes
 (defun disable-fci-mode ()
