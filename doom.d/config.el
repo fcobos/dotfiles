@@ -124,4 +124,8 @@
 (setq eshell-buffer-maximum-lines 1000)
 (add-hook 'eshell-output-filter-functions #'eshell-truncate-buffer)
 
+;; company config
+(setq company-idle-delay 0)
+(setq company-minimum-prefix-length 2)
+
 ;;; config.el ends here
