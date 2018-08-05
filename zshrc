@@ -119,15 +119,15 @@ bindkey "^[m" copy-prev-shell-word
 
 fpath=( "$HOME/dotfiles/zsh-themes" $fpath )
 autoload -U promptinit; promptinit
-#prompt spaceship
-if [ "$TERM" = "linux" ]; then
-	PURE_PROMPT_SYMBOL="$"
-fi
-PURE_GIT_UP_ARROW="↑"
-PURE_GIT_DOWN_ARROW="↓"
-prompt pure
-# Show number of background jobs
-PROMPT='%(1j.[%j] .)%(?.%F{green}.%F{red})${prompt_pure_state[prompt]}%f '
+prompt spaceship
+#if [ "$TERM" = "linux" ]; then
+#	PURE_PROMPT_SYMBOL="$"
+#fi
+#PURE_GIT_UP_ARROW="↑"
+#PURE_GIT_DOWN_ARROW="↓"
+#prompt pure
+## Show number of background jobs
+#PROMPT='%(1j.[%j] .)%(?.%F{green}.%F{red})${prompt_pure_state[prompt]}%f '
 
 # Aliases
 source $HOME/dotfiles/aliases
