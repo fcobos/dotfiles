@@ -119,6 +119,10 @@ bindkey "^[m" copy-prev-shell-word
 
 fpath=( "$HOME/dotfiles/zsh-themes" $fpath )
 autoload -U promptinit; promptinit
+SPACESHIP_CHAR_SYMBOL="❯ "
+if [ "$TERM" = "linux" ]; then
+	SPACESHIP_CHAR_SYMBOL="$ "
+fi
 prompt spaceship
 #if [ "$TERM" = "linux" ]; then
 #	PURE_PROMPT_SYMBOL="$"
