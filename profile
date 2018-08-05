@@ -1,6 +1,4 @@
 # User specific environment and startup programs
-PATH=$HOME/bin:$HOME/.local/bin:$HOME/devel/android-sdk/emulator:$HOME/devel/android-sdk/tools:$HOME/devel/android-sdk/platform-tools:$HOME/devel/android-ndk:$PATH
-export PATH
 export EDITOR=vim
 export ANDROID_HOME=$HOME/devel/android-sdk
 export ANDROID_SDK=$ANDROID_HOME
@@ -8,6 +6,8 @@ export ANDROID_NDK_HOME=$HOME/devel/android-ndk
 export ANDROID_NDK=$ANDROID_NDK_HOME
 export NDK_ROOT=$ANDROID_NDK_HOME
 export NDKROOT=$ANDROID_NDK_HOME
+PATH=$HOME/bin:$HOME/.local/bin:$ANDROID_SDK/emulator:$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools:$ANDROID_NDK:$PATH
+export PATH
 
 export MOZ_USE_OMTC=1
 export MOZ_GLX_IGNORE_BLACKLIST=1
