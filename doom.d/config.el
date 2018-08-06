@@ -32,7 +32,8 @@
 (unless (display-graphic-p)
   (custom-set-faces '(region ((t (:background "#303030"))))
                     '(hl-line ((t (:background "#303030"))))
-                    '(ivy-current-match ((t (:background "#101010"))))
+                    ;;'(ivy-current-match ((t (:background "#101010"))))
+                    '(helm-selection ((t (:background "#101010"))))
                     '(company-tooltip-selection ((t (:background "#101010"))))
                     '(show-paren-match ((t (:foreground "red" :background "#101010"))))))
 
