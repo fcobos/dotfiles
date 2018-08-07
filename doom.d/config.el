@@ -147,7 +147,7 @@
              (if (equal "./" relative-dirs) (setq relative-dirs ""))
              (concat (propertize relative-dirs 'face (if relative-faces `(:inherit ,relative-faces)))
                      (propertize (file-name-nondirectory true-filename)
-                                 'face (if file-faces `(:inherit ,file-faces)))))))))
+                                 'face (if relative-faces `(:inherit ,relative-faces)))))))))
 
 (setq +modeline-buffer-path-function #'+modeline-file-name)
 
