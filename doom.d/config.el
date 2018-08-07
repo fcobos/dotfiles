@@ -129,4 +129,26 @@
 (setq company-idle-delay 0)
 (setq company-minimum-prefix-length 2)
 
+;; modeline file name
+(defun +modeline-file-name (&optional path)
+  (let ((buffer-file-name (or path buffer-file-name))
+        (root (doom-project-root)))
+    (cond ((null root)
+           (propertize "%b" 'face 'doom-modeline-buffer-file))
+          ((or (null buffer-file-name)
+               (directory-name-p buffer-file-name))
+           (propertize (abbreviate-file-name (or buffer-file-name default-directory))
+                       'face 'doom-modeline-buffer-path))
+          ((let* ((modified-faces (if (buffer-modified-p) 'doom-modeline-buffer-modified))
+                  (true-filename (file-truename buffer-file-name))
+                  (relative-dirs "")
+                  (relative-faces (or modified-faces 'doom-modeline-buffer-path))
+                  (file-faces (or modified-faces 'doom-modeline-buffer-file)))
+             (if (equal "./" relative-dirs) (setq relative-dirs ""))
+             (concat (propertize relative-dirs 'face (if relative-faces `(:inherit ,relative-faces)))
+                     (propertize (file-name-nondirectory true-filename)
+                                 'face (if file-faces `(:inherit ,file-faces)))))))))
+
+(setq +modeline-buffer-path-function #'+modeline-file-name)
+
 ;;; config.el ends here
