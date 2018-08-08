@@ -48,21 +48,21 @@ st.actionfps:         30
 st.opacity:      255
 
 ! colors
-#define base00 #1d1f21
-#define base01 #282a2e
-#define base02 #373b41
-#define base03 #585858
-#define base04 #b4b7b4
-#define base05 #c5c8c6
-#define base06 #e0e0e0
-#define base07 #ffffff
-#define base08 #cc6666
-#define base09 #de935f
-#define base0A #f0c674
-#define base0B #b5bd68
-#define base0C #8abeb7
-#define base0D #81a2be
-#define base0E #b294bb
+#define base00 #ffffff
+#define base01 #e0e0e0
+#define base02 #d6d6d6
+#define base03 #8e908c
+#define base04 #969896
+#define base05 #4d4d4c
+#define base06 #282a2e
+#define base07 #1d1f21
+#define base08 #c82829
+#define base09 #f5871f
+#define base0A #eab700
+#define base0B #718c00
+#define base0C #3e999f
+#define base0D #4271ae
+#define base0E #8959a8
 #define base0F #a3685a
 
 *foreground:   base05

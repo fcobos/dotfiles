@@ -145,14 +145,16 @@ startup_notification = false
 dmenu = /usr/bin/dmenu -p dunst:
 
 # Browser for opening urls in context menu.
-browser = /usr/bin/firefox -new-tab
+#browser = /usr/bin/firefox -new-tab
+browser = /usr/bin/xdg-open
 
 # Align icons left/right/off
 icon_position = left
 max_icon_size = 48
 
 # Paths to default icons.
-icon_folders = /usr/share/icons/Papirus-Dark/32x32/mimetypes/:/usr/share/icons/Papirus-Dark/32x32/status/:/usr/share/icons/Papirus-Dark/32x32/devices/:/usr/share/icons/Papirus-Dark/32x32/notifications/:/usr/share/icons/Papirus-Dark/32x32/emblems/
+#icon_folders = /usr/share/icons/Papirus-Dark/32x32/mimetypes/:/usr/share/icons/Papirus-Dark/32x32/status/:/usr/share/icons/Papirus-Dark/32x32/devices/:/usr/share/icons/Papirus-Dark/32x32/notifications/:/usr/share/icons/Papirus-Dark/32x32/emblems/
+icon_folders = /usr/share/icons/Papirus/32x32/mimetypes/:/usr/share/icons/Papirus/32x32/status/:/usr/share/icons/Papirus/32x32/devices/:/usr/share/icons/Papirus/32x32/notifications/:/usr/share/icons/Papirus/32x32/emblems/
 
 frame_width = 3
 frame_color = "#8EC07C"
@@ -181,20 +183,20 @@ context = ctrl+shift+period
 
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#c5c8c6"
-separator_color = "#c5c8c6"
+frame_color = "#383a42"
+separator_color = "#383a42"
 [base16_low]
     msg_urgency = low
-    background = "#282a2e"
-    foreground = "#585858"
+    background = "#f0f0f1"
+    foreground = "#a0a1a7"
 [base16_normal]
     msg_urgency = normal
-    background = "#373b41"
-    foreground = "#c5c8c6"
+    background = "#e5e5e6"
+    foreground = "#383a42"
 [base16_critical]
     msg_urgency = critical
-    background = "#cc6666"
-    foreground = "#e0e0e0"
+    background = "#ca1243"
+    foreground = "#202227"
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.

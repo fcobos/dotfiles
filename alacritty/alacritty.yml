@@ -134,46 +134,78 @@ render_timer: false
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: false
 
+# light
 colors:
   # Default colors
   primary:
-    background: '0x1d1f21'
-    foreground: '0xc5c8c6'
+    background: '0xffffff'
+    foreground: '0x4d4d4c'
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x1d1f21'
-    cursor: '0xc5c8c6'
+    text: '0xffffff'
+    cursor: '0x4d4d4c'
   # Normal colors
   normal:
-    black:   '0x1d1f21'
-    red:     '0xcc6666'
-    green:   '0xb5bd68'
-    yellow:  '0xf0c674'
-    blue:    '0x81a2be'
-    magenta: '0xb294bb'
-    cyan:    '0x8abeb7'
-    white:   '0xc5c8c6'
+    black:   '0xffffff'
+    red:     '0xc82829'
+    green:   '0x718c00'
+    yellow:  '0xeab700'
+    blue:    '0x4271ae'
+    magenta: '0x8959a8'
+    cyan:    '0x3e999f'
+    white:   '0x4d4d4c'
   # Bright colors
   bright:
-    black:   '0x585858'
-    red:     '0xcc6666'
-    green:   '0xb5bd68'
-    yellow:  '0xf0c674'
-    blue:    '0x81a2be'
-    magenta: '0xb294bb'
-    cyan:    '0x8abeb7'
-    white:   '0xc5c8c6'
+    black:   '0x8e908c'
+    red:     '0xc82829'
+    green:   '0x718c00'
+    yellow:  '0xeab700'
+    blue:    '0x4271ae'
+    magenta: '0x8959a8'
+    cyan:    '0x3e999f'
+    white:   '0x4d4d4c'
 
- # Dim colors (Optional)
-  dim:
-    black:   '0x333333'
-    red:     '0xf2777a'
-    green:   '0x99cc99'
-    yellow:  '0xffcc66'
-    blue:    '0x6699cc'
-    magenta: '0xcc99cc'
-    cyan:    '0x66cccc'
-    white:   '0xdddddd'
+# dark
+#colors:
+#  # Default colors
+#  primary:
+#    background: '0x1d1f21'
+#    foreground: '0xc5c8c6'
+#  # Colors the cursor will use if `custom_cursor_colors` is true
+#  cursor:
+#    text: '0x1d1f21'
+#    cursor: '0xc5c8c6'
+#  # Normal colors
+#  normal:
+#    black:   '0x1d1f21'
+#    red:     '0xcc6666'
+#    green:   '0xb5bd68'
+#    yellow:  '0xf0c674'
+#    blue:    '0x81a2be'
+#    magenta: '0xb294bb'
+#    cyan:    '0x8abeb7'
+#    white:   '0xc5c8c6'
+#  # Bright colors
+#  bright:
+#    black:   '0x585858'
+#    red:     '0xcc6666'
+#    green:   '0xb5bd68'
+#    yellow:  '0xf0c674'
+#    blue:    '0x81a2be'
+#    magenta: '0xb294bb'
+#    cyan:    '0x8abeb7'
+#    white:   '0xc5c8c6'
+
+  # Dim colors (Optional)
+#  dim:
+#    black:   '0x333333'
+#    red:     '0xf2777a'
+#    green:   '0x99cc99'
+#    yellow:  '0xffcc66'
+#    blue:    '0x6699cc'
+#    magenta: '0xcc99cc'
+#    cyan:    '0x66cccc'
+#    white:   '0xdddddd'
 
 # Visual Bell
 #

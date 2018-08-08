@@ -25,17 +25,20 @@
 ;; Set the font
 (setq doom-font (font-spec :family "Iosevka SS04" :size 12)
       doom-big-font (font-spec :family "Iosevka SS04" :size 24)
-      doom-variable-pitch-font (font-spec :family "IBM Plex Sans Condensed" :size 12))
+      doom-variable-pitch-font (font-spec
+                                :family "IBM Plex Sans Condensed" :size 12))
 
 ;; Set the theme
-(setq doom-theme 'doom-tomorrow-night)
+(setq doom-theme 'doom-one-light)
 (unless (display-graphic-p)
-  (custom-set-faces '(region ((t (:background "#303030"))))
-                    '(hl-line ((t (:background "#303030"))))
+  (custom-set-faces '(region ((t (:background "#f0f0f0"))))
+                    ;;'(hl-line ((t (:background "#303030"))))
                     ;;'(ivy-current-match ((t (:background "#101010"))))
-                    '(helm-selection ((t (:background "#101010"))))
-                    '(company-tooltip-selection ((t (:background "#101010"))))
-                    '(show-paren-match ((t (:foreground "red" :background "#101010"))))))
+                    ;;'(helm-selection ((t (:background "#101010"))))
+                    ;;'(company-tooltip-selection ((t (:background "#f0f0f0"))))
+                    '(company-tooltip ((t (:background "f0f0f0"))))
+                    '(show-paren-match
+                      ((t (:foreground "#ca1243" :background "gray"))))))
 
 ;; Set line numbers style
 (setq doom-line-numbers-style 'relative)
@@ -103,13 +106,14 @@
 
 ;; enable rainbow delimiters for programming modes
 (defun set-rainbow-max-face-count ()
-  (setq rainbow-delimiters-max-face-count 7))
+  (setq rainbow-delimiters-max-face-count 4))
 (add-hook 'rainbow-delimiters-mode-hook #'set-rainbow-max-face-count)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'parinfer-mode-hook 'rainbow-delimiters-mode)
 
 ;; use treemacs git deferred mode
-(after! treemacs
-  (treemacs-git-mode 'deferred))
+;;(after! treemacs
+;;  (treemacs-git-mode 'deferred))
 ;; don't use variable pitch font for treemacs
 (after! doom-themes
   (setq doom-treemacs-enable-variable-pitch nil))
@@ -124,10 +128,6 @@
 ;; eshell maximum lines of scrollback
 (setq eshell-buffer-maximum-lines 1000)
 (add-hook 'eshell-output-filter-functions #'eshell-truncate-buffer)
-
-;; company config
-(setq company-idle-delay 0)
-(setq company-minimum-prefix-length 2)
 
 ;; modeline file name
 (defun +modeline-file-name (&optional path)

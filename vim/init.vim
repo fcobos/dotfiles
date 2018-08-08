@@ -100,14 +100,16 @@ endif
 if &t_Co == 256 || has("gui_running")
   set termguicolors
 endif
-colorscheme base16-tomorrow-night
+"colorscheme base16-tomorrow-night
+set background=light
+colorscheme base16-one-light
 
 " rainbow parentheses
-autocmd VimEnter * RainbowParentheses
-let g:rainbow#max_level = 8
-let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
+"autocmd VimEnter * RainbowParentheses
+"let g:rainbow#max_level = 4
+"let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 " List of colors that you do not want. ANSI code or #RRGGBB
-let g:rainbow#blacklist = [7, 8, 15, 18, 19, 20, 21, '#3e4451']
+"let g:rainbow#blacklist = [7, 8, 15, 18, 19, 20, 21, '#3e4451']
 
 " this is needed for termite
 "autocmd VimEnter * redrawstatus!
