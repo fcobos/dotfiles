@@ -18,7 +18,7 @@ indent_size = 2
 indent_style = space
 indent_size = 2
 
-[*.{l{i,}sp,ros}]
+[*.{l{i,}sp,cl,ros}]
 indent_style = space
 indent_size = 2
 
