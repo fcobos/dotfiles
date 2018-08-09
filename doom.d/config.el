@@ -29,14 +29,15 @@
                                 :family "IBM Plex Sans Condensed" :size 12))
 
 ;; Set the theme
-(setq doom-theme 'doom-one-light)
+(setq doom-theme 'doom-tomorrow-day)
 (unless (display-graphic-p)
-  (custom-set-faces '(region ((t (:background "#f0f0f0"))))
+  (setq doom-theme 'doom-one-light)
+  (custom-set-faces '(region ((t (:background "#d8d8d8"))))
                     ;;'(hl-line ((t (:background "#303030"))))
                     ;;'(ivy-current-match ((t (:background "#101010"))))
                     ;;'(helm-selection ((t (:background "#101010"))))
                     ;;'(company-tooltip-selection ((t (:background "#f0f0f0"))))
-                    '(company-tooltip ((t (:background "f0f0f0"))))
+                    '(company-tooltip ((t (:background "#d8d8d8"))))
                     '(show-paren-match
                       ((t (:foreground "#ca1243" :background "gray"))))))
 
