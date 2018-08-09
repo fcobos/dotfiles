@@ -29,9 +29,9 @@
                                 :family "IBM Plex Sans Condensed" :size 12))
 
 ;; Set the theme
-(setq doom-theme 'doom-tomorrow-day)
+(setq doom-theme 'doom-one-light)
+(custom-set-faces '(solaire-hl-line-face ((t (:background "#d8d8d8")))))
 (unless (display-graphic-p)
-  (setq doom-theme 'doom-one-light)
   (custom-set-faces '(region ((t (:background "#d8d8d8"))))
                     ;;'(hl-line ((t (:background "#303030"))))
                     ;;'(ivy-current-match ((t (:background "#101010"))))
