@@ -30,16 +30,13 @@
 
 ;; Set the theme
 (setq doom-theme 'doom-one-light)
-(custom-set-faces '(solaire-hl-line-face ((t (:background "#d8d8d8")))))
+(custom-set-faces '(solaire-hl-line-face ((t (:background "#d8d8d8"))))
+                  '(hl-line ((t (:background "#d8d8d8"))))
+                  '(show-paren-match
+                    ((t (:foreground "#ca1243" :background "gray")))))
 (unless (display-graphic-p)
   (custom-set-faces '(region ((t (:background "#d8d8d8"))))
-                    ;;'(hl-line ((t (:background "#303030"))))
-                    ;;'(ivy-current-match ((t (:background "#101010"))))
-                    ;;'(helm-selection ((t (:background "#101010"))))
-                    ;;'(company-tooltip-selection ((t (:background "#f0f0f0"))))
-                    '(company-tooltip ((t (:background "#d8d8d8"))))
-                    '(show-paren-match
-                      ((t (:foreground "#ca1243" :background "gray"))))))
+                    '(company-tooltip ((t (:background "#d8d8d8"))))))
 
 ;; Set line numbers style
 (setq doom-line-numbers-style 'relative)
@@ -82,28 +79,15 @@
   (setq posframe-mouse-banish nil))
 (add-hook 'flycheck-mode-hook #'disable-posframe-mouse-banish)
 
-;; config python linters
-;;(defun config-python-linters ()
-;;  (flycheck-define-checker
-;;      python-mypy "Mypy syntax and type checker.  Requires mypy>=0.580.
-;;
-;;See URL `http://mypy-lang.org/'."
-;;      :command ("mypy" "--ignore-missing-imports" "--fast-parser"
-;;                "--python-version" "3.6" source-original)
-;;      :error-patterns
-;;      ((error line-start (file-name) ":" line ": error:" (message) line-end)
-;;       (warning line-start (file-name) ":" line ": warning:" (message) line-end))
-;;      :modes python-mode
-;;      :predicate flycheck-buffer-saved-p)
-;;  (flycheck-add-next-checker 'python-flake8 'python-mypy)
-;;  (flycheck-add-next-checker 'python-mypy 'python-pylint))
-;;(add-hook 'python-mode-hook #'config-python-linters)
-
 ;; disable fci-mode for markdown modes
 (defun disable-fci-mode ()
   (fci-mode 0))
 (add-hook 'markdown-mode-hook #'disable-fci-mode)
 (add-hook 'gfm-mode-hook #'disable-fci-mode)
+;; set the ruler color
+(add-hook 'prog-mode-hook #'(lambda ()
+                              (setq +fci-rule-color-function "#d8d8d8")
+                              (setq fci-rule-color "#d8d8d8")))
 
 ;; enable rainbow delimiters for programming modes
 (defun set-rainbow-max-face-count ()
