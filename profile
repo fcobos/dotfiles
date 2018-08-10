@@ -42,6 +42,9 @@ if [ "$XDG_CURRENT_DESKTOP" = "i3" ]; then
 	export QT_QPA_PLATFORMTHEME="qt5ct"
 fi
 
+# ruby path
+export PATH=$PATH/.gem/ruby/2.5.0/bin
+
 # go paths
 export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$GOPATH/bin
