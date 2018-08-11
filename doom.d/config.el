@@ -97,8 +97,8 @@
 (add-hook 'parinfer-mode-hook 'rainbow-delimiters-mode)
 
 ;; use treemacs git deferred mode
-;;(after! treemacs
-;;  (treemacs-git-mode 'deferred))
+(after! treemacs
+  (treemacs-git-mode 'deferred))
 ;; don't use variable pitch font for treemacs
 (after! doom-themes
   (setq doom-treemacs-enable-variable-pitch nil))
