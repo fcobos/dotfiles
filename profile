@@ -43,7 +43,7 @@ if [ "$XDG_CURRENT_DESKTOP" = "i3" ]; then
 fi
 
 # ruby path
-export PATH=$PATH/.gem/ruby/2.5.0/bin
+export PATH=$PATH:$HOME/.gem/ruby/2.5.0/bin
 
 # go paths
 export GOPATH=$(go env GOPATH)
