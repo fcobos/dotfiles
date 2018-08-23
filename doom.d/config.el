@@ -10,13 +10,6 @@
             --priority='SECURE192:+SECURE128:-VERS-ALL:+VERS-TLS1.2:%PROFILE_MEDIUM' %h"))
 (setq tls-checktrust t)
 
-;; Custom keybindings
-(map!
- (:leader
-   :desc "M-x" :n "SPC" #'execute-extended-command
-   (:prefix "c"
-     :desc "Format buffer" :n "f" #'format-all-buffer)))
-
 ;; Disable exit confirmation dialog
 (setq confirm-kill-emacs nil)
 ;; Don't ask if processes should be killed
@@ -115,25 +108,6 @@
 (add-hook 'eshell-output-filter-functions #'eshell-truncate-buffer)
 
 ;; modeline file name
-(defun +modeline-file-name (&optional path)
-  (let ((buffer-file-name (or path buffer-file-name))
-        (root (doom-project-root)))
-    (cond ((null root)
-           (propertize "%b" 'face 'doom-modeline-buffer-file))
-          ((or (null buffer-file-name)
-               (directory-name-p buffer-file-name))
-           (propertize (abbreviate-file-name (or buffer-file-name default-directory))
-                       'face 'doom-modeline-buffer-path))
-          ((let* ((modified-faces (if (buffer-modified-p) 'doom-modeline-buffer-modified))
-                  (true-filename (file-truename buffer-file-name))
-                  (relative-dirs "")
-                  (relative-faces (or modified-faces 'doom-modeline-buffer-path))
-                  (file-faces (or modified-faces 'doom-modeline-buffer-file)))
-             (if (equal "./" relative-dirs) (setq relative-dirs ""))
-             (concat (propertize relative-dirs 'face (if relative-faces `(:inherit ,relative-faces)))
-                     (propertize (file-name-nondirectory true-filename)
-                                 'face (if relative-faces `(:inherit ,relative-faces)))))))))
-
 (setq +modeline-buffer-path-function #'+modeline-file-name)
 
 ;;; config.el ends here
