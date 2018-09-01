@@ -48,7 +48,7 @@
 
 ;; Disable whitespace-mode
 (remove-hook 'after-change-major-mode-hook
-             'doom|show-whitespace-maybe)
+             'doom|highlight-non-default-indentation)
 
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
