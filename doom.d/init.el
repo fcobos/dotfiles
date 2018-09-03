@@ -68,7 +68,7 @@
        gist              ; interacting with github gists
       ;macos             ; MacOS-specific commands
        make              ; run make tasks from Emacs
-       magit             ;
+       magit             ; a git porcelain for Emacs
        password-store    ; password manager for nerds
        pdf               ; pdf enhancements
       ;prodigy           ; FIXME managing external services & code builders
@@ -94,6 +94,7 @@
        go                ; the hipster dialect
       ;(haskell +intero) ; a language that's lazier than I am
       ;hy                ; readability of scheme w/ speed of python
+      ;idris             ;
        (java +meghanada) ; the poster child for carpal tunnel syndrome
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
       ;julia             ; a better, faster MATLAB
