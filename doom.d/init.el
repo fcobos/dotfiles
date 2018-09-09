@@ -63,6 +63,7 @@
        vc                ; version-control and Emacs, sitting in a tree
 
        :tools
+       docker
        editorconfig      ; let someone else argue about tabs vs spaces
        ein               ; tame Jupyter notebooks with emacs
        gist              ; interacting with github gists
@@ -151,9 +152,9 @@
        ;; literate config in your `doom-private-dir' whenever it changes.
       ;literate
 
-       ;; The default module set reasonable defaults for Emacs. It also provides
-       ;; a Spacemacs-inspired keybinding scheme, a custom yasnippet library,
-       ;; and additional ex commands for evil-mode. Use it as a reference for
-       ;; your own modules.
+       ;; The default module sets reasonable defaults for Emacs. It also
+       ;; provides a Spacemacs-inspired keybinding scheme, a custom yasnippet
+       ;; library, and additional ex commands for evil-mode. Use it as a
+       ;; reference for your own modules.
        (default +bindings +snippets +evil-commands))
 
