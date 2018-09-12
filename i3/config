@@ -194,7 +194,7 @@ exec --no-startup-id nm-applet
 # nvidia-settings
 exec --no-startup-id nvidia-settings --load-config-only
 # nvidia fan control
-#exec --no-startup-id nvFanControl
+exec --no-startup-id nvFanControl
 # xiccd
 exec --no-startup-id xiccd
 # apply color profile
