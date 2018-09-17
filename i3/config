@@ -179,8 +179,6 @@ bindsym $mod+r mode "resize"
 # start polkit auth agent
 #exec --no-startup-id lxpolkit &
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# start compton
-exec --no-startup-id env allow_rgb10_configs=false compton -b -d :0
 # background
 exec --no-startup-id ~/.fehbg
 # touchpad config
@@ -218,6 +216,8 @@ exec --no-startup-id /usr/lib/gsd-xsettings
 exec --no-startup-id dunst
 # start polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+# start compton
+exec --no-startup-id env allow_rgb10_configs=false compton -b -d :0
 
 # Pulse Audio Controls
 #bindsym XF86AudioMute        exec --no-startup-id amixer set Master -q toggle
