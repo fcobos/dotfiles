@@ -38,7 +38,7 @@ alias xzgrep='xzgrep --color=auto'
 alias zegrep='zegrep --color=auto'
 alias zfgrep='zfgrep --color=auto'
 alias zgrep='zgrep --color=auto'
-alias glances='glances --disable-bg'
+alias glances='glances -1 --disable-bg'
 
 # emacs ediff
 function ediff() {
