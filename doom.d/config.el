@@ -32,7 +32,7 @@
                     '(company-tooltip ((t (:background "#d8d8d8"))))))
 
 ;; Set line numbers style
-(setq doom-line-numbers-style 'relative)
+(setq display-line-numbers-type 'relative)
 
 ;; setup default indentation
 (setq indent-tabs-mode 't)
