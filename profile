@@ -37,7 +37,10 @@ if [ -n "$DESKTOP_SESSION" ];then
 	export $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
 fi
 
-export QT_QPA_PLATFORMTHEME="qt5ct"
+# qt themeing under i3
+if [ "$XDG_CURRENT_DESKTOP" = "i3" ]; then
+       export QT_QPA_PLATFORMTHEME="qt5ct"
+fi
 
 # ruby path
 export PATH=$PATH:$HOME/.gem/ruby/2.5.0/bin
