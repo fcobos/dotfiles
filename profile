@@ -37,8 +37,8 @@ if [ -n "$DESKTOP_SESSION" ];then
 	export $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
 fi
 
-# qt themeing under i3
-if [ "$XDG_CURRENT_DESKTOP" = "i3" ]; then
+# qt themeing under i3 and gnome
+if [ "$XDG_CURRENT_DESKTOP" = "i3" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] ; then
        export QT_QPA_PLATFORMTHEME="qt5ct"
 fi
 
