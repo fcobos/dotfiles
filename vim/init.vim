@@ -97,7 +97,11 @@ endif
 " centered cursor
 ":nnoremap j jzz
 ":nnoremap k kzz
-if &t_Co == 256 || has("gui_running")
+if &t_Co >= 256 || has("gui_running")
+  " set Vim-specific sequences for RGB colors
+  " this should fix colors in truecolor terminals
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
 "colorscheme base16-tomorrow-night
