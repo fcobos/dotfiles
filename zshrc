@@ -21,7 +21,7 @@ unsetopt NO_HUP
 setopt INTERACTIVE_COMMENTS
 
 # ls colors
-eval $(dircolors)
+eval $(dircolors ~/.dircolors)
 
 # Autoload auto completion
 autoload -U compinit

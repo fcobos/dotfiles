@@ -20,7 +20,7 @@ export HISTIGNORE="history *:df *:exit:fg:bg:ll:ls:la:l.:l:cd:top:htop:glances:f
 #[ $SHELL = "/bin/bash" ]; shopt -s histappend
 
 # ls colors
-eval $(dircolors)
+eval $(dircolors ~/.dircolors)
 
 # case insensitive tab completion
 bind "set completion-ignore-case on"
