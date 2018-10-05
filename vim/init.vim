@@ -130,3 +130,8 @@ let g:netrw_home=$XDG_CACHE_HOME.'/vim'
 " mutt config
 au BufRead /tmp/mutt-* set tw=72
 
+" different cursor shapes depending on the mode.
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[0 q"
+
