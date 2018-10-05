@@ -39,6 +39,7 @@ alias zegrep='zegrep --color=auto'
 alias zfgrep='zfgrep --color=auto'
 alias zgrep='zgrep --color=auto'
 alias glances='glances -1 --disable-bg'
+alias emacsnw="TERM=alacritty-direct emacs -nw"
 
 # emacs ediff
 function ediff() {
