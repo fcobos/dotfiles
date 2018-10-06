@@ -22,14 +22,15 @@
                                 :family "IBM Plex Sans Condensed" :size 12))
 
 ;; Set the theme
-(setq doom-theme 'doom-one-light)
-(custom-set-faces '(solaire-hl-line-face ((t (:background "#d8d8d8"))))
-                  '(hl-line ((t (:background "#d8d8d8"))))
-                  '(show-paren-match
-                    ((t (:foreground "#ca1243" :background "gray")))))
-(unless (display-graphic-p)
-  (custom-set-faces '(region ((t (:background "#d8d8d8"))))
-                    '(company-tooltip ((t (:background "#d8d8d8"))))))
+(setq doom-theme 'doom-one)
+;;(setq doom-theme 'doom-one-light)
+;;(custom-set-faces '(solaire-hl-line-face ((t (:background "#d8d8d8"))))
+;;                  '(hl-line ((t (:background "#d8d8d8"))))
+;;                  '(show-paren-match
+;;                    ((t (:foreground "#ca1243" :background "gray"))))
+;;(unless (display-graphic-p)
+;;  (custom-set-faces '(region ((t (:background "#d8d8d8"))))
+;;                    '(company-tooltip ((t (:background "#d8d8d8")))))
 
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)

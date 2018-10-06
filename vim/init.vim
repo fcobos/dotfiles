@@ -104,9 +104,9 @@ if &t_Co >= 256 || has("gui_running")
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
-"colorscheme base16-tomorrow-night
-set background=light
-colorscheme base16-one-light
+
+set background=dark
+colorscheme base16-onedark
 
 " rainbow parentheses
 "autocmd VimEnter * RainbowParentheses
