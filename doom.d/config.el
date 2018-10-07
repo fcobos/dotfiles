@@ -79,9 +79,9 @@
 (add-hook 'markdown-mode-hook #'disable-fci-mode)
 (add-hook 'gfm-mode-hook #'disable-fci-mode)
 ;; set the ruler color
-(add-hook 'prog-mode-hook #'(lambda ()
-                              (setq +fci-rule-color-function "#d8d8d8")
-                              (setq fci-rule-color "#d8d8d8")))
+;;(add-hook 'prog-mode-hook #'(lambda ()
+;;                              (setq +fci-rule-color-function "#d8d8d8")
+;;                              (setq fci-rule-color "#d8d8d8"))
 
 ;; enable rainbow delimiters for programming modes
 (defun set-rainbow-max-face-count ()
