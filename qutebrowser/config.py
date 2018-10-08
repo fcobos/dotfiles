@@ -60,8 +60,8 @@ c.completion.height = '40%'
 c.editor.command = ['emacs', '{}']
 
 # Show a scrollbar.
-# Type: Bool
-c.scrolling.bar = False
+# Type: String
+c.scrolling.bar = "when-searching"
 
 # Enable smooth scrolling for web pages. Note smooth scrolling does not
 # work with the `:scroll-px` command.
@@ -459,5 +459,7 @@ c.url.start_pages = '~/.config/qutebrowser/start/start.html'
 # Disable reading from canvas
 c.content.canvas_reading = False
 # Don't expose lan address via webrtc
-c.content.webrtc_public_interfaces_only = True
+c.content.webrtc_ip_handling_policy = "default-public-interface-only"
 
+# Hide window decoration
+c.window.hide_decoration = True
