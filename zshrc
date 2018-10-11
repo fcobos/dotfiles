@@ -137,6 +137,13 @@ prompt spaceship
 ## Show number of background jobs
 #PROMPT='%(1j.[%j] .)%(?.%F{green}.%F{red})${prompt_pure_state[prompt]}%f '
 
+# Show pwd on alacritty title bar
+case ${TERM} in
+	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|alacritty*)
+		precmd () {printf "\033]0;%s@%s:%s\007" "${USER}" "${HOST%%.*}" "${PWD/#$HOME/~}"}
+                ;;
+esac
+
 # Aliases
 source $HOME/dotfiles/aliases
 
