@@ -6,6 +6,7 @@ set nocompatible " Use Vim defaults (much better!)
 set bs=indent,eol,start " allow backspacing over everything in insert mode
 set ai " always set autoindenting on
 set smartindent
+set clipboard^=unnamed,unnamedplus
 "set scrolloff=1
 "set sj=-50
 set display+=lastline
