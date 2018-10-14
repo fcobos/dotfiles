@@ -35,18 +35,18 @@
   default_position = 'top'
   default_height = 30
 
-[[layers]]
-  name = "lsp"
-  filetypes = [
-    "rust",
-    "javascript",
-    "python",
-    "c",
-    "cpp",
-    "go"
-  ]
-  [layers.override_cmd]
-    rust = ["rustup", "run", "nightly", "rls"]
+#[[layers]]
+#  name = "lsp"
+#  filetypes = [
+#    "rust",
+#    "javascript",
+#    "python",
+#    "c",
+#    "cpp",
+#    "go"
+#  ]
+#  [layers.override_cmd]
+#    rust = ["rustup", "run", "nightly", "rls"]
 
 
 [[layers]]
@@ -112,8 +112,8 @@
 [[layers]]
   name = "lang#xml"
 
-#[[layers]]
-#  name = "lang#go"
+[[layers]]
+  name = "lang#go"
 
 
 # Custom plugins
