@@ -8,32 +8,32 @@
 
 # All SpaceVim option below [option] section
 [options]
-    # set spacevim theme. by default colorscheme layer is not loaded,
-    # if you want to use more colorscheme, please load the colorscheme
-    # layer
-    colorscheme = "base16-onedark"
-    background = "dark"
-    # Disable guicolors in basic mode, many terminal do not support 24bit
-    # true colors
-    enable_guicolors = true
-    # Disable statusline separator, if you want to use other value, please
-    # install nerd fonts
-    statusline_separator = "arrow"
-    statusline_inactive_separator = "arrow"
-    buffer_index_type = 4
-    enable_tabline_filetype_icon = true
-    enable_statusline_display_mode = false
+  # set spacevim theme. by default colorscheme layer is not loaded,
+  # if you want to use more colorscheme, please load the colorscheme
+  # layer
+  colorscheme = "base16-onedark"
+  background = "dark"
+  # Disable guicolors in basic mode, many terminal do not support 24bit
+  # true colors
+  enable_guicolors = true
+  # Disable statusline separator, if you want to use other value, please
+  # install nerd fonts
+  statusline_separator = "arrow"
+  statusline_inactive_separator = "arrow"
+  buffer_index_type = 4
+  enable_tabline_filetype_icon = true
+  enable_statusline_display_mode = false
 
 # Enable autocomplete layer
 [[layers]]
-name = 'autocomplete'
-auto-completion-return-key-behavior = "complete"
-auto-completion-tab-key-behavior = "smart"
+  name = 'autocomplete'
+  auto-completion-return-key-behavior = "complete"
+  auto-completion-tab-key-behavior = "smart"
 
 [[layers]]
-name = 'shell'
-default_position = 'top'
-default_height = 30
+  name = 'shell'
+  default_position = 'top'
+  default_height = 30
 
 [[layers]]
   name = "lsp"
@@ -42,76 +42,82 @@ default_height = 30
     "javascript",
     "python",
     "c",
-    "cpp"
+    "cpp",
+    "go"
   ]
+  [layers.override_cmd]
+    rust = ["rustup", "run", "nightly", "rls"]
 
 
 [[layers]]
-name = "VersionControl"
+  name = "VersionControl"
 
 [[layers]]
-name = "cscope"
+  name = "cscope"
 
 [[layers]]
-name = "debug"
+  name = "debug"
 
 [[layers]]
-name = "git"
+  name = "git"
 
 [[layers]]
-name = "github"
+  name = "github"
 
 [[layers]]
-name = "incseaerch"
+  name = "incseaerch"
 
 [[layers]]
-name = "lang#c"
+  name = "lang#c"
 
 [[layers]]
-name = "lang#clojure"
+  name = "lang#clojure"
 
 [[layers]]
-name = "lang#html"
+  name = "lang#html"
 
 [[layers]]
-name = "lang#java"
+  name = "lang#java"
 
 [[layers]]
-name = "lang#javascript"
+  name = "lang#javascript"
 
 [[layers]]
-name =  "lang#json"
+  name =  "lang#json"
 
 [[layers]]
-name = "lang#lisp"
+  name = "lang#lisp"
 
 [[layers]]
-name =  "lang#lua"
+  name =  "lang#lua"
 
 [[layers]]
-name =  "lang#markdown"
+  name =  "lang#markdown"
 
 [[layers]]
-name = "lang#python"
+  name = "lang#python"
 
 [[layers]]
-name = "lang#sh"
+  name = "lang#sh"
 
 [[layers]]
-name = "lang#toml"
+  name = "lang#toml"
 
 [[layers]]
-name = "lang#typescript"
+  name = "lang#typescript"
 
 [[layers]]
-name = "lang#vim"
+  name = "lang#vim"
 
 [[layers]]
-name = "lang#xml"
+  name = "lang#xml"
+
+#[[layers]]
+#  name = "lang#go"
 
 
 # Custom plugins
 [[custom_plugins]]
-    name = "chriskempson/base16-vim"
-    merged = 0
+  name = "chriskempson/base16-vim"
+  merged = 0
 
