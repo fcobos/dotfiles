@@ -10,6 +10,10 @@
             --priority='SECURE192:+SECURE128:-VERS-ALL:+VERS-TLS1.2:%PROFILE_MEDIUM' %h"))
 (setq tls-checktrust t)
 
+;; Maximize frame at startup
+(setq frame-resize-pixelwise t)
+(toggle-frame-maximized)
+
 ;; Disable exit confirmation dialog
 (setq confirm-kill-emacs nil)
 ;; Don't ask if processes should be killed
