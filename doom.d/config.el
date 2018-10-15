@@ -23,14 +23,6 @@
 
 ;; Set the theme
 (setq doom-theme 'doom-one)
-;;(setq doom-theme 'doom-one-light)
-;;(custom-set-faces '(solaire-hl-line-face ((t (:background "#d8d8d8"))))
-;;                  '(hl-line ((t (:background "#d8d8d8"))))
-;;                  '(show-paren-match
-;;                    ((t (:foreground "#ca1243" :background "gray"))))
-;;(unless (display-graphic-p)
-;;  (custom-set-faces '(region ((t (:background "#d8d8d8"))))
-;;                    '(company-tooltip ((t (:background "#d8d8d8")))))
 
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
@@ -48,8 +40,9 @@
 (add-hook 'window-setup-hook #'disable-cursor-blink)
 
 ;; Disable whitespace-mode
-(remove-hook 'after-change-major-mode-hook
-             'doom|highlight-non-default-indentation)
+(defun disable-white-space-mode ()
+  (whitespace-mode 0))
+(add-hook 'after-change-major-mode-hook #'disable-white-space-mode)
 
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
@@ -78,10 +71,6 @@
   (fci-mode 0))
 (add-hook 'markdown-mode-hook #'disable-fci-mode)
 (add-hook 'gfm-mode-hook #'disable-fci-mode)
-;; set the ruler color
-;;(add-hook 'prog-mode-hook #'(lambda ()
-;;                              (setq +fci-rule-color-function "#d8d8d8")
-;;                              (setq fci-rule-color "#d8d8d8"))
 
 ;; enable rainbow delimiters for programming modes
 (defun set-rainbow-max-face-count ()
