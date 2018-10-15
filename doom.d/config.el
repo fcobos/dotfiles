@@ -1,15 +1,5 @@
 ;;; config.el -*- lexical-binding: t; -*-
 
-;; https://www.reddit.com/r/emacs/comments/8sykl1/emacs_tls_defaults_are_downright_dangerous/
-(setq gnutls-verify-error t)
-(setq gnutls-min-prime-bits 2048)
-(setq network-security-level 'high)
-(setq nsm-save-host-names t)
-(setq tls-program
-      '("gnutls-cli -p %p --dh-bits=2048 --ocsp --x509cafile=%t \
-            --priority='SECURE192:+SECURE128:-VERS-ALL:+VERS-TLS1.2:%PROFILE_MEDIUM' %h"))
-(setq tls-checktrust t)
-
 ;; Maximize frame at startup
 (setq frame-resize-pixelwise t)
 (toggle-frame-maximized)
