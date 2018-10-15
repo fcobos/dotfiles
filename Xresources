@@ -18,14 +18,14 @@ XTerm*VT100.geometry:   80x24
 XTerm*dynamicColors:    true
 XTerm*eightBitInput:    false
 XTerm.vt100*faceName:   Iosevka Term SS04
-XTerm*faceSize: 9
+XTerm*faceSize: 11
 XTerm*renderFont: true
 
 ! URxvt
 URxvt*.depth: 24
 URxvt.scrollBar: false
 URxvt.cursorBlink: false
-URxvt.font:     xft:Iosevka Term SS04:size=9, xft:FontAwesome:size=9, xft:Symbola:size=9, xft:Unifont:size=9
+URxvt.font:     xft:Iosevka Term SS04:size=11, xft:FontAwesome:size=11, xft:Symbola:size=11, xft:Unifont:size=11
 !URxvt.boldFont: xft:Iosevka:size=9:bold, xft:Symbola, xft:Unifont
 !URxvt.italicFont: xft:Iosevka:size=9:oblique, xft:Symbola, xft:Unifont
 URxvt.letterSpace: -1
@@ -35,7 +35,7 @@ URxvt.url-launcher: xdg-open
 
 ! xst
 st.termname: xterm-256color
-st.font: Iosevka Term SS04:size=9:antialias=true;
+st.font: Iosevka Term SS04:size=11:antialias=true;
 st.bold_font: 1
 st.borderpx: 0
 !st.cursorshape:       1

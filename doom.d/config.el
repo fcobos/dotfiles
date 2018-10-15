@@ -16,10 +16,10 @@
 (setq confirm-kill-processes nil)
 
 ;; Set the font
-(setq doom-font (font-spec :family "Iosevka SS04" :size 12)
+(setq doom-font (font-spec :family "Iosevka SS04" :size 14)
       doom-big-font (font-spec :family "Iosevka SS04" :size 24)
       doom-variable-pitch-font (font-spec
-                                :family "IBM Plex Sans Condensed" :size 12))
+                                :family "Cantarell" :size 14))
 
 ;; Set the theme
 (setq doom-theme 'doom-one)
