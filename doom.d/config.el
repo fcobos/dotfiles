@@ -66,12 +66,6 @@
   (setq posframe-mouse-banish nil))
 (add-hook 'flycheck-mode-hook #'disable-posframe-mouse-banish)
 
-;; disable fci-mode for markdown modes
-(defun disable-fci-mode ()
-  (fci-mode 0))
-(add-hook 'markdown-mode-hook #'disable-fci-mode)
-(add-hook 'gfm-mode-hook #'disable-fci-mode)
-
 ;; enable rainbow delimiters for programming modes
 (defun set-rainbow-max-face-count ()
   (setq rainbow-delimiters-max-face-count 4))
