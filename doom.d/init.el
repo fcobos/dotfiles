@@ -117,9 +117,9 @@
        php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        purescript        ; javascript, but functional
-      (python            ; beautiful is better than ugly
-       +pyenv
-       +pyvenv)
+       (python            ; beautiful is better than ugly
+        +pyenv
+        +pyvenv)
        qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        rest              ; Emacs as a REST client
@@ -128,8 +128,9 @@
        ;;scala             ; java, but good
        (sh +fish)        ; she sells (ba|z)sh shells on the C xor
        ;;solidity          ; do you need a blockchain? No.
-       ;;swift             ; who asked for emoji variables?
+       ;;swtft             ; who asked for emoji variables?
        web               ; the tubes
+       vala              ; GObjective-C
 
        ;; Applications are complex and opinionated modules that transform Emacs
        ;; toward a specific purpose. They may have additional dependencies and
