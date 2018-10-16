@@ -2,7 +2,7 @@
 
 ;; Maximize frame at startup
 (setq frame-resize-pixelwise t)
-(toggle-frame-maximized)
+;; (toggle-frame-maximized)
 
 ;; Disable exit confirmation dialog
 (setq confirm-kill-emacs nil)
