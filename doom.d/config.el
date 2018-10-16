@@ -87,4 +87,7 @@
 ;; modeline file name
 (setq +modeline-buffer-path-function #'+modeline-file-name)
 
+;; use bash for terminals
+(setq multi-term-program "/bin/bash")
+
 ;;; config.el ends here
