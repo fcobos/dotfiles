@@ -15,10 +15,12 @@
       doom-variable-pitch-font (font-spec :family "Cantarell" :size 14))
 
 ;; Set the theme
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-tomorrow-night)
 
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
+
+
 
 ;; setup default indentation
 (setq indent-tabs-mode 't)
