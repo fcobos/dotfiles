@@ -20,8 +20,6 @@
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
 
-
-
 ;; setup default indentation
 (setq indent-tabs-mode 't)
 (setq-default tab-width 8)
