@@ -118,8 +118,9 @@ bindkey '\C-x\C-e' edit-command-line
 bindkey "^[m" copy-prev-shell-word
 
 fpath=( "$HOME/dotfiles/zsh-themes" $fpath )
-autoload -U promptinit; promptinit
 source ~/dotfiles/zsh-themes/slimline/slimline.zsh
+
+#autoload -U promptinit; promptinit
 #SPACESHIP_CHAR_SYMBOL="❯ "
 #if [ "$TERM" = "linux" ]; then
 #	SPACESHIP_CHAR_SYMBOL="$ "
@@ -134,8 +135,10 @@ source ~/dotfiles/zsh-themes/slimline/slimline.zsh
 #if [ "$TERM" = "linux" ]; then
 #	PURE_PROMPT_SYMBOL="$"
 #fi
+
 #PURE_GIT_UP_ARROW="↑"
 #PURE_GIT_DOWN_ARROW="↓"
+#autoload -U promptinit; promptinit
 #prompt pure
 ## Show number of background jobs
 #PROMPT='%(1j.[%j] .)%(?.%F{green}.%F{red})${prompt_pure_state[prompt]}%f '
