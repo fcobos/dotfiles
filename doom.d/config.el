@@ -53,6 +53,7 @@
 (add-to-list 'auto-mode-alist '("PKGBUILD" . shell-script-mode))
 (add-to-list 'auto-mode-alist '("Pipfile" . toml-mode))
 (add-to-list 'auto-mode-alist '("Pipfile.lock" . json-mode))
+(add-to-list 'auto-mode-alist '("\\patch$" . diff-mode))
 
 ;; make postframe stop moving my mouse pointer, kthxbai
 (defun disable-posframe-mouse-banish ()
