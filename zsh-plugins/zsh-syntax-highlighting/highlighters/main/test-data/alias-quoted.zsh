@@ -1,5 +1,6 @@
+#!/usr/bin/env zsh
 # -------------------------------------------------------------------------------------------------
-# Copyright (c) 2015 zsh-syntax-highlighting contributors
+# Copyright (c) YYYY zsh-syntax-highlighting contributors
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without modification, are permitted
@@ -27,11 +28,12 @@
 # vim: ft=zsh sw=2 ts=2 et
 # -------------------------------------------------------------------------------------------------
 
-BUFFER='(A=1)'
+alias a=: ls='ls -l'
+BUFFER='"a" foo; \ls'
 
 expected_region_highlight=(
-  "1 1 reserved-word" # (
-  "2 4 assign" # A=1
-  "4 4 default" # 1
-  "5 5 reserved-word" # )
+  '1 3 unknown-token' # "a"
+  '5 7 default' # foo
+  '8 8 commandseparator' # ;
+  '10 12 command "issue #544' # \ls
 )

@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------------------------------
-# Copyright (c) 2015 zsh-syntax-highlighting contributors
+# Copyright (c) 2016 zsh-syntax-highlighting contributors
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without modification, are permitted
@@ -27,11 +27,15 @@
 # vim: ft=zsh sw=2 ts=2 et
 # -------------------------------------------------------------------------------------------------
 
-BUFFER='(A=1)'
+BUFFER='nice -n10 ls; nice -n 10 ls'
 
 expected_region_highlight=(
-  "1 1 reserved-word" # (
-  "2 4 assign" # A=1
-  "4 4 default" # 1
-  "5 5 reserved-word" # )
+  "1 4 precommand" # nice
+  "6 9 single-hyphen-option" # -n10
+  "11 12 command" # ls
+  "13 13 commandseparator" # ;
+  "15 18 precommand" # nice
+  "20 21 single-hyphen-option" # -n
+  "23 24 default" # 10
+  "26 27 command" # ls
 )

@@ -1,5 +1,6 @@
+#!/usr/bin/env zsh
 # -------------------------------------------------------------------------------------------------
-# Copyright (c) 2015 zsh-syntax-highlighting contributors
+# Copyright (c) 2018 zsh-syntax-highlighting contributors
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without modification, are permitted
@@ -27,11 +28,16 @@
 # vim: ft=zsh sw=2 ts=2 et
 # -------------------------------------------------------------------------------------------------
 
-BUFFER='(A=1)'
+sudo(){}
+
+BUFFER='sudo -ux ls; sudo -x ls'
 
 expected_region_highlight=(
-  "1 1 reserved-word" # (
-  "2 4 assign" # A=1
-  "4 4 default" # 1
-  "5 5 reserved-word" # )
+  '1 4 precommand' # sudo
+  '6 8 single-hyphen-option' # -ux
+  '10 11 command' # ls
+  '12 12 commandseparator' # ;
+  '14 17 precommand' # sudo
+  '19 20 unknown-token' # -x
+  '22 23 command' # ls
 )
