@@ -118,6 +118,7 @@ bindkey '\C-x\C-e' edit-command-line
 bindkey "^[m" copy-prev-shell-word
 
 fpath=( "$HOME/dotfiles/zsh-themes" $fpath )
+
 source ~/dotfiles/zsh-themes/slimline/slimline.zsh
 
 #autoload -U promptinit; promptinit
