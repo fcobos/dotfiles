@@ -119,17 +119,18 @@ bindkey "^[m" copy-prev-shell-word
 
 fpath=( "$HOME/dotfiles/zsh-themes" $fpath )
 autoload -U promptinit; promptinit
-SPACESHIP_CHAR_SYMBOL="❯ "
-if [ "$TERM" = "linux" ]; then
-	SPACESHIP_CHAR_SYMBOL="$ "
-fi
-SPACESHIP_DIR_TRUNC=0
-SPACESHIP_EXEC_TIME_ELAPSED=5
-SPACESHIP_BATTERY_SHOW=false
-#SPACESHIP_BATTERY_THRESHOLD=20
-SPACESHIP_GIT_STATUS_AHEAD="↑"
-SPACESHIP_GIT_STATUS_BEHIND="↓"
-prompt spaceship
+source ~/dotfiles/zsh-themes/slimline/slimline.zsh
+#SPACESHIP_CHAR_SYMBOL="❯ "
+#if [ "$TERM" = "linux" ]; then
+#	SPACESHIP_CHAR_SYMBOL="$ "
+#fi
+#SPACESHIP_DIR_TRUNC=0
+#SPACESHIP_EXEC_TIME_ELAPSED=5
+#SPACESHIP_BATTERY_SHOW=false
+##SPACESHIP_BATTERY_THRESHOLD=20
+#SPACESHIP_GIT_STATUS_AHEAD="↑"
+#SPACESHIP_GIT_STATUS_BEHIND="↓"
+#prompt spaceship
 #if [ "$TERM" = "linux" ]; then
 #	PURE_PROMPT_SYMBOL="$"
 #fi
@@ -139,13 +140,13 @@ prompt spaceship
 ## Show number of background jobs
 #PROMPT='%(1j.[%j] .)%(?.%F{green}.%F{red})${prompt_pure_state[prompt]}%f '
 
-# Show pwd on alacritty title bar (not needed with pure prompt)
-case ${TERM} in
-	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|alacritty*)
-		precmd () {printf "\033]0;%s@%s:%s\007" "${USER}" "${HOST%%.*}" "${PWD/#$HOME/~}"}
-		preexec () {printf "\033]0;%s ... %s@%s\a" "${1%% 2%% *}" "${USER}" "${HOST%%.*}"}
-                ;;
-esac
+## Show pwd on alacritty title bar (not needed with pure prompt)
+#case ${TERM} in
+#	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|alacritty*)
+#		precmd () {printf "\033]0;%s@%s:%s\007" "${USER}" "${HOST%%.*}" "${PWD/#$HOME/~}"}
+#		preexec () {printf "\033]0;%s ... %s@%s\a" "${1%% 2%% *}" "${USER}" "${HOST%%.*}"}
+#                ;;
+#esac
 
 # Aliases
 source $HOME/dotfiles/aliases

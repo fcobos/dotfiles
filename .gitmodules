@@ -4,3 +4,6 @@
 [submodule "zsh-themes/pure"]
 	path = zsh-themes/pure
 	url = https://github.com/sindresorhus/pure.git
+[submodule "zsh-themes/slimline"]
+	path = zsh-themes/slimline
+	url = https://github.com/mgee/slimline.git
