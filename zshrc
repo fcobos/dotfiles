@@ -118,29 +118,22 @@ bindkey '\C-x\C-e' edit-command-line
 bindkey "^[m" copy-prev-shell-word
 
 fpath=( "$HOME/dotfiles/zsh-themes" $fpath )
+autoload -U promptinit; promptinit
+SPACESHIP_CHAR_SYMBOL="❯ "
+if [ "$TERM" = "linux" ]; then
+	SPACESHIP_CHAR_SYMBOL="$ "
+fi
+SPACESHIP_DIR_TRUNC=0
+SPACESHIP_EXEC_TIME_ELAPSED=5
+SPACESHIP_BATTERY_SHOW=false
+#SPACESHIP_BATTERY_THRESHOLD=20
+SPACESHIP_GIT_STATUS_AHEAD="↑"
+SPACESHIP_GIT_STATUS_BEHIND="↓"
+prompt spaceship
 
-source ~/dotfiles/zsh-themes/slimline/slimline.zsh
-export SLIMLINE_SYMBOL_READY_FORMAT="
-%F{white}∙%f"
-SLIMLINE_SYMBOL_WORKING_FORMAT="
-%F{red}∙%f"
-
-#autoload -U promptinit; promptinit
-#SPACESHIP_CHAR_SYMBOL="❯ "
-#if [ "$TERM" = "linux" ]; then
-#	SPACESHIP_CHAR_SYMBOL="$ "
-#fi
-#SPACESHIP_DIR_TRUNC=0
-#SPACESHIP_EXEC_TIME_ELAPSED=5
-#SPACESHIP_BATTERY_SHOW=false
-##SPACESHIP_BATTERY_THRESHOLD=20
-#SPACESHIP_GIT_STATUS_AHEAD="↑"
-#SPACESHIP_GIT_STATUS_BEHIND="↓"
-#prompt spaceship
 #if [ "$TERM" = "linux" ]; then
 #	PURE_PROMPT_SYMBOL="$"
 #fi
-
 #PURE_GIT_UP_ARROW="↑"
 #PURE_GIT_DOWN_ARROW="↓"
 #autoload -U promptinit; promptinit
