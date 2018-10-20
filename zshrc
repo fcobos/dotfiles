@@ -120,6 +120,10 @@ bindkey "^[m" copy-prev-shell-word
 fpath=( "$HOME/dotfiles/zsh-themes" $fpath )
 
 source ~/dotfiles/zsh-themes/slimline/slimline.zsh
+export SLIMLINE_SYMBOL_READY_FORMAT="
+%F{white}∙%f"
+SLIMLINE_SYMBOL_WORKING_FORMAT="
+%F{red}∙%f"
 
 #autoload -U promptinit; promptinit
 #SPACESHIP_CHAR_SYMBOL="❯ "
