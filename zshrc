@@ -149,11 +149,14 @@ case ${TERM} in
                 ;;
 esac
 
+# Load zsh-autosuggestions
+export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
+source ~/dotfiles/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^ ' autosuggest-accept
+
 # Aliases
 source $HOME/dotfiles/aliases
-
-# termite needs this
-source /etc/profile.d/vte.sh
 
 # load autopair plugin
 source ~/dotfiles/zsh-plugins/zsh-autopair/autopair.zsh
