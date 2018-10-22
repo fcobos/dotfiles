@@ -158,6 +158,7 @@ bindkey '^ ' autosuggest-accept
 source ~/dotfiles/zsh-plugins/zsh-autopair/autopair.zsh
 # load syntax highlighting plugin
 source ~/dotfiles/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+typeset -ga ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # load history substring search plugin
 source ~/dotfiles/zsh-plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
