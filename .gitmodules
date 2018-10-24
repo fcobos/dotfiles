@@ -16,3 +16,6 @@
 [submodule "zsh-plugins/zsh-autopair"]
 	path = zsh-plugins/zsh-autopair
 	url = https://github.com/hlissner/zsh-autopair.git
+[submodule "zsh-themes/geometry"]
+	path = zsh-themes/geometry
+	url = https://github.com/geometry-zsh/geometry

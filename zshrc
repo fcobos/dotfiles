@@ -117,8 +117,9 @@ bindkey '\C-x\C-e' edit-command-line
 # file rename magick
 bindkey "^[m" copy-prev-shell-word
 
-fpath=( "$HOME/dotfiles/zsh-themes" $fpath )
-autoload -U promptinit; promptinit
+#fpath=( "$HOME/dotfiles/zsh-themes" $fpath )
+#autoload -U promptinit; promptinit
+
 #SPACESHIP_CHAR_SYMBOL="❯ "
 #if [ "$TERM" = "linux" ]; then
 #	SPACESHIP_CHAR_SYMBOL="$ "
@@ -131,15 +132,15 @@ autoload -U promptinit; promptinit
 #SPACESHIP_GIT_STATUS_BEHIND="↓"
 #prompt spaceship
 
-if [ "$TERM" = "linux" ]; then
-	PURE_PROMPT_SYMBOL=">"
-fi
-PURE_GIT_UP_ARROW="↑"
-PURE_GIT_DOWN_ARROW="↓"
-autoload -U promptinit; promptinit
-prompt pure
-# Show number of background jobs
-PROMPT='%(1j.[%j] .)%(?.%F{green}.%F{red})${prompt_pure_state[prompt]}%f '
+#if [ "$TERM" = "linux" ]; then
+#	PURE_PROMPT_SYMBOL=">"
+#fi
+#PURE_GIT_UP_ARROW="↑"
+#PURE_GIT_DOWN_ARROW="↓"
+#autoload -U promptinit; promptinit
+#prompt pure
+## Show number of background jobs
+#PROMPT='%(1j.[%j] .)%(?.%F{green}.%F{red})${prompt_pure_state[prompt]}%f '
 
 ## Show pwd on alacritty title bar (not needed with pure prompt)
 #case ${TERM} in
@@ -148,6 +149,13 @@ PROMPT='%(1j.[%j] .)%(?.%F{green}.%F{red})${prompt_pure_state[prompt]}%f '
 #		preexec () {printf "\033]0;%s ... %s@%s\a" "${1%% 2%% *}" "${USER}" "${HOST%%.*}"}
 #                ;;
 #esac
+
+# Load geometry prompt
+GEOMETRY_PROMPT_PREFIX=$'\n'
+GEOMETRY_PROMPT_SUFFIX="\n ❯"
+GEOMETRY_COLOR_EXIT_VALUE="red"
+GEOMETRY_COLOR_ROOT="orange"
+source ~/dotfiles/zsh-themes/geometry/geometry.zsh
 
 # Load zsh-autosuggestions
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
