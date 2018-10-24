@@ -122,7 +122,7 @@ autoload -U promptinit; promptinit
 
 SPACESHIP_CHAR_SYMBOL="❯ "
 if [ "$TERM" = "linux" ]; then
-	SPACESHIP_CHAR_SYMBOL="$ "
+	SPACESHIP_CHAR_SYMBOL="> "
 fi
 SPACESHIP_DIR_TRUNC=0
 SPACESHIP_EXEC_TIME_ELAPSED=5
