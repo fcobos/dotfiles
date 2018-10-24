@@ -86,7 +86,7 @@
 (add-hook 'eshell-output-filter-functions #'eshell-truncate-buffer)
 
 ;; modeline file name
-(setq +modeline-buffer-path-function #'+modeline-file-name)
+;;(setq +modeline-buffer-path-function #'+modeline-file-name)
 
 ;; use bash for terminals
 (setq multi-term-program "/bin/bash")
