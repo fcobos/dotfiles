@@ -27,7 +27,7 @@
 [[layers]]
   name = "colorscheme"
   [options]
-    colorscheme = "base16-onedark"
+    colorscheme = "base16-default-dark"
     colorscheme_bg = "dark"
 
 # Enable autocomplete layer

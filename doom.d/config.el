@@ -32,7 +32,7 @@
       doom-variable-pitch-font (font-spec :family "Cantarell" :size 14))
 
 ;; Set the theme
-(setq doom-theme 'doom-tomorrow-night)
+(setq doom-theme 'base16-default-dark)
 ;; disable solaire-mode
 (solaire-mode 0)
 (add-hook 'after-change-major-mode-hook (lambda ()
@@ -49,9 +49,9 @@
 (c-set-offset 'case-label '+)
 
 ;; Disable cursor blink
-(defun disable-cursor-blink ()
-  (blink-cursor-mode 0))
-(add-hook 'window-setup-hook #'disable-cursor-blink)
+;;(defun disable-cursor-blink ()
+;;  (blink-cursor-mode -1))
+;;(add-hook 'window-setup-hook #'disable-cursor-blink)
 
 ;; Disable whitespace-mode
 (defun disable-white-space-mode ()

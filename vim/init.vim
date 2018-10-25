@@ -116,7 +116,7 @@ if &t_Co >= 256 || has("gui_running")
 endif
 
 set background=dark
-colorscheme base16-tomorrow-night
+colorscheme base16-default-dark
 
 " rainbow parentheses
 "autocmd VimEnter * RainbowParentheses
