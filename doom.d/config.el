@@ -1,5 +1,22 @@
 ;;; config.el -*- lexical-binding: t; -*-
 
+;; set dark windows decorations
+(defun get-frame-name (&optional frame)
+  "Return the string that names FRAME (a frame).  Default is selected frame."
+  (unless frame (setq frame  (selected-frame)))
+  (if (framep frame)
+      (cdr (assq 'name (frame-parameters frame)))
+    (error "Function `get-frame-name': Argument not a frame: `%s'" frame)))
+
+(defun set-selected-frame-dark ()
+  (interactive)
+  (let ((frame-name (get-frame-name (selected-frame))))
+    (call-process-shell-command (concat "xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT \"dark\" -name \""
+                                        frame-name
+                                        "\""))))
+(if (window-system)
+  (set-selected-frame-dark))
+
 ;; Maximize frame at startup
 (setq frame-resize-pixelwise t)
 ;; (toggle-frame-maximized)
