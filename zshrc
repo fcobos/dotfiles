@@ -136,26 +136,17 @@ bindkey -M emacs '^N' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
-fpath=( "$HOME/dotfiles/zsh-themes" $fpath )
-autoload -U promptinit; promptinit
-# Load pure prompt
-if [ "$TERM" = "linux" ]; then
-	PURE_PROMPT_SYMBOL=">"
-fi
-PURE_GIT_UP_ARROW="↑"
-PURE_GIT_DOWN_ARROW="↓"
-prompt pure
-# Show number of background jobs
-PROMPT='%(1j.[%j] .)%(?.%F{green}.%F{red})${prompt_pure_state[prompt]}%f '
+# Load powerlevel9k
+source ~/dotfiles/p9k-config
+source ~/dotfiles/zsh-themes/powerlevel9k/powerlevel9k.zsh-theme
 
-## Show pwd on alacritty title bar (not needed with pure prompt)
-#case ${TERM} in
-#	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|alacritty*)
-#		precmd () {printf "\033]0;%s@%s:%s\007" "${USER}" "${HOST%%.*}" "${PWD/#$HOME/~}"}
-#		preexec () {printf "\033]0;%s ... %s@%s\a" "${1%% 2%% *}" "${USER}" "${HOST%%.*}"}
-#                ;;
-#esac
-
+# Show pwd on alacritty title bar (not needed with pure prompt)
+case ${TERM} in
+	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|alacritty*)
+		precmd () {printf "\033]0;%s@%s:%s\007" "${USER}" "${HOST%%.*}" "${PWD/#$HOME/~}"}
+		preexec () {printf "\033]0;%s ... %s@%s\a" "${1%% 2%% *}" "${USER}" "${HOST%%.*}"}
+                ;;
+esac
 
 # Aliases
 source $HOME/dotfiles/aliases
