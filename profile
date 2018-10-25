@@ -17,7 +17,7 @@ export MOZ_GLX_IGNORE_BLACKLIST=1
 # fix for android emulator's old libstdc++
 export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 
-if  [[ $TILIX_ID ]]; then
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 	source /etc/profile.d/vte.sh
 fi
 
