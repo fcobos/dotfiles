@@ -117,6 +117,25 @@ bindkey '\C-x\C-e' edit-command-line
 # file rename magick
 bindkey "^[m" copy-prev-shell-word
 
+# Load zsh-autosuggestions
+export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
+source ~/dotfiles/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^ ' autosuggest-accept
+# load autopair plugin
+source ~/dotfiles/zsh-plugins/zsh-autopair/autopair.zsh
+# load syntax highlighting plugin
+source ~/dotfiles/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+typeset -ga ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+# load history substring search plugin
+source ~/dotfiles/zsh-plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+
 fpath=( "$HOME/dotfiles/zsh-themes" $fpath )
 autoload -U promptinit; promptinit
 # Load pure prompt
@@ -137,24 +156,6 @@ PROMPT='%(1j.[%j] .)%(?.%F{green}.%F{red})${prompt_pure_state[prompt]}%f '
 #                ;;
 #esac
 
-# Load zsh-autosuggestions
-export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-export ZSH_AUTOSUGGEST_USE_ASYNC=1
-source ~/dotfiles/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-bindkey '^ ' autosuggest-accept
-# load autopair plugin
-source ~/dotfiles/zsh-plugins/zsh-autopair/autopair.zsh
-# load syntax highlighting plugin
-source ~/dotfiles/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-typeset -ga ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-# load history substring search plugin
-source ~/dotfiles/zsh-plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-bindkey -M emacs '^P' history-substring-search-up
-bindkey -M emacs '^N' history-substring-search-down
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
 
 # Aliases
 source $HOME/dotfiles/aliases
