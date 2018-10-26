@@ -29,7 +29,7 @@ set highlight-active-color      "#61afef"
 set completion-bg               "#353b45"
 set completion-fg               "#61afef"
 
-set completion-highlight-fg     "#c8ccd4"
+set completion-highlight-fg     "#181818"
 set completion-highlight-bg     "#61afef"
 
 set recolor-lightcolor          "#282c34"
