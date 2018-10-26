@@ -137,8 +137,12 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 # Load powerlevel9k
-source ~/dotfiles/p9k-config
-source ~/dotfiles/zsh-themes/powerlevel9k/powerlevel9k.zsh-theme
+if [ "$TERM" != "linux" ]; then
+	source ~/dotfiles/p9k-config
+	source ~/dotfiles/zsh-themes/powerlevel9k/powerlevel9k.zsh-theme
+else
+	PS1="%n@%m %~ \$ "
+fi
 
 # Show pwd on alacritty title bar (not needed with pure prompt)
 case ${TERM} in
