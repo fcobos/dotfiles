@@ -39,7 +39,12 @@ source /etc/profile.d/vte.sh
 
 # pipenv config
 if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
+	eval "$(pyenv init -)"
+fi
+
+# https://gnunn1.github.io/tilix-web/manual/vteconfig/
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+	source /etc/profile.d/vte.sh
 fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!

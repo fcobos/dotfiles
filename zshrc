@@ -145,7 +145,7 @@ case ${TERM} in
 	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|alacritty*)
 		precmd () {printf "\033]0;%s@%s:%s\007" "${USER}" "${HOST%%.*}" "${PWD/#$HOME/~}"}
 		preexec () {printf "\033]0;%s ... %s@%s\a" "${1%% 2%% *}" "${USER}" "${HOST%%.*}"}
-                ;;
+		;;
 esac
 
 # Aliases
@@ -154,6 +154,11 @@ source $HOME/dotfiles/aliases
 # pipenv config
 if command -v pyenv 1>/dev/null 2>&1; then
 	eval "$(pyenv init -)"
+fi
+
+# https://gnunn1.github.io/tilix-web/manual/vteconfig/
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+	source /etc/profile.d/vte.sh
 fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
