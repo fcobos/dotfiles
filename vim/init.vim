@@ -125,8 +125,8 @@ colorscheme base16-onedark
 " List of colors that you do not want. ANSI code or #RRGGBB
 "let g:rainbow#blacklist = [7, 8, 15, 18, 19, 20, 21, '#3e4451']
 
-" this is needed for termite
-"autocmd VimEnter * redrawstatus!
+" this is needed for termite and tilix
+autocmd VimEnter * redrawstatus!
 
 " hightlight current line
 set cursorline
