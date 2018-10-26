@@ -3,7 +3,7 @@ configuration {
 	width: 35;
 /*	lines: 15;*/
 /*	columns: 1;*/
-	font: "Cantarell 11";
+	font: "Iosevka SS04 11";
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/
@@ -48,7 +48,7 @@ configuration {
 /*	window-format: "{w}    {i}{c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-	theme: "base16-default-dark";
+	theme: "onedark";
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/

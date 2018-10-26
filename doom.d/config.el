@@ -32,11 +32,11 @@
       doom-variable-pitch-font (font-spec :family "Cantarell" :size 14))
 
 ;; Set the theme
-(setq doom-theme 'base16-default-dark)
+(setq doom-theme 'doom-one)
 ;; disable solaire-mode
-(solaire-mode 0)
-(add-hook 'after-change-major-mode-hook (lambda ()
-                                          (interactive) (solaire-mode 0)))
+;;(solaire-mode 0)
+;;(add-hook 'after-change-major-mode-hook (lambda ()
+;;                                          (interactive) (solaire-mode 0))
 
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
