@@ -32,7 +32,7 @@
       doom-variable-pitch-font (font-spec :family "Cantarell" :size 14))
 
 ;; Set the theme
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-nord)
 ;; disable solaire-mode
 ;;(solaire-mode 0)
 ;;(add-hook 'after-change-major-mode-hook (lambda ()
