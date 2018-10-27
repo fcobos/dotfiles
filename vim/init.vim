@@ -116,6 +116,7 @@ if &t_Co >= 256 || has("gui_running")
 endif
 
 set background=dark
+let g:nord_comment_brightness = 15
 colorscheme nord
 
 " rainbow parentheses
