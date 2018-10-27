@@ -1,5 +1,5 @@
 DEFAULT_USER=$USER
-#P9K_MODE='awesome-fontconfig'
+P9K_MODE='awesome-fontconfig'
 P9K_LEFT_PROMPT_ELEMENTS=(context dir vcs virtualenv anaconda pyenv aws docker_machine kubecontext root_indicator background_jobs status)
 P9K_DISABLE_RPROMPT=true
 P9K_PROMPT_ON_NEWLINE=true
