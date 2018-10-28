@@ -71,7 +71,6 @@
 (add-to-list 'auto-mode-alist '("\\vimrc$" . vimrc-mode))
 (add-to-list 'auto-mode-alist '("\\zshrc$" . shell-script-mode))
 (add-to-list 'auto-mode-alist '("\\bashrc$" . shell-script-mode))
-(add-to-list 'auto-mode-alist '("PKGBUILD" . shell-script-mode))
 (add-to-list 'auto-mode-alist '("Pipfile" . toml-mode))
 (add-to-list 'auto-mode-alist '("Pipfile.lock" . json-mode))
 (add-to-list 'auto-mode-alist '("\\patch$" . diff-mode))
