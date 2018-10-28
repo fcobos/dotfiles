@@ -14,8 +14,7 @@
     (call-process-shell-command (concat "xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT \"dark\" -name \""
                                         frame-name
                                         "\""))))
-(if (window-system)
-  (set-selected-frame-dark))
+(if (window-system) (set-selected-frame-dark))
 
 ;; Maximize frame at startup
 (setq frame-resize-pixelwise t)
@@ -29,7 +28,7 @@
 ;; Set the font
 (setq doom-font (font-spec :family "Iosevka SS04" :size 14)
       doom-big-font (font-spec :family "Iosevka SS04" :size 24)
-      doom-variable-pitch-font (font-spec :family "Cantarell" :size 14))
+      doom-variable-pitch-font (font-spec :family "DejaVu Sans" :size 14))
 
 ;; Set the theme
 (setq doom-theme 'doom-nord)
