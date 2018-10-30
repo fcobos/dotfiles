@@ -34,7 +34,6 @@ indent_size = 4
 indent_style = space
 indent_size = 4
 
-
 [{Makefile,gitconfig}]
 indent_style = tab
 
@@ -56,4 +55,6 @@ insert_final_newline = false
 indent_style = space
 indent_size = 2
 
-
+[*.java]
+indent_style = space
+indent_size = 4
