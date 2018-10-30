@@ -40,13 +40,6 @@
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
 
-;; setup default indentation
-(setq indent-tabs-mode 't)
-(setq-default tab-width 8)
-(setq default-tab-width 8)
-(setq c-basic-offset 8)
-(c-set-offset 'case-label '+)
-
 ;; Disable cursor blink
 ;;(defun disable-cursor-blink ()
 ;;  (blink-cursor-mode -1))
@@ -109,5 +102,15 @@
 
 ;; use bash for terminals
 (setq multi-term-program "/bin/bash")
+
+;; setup default indentation
+(setq indent-tabs-mode 't)
+(setq-default tab-width 8)
+(setq default-tab-width 8)
+(setq c-basic-offset 8)
+(c-set-offset 'case-label '+)
+
+;; autodetect indentation settings
+(add-hook 'prog-mode-hook (lambda () (interactive) (dtrt-indent-mode 1)))
 
 ;;; config.el ends here
