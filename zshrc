@@ -122,11 +122,14 @@ export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
 source ~/dotfiles/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-accept
+
 # load autopair plugin
 source ~/dotfiles/zsh-plugins/zsh-autopair/autopair.zsh
+
 # load syntax highlighting plugin
 source ~/dotfiles/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 typeset -ga ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
 # load history substring search plugin
 source ~/dotfiles/zsh-plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
