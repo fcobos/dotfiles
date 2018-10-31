@@ -1,20 +1,20 @@
 ;;; config.el -*- lexical-binding: t; -*-
 
 ;; set dark windows decorations
-(defun get-frame-name (&optional frame)
-  "Return the string that names FRAME (a frame).  Default is selected frame."
-  (unless frame (setq frame  (selected-frame)))
-  (if (framep frame)
-      (cdr (assq 'name (frame-parameters frame)))
-    (error "Function `get-frame-name': Argument not a frame: `%s'" frame)))
-
-(defun set-selected-frame-dark ()
-  (interactive)
-  (let ((frame-name (get-frame-name (selected-frame))))
-    (call-process-shell-command (concat "xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT \"dark\" -name \""
-                                        frame-name
-                                        "\""))))
-(if (window-system) (set-selected-frame-dark))
+;;(defun get-frame-name (&optional frame)
+;;  "Return the string that names FRAME (a frame).  Default is selected frame."
+;;  (unless frame (setq frame  (selected-frame)))
+;;  (if (framep frame)
+;;      (cdr (assq 'name (frame-parameters frame)))
+;;    (error "Function `get-frame-name': Argument not a frame: `%s'" frame)
+;;
+;;(defun set-selected-frame-dark ()
+;;  (interactive)
+;;  (let ((frame-name (get-frame-name (selected-frame))))
+;;    (call-process-shell-command (concat "xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT \"dark\" -name \""
+;;                                        frame-name
+;;                                        "\""
+;;(if (window-system) (set-selected-frame-dark))
 
 ;; Maximize frame at startup
 (setq frame-resize-pixelwise t)
@@ -31,11 +31,11 @@
       doom-variable-pitch-font (font-spec :family "DejaVu Sans" :size 14))
 
 ;; Set the theme
-(setq doom-theme 'doom-nord)
+(setq doom-theme 'doom-one-light)
 ;; disable solaire-mode
-(solaire-mode 0)
-(add-hook 'after-change-major-mode-hook (lambda ()
-                                          (interactive) (solaire-mode 0)))
+;;(solaire-mode 0)
+;;(add-hook 'after-change-major-mode-hook (lambda ()
+;;                                          (interactive) (solaire-mode 0))
 
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
