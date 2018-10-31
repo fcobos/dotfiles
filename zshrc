@@ -149,7 +149,7 @@ fi
 
 # Show pwd on alacritty title bar (not needed with pure prompt)
 case ${TERM} in
-	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|alacritty*)
+	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|alacritty*|tmux*|screen*)
 		precmd () {printf "\033]0;%s@%s:%s\007" "${USER}" "${HOST%%.*}" "${PWD/#$HOME/~}"}
 		preexec () {printf "\033]0;%s ... %s@%s\a" "${1%% 2%% *}" "${USER}" "${HOST%%.*}"}
 		;;
