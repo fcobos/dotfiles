@@ -113,26 +113,4 @@
 ;; autodetect indentation settings
 (add-hook 'prog-mode-hook (lambda () (interactive) (dtrt-indent-mode 1)))
 
-;; show evil state in the modeline
-(def-modeline-segment! my-evil-state-segment
-  (when (bound-and-true-p evil-local-mode)
-    (s-trim (evil-state-property evil-state :tag t))))
-
-(def-modeline-format! :main-evil-state
-  '(+modeline-matches
-    my-evil-state-segment " "
-    +modeline-buffer-state
-    +modeline-buffer-id
-    "  %2l:%c %p  ")
-  `(mode-line-misc-info
-    +modeline-indent-style
-    +modeline-encoding
-    +modeline-major-mode " "
-    (vc-mode (" " +modeline-vcs " "))
-    mode-line-process
-    +modeline-flycheck))
-
-(add-hook 'after-change-major-mode-hook (lambda ()
-                                          (set-modeline! :main-evil-state t)))
-
 ;;; config.el ends here
