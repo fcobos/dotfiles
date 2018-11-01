@@ -20,11 +20,6 @@
 (setq frame-resize-pixelwise t)
 ;; (toggle-frame-maximized)
 
-;; Disable exit confirmation dialog
-(setq confirm-kill-emacs nil)
-;; Don't ask if processes should be killed
-(setq confirm-kill-processes nil)
-
 ;; Set the font
 (setq doom-font (font-spec :family "Iosevka SS04" :size 14)
       doom-big-font (font-spec :family "Iosevka SS04" :size 24)
