@@ -151,7 +151,7 @@ fi
 case ${TERM} in
 	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|alacritty*|tmux*|screen*)
 		precmd () {printf "\033]0;%s@%s:%s\007" "${USER}" "${HOST%%.*}" "${PWD/#$HOME/~}"}
-		preexec () {printf "\033]0;%s@%s - %s\a" "${USER}" "${HOST%%.*}" "${"${1%% 2%% *}":0:10}..."}
+		preexec () {printf "\033]0;%s@%s - %s\a" "${USER}" "${HOST%%.*}" "${"${1%% 2%% *}":0:15}"}
 		;;
 esac
 
