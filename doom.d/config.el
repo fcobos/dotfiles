@@ -113,4 +113,9 @@
 ;; autodetect indentation settings
 (add-hook 'prog-mode-hook (lambda () (interactive) (dtrt-indent-mode 1)))
 
+;; Maximize frame at startup
+(setq frame-resize-pixelwise t)
+(add-hook 'after-init-hook (lambda ()
+                             (toggle-frame-maximized)))
+
 ;;; config.el ends here
