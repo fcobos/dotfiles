@@ -16,10 +16,6 @@
 ;;                                        "\""
 ;;(if (window-system) (set-selected-frame-dark))
 
-;; Maximize frame at startup
-(setq frame-resize-pixelwise t)
-;; (toggle-frame-maximized)
-
 ;; Set the font
 (setq doom-font (font-spec :family "Iosevka SS04" :size 14)
       doom-big-font (font-spec :family "Iosevka SS04" :size 24)
