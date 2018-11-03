@@ -139,13 +139,8 @@ bindkey -M emacs '^N' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
-# Load powerlevel9k
-if [ "$TERM" != "linux" ]; then
-	source ~/dotfiles/p9k-config
-	source ~/dotfiles/zsh-themes/powerlevel9k/powerlevel9k.zsh-theme
-else
-	PS1="%n@%m %~ \$ "
-fi
+# prompt
+PS1=$'%F{blue}'"%n"$'%F{green}'"@"$'%F{yellow}'"%m "$'%F{blue}'"%~"$'\n'$'%F{blue}\u2771%F{cyan}\u276f%F{green}\u276d '
 
 # Show pwd on alacritty title bar (not needed with pure prompt)
 case ${TERM} in
