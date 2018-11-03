@@ -140,7 +140,7 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 # prompt
-PS1=$'%F{blue}'"%n"$'%F{green}'"@"$'%F{yellow}'"%m "$'%F{blue}'"%~"$'\n'$'%F{blue}\u2771%F{cyan}\u276f%F{green}\u276d '
+PS1=$'\n'$'%F{blue}'"%n"$'%F{green}'"@"$'%F{yellow}'"%m "$'%F{blue}'"%~"$'\n'$'%F{blue}\u2771%F{cyan}\u276f%F{green}\u276d '
 
 # Show pwd on alacritty title bar (not needed with pure prompt)
 case ${TERM} in
