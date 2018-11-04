@@ -140,12 +140,18 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 # prompt
+autoload -U colors && colors
 USER_HOST=""
 if [ $SSH_CLIENT ]; then
-	USER_HOST=$'%F{blue}'"%n"$'%F{green}'"@"$'%F{yellow}'"%m "
+	USER_HOST="%{$fg[blue]%}%n%{$fg[green]%}@%{$fg[yellow]%}%m" 
 fi
-THE_CWD=$'%F{blue}'"%~"
-PS1=${USER_HOST}${THE_CWD}$'\n'$'%F{green}\u276d '
+THE_CWD="%{$fg[blue]%}%~"
+if [ $TERM = "linux" ]; then
+	PROMPT_SYMBOL="%{$fg[green]%}>"
+else
+	PROMPT_SYMBOL="%{$fg[green]%}"$'\u276d'
+fi
+PS1=${USER_HOST}${THE_CWD}$'\n'${PROMPT_SYMBOL}"%{$reset_color%}%  "
 
 # Show pwd on alacritty title bar (not needed with pure prompt)
 case ${TERM} in
