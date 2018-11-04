@@ -39,7 +39,7 @@ alias zegrep='zegrep --color=auto'
 alias zfgrep='zfgrep --color=auto'
 alias zgrep='zgrep --color=auto'
 alias glances='glances --disable-bg'
-alias emacsnw="TERM=vte-direct emacs -nw"
+alias emacs="emacs -nw"
 
 # emacs ediff
 function ediff() {
@@ -47,7 +47,7 @@ function ediff() {
 		echo "USAGE: ediff <FILE 1> <FILE 2>"
 	else
 		# The --eval flag takes lisp code and evaluates it with EMACS
-		emacs --eval "(ediff-files \"$1\" \"$2\")" &
+		emacs --eval "(ediff-files \"$1\" \"$2\")"
 	fi
 }
 
