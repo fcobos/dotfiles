@@ -140,12 +140,12 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 # prompt
-HOST_MACHINE=""
+USER_HOST=""
 if [ $SSH_CLIENT ]; then
-	HOST_MACHINE=$'%F{blue}'"%n"$'%F{green}'"@"$'%F{yellow}'"%m "
+	USER_HOST=$'%F{blue}'"%n"$'%F{green}'"@"$'%F{yellow}'"%m "
 fi
 THE_CWD=$'%F{blue}'"%~"
-PS1=${HOST_MACHINE}${THE_CWD}$'\n'$'%F{green}\u276d '
+PS1=${USER_HOST}${THE_CWD}$'\n'$'%F{green}\u276d '
 
 # Show pwd on alacritty title bar (not needed with pure prompt)
 case ${TERM} in
