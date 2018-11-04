@@ -48,8 +48,11 @@ fi
 export PATH=$PATH:$HOME/.gem/ruby/2.5.0/bin
 
 # go paths
-export GOPATH=$(go env GOPATH)
-export PATH=$PATH:$GOPATH/bin
+GO_BINARY=$(which go)
+if [ -f "$GO_BINARY" ]; then
+	export GOPATH=$(go env GOPATH)
+	export PATH=$PATH:$GOPATH/bin
+fi
 
 # pyenv configuration
 export PYENV_ROOT="$HOME/.pyenv"
