@@ -145,7 +145,7 @@ if [ $SSH_CLIENT ]; then
 	HOST_MACHINE=$'%F{blue}'"%n"$'%F{green}'"@"$'%F{yellow}'"%m "
 fi
 THE_CWD=$'%F{blue}'"%~"
-PS1=$'\n'${HOST_MACHINE}${THE_CWD}$'\n'$'%F{green}\u276d '
+PS1=${HOST_MACHINE}${THE_CWD}$'\n'$'%F{green}\u276d '
 
 # Show pwd on alacritty title bar (not needed with pure prompt)
 case ${TERM} in
