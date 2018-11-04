@@ -31,9 +31,6 @@ eval $(dircolors ~/.dircolors)
 # case insensitive tab completion
 bind "set completion-ignore-case on"
 
-# termite needs this
-source /etc/profile.d/vte.sh
-
 # vim keybindings
 #set -o vi
 
