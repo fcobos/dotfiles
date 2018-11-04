@@ -7,6 +7,10 @@ Xft.rgba: rgb
 Xft.embeddedbitmap: 0
 !Xft.dpi: 96
 
+! emacs
+Emacs.FontBackend: xft
+Emacs.font: Iosevka SS04-11
+
 ! xterm
 XTerm.termName: xterm-256color
 xterm.vt100.metaSendsEscape: true
