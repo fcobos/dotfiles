@@ -152,7 +152,7 @@ if [ $TERM = "linux" ]; then
 fi
 PS1=$'\n'${USER_HOST}${THE_CWD}$'\n'${PROMPT_SYMBOL}"%{$reset_color%}%  "
 
-# Show pwd on alacritty title bar (not needed with pure prompt)
+# Show pwd on terminal title bar (not needed with pure prompt)
 case ${TERM} in
 	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|alacritty*|tmux*|screen*)
 		precmd () {printf "\033]0;%s@%s:%s\007" "${USER}" "${HOST%%.*}" "${PWD/#$HOME/~}"}
