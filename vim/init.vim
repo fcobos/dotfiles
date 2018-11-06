@@ -115,7 +115,7 @@ if &t_Co >= 256 || has("gui_running")
   set termguicolors
 endif
 
-set background=light
+set background=dark
 let g:one_allow_italics = 1
 colorscheme one
 
