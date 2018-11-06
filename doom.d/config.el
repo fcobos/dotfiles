@@ -19,7 +19,7 @@
 ;; Set the font
 (setq doom-font (font-spec :family "Iosevka SS04" :size 14)
       doom-big-font (font-spec :family "Iosevka SS04" :size 24)
-      doom-variable-pitch-font (font-spec :family "DejaVu Sans" :size 14))
+      doom-variable-pitch-font (font-spec :family "DejaVu Sans Condensed" :size 14))
 (setq-default line-spacing 1)
 
 ;; Set the theme
@@ -108,6 +108,10 @@
 
 ;; autodetect indentation settings
 (add-hook 'prog-mode-hook (lambda () (interactive) (dtrt-indent-mode 1)))
+
+;; docsets configuration
+(setq +lookup-open-url-fn 'eww)
+(set! :docset 'java-mode "Java" "Java EE8")
 
 ;; Maximize frame at startup
 (when (display-graphic-p)
