@@ -111,7 +111,7 @@
 
 ;; docsets configuration
 (setq +lookup-open-url-fn 'eww)
-(set! :docset 'java-mode "Java" "Java EE8")
+(set-docset! 'java-mode "Java" "Java EE8")
 
 ;; Maximize frame at startup
 (when (display-graphic-p)
