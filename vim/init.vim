@@ -116,8 +116,8 @@ if &t_Co >= 256 || has("gui_running")
 endif
 
 set background=dark
-let g:one_allow_italics = 1
-colorscheme one
+"let g:one_allow_italics = 1
+colorscheme nord
 
 " rainbow parentheses
 "autocmd VimEnter * RainbowParentheses
