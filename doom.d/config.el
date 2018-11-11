@@ -23,7 +23,7 @@
 (setq-default line-spacing 1)
 
 ;; Set the theme
-(setq doom-theme 'doom-nord)
+(setq doom-theme 'doom-tomorrow-night)
 ;; disable solaire-mode
 (solaire-mode 0)
 (add-hook 'after-change-major-mode-hook (lambda ()
