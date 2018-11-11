@@ -39,7 +39,11 @@ alias zegrep='zegrep --color=auto'
 alias zfgrep='zfgrep --color=auto'
 alias zgrep='zgrep --color=auto'
 alias glances='glances --disable-bg'
-alias e="TERM=xterm-24bit emacs -nw"
+if [ "$TERM" = "alacritty" ]; then
+	alias e="TERM=alacritty-direct emacs -nw"
+else
+	alias e="TERM=xterm-24bit emacs -nw"
+fi
 
 # emacs ediff
 function ediff() {
