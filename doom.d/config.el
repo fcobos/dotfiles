@@ -23,7 +23,8 @@
 (setq-default line-spacing 1)
 
 ;; Set the theme
-(setq doom-theme 'doom-nord)
+(setq srcery-invert-region nil)
+(setq doom-theme 'srcery)
 ;; disable solaire-mode
 (solaire-mode 0)
 (add-hook 'after-change-major-mode-hook (lambda ()
