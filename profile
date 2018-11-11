@@ -34,9 +34,9 @@ export PATH="$HOME/.nimble/bin:$PATH"
 # Stop wine from creating .desktop entries
 export WINEDLLOVERRIDES=winemenubuilder.exe=d
 
-# gnome-keyring
-if [ -n "$DESKTOP_SESSION" ];then
-	export $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
+# needed to show passphrase dialog under a ssh session
+if [ "$SSH_TTY" ]; then
+	export GPG_TTY=$SSH_TTY
 fi
 
 # qt themeing under i3 and gnome
