@@ -15,7 +15,7 @@
      (concat "xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT \"dark\" -name \""
              frame-name
              "\""))))
-(if (window-system) (set-selected-frame-dark))
+(when (display-graphic-p) (set-selected-frame-dark))
 
 ;; Set the font
 (setq doom-font (font-spec :family "Iosevka SS04" :size 14)
