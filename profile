@@ -17,10 +17,6 @@ export MOZ_GLX_IGNORE_BLACKLIST=1
 # fix for android emulator's old libstdc++
 export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 
-if [ "$TILIX_ID" ] || [ "$VTE_VERSION" ]; then
-	source /etc/profile.d/vte.sh
-fi
-
 # node npm configuration
 export NPM_PACKAGES="/home/felix/.npm-packages"
 export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
