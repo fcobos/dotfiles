@@ -94,7 +94,8 @@
        ;;(haskell +intero) ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ;
-       (java +meghanada) ; the poster child for carpal tunnel syndrome
+       ;;(java +meghanada) ; the poster child for carpal tunnel syndrome
+       java
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
        ;;julia             ; a better, faster MATLAB
        ;;latex             ; writing papers in Emacs has never been so fun
@@ -154,4 +155,6 @@
        ;; provides a Spacemacs-inspired keybinding scheme, a custom yasnippet
        ;; library, and additional ex commands for evil-mode. Use it as a
        ;; reference for your own modules.
-       (default +bindings +evil-commands))
+       (default +bindings +evil-commands)
+
+       :private java-lsp)
