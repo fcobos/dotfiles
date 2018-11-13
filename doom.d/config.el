@@ -26,13 +26,13 @@
 ;; Set the theme
 (setq doom-theme 'doom-tomorrow-night)
 ;; disable solaire-mode
-(solaire-mode 0)
-(add-hook 'after-change-major-mode-hook (lambda ()
-                                          (interactive) (solaire-mode 0)))
+;;(solaire-mode 0)
+;;(add-hook 'after-change-major-mode-hook (lambda ()
+;;                                          (interactive) (solaire-mode 0)))
 ;; force solaire-mode
 ;;(solaire-mode 1)
 ;;(add-hook 'after-change-major-mode-hook (lambda ()
-;;                                          (interactive) (solaire-mode 1))
+;;                                          (interactive) (solaire-mode 1)))
 
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
