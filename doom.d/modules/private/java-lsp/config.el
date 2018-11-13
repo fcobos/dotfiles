@@ -32,14 +32,23 @@
           :n "d" #'lsp-goto-type-definition
           :n "i" #'lsp-goto-implementation)
         (:prefix "d"
-          :n "d"  #'dap-java-debug
-          :n "t"  #'dap-java-run-test-method
+          :n "k" #'dap-breakpoint-toggle
+          :n "e" #'dap-eval
+          :n "." #'dap-eval-thing-at-point
+          :n "d" #'dap-java-debug
+          :n "l" #'dap-ui-locals
+          :n "r" #'dap-ui-repl
+          :n "s" #'dap-ui-sessions
+          :n "t" #'dap-java-run-test-method
           :n "m" #'dap-java-debug-test-method
           :n "c" #'dap-java-run-test-class
           :n "x" #'dap-java-debug-test-class)
         (:prefix "b"
           :n "b"  #'lsp-java-build-project
           :n "u"  #'lsp-update-project-configuration))
+  (local-set-key (kbd "<f5>") 'dap-next)
+  (local-set-key (kbd "<f6>") 'dap-step-in)
+  (local-set-key (kbd "<f7>") 'dap-step-out)
   (add-hook 'java-mode-hook 'flycheck-mode)
   ;; don't highlight references of the symbol at point
   (defun lsp-document-highlight ()))
