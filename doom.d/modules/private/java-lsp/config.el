@@ -1,21 +1,54 @@
 ;;; private/java/config.el -*- lexical-binding: t; -*-
 
 (def-package! lsp-mode
-;;  :commands (lsp-mode lsp-define-stdio-client)
+  :commands (lsp-mode lsp-define-stdio-client)
   :init
   (setq lsp-eldoc-render-all nil
-        lsp-enable-completion-at-point t
-        lsp-highlight-symbol-at-point nil))
+        lsp-enable-completion-at-point t))
 
 (def-package! lsp-java
   :hook (java-mode . lsp-java-enable)
+  :init
+  (setq lsp-java-server-install-dir (concat doom-etc-dir "eclipse.jdt.ls/server/")
+        lsp-java-workspace-dir (concat doom-local-dir "java-workspace/")
+        lsp-java-workspace-cache-dir (concat lsp-java-workspace-dir ".cache/"))
   :config
-  (add-hook 'java-mode-hook 'flycheck-mode))
+  (map! :map java-mode-map
+        :localleader
+        (:prefix "r"
+          :n "ai" #'lsp-java-add-import
+          :n "au" #'lsp-java-add-unimplemented-methods
+          :n "cf" #'lsp-java-create-field
+          :n "cl" #'lsp-java-create-local
+          :n "cp" #'lsp-java-create-parameter
+          :n "ec" #'lsp-java-extract-to-constant
+          :n "em" #'lsp-java-extract-method
+          :n "oi" #'lsp-java-organize-imports
+          :n "f"  #'lsp-format-buffer
+          :n "r"  #'lsp-rename)
+        (:prefix "h"
+          :n "."  #'lsp-describe-thing-at-point)
+        (:prefix "g"
+          :n "d" #'lsp-goto-type-definition
+          :n "i" #'lsp-goto-implementation)
+        (:prefix "d"
+          :n "d"  #'dap-java-debug
+          :n "t"  #'dap-java-run-test-method
+          :n "m" #'dap-java-debug-test-method
+          :n "c" #'dap-java-run-test-class
+          :n "x" #'dap-java-debug-test-class)
+        (:prefix "b"
+          :n "b"  #'lsp-java-build-project
+          :n "u"  #'lsp-update-project-configuration))
+  (add-hook 'java-mode-hook 'flycheck-mode)
+  ;; don't highlight references of the symbol at point
+  (defun lsp-document-highlight ()))
 
 (def-package! lsp-ui
   :hook (lsp-mode . lsp-ui-mode)
   :config
   (set-lookup-handlers! 'lsp-ui-mode
+    :documentation #'lsp-describe-thing-at-point
     :definition #'lsp-ui-peek-find-definitions
     :references #'lsp-ui-peek-find-references)
   (setq lsp-ui-doc-max-height 8
@@ -37,7 +70,7 @@
   :after lsp-mode
   :config
   (dap-mode t)
-  (dap-mode-ui t))
+  (dap-ui-mode t))
 
 (def-package! dap-java
   :after lsp-java)
