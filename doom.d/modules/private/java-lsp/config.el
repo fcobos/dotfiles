@@ -4,6 +4,7 @@
   :commands (lsp-mode lsp-define-stdio-client)
   :init
   (setq lsp-eldoc-render-all nil
+	lsp-response-timeout 30
         lsp-enable-completion-at-point t))
 
 (def-package! lsp-java
