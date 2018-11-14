@@ -110,9 +110,8 @@
 ;; autodetect indentation settings
 (add-hook 'prog-mode-hook (lambda () (interactive) (dtrt-indent-mode 1)))
 
-;; docsets configuration
+;; use eww to open urls
 (setq +lookup-open-url-fn 'eww)
-(set-docset! 'java-mode "Java" "Java EE8")
 
 ;; Maximize frame at startup
 (when (display-graphic-p)

@@ -3,8 +3,8 @@
 (def-package! lsp-mode
   :commands (lsp-mode lsp-define-stdio-client)
   :init
-  (setq lsp-eldoc-render-all nil
-	lsp-response-timeout 30
+  (setq lsp-response-timeout 30
+        lsp-eldoc-render-all nil
         lsp-enable-completion-at-point t))
 
 (def-package! lsp-java
@@ -14,6 +14,43 @@
         lsp-java-workspace-dir (concat doom-local-dir "java-workspace/")
         lsp-java-workspace-cache-dir (concat lsp-java-workspace-dir ".cache/"))
   :config
+  (add-hook 'java-mode-hook 'flycheck-mode)
+  ;; don't highlight references of the symbol at point
+  (defun lsp-document-highlight ()))
+
+(def-package! lsp-ui
+  :hook (lsp-mode . lsp-ui-mode)
+  :config
+  (set-lookup-handlers! 'lsp-ui-mode
+    :documentation #'lsp-describe-thing-at-point
+    :definition #'lsp-ui-peek-find-definitions
+    :references #'lsp-ui-peek-find-references)
+  (setq lsp-ui-doc-max-height 8
+        lsp-ui-doc-max-width 35
+        lsp-ui-sideline-ignore-duplicate t
+        lsp-ui-sideline-enable nil
+        lsp-ui-doc-enable nil))
+
+(def-package! company-lsp
+  :after lsp-mode
+  :config
+  (set-company-backend! 'lsp-mode '(company-lsp))
+  (setq company-lsp-cache-candidates t
+        company-lsp-enable-snippet t
+        company-lsp-async t
+        company-lsp-enable-recompletion t))
+
+(def-package! dap-mode
+  :after lsp-mode
+  :config
+  (dap-mode t)
+  (dap-ui-mode t))
+
+(def-package! dap-java
+  :after lsp-java)
+
+(after! lsp-java
+  (set-docsets! 'java-mode "Java" "Java EE8")
   (map! :map java-mode-map
         :localleader
         (:prefix "r"
@@ -49,38 +86,4 @@
           :n "u"  #'lsp-update-project-configuration))
   (local-set-key (kbd "<f5>") 'dap-next)
   (local-set-key (kbd "<f6>") 'dap-step-in)
-  (local-set-key (kbd "<f7>") 'dap-step-out)
-  (add-hook 'java-mode-hook 'flycheck-mode)
-  ;; don't highlight references of the symbol at point
-  (defun lsp-document-highlight ()))
-
-(def-package! lsp-ui
-  :hook (lsp-mode . lsp-ui-mode)
-  :config
-  (set-lookup-handlers! 'lsp-ui-mode
-    :documentation #'lsp-describe-thing-at-point
-    :definition #'lsp-ui-peek-find-definitions
-    :references #'lsp-ui-peek-find-references)
-  (setq lsp-ui-doc-max-height 8
-        lsp-ui-doc-max-width 35
-        lsp-ui-sideline-ignore-duplicate t
-        lsp-ui-sideline-enable nil
-        lsp-ui-doc-enable nil))
-
-(def-package! company-lsp
-  :after lsp-mode
-  :config
-  (set-company-backend! 'lsp-mode '(company-lsp))
-  (setq company-lsp-cache-candidates t
-        company-lsp-enable-snippet t
-        company-lsp-async t
-        company-lsp-enable-recompletion t))
-
-(def-package! dap-mode
-  :after lsp-mode
-  :config
-  (dap-mode t)
-  (dap-ui-mode t))
-
-(def-package! dap-java
-  :after lsp-java)
+  (local-set-key (kbd "<f7>") 'dap-step-out))
