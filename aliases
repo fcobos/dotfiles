@@ -29,7 +29,7 @@ alias po=popd
 alias pu=pushd
 alias rd=rmdir
 alias run-help=man
-alias vi=vim
+alias vi=nvim
 alias which-command=whence
 alias grep='grep --color=auto'
 alias xzegrep='xzegrep --color=auto'
