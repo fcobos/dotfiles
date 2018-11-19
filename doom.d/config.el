@@ -113,6 +113,10 @@
 ;; use eww to open urls
 (setq +lookup-open-url-fn 'eww)
 
+;; use gogetdoc for go documentation
+(after! go-mode
+  (setq godoc-at-point-function #'godoc-gogetdoc))
+
 ;; Maximize frame at startup
 (when (display-graphic-p)
   (setq frame-resize-pixelwise 't)
