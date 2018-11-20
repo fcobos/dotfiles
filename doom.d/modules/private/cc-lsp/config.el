@@ -23,12 +23,15 @@
         :m  "gd" #'lsp-ui-peek-find-definitions
         :m  "gD" #'lsp-ui-peek-find-references
         :localleader
-        (:desc "help"
+        (:desc "Help"
           :prefix "h"
+          :desc "Describe thing at point"
           :n "."  #'lsp-describe-thing-at-point)
-        (:desc "goto"
+        (:desc "Navigation"
           :prefix "g"
+          :desc "Find definitions"
           :n "d" #'lsp-ui-peek-find-definitions
+          :desc "Go to implementation"
           :n "i" #'lsp-goto-implementation))
   ;; don't highlight references of the symbol at point
   (defun lsp-document-highlight ()))

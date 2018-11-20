@@ -55,36 +55,67 @@
     (add-hook 'lsp-mode-hook #'evil-normalize-keymaps))
   (map! :map java-mode-map
         :localleader
-        (:prefix "r"
+        (:desc "Refactor"
+          :prefix "r"
+          :desc "Add import"
           :n "ai" #'lsp-java-add-import
+          :desc "Add unimplemented methods"
           :n "au" #'lsp-java-add-unimplemented-methods
+          :desc "Create field"
           :n "cf" #'lsp-java-create-field
+          :desc "Create local"
           :n "cl" #'lsp-java-create-local
+          :desc "Create parameter"
           :n "cp" #'lsp-java-create-parameter
+          :desc "Extract to constant"
           :n "ec" #'lsp-java-extract-to-constant
+          :desc "Extract method"
           :n "em" #'lsp-java-extract-method
+          :desc "Organize imports"
           :n "oi" #'lsp-java-organize-imports
+          :desc "Format buffer"
           :n "f"  #'lsp-format-buffer
+          :desc "Rename"
           :n "r"  #'lsp-rename)
-        (:prefix "h"
+        (:desc "Help"
+          :prefix "h"
+          :desc "Describe thing at point"
           :n "."  #'lsp-describe-thing-at-point)
-        (:prefix "g"
+        (:desc "Navigation"
+          :prefix "g"
+          :desc "Go to type definition"
           :n "d" #'lsp-goto-type-definition
+          :desc "Go to implementation"
           :n "i" #'lsp-goto-implementation)
-        (:prefix "d"
+        (:desc "Debugging"
+          :prefix "d"
+          :desc "Toggle breakpoint"
           :n "k" #'dap-breakpoint-toggle
+          :desc "Eval"
           :n "e" #'dap-eval
+          :desc "Eval thing at point"
           :n "." #'dap-eval-thing-at-point
+          :desc "Debug"
           :n "d" #'dap-java-debug
+          :desc "Show locals"
           :n "l" #'dap-ui-locals
+          :desc "REPL"
           :n "r" #'dap-ui-repl
+          :desc "Show sessions"
           :n "s" #'dap-ui-sessions
+          :desc "Run test method"
           :n "t" #'dap-java-run-test-method
+          :desc "Debug test method"
           :n "m" #'dap-java-debug-test-method
+          :desc "Run test class"
           :n "c" #'dap-java-run-test-class
+          :desc "Debug test class"
           :n "x" #'dap-java-debug-test-class)
-        (:prefix "b"
+        (:desc "Build"
+          :prefix "b"
+          :desc "Build project"
           :n "b"  #'lsp-java-build-project
+          :desc "Update project configuration"
           :n "u"  #'lsp-update-project-configuration))
   (local-set-key (kbd "<f5>") 'dap-next)
   (local-set-key (kbd "<f6>") 'dap-step-in)
