@@ -51,6 +51,8 @@
 
 (after! lsp-java
   (set-docsets! 'java-mode "Java" "Java EE8")
+  (when (featurep 'evil)
+    (add-hook 'lsp-mode-hook #'evil-normalize-keymaps))
   (map! :map java-mode-map
         :localleader
         (:prefix "r"
