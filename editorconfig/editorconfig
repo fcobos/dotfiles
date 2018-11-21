@@ -10,7 +10,7 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 max_line_length = 79
 
-[*.{c{pp,xx,},h{pp,}}]
+[*.{c{pp,xx,},h{pp,xx,}}]
 indent_style = tab
 indent_size = 4
 
