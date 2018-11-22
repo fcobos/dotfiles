@@ -1,21 +1,21 @@
 ;;; config.el -*- lexical-binding: t; -*-
 
 ;; set dark windows decorations
-(defun get-frame-name (&optional frame)
-  "Return the string that names FRAME (a frame).  Default is selected frame."
-  (unless frame (setq frame  (selected-frame)))
-  (if (framep frame)
-      (cdr (assq 'name (frame-parameters frame)))
-    (error "Function `get-frame-name': Argument not a frame: `%s'" frame)))
-
-(defun set-selected-frame-dark ()
-  (interactive)
-  (let ((frame-name (get-frame-name (selected-frame))))
-    (call-process-shell-command
-     (concat "xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT \"dark\" -name \""
-             frame-name
-             "\""))))
-(when (display-graphic-p) (set-selected-frame-dark))
+;;(defun get-frame-name (&optional frame)
+;;  "Return the string that names FRAME (a frame).  Default is selected frame."
+;;  (unless frame (setq frame  (selected-frame)))
+;;  (if (framep frame)
+;;      (cdr (assq 'name (frame-parameters frame)))
+;;    (error "Function `get-frame-name': Argument not a frame: `%s'" frame)
+;;
+;;(defun set-selected-frame-dark ()
+;;  (interactive)
+;;  (let ((frame-name (get-frame-name (selected-frame))))
+;;    (call-process-shell-command
+;;     (concat "xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT \"dark\" -name \""
+;;             frame-name
+;;             "\""
+;;(when (display-graphic-p) (set-selected-frame-dark))
 
 ;; Set the font
 (setq doom-font (font-spec :family "Iosevka SS04" :size 14)
@@ -24,15 +24,15 @@
 (setq-default line-spacing 1)
 
 ;; Set the theme
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-one-light)
 ;; disable solaire-mode
 ;;(solaire-mode 0)
 ;;(add-hook 'after-change-major-mode-hook (lambda ()
 ;;                                          (interactive) (solaire-mode 0)))
 ;; force solaire-mode
-(solaire-mode 1)
-(add-hook 'after-change-major-mode-hook (lambda ()
-                                          (interactive) (solaire-mode 1)))
+;;(solaire-mode 1)
+;;(add-hook 'after-change-major-mode-hook (lambda ()
+;;                                          (interactive) (solaire-mode 1)))
 
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
