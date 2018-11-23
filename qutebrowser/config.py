@@ -463,3 +463,6 @@ c.content.webrtc_ip_handling_policy = "default-public-interface-only"
 
 # Hide window decoration
 c.window.hide_decoration = True
+
+# don't accept 3rd party cookies
+c.content.cookies.accept = "no-3rdparty"
