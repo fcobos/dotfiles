@@ -40,8 +40,8 @@ if [ "$XDG_CURRENT_DESKTOP" = "i3" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] ; t
 	export QT_QPA_PLATFORMTHEME="qt5ct"
 fi
 
-# gnome-keyring under plasma
-if [ "$XDG_CURRENT_DESKTOP" = "KDE" ]; then
+# gnome-keyring under i3 and plasma
+if [ "$XDG_CURRENT_DESKTOP" = "i3" ] || [ "$XDG_CURRENT_DESKTOP" = "KDE" ]; then
 	eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 	export SSH_AUTH_SOCK
 fi

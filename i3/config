@@ -178,7 +178,8 @@ bindsym $mod+r mode "resize"
 
 # start polkit auth agent
 #exec --no-startup-id lxpolkit &
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1
 # background
 exec --no-startup-id ~/.fehbg
 # touchpad config
@@ -211,7 +212,8 @@ exec --no-startup-id xset +fp ~/.local/share/fonts
 exec --no-startup-id xset fp rehash
 # gnome gsd-xsettings (to make flatpak apps use the right theme)
 #exec --no-startup-id /usr/libexec/gsd-xsettings
-exec --no-startup-id /usr/lib/gsd-xsettings
+#exec --no-startup-id /usr/lib/gsd-xsettings
+exec --no-startup-id xsettingsd
 # dunst notification daemon
 exec --no-startup-id dunst
 # start polybar
@@ -369,7 +371,6 @@ focus_follows_mouse no
 mouse_warping none
 
 # gaps
-gaps inner 8
-gaps outer 0
-smart_gaps on
-
+#gaps inner 8
+#gaps outer 0
+#smart_gaps on
