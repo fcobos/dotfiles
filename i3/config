@@ -371,6 +371,6 @@ focus_follows_mouse no
 mouse_warping none
 
 # gaps
-#gaps inner 8
-#gaps outer 0
-#smart_gaps on
+gaps inner 8
+gaps outer 0
+smart_gaps on
