@@ -177,6 +177,8 @@ bindsym $mod+r mode "resize"
 #        }
 #}
 
+# start polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 # start polkit auth agent
 #exec --no-startup-id lxpolkit &
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -217,8 +219,8 @@ exec --no-startup-id xset fp rehash
 exec --no-startup-id xsettingsd
 # dunst notification daemon
 exec --no-startup-id dunst
-# start polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+# redshift
+exec --no-startup-id redshift-gtk
 # start compton
 exec --no-startup-id env allow_rgb10_configs=false compton -b -d :0
 
