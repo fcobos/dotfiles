@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+sleep 15
+
+~/dotfiles/scripts/zscroll -u true -a "  " -d 0.5 -M "mpc status" -m "playing" \
+		"-a '  '" -m "paused" "-a ' ▮▮ ' -s false" "mpc current" \
+		-p " *** " -l 25 &
+
+wait
+
