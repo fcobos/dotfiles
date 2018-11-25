@@ -15,4 +15,9 @@
 # Xsession and xinitrc scripts which has been factored out to avoid duplication
 . /etc/X11/xinit/xinitrc-common
 
+# gnome-keyring
+dbus-update-activation-environment --systemd DISPLAY
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+
 i3
