@@ -1,4 +1,9 @@
 # User specific environment and startup programs
+
+# start X session
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && export XDG_CURRENT_DESKTOP=i3 && \
+	export XDG_SESSION_DESKTOP=i3 && startx > /dev/null 2>&1 && reset
+
 # gcc colors
 export GCC_COLORS=error="01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
 export EDITOR=vim
@@ -62,9 +67,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 
 # remove duplicates from PATH
 export PATH=$(printf "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
-
-# start X session
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx > /dev/null 2>&1 &
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
