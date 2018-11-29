@@ -1,5 +1,5 @@
 Net/ThemeName "Adwaita"
-Net/IconThemeName "Papirus-Light"
+#Net/IconThemeName "Papirus-Light"
 Xft/Antialias 1
 Xft/HintStyle "hintslight"
 Xft/Hinting 1

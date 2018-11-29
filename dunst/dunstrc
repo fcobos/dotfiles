@@ -153,8 +153,7 @@ icon_position = left
 max_icon_size = 48
 
 # Paths to default icons.
-#icon_folders = /usr/share/icons/Papirus-Dark/32x32/mimetypes/:/usr/share/icons/Papirus-Dark/32x32/status/:/usr/share/icons/Papirus-Dark/32x32/devices/:/usr/share/icons/Papirus-Dark/32x32/notifications/:/usr/share/icons/Papirus-Dark/32x32/emblems/
-icon_folders = /usr/share/icons/Papirus/32x32/mimetypes/:/usr/share/icons/Papirus/32x32/status/:/usr/share/icons/Papirus/32x32/devices/:/usr/share/icons/Papirus/32x32/notifications/:/usr/share/icons/Papirus/32x32/emblems/
+icon_folders = /usr/share/icons/Adwaita/32x32/mimetypes/:/usr/share/icons/Adwaita/32x32/status/:/usr/share/icons/Adwaita/32x32/devices/:/usr/share/icons/Adwaita/32x32/notifications/:/usr/share/icons/Adwaita/32x32/emblems/
 
 frame_width = 3
 frame_color = "#8EC07C"
