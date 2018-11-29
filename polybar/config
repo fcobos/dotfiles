@@ -65,13 +65,12 @@ font-7 = Hack:size=6;0
 
 tray-position = right
 tray-padding = 0
-tray-transparent = false
 tray-maxsize = 14
 ;tray-offset-x = 21%
 tray-foreground = ${colors.foreground}
 tray-background = ${colors.dark_gray}
 
-wm-restack = i3
+;wm-restack = i3
 ;override-redirect = true
 
 ;----------------------------------------------------------
@@ -79,7 +78,7 @@ wm-restack = i3
 ;----------------------------------------------------------
 
 modules-left = i3 xwindow
-modules-right = volume date network battery powermenu
+modules-right = volume date powermenu
 
 ;----------------------------------------------------------
 ;		i3   M O D U L E
@@ -263,12 +262,7 @@ label-font = 2
 ;----------------------------------------------------------
 
 [module/volume]
-type = internal/volume
-
-master-soundcard = default
-speaker-soundcard = default
-headphone-soundcard = default
-mapping = true
+type = internal/pulseaudio
 
 format-volume = <ramp-volume><label-volume>
 ;     
