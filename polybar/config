@@ -29,7 +29,7 @@ margin-bottom = 0
 ;dpi = ${xrdb:Xft.dpi:136}
 bottom = false
 width = 100%
-height = 18
+height = 24
 ;offset-x = 0%
 ;offset-y = 0%
 fixed-center = false
@@ -65,7 +65,7 @@ font-7 = Hack:size=6;0
 
 tray-position = right
 tray-padding = 0
-tray-maxsize = 14
+tray-maxsize = 16
 ;tray-offset-x = 21%
 tray-foreground = ${colors.foreground}
 tray-background = ${colors.dark_gray}
