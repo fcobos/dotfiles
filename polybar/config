@@ -149,17 +149,6 @@ label-indicator-background = ${colors.background}
 
 
 ;----------------------------------------------------------
-;			    M P D
-;----------------------------------------------------------
-
-[module/mpd]
-type = custom/script
-exec = $HOME/dotfiles/scripts/scroll_music_title
-tail = true
-label-foreground = ${colors.white}
-label-font = 2
-
-;----------------------------------------------------------
 ;		     B A C K L I G H T
 ;----------------------------------------------------------
 
@@ -404,14 +393,14 @@ menu-0-0 = ""
 menu-0-0-exec = lock-screen
 menu-0-0-foreground = ${colors.foreground}
 menu-0-0-background = ${colors.dark_gray}
-; sleep
-menu-0-1 = ""
-menu-0-1-exec = zenity --question --text="Suspend?" --icon-name=system-suspend --default-cancel && xflock4 && systemctl suspend
+; logout
+menu-0-1 = ""
+menu-0-1-exec = zenity --question --text="Logout?" --icon-name=gnome-logout --default-cancel && (killall -9 pulseaudio ; i3-msg exit)
 menu-0-1-foreground = ${colors.foreground}
 menu-0-1-background = ${colors.dark_gray}
-; logout
-menu-0-2 = ""
-menu-0-2-exec = zenity --question --text="Logout?" --icon-name=gnome-logout --default-cancel && (killall -9 pulseaudio ; i3-msg exit)
+; sleep
+menu-0-2 = ""
+menu-0-2-exec = zenity --question --text="Suspend?" --icon-name=media-playback-pause --default-cancel && xflock4 && systemctl suspend
 menu-0-2-foreground = ${colors.foreground}
 menu-0-2-background = ${colors.dark_gray}
 ; reboot
