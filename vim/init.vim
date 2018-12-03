@@ -148,5 +148,5 @@ let &t_EI = "\<Esc>[0 q"
 
 " enable mouse
 if has('mouse')
-	set mouse=a
+  set mouse=a
 endif
