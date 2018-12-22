@@ -222,7 +222,7 @@ exec --no-startup-id dunst
 # redshift
 #exec --no-startup-id redshift-gtk
 # start compton
-exec --no-startup-id env allow_rgb10_configs=false compton -b -d :0
+exec --no-startup-id env allow_rgb10_configs=false compton -b
 
 # Pulse Audio Controls
 #bindsym XF86AudioMute        exec --no-startup-id amixer set Master -q toggle
