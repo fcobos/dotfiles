@@ -37,9 +37,9 @@
 ;;(add-hook 'window-setup-hook #'disable-cursor-blink)
 
 ;; Disable whitespace-mode
-(defun disable-white-space-mode ()
-  (whitespace-mode 0))
-(add-hook 'after-change-major-mode-hook #'disable-white-space-mode)
+;;(defun disable-white-space-mode ()
+;;  (whitespace-mode 0))
+;;(add-hook 'after-change-major-mode-hook #'disable-white-space-mode)
 
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
