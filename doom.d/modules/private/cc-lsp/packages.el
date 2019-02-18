@@ -2,4 +2,5 @@
 ;;; private/cc-lsp/packages.el
 
 (package! lsp-mode)
-(package! cquery)
+;;(package! cquery)
+(package! ccls)
