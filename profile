@@ -18,6 +18,8 @@ export PATH
 
 export MOZ_USE_OMTC=1
 export MOZ_GLX_IGNORE_BLACKLIST=1
+export MOZ_ACCELERATED=1
+export MOZ_WEBRENDER=1
 
 # fix for android emulator's old libstdc++
 export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
