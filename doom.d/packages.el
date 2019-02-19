@@ -3,3 +3,5 @@
 (package! traad)
 ;; pkgbuild-mode
 (package! pkgbuild-mode)
+;; vimrc-mode
+(package! vimrc-mode)

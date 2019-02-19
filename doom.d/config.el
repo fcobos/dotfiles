@@ -52,6 +52,7 @@
 ;; open *rc files as conf-mode
 (add-to-list 'auto-mode-alist '("\\rc$" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\vimrc$" . vimrc-mode))
+(add-to-list 'auto-mode-alist '("\\.?vimperatorrc\\'" . vimrc-mode))
 (add-to-list 'auto-mode-alist '("\\zshrc$" . shell-script-mode))
 (add-to-list 'auto-mode-alist '("\\bashrc$" . shell-script-mode))
 (add-to-list 'auto-mode-alist '("Pipfile" . toml-mode))
