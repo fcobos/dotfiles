@@ -54,7 +54,7 @@ if [ "$XDG_CURRENT_DESKTOP" = "i3" ] || [ "$XDG_CURRENT_DESKTOP" = "KDE" ]; then
 fi
 
 # ruby path
-export PATH="$HOME/.gem/ruby/2.5.0/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 
 # go paths
 GO_BINARY=$(which go)
