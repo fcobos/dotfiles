@@ -112,6 +112,9 @@
 (after! go-mode
   (setq godoc-at-point-function #'godoc-gogetdoc))
 
+;; avoid exit confirmation dialog
+(setq confirm-kill-emacs nil)
+
 ;; Maximize frame at startup
 (when (display-graphic-p)
   (setq frame-resize-pixelwise 't)
