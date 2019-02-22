@@ -14,7 +14,7 @@
     (call-process-shell-command
      (concat "xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT \"dark\" -name \""
              frame-name
-             "\""
+             "\""))))
 (when (display-graphic-p) (set-selected-frame-dark))
 
 ;; Set the font

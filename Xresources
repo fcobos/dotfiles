@@ -106,3 +106,57 @@ st.opacity:      255
 *color19:      base02
 *color20:      base04
 *color21:      base06
+
+
+! Emacs colors
+#define emacs00 #282c34
+#define emacs01 #353b45
+#define emacs02 #3e4451
+#define emacs03 #545862
+#define emacs04 #565c64
+#define emacs05 #abb2bf
+#define emacs06 #b6bdca
+#define emacs07 #c8ccd4
+#define emacs08 #e06c75
+#define emacs09 #d19a66
+#define emacs0A #e5c07b
+#define emacs0B #98c379
+#define emacs0C #56b6c2
+#define emacs0D #61afef
+#define emacs0E #c678dd
+#define emacs0F #be5046
+
+Emacs*foreground:   emacs05
+#ifdef background_opacity
+Emacs*background:   [background_opacity]emacs00
+#else
+Emacs*background:   emacs00
+#endif
+Emacs*cursorColor:  emacs05
+
+Emacs*color0:       emacs00
+Emacs*color1:       emacs08
+Emacs*color2:       emacs0B
+Emacs*color3:       emacs0A
+Emacs*color4:       emacs0D
+Emacs*color5:       emacs0E
+Emacs*color6:       emacs0C
+Emacs*color7:       emacs05
+
+Emacs*color8:       emacs03
+Emacs*color9:       emacs08
+Emacs*color10:      emacs0B
+Emacs*color11:      emacs0A
+Emacs*color12:      emacs0D
+Emacs*color13:      emacs0E
+Emacs*color14:      emacs0C
+Emacs*color15:      emacs07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+Emacs*color16:      emacs09
+Emacs*color17:      emacs0F
+Emacs*color18:      emacs01
+Emacs*color19:      emacs02
+Emacs*color20:      emacs04
+Emacs*color21:      emacs06
