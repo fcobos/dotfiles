@@ -35,9 +35,7 @@
           :desc "Find definitions"
           :n "d" #'lsp-ui-peek-find-definitions
           :desc "Go to implementation"
-          :n "i" #'lsp-goto-implementation))
-  ;; don't highlight references of the symbol at point
-  (defun lsp-document-highlight ()))
+          :n "i" #'lsp-goto-implementation)))
 
 (def-package! lsp-ui
   :hook (lsp-mode . lsp-ui-mode)

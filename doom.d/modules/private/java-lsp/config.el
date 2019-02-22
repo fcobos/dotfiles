@@ -8,15 +8,13 @@
         lsp-enable-completion-at-point t))
 
 (def-package! lsp-java
-  :hook (java-mode . lsp-java-enable)
   :init
+  (add-hook 'java-mode-hook #'lsp)
   (setq lsp-java-server-install-dir (concat doom-etc-dir "eclipse.jdt.ls/server/")
         lsp-java-workspace-dir (concat doom-local-dir "java-workspace/")
         lsp-java-workspace-cache-dir (concat lsp-java-workspace-dir ".cache/"))
   :config
-  (add-hook 'java-mode-hook 'flycheck-mode)
-  ;; don't highlight references of the symbol at point
-  (defun lsp-document-highlight ()))
+  (add-hook 'java-mode-hook 'flycheck-mode))
 
 (def-package! lsp-ui
   :hook (lsp-mode . lsp-ui-mode)
