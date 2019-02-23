@@ -1,21 +1,24 @@
 ;;; config.el -*- lexical-binding: t; -*-
 
 ;; set dark windows decorations
-(defun get-frame-name (&optional frame)
-  "Return the string that names FRAME (a frame).  Default is selected frame."
-  (unless frame (setq frame  (selected-frame)))
-  (if (framep frame)
-      (cdr (assq 'name (frame-parameters frame)))
-    (error "Function `get-frame-name': Argument not a frame: `%s'" frame)))
+;;(defun get-frame-name (&optional frame)
+;;  "Return the string that names FRAME (a frame).  Default is selected frame."
+;;  (unless frame (setq frame  (selected-frame)))
+;;  (if (framep frame)
+;;      (cdr (assq 'name (frame-parameters frame)))
+;;    (error "Function `get-frame-name': Argument not a frame: `%s'" frame)
+;;
+;;(defun set-selected-frame-dark ()
+;;  (interactive)
+;;  (let ((frame-name (get-frame-name (selected-frame))))
+;;    (call-process-shell-command
+;;     (concat "xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT \"dark\" -name \""
+;;             frame-name
+;;             "\""))))
+;;(when (display-graphic-p) (set-selected-frame-dark))
 
-(defun set-selected-frame-dark ()
-  (interactive)
-  (let ((frame-name (get-frame-name (selected-frame))))
-    (call-process-shell-command
-     (concat "xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT \"dark\" -name \""
-             frame-name
-             "\""))))
-(when (display-graphic-p) (set-selected-frame-dark))
+;; disable window decorations
+(set-frame-parameter nil 'undecorated t)
 
 ;; Set the font
 (setq doom-font (font-spec :family "Iosevka SS04" :size 14)
