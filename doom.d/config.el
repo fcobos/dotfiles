@@ -1,22 +1,5 @@
 ;;; config.el -*- lexical-binding: t; -*-
 
-;; set dark windows decorations
-;;(defun get-frame-name (&optional frame)
-;;  "Return the string that names FRAME (a frame).  Default is selected frame."
-;;  (unless frame (setq frame  (selected-frame)))
-;;  (if (framep frame)
-;;      (cdr (assq 'name (frame-parameters frame)))
-;;    (error "Function `get-frame-name': Argument not a frame: `%s'" frame)
-;;
-;;(defun set-selected-frame-dark ()
-;;  (interactive)
-;;  (let ((frame-name (get-frame-name (selected-frame))))
-;;    (call-process-shell-command
-;;     (concat "xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT \"dark\" -name \""
-;;             frame-name
-;;             "\""))))
-;;(when (display-graphic-p) (set-selected-frame-dark))
-
 ;; disable window decorations
 (set-frame-parameter nil 'undecorated t)
 
@@ -33,16 +16,6 @@
 
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
-
-;; Disable cursor blink
-;;(defun disable-cursor-blink ()
-;;  (blink-cursor-mode -1))
-;;(add-hook 'window-setup-hook #'disable-cursor-blink)
-
-;; Disable whitespace-mode
-;;(defun disable-white-space-mode ()
-;;  (whitespace-mode 0))
-;;(add-hook 'after-change-major-mode-hook #'disable-white-space-mode)
 
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
@@ -91,9 +64,6 @@
 ;; eshell maximum lines of scrollback
 (setq eshell-buffer-maximum-lines 1000)
 (add-hook 'eshell-output-filter-functions #'eshell-truncate-buffer)
-
-;; modeline file name
-;;(setq +modeline-buffer-path-function #'+modeline-file-name)
 
 ;; use bash for terminals
 (setq multi-term-program "/bin/bash")
