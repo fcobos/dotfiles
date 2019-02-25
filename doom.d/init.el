@@ -15,7 +15,7 @@
        company           ; the ultimate code completion backend
        ;;helm             ; the *other* search engine for love and life
        ;;ido              ; the other *other* search engine...
-       (ivy +fuzzy)      ; a search engine for love and life
+       ivy               ; a search engine for love and life
 
        :ui
        ;;deft              ; notational velocity for Emacs
@@ -50,8 +50,8 @@
 
        :emacs
        (dired            ; making dired pretty [functional]
-       ;;+ranger         ; bringing the goodness of ranger to dired
-       ;;+icons          ; colorful icons for dired-mode
+        ;;+ranger         ; bringing the goodness of ranger to dired
+        ;;+icons          ; colorful icons for dired-mode
         )
        electric          ; smarter, keyword-based electric-indent
        eshell            ; a consistent, cross-platform shell (WIP)
@@ -120,7 +120,7 @@
        ;;plantuml          ; diagrams for confusing people more
        purescript        ; javascript, but functional
        (python           ; beautiful is better than ugly
-	+lsp
+	 +lsp
         +pyenv
         +pyvenv)
        qt                ; the 'cutest' gui framework ever
@@ -162,6 +162,6 @@
        ;; reference for your own modules.
        (default +bindings +smartparens)
 
-       :private 
+       :private
        java-lsp
        cc-lsp)
