@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+/usr/bin/qutebrowser --loglines 0 --loglevel critical --logfilter qt,init
