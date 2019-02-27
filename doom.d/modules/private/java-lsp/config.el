@@ -5,6 +5,9 @@
   :init
   (setq lsp-response-timeout 30
         lsp-eldoc-render-all nil
+        lsp-auto-guess-root t
+        lsp-keep-workspace-alive nil
+        lsp-session-file (concat doom-etc-dir "lsp-session")
         lsp-enable-completion-at-point t))
 
 (def-package! lsp-java
