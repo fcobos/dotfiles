@@ -10,7 +10,7 @@
 (setq-default line-spacing 1)
 
 ;; Set the theme
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-one-light)
 ;; solaire-mode is not activated on first opened buffer
 (solaire-mode 1)
 
