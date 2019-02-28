@@ -470,3 +470,8 @@ c.window.hide_decoration = True
 
 # don't accept 3rd party cookies
 c.content.cookies.accept = "no-3rdparty"
+
+# Document fonts
+c.fonts.web.family.serif = "Tinos"
+c.fonts.web.family.sans_serif="Arimo"
+c.fonts.web.family.fixed="Cousine"
