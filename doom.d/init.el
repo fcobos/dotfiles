@@ -21,7 +21,6 @@
        ;;deft              ; notational velocity for Emacs
        doom              ; what makes DOOM look the way it does
        ;;doom-dashboard    ; a nifty splash screen for Emacs
-       ;;doom-modeline     ; a snazzy Atom-inspired mode-line
        ;;doom-quit         ; DOOM quit-message prompts when you quit Emacs
        evil-goggles      ; display visual hints when editing in evil
        ;;fci               ; a `fill-column' indicator
@@ -69,8 +68,8 @@
        gist              ; interacting with github gists
        lsp
        ;;macos             ; MacOS-specific commands
-       make              ; run make tasks from Emacs
        magit             ; a git porcelain for Emacs
+       make              ; run make tasks from Emacs
        password-store    ; password manager for nerds
        pdf               ; pdf enhancements
        ;;prodigy           ; FIXME managing external services & code builders
@@ -83,7 +82,7 @@
 
        :lang
        assembly          ; assembly for fun or debugging
-       ;;cc                ; C/C++/Obj-C madness
+       (cc +lsp)         ; C/C++/Obj-C madness
        clojure           ; java with a lisp
        common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs

@@ -22,8 +22,9 @@
 ;; python debugger
 (setq gud-pdb-command-name "python -m pdb")
 
-;; modeline height
-(setq +doom-modeline-height 22)
+;; modeline config
+(setq doom-modeline-height 22)
+(setq doom-modeline-buffer-file-name-style 'file-name)
 
 ;; open *rc files as conf-mode
 (add-to-list 'auto-mode-alist '("\\rc$" . conf-mode))
