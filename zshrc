@@ -141,40 +141,16 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 # prompt
 autoload -U colors && colors
-#USER_HOST=""
-#if [ $SSH_CLIENT ]; then
-#	USER_HOST="%{$fg[blue]%}%n%{$fg[green]%}@%{$fg[yellow]%}%m "
-#fi
-#THE_CWD="%{$bold_color%}%{$fg[blue]%}%~"
-#PROMPT_SYMBOL="%{$fg[green]%}"$'\u276d'
-#if [ $TERM = "linux" ]; then
-#	PROMPT_SYMBOL="%{$fg[green]%}>"
-#fi
-#PS1=$'\n'${USER_HOST}${THE_CWD}$'\n'${PROMPT_SYMBOL}"%{$reset_color%}%  "
-
-source ~/dotfiles/zsh-themes/p10k/p10k.zsh
+USER_HOST=""
 if [ $SSH_CLIENT ]; then
-	p10k_left=(
-		p10ks_userhost
-		p10ks_cwd_writable
-		p10ks_cwd
-		p10ks_vcs
-		p10ks_jobs
-	)
-else
-	p10k_left=(
-		p10ks_cwd_writable
-		p10ks_cwd
-		p10ks_vcs
-		p10ks_jobs
-	)
+	USER_HOST="%{$fg[blue]%}%n%{$fg[green]%}@%{$fg[yellow]%}%m "
 fi
-
-p10k_right=()
-
-p10k_opts=(
-	p10ks_cwd ';;;;rtab;-t;-l'
-)
+THE_CWD="%{$bold_color%}%{$fg[blue]%}%~"
+PROMPT_SYMBOL="%{$fg[green]%}"$'\u276d'
+if [ $TERM = "linux" ]; then
+	PROMPT_SYMBOL="%{$fg[green]%}>"
+fi
+PS1=$'\n'${USER_HOST}${THE_CWD}$'\n'${PROMPT_SYMBOL}"%{$reset_color%}%  "
 
 # Set terminal title bar (not needed with pure prompt)
 case ${TERM} in
