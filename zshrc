@@ -160,7 +160,6 @@ if [ $SSH_CLIENT ]; then
 		p10ks_cwd
 		p10ks_vcs
 		p10ks_jobs
-		p10ks_execution_time
 	)
 else
 	p10k_left=(
@@ -168,7 +167,6 @@ else
 		p10ks_cwd
 		p10ks_vcs
 		p10ks_jobs
-		p10ks_execution_time
 	)
 fi
 
