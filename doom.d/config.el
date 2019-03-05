@@ -11,8 +11,8 @@
 
 ;; Set the theme
 (setq doom-theme 'doom-one-light)
-;; solaire-mode is not activated on first opened buffer
-(solaire-mode 1)
+;; Fix solaire-mode hl-line when using doom-one-light theme
+(custom-set-faces '(solaire-hl-line-face ((t (:background "lightgray")))))
 
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
