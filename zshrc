@@ -146,7 +146,7 @@ if [ $SSH_CLIENT ]; then
 	USER_HOST="%{$fg[blue]%}%n%{$fg[green]%}@%{$fg[yellow]%}%m "
 fi
 THE_CWD="%{$bold_color%}%{$fg[blue]%}%~"
-PROMPT_SYMBOL="%{$fg[green]%}"$'\u276d'
+PROMPT_SYMBOL="%{$fg[green]%}"$'\u2771'
 if [ $TERM = "linux" ]; then
 	PROMPT_SYMBOL="%{$fg[green]%}>"
 fi
