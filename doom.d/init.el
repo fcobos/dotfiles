@@ -25,6 +25,7 @@
        evil-goggles      ; display visual hints when editing in evil
        ;;fci               ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE tags
+       ;;indent-guides     ; highlighted indent columns
        modeline          ; snazzy, Atom-inspired modeline, plus API
        ;;nav-flash         ; blink the current line after jumping
        ;;neotree           ; a project drawer, like NERDTree for vim
@@ -49,8 +50,8 @@
 
        :emacs
        (dired            ; making dired pretty [functional]
-        ;;+ranger         ; bringing the goodness of ranger to dired
-        ;;+icons          ; colorful icons for dired-mode
+       ;;+ranger         ; bringing the goodness of ranger to dired
+       ;;+icons          ; colorful icons for dired-mode
         )
        electric          ; smarter, keyword-based electric-indent
        eshell            ; a consistent, cross-platform shell (WIP)
