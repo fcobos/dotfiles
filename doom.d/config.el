@@ -11,8 +11,6 @@
 
 ;; Set the theme
 (setq doom-theme 'doom-one-light)
-;; Fix solaire-mode hl-line when using doom-one-light theme
-(custom-set-faces '(solaire-hl-line-face ((t (:background "lightgray")))))
 
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
