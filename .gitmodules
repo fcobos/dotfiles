@@ -10,3 +10,6 @@
 [submodule "zsh-plugins/zsh-autopair"]
 	path = zsh-plugins/zsh-autopair
 	url = https://github.com/hlissner/zsh-autopair.git
+[submodule "zsh-themes/powerlevel10k"]
+	path = zsh-themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
