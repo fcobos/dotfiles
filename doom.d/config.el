@@ -4,8 +4,8 @@
 (set-frame-parameter nil 'undecorated t)
 
 ;; Set the font
-(setq doom-font (font-spec :family "Iosevka SS04" :size 14)
-      doom-big-font (font-spec :family "Iosevka SS04" :size 24)
+(setq doom-font (font-spec :family "Iosevka" :size 14)
+      doom-big-font (font-spec :family "Iosevka" :size 24)
       doom-variable-pitch-font (font-spec :family "DejaVu Sans Condensed" :size 14))
 (setq-default line-spacing 1)
 
