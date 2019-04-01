@@ -23,7 +23,7 @@
        ;;doom-dashboard    ; a nifty splash screen for Emacs
        ;;doom-quit         ; DOOM quit-message prompts when you quit Emacs
        evil-goggles      ; display visual hints when editing in evil
-       ;;fci               ; a `fill-column' indicator
+       ;;fill-column       ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        ;;indent-guides     ; highlighted indent columns
        modeline          ; snazzy, Atom-inspired modeline, plus API
@@ -49,10 +49,10 @@
        rotate-text       ; cycle region at point between text candidates
 
        :emacs
-       (dired            ; making dired pretty [functional]
+       (dired)            ; making dired pretty [functional]
        ;;+ranger         ; bringing the goodness of ranger to dired
        ;;+icons          ; colorful icons for dired-mode
-        )
+
        electric          ; smarter, keyword-based electric-indent
        eshell            ; a consistent, cross-platform shell (WIP)
        imenu             ; an imenu sidebar and searchable code index
