@@ -215,14 +215,16 @@ exec --no-startup-id xset +fp ~/.local/share/fonts
 exec --no-startup-id xset fp rehash
 # gnome gsd-xsettings (to make flatpak apps use the right theme)
 #exec --no-startup-id /usr/libexec/gsd-xsettings
-#exec --no-startup-id /usr/lib/gsd-xsettings
-exec --no-startup-id xsettingsd
+exec --no-startup-id /usr/lib/gsd-xsettings
+#exec --no-startup-id xsettingsd
 # dunst notification daemon
 exec --no-startup-id dunst
 # redshift
 #exec --no-startup-id redshift-gtk
 # start compton
 exec --no-startup-id env allow_rgb10_configs=false compton -b
+# Xresources
+exec --no-startup-id xrdb ~/.Xresources
 
 # Pulse Audio Controls
 #bindsym XF86AudioMute        exec --no-startup-id amixer set Master -q toggle
