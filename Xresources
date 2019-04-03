@@ -109,22 +109,22 @@ st.opacity:      255
 
 
 ! Emacs colors
-#define emacs00 #282c34
-#define emacs01 #353b45
-#define emacs02 #3e4451
-#define emacs03 #545862
-#define emacs04 #565c64
-#define emacs05 #abb2bf
-#define emacs06 #b6bdca
-#define emacs07 #c8ccd4
-#define emacs08 #e06c75
-#define emacs09 #d19a66
-#define emacs0A #e5c07b
-#define emacs0B #98c379
-#define emacs0C #56b6c2
-#define emacs0D #61afef
-#define emacs0E #c678dd
-#define emacs0F #be5046
+#define emacs00 #f9f5d7
+#define emacs01 #ebdbb2
+#define emacs02 #d5c4a1
+#define emacs03 #bdae93
+#define emacs04 #665c54
+#define emacs05 #504945
+#define emacs06 #3c3836
+#define emacs07 #282828
+#define emacs08 #9d0006
+#define emacs09 #af3a03
+#define emacs0A #b57614
+#define emacs0B #79740e
+#define emacs0C #427b58
+#define emacs0D #076678
+#define emacs0E #8f3f71
+#define emacs0F #d65d0e
 
 Emacs*foreground:   emacs05
 #ifdef background_opacity

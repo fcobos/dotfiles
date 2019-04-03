@@ -115,9 +115,9 @@ if &t_Co >= 256 || has("gui_running")
   set termguicolors
 endif
 
-set background=dark
-let g:one_allow_italics = 1
-colorscheme one
+set background=light
+"let g:one_allow_italics = 1
+colorscheme base16-gruvbox-light-hard
 
 " rainbow parentheses
 "autocmd VimEnter * RainbowParentheses
