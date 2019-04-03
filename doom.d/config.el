@@ -12,6 +12,9 @@
 ;; Set the theme
 (setq doom-theme 'doom-solarized-light)
 
+;; Disable solaire-mode
+(add-hook 'after-change-major-mode-hook (lambda () (solaire-mode 0)))
+
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
 
