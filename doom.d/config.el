@@ -10,9 +10,7 @@
 (setq-default line-spacing 1)
 
 ;; Set the theme
-(setq base16-theme-256-color-source 'colors)
-(setq doom-theme 'base16-gruvbox-light-hard)
-(doom-themes-treemacs-config)
+(setq doom-theme 'doom-solarized-light)
 
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
