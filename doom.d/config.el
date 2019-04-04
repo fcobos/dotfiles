@@ -17,6 +17,7 @@
 (custom-set-faces
  '(show-paren-match ((t (:background "#bdae93" :foreground "#504945"))))
  '(cursor ((t (:background "#504945"))))
+ '(treemacs-root-face ((t (:underline nil :height 1.2 :weight bold :foreground "#9d0006"))))
  '(line-number-current-line ((t (:background "#bdae93" :inverse-video nil)))))
 
 ;; Disable solaire-mode
