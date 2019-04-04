@@ -6,7 +6,7 @@
 
 # gcc colors
 export GCC_COLORS=error="01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
-export EDITOR=vim
+export EDITOR=nvim
 export ANDROID_HOME="$HOME/devel/android-sdk"
 export ANDROID_SDK="$ANDROID_HOME"
 export ANDROID_NDK_HOME="$HOME/devel/android-ndk"
