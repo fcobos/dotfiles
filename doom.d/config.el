@@ -16,7 +16,8 @@
   (doom-themes-treemacs-config))
 (custom-set-faces
  '(show-paren-match ((t (:background "#bdae93" :foreground "#504945"))))
- '(cursor ((t (:background "#504945")))))
+ '(cursor ((t (:background "#504945"))))
+ '(line-number-current-line ((t (:background "#bdae93" :inverse-video nil)))))
 
 ;; Disable solaire-mode
 (add-hook 'after-change-major-mode-hook (lambda () (solaire-mode 0)))
