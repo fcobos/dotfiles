@@ -93,6 +93,13 @@
 ;; use gogetdoc for go documentation
 (after! go-mode
   (setq godoc-at-point-function #'godoc-gogetdoc))
+;; format go buffers on save
+(after! go-mode
+  (add-hook 'before-save-hook #'gofmt-before-save))
+
+;; format rust buffers on save
+(after! rust-mode
+  (setq rust-format-on-save t))
 
 ;; avoid exit confirmation dialog
 (setq confirm-kill-emacs nil)
