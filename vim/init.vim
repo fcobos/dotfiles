@@ -116,7 +116,6 @@ if &t_Co >= 256 || has('gui_running')
 endif
 
 set background=light
-"let g:one_allow_italics = 1
 colorscheme base16-gruvbox-light-hard
 
 " rainbow parentheses

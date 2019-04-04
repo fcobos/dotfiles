@@ -10,7 +10,12 @@
 (setq-default line-spacing 1)
 
 ;; Set the theme
-(setq doom-theme 'doom-solarized-light)
+(setq base16-theme-256-color-source 'colors)
+(setq doom-theme 'base16-gruvbox-light-hard)
+(after! treemacs
+  (doom-themes-treemacs-config))
+(custom-set-faces
+ '(show-paren-match ((t (:background "gray" :foreground "black")))))
 
 ;; Disable solaire-mode
 (add-hook 'after-change-major-mode-hook (lambda () (solaire-mode 0)))
