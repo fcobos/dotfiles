@@ -15,7 +15,7 @@
 (after! treemacs
   (doom-themes-treemacs-config))
 (custom-set-faces
- '(show-paren-match ((t (:background "gray" :foreground "black")))))
+ '(show-paren-match ((t (:background "#bdae93" :foreground "#504945")))))
 
 ;; Disable solaire-mode
 (add-hook 'after-change-major-mode-hook (lambda () (solaire-mode 0)))
