@@ -15,6 +15,7 @@
 (after! treemacs
   (doom-themes-treemacs-config))
 (custom-set-faces
+ '(fixed-pitch ((t (:family "Iosevka"))))
  '(show-paren-match ((t (:background "#bdae93" :foreground "#504945"))))
  '(cursor ((t (:background "#504945"))))
  '(line-number-current-line ((t (:background "#bdae93" :inverse-video nil)))))
