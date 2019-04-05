@@ -111,4 +111,17 @@
   (add-hook 'after-init-hook (lambda ()
                                (toggle-frame-maximized))))
 
+;; c key mapping workaround
+(map! :leader
+      (:prefix ("c" . "code")
+        :desc "Compile project"             "c"   #'projectile-compile-project
+        :desc "Jump to definition"          "d"   #'+lookup/definition
+        :desc "Jump to references"          "D"   #'+lookup/references
+        :desc "Evaluate buffer/region"      "e"   #'+eval/buffer-or-region
+        :desc "Evaluate & replace region"   "E"   #'+eval:replace-region
+        :desc "Format buffer/region"        "f"   #'+format/region-or-buffer
+        :desc "Open REPL"                   "r"   #'+eval/open-repl-other-window
+        :desc "Delete trailing whitespace"  "w"   #'delete-trailing-whitespace
+        :desc "Delete trailing newlines"    "W"   #'doom/delete-trailing-newlines
+        :desc "List errors"                 "x"   #'flycheck-list-errors))
 ;;; config.el ends here
