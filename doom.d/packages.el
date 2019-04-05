@@ -7,3 +7,5 @@
 (package! vimrc-mode)
 ;; base16 themes
 (package! base16-theme)
+;; terminal cursor changer
+(package! evil-terminal-cursor-changer)
