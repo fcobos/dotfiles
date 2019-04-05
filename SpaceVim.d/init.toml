@@ -1,0 +1,74 @@
+[options]
+    colorscheme = "gruvbox"
+    colorscheme_bg = "light"
+    enable_guicolors = true
+    statusline_separator = "nil"
+    statusline_inactive_separator = "nil"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = false
+    guifont = "Iosevka:11"
+    bootstrap_after = "settings#after"
+
+[[layers]]
+name = 'autocomplete'
+auto-completion-return-key-behavior = "complete"
+auto-completion-tab-key-behavior = "smart"
+
+[[layers]]
+name = 'shell'
+default_position = 'bottom'
+default_height = 30
+
+[[layers]]
+  name = "lang#python"
+
+[[layers]]
+  name = "lang#rust"
+
+[[layers]]
+  name = "debug"
+
+[[layers]]
+  name = "git"
+
+[[layers]]
+  name = "lang#vim"
+
+[[layers]]
+  name = "lang#markdown"
+
+[[layers]]
+  name = "lang#html"
+
+[[layers]]
+  name = "lang#java"
+
+[[layers]]
+  name = "lang#kotlin"
+
+[[layers]]
+  name = "lang#dockerfile"
+
+[[layers]]
+  name = "lang#sh"
+
+[[layers]]
+  name = "lang#go"
+
+[[layers]]
+  name = "lsp"
+  filetypes = [
+    "javascript",
+    "rust",
+    "go",
+    "python",
+    "c",
+    "cpp"
+  ]
+  [layers.override_cmd]
+    rust = ["rustup", "run", "stable", "rls"]
+    go = ['bingo', '-mode', 'stdio']
+    c = ["ccls"]
+    cpp = ["ccls"]
+
