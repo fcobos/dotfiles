@@ -11,7 +11,7 @@
 
 ;; Set the theme
 (setq base16-theme-256-color-source 'colors)
-(setq doom-theme 'base16-gruvbox-light-hard)
+(setq doom-theme 'base16-gruvbox-light-medium)
 (after! treemacs
   (doom-themes-treemacs-config))
 (custom-set-faces

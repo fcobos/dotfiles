@@ -109,7 +109,7 @@ st.opacity:      255
 
 
 ! Emacs colors
-#define emacs00 #f9f5d7
+#define emacs00 #fbf1c7
 #define emacs01 #ebdbb2
 #define emacs02 #d5c4a1
 #define emacs03 #bdae93
@@ -124,7 +124,7 @@ st.opacity:      255
 #define emacs0C #427b58
 #define emacs0D #076678
 #define emacs0E #8f3f71
-#define emacs0F #d65d0e
+#define emacs0F #d65d0ei
 
 Emacs*foreground:   emacs05
 #ifdef background_opacity
