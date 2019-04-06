@@ -33,10 +33,8 @@
 
 ;; modeline config
 (setq doom-modeline-height 22)
-(setq all-the-icons-color-icons nil)
-(setq doom-modeline-icon t)
-(setq doom-modeline-major-mode-icon t)
-(setq doom-modeline-major-mode-color-icon t)
+(setq doom-modeline-buffer-file-name-style 'file-name)
+(setq doom-modeline-env-version nil)
 
 ;; open *rc files as conf-mode
 (add-to-list 'auto-mode-alist '("\\rc$" . conf-mode))
