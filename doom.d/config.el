@@ -111,29 +111,10 @@
   (add-hook 'after-init-hook (lambda ()
                                (toggle-frame-maximized))))
 
-;; c key mapping workaround
-(add-hook
- 'after-change-major-mode-hook
- (lambda ()
-   (map! :leader
-         (:prefix ("c" . "code")
-           :desc "Compile project"             "c"   #'projectile-compile-project
-           :desc "Jump to definition"          "d"   #'+lookup/definition
-           :desc "Jump to references"          "D"   #'+lookup/references
-           :desc "Evaluate buffer/region"      "e"   #'+eval/buffer-or-region
-           :desc "Evaluate & replace region"   "E"   #'+eval:replace-region
-           :desc "Format buffer/region"        "f"   #'+format/region-or-buffer
-           :desc "Toggle comment"              "l"   #'evil-commentary-line
-           :desc "Copy and comment lines"      "y"   #'evil-commentary-yank-line
-           :desc "Open REPL"                   "r"   #'+eval/open-repl-other-window
-           :desc "Delete trailing whitespace"  "w"   #'delete-trailing-whitespace
-           :desc "Delete trailing newlines"    "W"   #'doom/delete-trailing-newlines
-           :desc "List errors"                 "x"   #'flycheck-list-errors))))
-
 ;; key bindings
-;;(map! :leader
-;;      (:prefix "c"
-;;        :desc "Toggle comment"         "l" #'evil-commentary-line
-;;        :desc "Copy and comment lines" "y" #'evil-commentary-yank-line)))
+(map! :leader
+      (:prefix "c"
+        :desc "Toggle comment"         "l" #'evil-commentary-line
+        :desc "Copy and comment lines" "y" #'evil-commentary-yank-line))
 
 ;;; config.el ends here

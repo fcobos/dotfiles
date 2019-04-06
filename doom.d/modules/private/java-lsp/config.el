@@ -58,10 +58,6 @@
         :n   "K"  #'lsp-describe-thing-at-point
         :nv  "gd" #'lsp-ui-peek-find-definitions
         :nv  "gD" #'lsp-ui-peek-find-references
-        :leader
-        (:prefix ("c" . "code")
-          :desc "Jump to references"          "D"   #'lsp-ui-peek-find-references
-          :desc "Jump to definition"          "d"   #'lsp-ui-peek-find-definitions)
         :localleader
         (:desc "Refactor"
           :prefix "r"
