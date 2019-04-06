@@ -26,6 +26,9 @@
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
 
+;; auto completion delay
+(setq company-idle-delay 0.5)
+
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
 ;; python debugger
