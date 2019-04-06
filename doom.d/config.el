@@ -86,7 +86,7 @@
 (c-set-offset 'case-label '+)
 
 ;; autodetect indentation settings
-(add-hook 'prog-mode-hook (lambda () (interactive) (dtrt-indent-mode 1)))
+(add-hook 'prog-mode-hook (lambda () (dtrt-indent-mode 1)))
 
 ;; use eww to open urls
 (setq +lookup-open-url-fn 'eww)
