@@ -144,7 +144,7 @@ c.zoom.default = '100%'
 # Default monospace fonts. Whenever "monospace" is used in a font
 # setting, it's replaced with the fonts listed here.
 # Type: Font
-c.fonts.monospace = 'Iosevka'
+c.fonts.monospace = 'Iosevka SS04'
 
 # Font used in the completion widget.
 # Type: Font

@@ -50,12 +50,12 @@ line-size = 2
 ;----------------------------------------------------------
 
 font-0 = Hack:size=12;3
-font-1 = Iosevka:size=11;3
+font-1 = Iosevka SS04:size=11;3
 font-2 = FontAwesome:size=11;3
 font-3 = fixed:pixelsize=11;3
 font-4 = unifont:fontformat=truetype:size=11:antialias=true;3
 font-5 = siji:pixelsize=11;3
-font-6 = Iosevka:size=11:weight=bold;3
+font-6 = Iosevka SS04:size=11:weight=bold;3
 font-7 = Hack:size=6;0
 
 

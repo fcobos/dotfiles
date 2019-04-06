@@ -4,8 +4,8 @@
 (set-frame-parameter nil 'undecorated t)
 
 ;; Set the font
-(setq doom-font (font-spec :family "Iosevka" :size 14)
-      doom-big-font (font-spec :family "Iosevka" :size 24)
+(setq doom-font (font-spec :family "Iosevka SS04" :size 14)
+      doom-big-font (font-spec :family "Iosevka SS04" :size 24)
       doom-variable-pitch-font (font-spec :family "DejaVu Sans Condensed" :size 14))
 (setq-default line-spacing 1)
 
@@ -15,7 +15,7 @@
 (after! treemacs
   (doom-themes-treemacs-config))
 (custom-set-faces
- '(fixed-pitch ((t (:family "Iosevka"))))
+ '(fixed-pitch ((t (:family "Iosevka SS04"))))
  '(show-paren-match ((t (:background "#bdae93" :foreground "#504945"))))
  '(cursor ((t (:background "#504945"))))
  '(line-number-current-line ((t (:background "#bdae93" :inverse-video nil)))))
@@ -123,15 +123,17 @@
            :desc "Evaluate buffer/region"      "e"   #'+eval/buffer-or-region
            :desc "Evaluate & replace region"   "E"   #'+eval:replace-region
            :desc "Format buffer/region"        "f"   #'+format/region-or-buffer
+           :desc "Toggle comment"              "l"   #'evil-commentary-line
+           :desc "Copy and comment lines"      "y"   #'evil-commentary-yank-line
            :desc "Open REPL"                   "r"   #'+eval/open-repl-other-window
            :desc "Delete trailing whitespace"  "w"   #'delete-trailing-whitespace
            :desc "Delete trailing newlines"    "W"   #'doom/delete-trailing-newlines
            :desc "List errors"                 "x"   #'flycheck-list-errors))))
 
 ;; key bindings
-(map! :leader
-      (:prefix "c"
-        :desc "Toggle comment"         "l" #'evil-commentary-line
-        :desc "Copy and comment lines" "y" #'evil-commentary-yank-line))
+;;(map! :leader
+;;      (:prefix "c"
+;;        :desc "Toggle comment"         "l" #'evil-commentary-line
+;;        :desc "Copy and comment lines" "y" #'evil-commentary-yank-line)))
 
 ;;; config.el ends here

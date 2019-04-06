@@ -86,19 +86,19 @@ tabspaces: 8
 font:
   # Normal (roman) font face
   normal:
-    family: Iosevka Term
+    family: Iosevka Term SS04
     # The `style` can be specified to pick a specific face.
     style: Regular
 
   # Bold font face
   bold:
-    family: Iosevka Term
+    family: Iosevka Term SS04
     # The `style` can be specified to pick a specific face.
     style: Extrabold
 
   # Italic font face
   italic:
-    family: Iosevka Term
+    family: Iosevka Term SS04
     # The `style` can be specified to pick a specific face.
     style: Italic
 

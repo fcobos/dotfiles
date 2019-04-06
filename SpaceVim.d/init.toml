@@ -8,7 +8,7 @@
     enable_tabline_filetype_icon = false
     enable_statusline_mode = false
     statusline_unicode_symbols = false
-    guifont = "Iosevka:11"
+    guifont = "Iosevka SS04:11"
     bootstrap_after = "settings#after"
 
 [[layers]]
