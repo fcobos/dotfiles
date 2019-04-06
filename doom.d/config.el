@@ -128,4 +128,10 @@
            :desc "Delete trailing newlines"    "W"   #'doom/delete-trailing-newlines
            :desc "List errors"                 "x"   #'flycheck-list-errors))))
 
+;; key bindings
+(map! :leader
+      (:prefix "c"
+        :desc "Toggle comment"         "l" #'evil-commentary-line
+        :desc "Copy and comment lines" "y" #'evil-commentary-yank-line))
+
 ;;; config.el ends here
