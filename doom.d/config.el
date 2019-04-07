@@ -26,9 +26,6 @@
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
 
-;; auto completion delay
-(setq company-idle-delay 0.5)
-
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
 ;; python debugger
@@ -106,7 +103,10 @@
   (set-lookup-handlers! 'go-mode
     :definition #'lsp-ui-peek-find-definitions
     :references #'lsp-ui-peek-find-references
-    :documentation #'lsp-describe-thing-at-point))
+    :documentation #'godoc-at-point)
+  ;; key bindings
+  (map! :map go-mode-map
+        :nv   "K"  #'godoc-at-point))
 
 ;; format rust buffers on save
 (after! rust-mode

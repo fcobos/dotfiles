@@ -12,7 +12,7 @@
        workspaces        ; tab emulation, persistence & separate workspaces
 
        :completion
-       (company +auto)  ; the ultimate code completion backend
+       company          ; the ultimate code completion backend
        ;;helm             ; the *other* search engine for love and life
        ;;ido              ; the other *other* search engine...
        (ivy +fuzzy)     ; a search engine for love and life
@@ -50,8 +50,8 @@
 
        :emacs
        (dired            ; making dired pretty [functional]
-       ;;+ranger         ; bringing the goodness of ranger to dired
-       ;;+icons          ; colorful icons for dired-mode
+        ;;+ranger         ; bringing the goodness of ranger to dired
+        ;;+icons          ; colorful icons for dired-mode
         )
        electric          ; smarter, keyword-based electric-indent
        eshell            ; a consistent, cross-platform shell (WIP)
