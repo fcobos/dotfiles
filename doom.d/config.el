@@ -92,22 +92,6 @@
 ;; use eww to open urls
 (setq +lookup-open-url-fn 'eww)
 
-;; go configuration
-(after! go-mode
-  ;; use gogetdoc for go documentation
-  (setq godoc-at-point-function #'godoc-gogetdoc)
-  ;; format go buffers on save
-  (setq gofmt-command "goimports")
-  (add-hook 'before-save-hook #'gofmt-before-save)
-  ;; lookup handlers
-  (set-lookup-handlers! 'go-mode
-    :definition #'lsp-ui-peek-find-definitions
-    :references #'lsp-ui-peek-find-references
-    :documentation #'godoc-at-point)
-  ;; key bindings
-  (map! :map go-mode-map
-        :nv   "K"  #'godoc-at-point))
-
 ;; format rust buffers on save
 (after! rust-mode
   (setq rust-format-on-save t))

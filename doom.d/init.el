@@ -163,5 +163,6 @@
        (default +bindings +smartparens)
 
        :private
+       go-custom
        java-lsp
        cc-lsp)
