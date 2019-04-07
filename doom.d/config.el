@@ -103,13 +103,9 @@
   (add-hook 'before-save-hook #'gofmt-before-save)
   ;; lookup handlers
   (set-lookup-handlers! 'go-mode
-    :documentation #'lsp-describe-thing-at-point)
-  ;; keymaps
-  (map! :map (go-mode-map)
-        :n   "K"  #'lsp-describe-thing-at-point
-        :localleader
-        (:prefix ("h" . "help")
-          "." #'lsp-describe-thing-at-point)))
+    :definition #'lsp-ui-peek-find-definitions
+    :references #'lsp-ui-peek-find-references
+    :documentation #'lsp-describe-thing-at-point))
 
 ;; format rust buffers on save
 (after! rust-mode
