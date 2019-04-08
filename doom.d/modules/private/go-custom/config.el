@@ -6,13 +6,13 @@
   (setq godoc-at-point-function #'godoc-gogetdoc)
 
   ;; format go buffers on save
-  ;;(setq gofmt-command "goimports")
+  (setq gofmt-command "goimports")
   (add-hook 'before-save-hook #'gofmt-before-save)
 
   ;; lookup handlers
   (set-lookup-handlers! 'go-mode
-    :definition #'lsp-ui-peek-find-definitions
-    :references #'lsp-ui-peek-find-references
+    ;; :definition #'lsp-ui-peek-find-definitions
+    ;; :references #'lsp-ui-peek-find-references
     :documentation #'godoc-at-point)
 
   ;; font lock
