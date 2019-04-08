@@ -38,5 +38,5 @@ go get -u github.com/koron/iferr
 go get -u golang.org/x/mobile/cmd/gomobile
 
 # strip binaries
-cd $GOPATH
+cd $GOPATH/bin
 for f in * ; do strip --strip-all $f ; done
