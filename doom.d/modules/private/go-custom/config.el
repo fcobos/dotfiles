@@ -6,7 +6,7 @@
   (setq godoc-at-point-function #'godoc-gogetdoc)
 
   ;; format go buffers on save
-  (setq gofmt-command "goimports")
+  ;;(setq gofmt-command "goimports")
   (add-hook 'before-save-hook #'gofmt-before-save)
 
   ;; lookup handlers
