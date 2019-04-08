@@ -35,6 +35,7 @@
 (setq doom-modeline-height 22)
 (setq doom-modeline-buffer-file-name-style 'file-name)
 (setq doom-modeline-env-version nil)
+(setq doom-modeline-lsp nil)
 
 ;; open *rc files as conf-mode
 (add-to-list 'auto-mode-alist '("\\rc$" . conf-mode))
