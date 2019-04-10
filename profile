@@ -16,10 +16,10 @@ export NDKROOT="$ANDROID_NDK_HOME"
 PATH="$HOME/bin:$HOME/.local/bin:$ANDROID_SDK/emulator:$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools:$ANDROID_NDK:$PATH"
 export PATH
 
-export MOZ_USE_OMTC=1
-export MOZ_GLX_IGNORE_BLACKLIST=1
-export MOZ_ACCELERATED=1
-export MOZ_WEBRENDER=1
+#export MOZ_USE_OMTC=1
+#export MOZ_GLX_IGNORE_BLACKLIST=1
+#export MOZ_ACCELERATED=1
+#export MOZ_WEBRENDER=1
 
 # fix for android emulator's old libstdc++
 export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
