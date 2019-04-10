@@ -11,8 +11,8 @@
 
   ;; lookup handlers
   (set-lookup-handlers! 'go-mode
-    ;; :definition #'lsp-ui-peek-find-definitions
-    ;; :references #'lsp-ui-peek-find-references
+    :definition #'lsp-ui-peek-find-definitions
+    :references #'lsp-ui-peek-find-references
     :documentation #'godoc-at-point)
 
   ;; font lock
@@ -60,5 +60,9 @@
   ;; key bindings
   (map! :map go-mode-map
         :nv   "K"  #'godoc-at-point))
+
+;; flycheck configuration
+(add-hook 'lsp-ui-mode-hook (lambda ()
+                              (flycheck-add-next-checker 'lsp-ui 'go-gofmt)))
 
 ;;; config.el ends here
