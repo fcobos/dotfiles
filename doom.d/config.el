@@ -33,7 +33,7 @@
 
 ;; modeline config
 (setq doom-modeline-height 22)
-(setq doom-modeline-buffer-file-name-style 'file-name)
+(setq doom-modeline-buffer-file-name-style 'relative-to-project)
 (setq doom-modeline-env-version nil)
 (setq doom-modeline-lsp nil)
 
