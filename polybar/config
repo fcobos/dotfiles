@@ -78,7 +78,7 @@ tray-background = ${colors.dark_gray}
 ;----------------------------------------------------------
 
 modules-left = i3 xwindow
-modules-right = volume date powermenu
+modules-right = battery volume date powermenu
 
 ;----------------------------------------------------------
 ;		i3   M O D U L E
