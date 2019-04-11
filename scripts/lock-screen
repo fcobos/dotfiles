@@ -9,6 +9,7 @@ if [ -n $lock_pid ]; then
 	RES=$(xrandr --current | grep "\*" | cut -d ' ' -f 4)
 	BG=$(grep feh ~/.fehbg | cut -f 3 -d ' ' | tr -d "'")
 	##convert -scale 5% -scale 2000% $IMAGE $IMAGE
+	mkdir -p ~/.local/tmp > /dev/null 2>&1
 	convert $BG -resize $RES^ -gravity Center -extent $RES -blur 0x5 $IMAGE
 	convert -composite -gravity center -depth 8 $IMAGE $LOCK $IMAGE
 	i3lock -t -e -c 282c34 -i $IMAGE
