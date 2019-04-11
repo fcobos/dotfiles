@@ -195,8 +195,6 @@ exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natura
 exec --no-startup-id nm-applet
 # nvidia-settings
 exec --no-startup-id nvidia-settings --load-config-only
-# nvidia fan control
-exec --no-startup-id nvFanControl
 # xiccd
 exec --no-startup-id xiccd
 # apply color profile
@@ -204,12 +202,13 @@ exec --no-startup-id displaycal-apply-profiles --force
 # pulseaudio systray
 #exec --no-startup-id pasystray -a
 # power management
-exec --no-startup-id xfce4-power-manager
+#exec --no-startup-id xfce4-power-manager
+exec --no-startup-id /usr/lib/gsd-power
 # numlock
 exec --no-startup-id numlockx on
 # start mpd
-exec --no-startup-id mpd
-exec --no-startup-id mpDris2
+#exec --no-startup-id mpd
+#exec --no-startup-id mpDris2
 # fonts stuff
 exec --no-startup-id xset +fp ~/.local/share/fonts
 exec --no-startup-id xset fp rehash
