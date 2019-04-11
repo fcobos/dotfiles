@@ -42,7 +42,7 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -fn "Iosevka-9" -nf \#98d1ce -nb \#0a0f14 -sb \#195465'
-set $rofi_command "rofi -combi-modi window,drun,run -show combi -modi combi -theme onelight -width 480px -show-icons"
+set $rofi_command "rofi -combi-modi window,drun,run -show combi -modi combi -width 480px -show-icons"
 bindsym $mod+d exec --no-startup-id $rofi_command
 bindsym Mod1+space exec --no-startup-id $rofi_command
 
@@ -282,22 +282,22 @@ bindsym $mod+Pause exec --no-startup-id $Locker
 #client.urgent           $urgent        $urgent         $black            $urgent         $urgent
 #client.background       $black
 
-set $base00 #fafafa
-set $base01 #f0f0f1
-set $base02 #e5e5e6
-set $base03 #a0a1a7
-set $base04 #696c77
-set $base05 #383a42
-set $base06 #202227
-set $base07 #090a0b
-set $base08 #ca1243
-set $base09 #d75f00
-set $base0A #c18401
-set $base0B #50a14f
-set $base0C #0184bc
-set $base0D #4078f2
-set $base0E #a626a4
-set $base0F #986801
+set $base00 #fbf1c7
+set $base01 #ebdbb2
+set $base02 #d5c4a1
+set $base03 #bdae93
+set $base04 #665c54
+set $base05 #504945
+set $base06 #3c3836
+set $base07 #282828
+set $base08 #9d0006
+set $base09 #af3a03
+set $base0A #b57614
+set $base0B #79740e
+set $base0C #427b58
+set $base0D #076678
+set $base0E #8f3f71
+set $base0F #d65d0e
 
 # Basic color configuration using the Base16 variables for windows and borders.
 # Property Name         Border  BG      Text    Indicator Child Border
