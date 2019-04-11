@@ -78,7 +78,7 @@ tray-background = ${colors.dark_gray}
 ;----------------------------------------------------------
 
 modules-left = i3 xwindow
-modules-right = battery volume date powermenu
+modules-right = battery network volume date powermenu
 
 ;----------------------------------------------------------
 ;		i3   M O D U L E
@@ -184,11 +184,11 @@ format-disconnected = <label-disconnected>
 
 ;label-connected = "  %downspeed%"
 ;label-connected = "  %essid%"
-label-connected = " "
+label-connected = ""
 ;label-connected = "  %essid%  %local_ip%  %downspeed:8%  %upspeed:8%"
 label-connected-foreground = ${colors.foreground}
 label-connected-background = ${colors.dark_gray}
-label-disconnected = " "
+label-disconnected = ""
 label-disconnected-foreground = ${colors.foreground}
 label-disconnected-background = ${colors.dark_gray}
 
@@ -307,7 +307,7 @@ full-at = 98
 time-format = %H:%M
 
 ;format-charging = <animation-charging> <label-charging>
-format-charging = <animation-charging>
+format-charging = <label-charging><animation-charging>
 format-charging-foreground = ${colors.foreground}
 format-charging-background = ${colors.dark_gray}
 ;format-discharging = <ramp-capacity> <label-discharging>
@@ -318,7 +318,8 @@ format-full = <label-full>
 format-full-foreground = ${colors.foreground}
 format-full-background = ${colors.dark_gray}
 
-label-charging = "%percentage%% "
+;label-charging = "%percentage%% "
+label-charging = " "
 ;label-discharging = "%percentage%% "
 label-discharging = "%time% "
 label-discharging-foreground = ${colors.gray}

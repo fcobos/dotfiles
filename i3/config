@@ -192,7 +192,7 @@ exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natura
 #exec --no-startup-id /usr/lib/blueberry/blueberry-obex-agent.py
 #exec --no-startup-id blueberry-tray
 # NetworkManager applet
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 # nvidia-settings
 exec --no-startup-id nvidia-settings --load-config-only
 # xiccd
