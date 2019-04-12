@@ -1,7 +1,7 @@
 ;;; config.el -*- lexical-binding: t; -*-
 
 ;; disable window decorations
-(set-frame-parameter nil 'undecorated t)
+;;(set-frame-parameter nil 'undecorated t)
 
 ;; Set the font
 (setq doom-font (font-spec :family "Iosevka SS04" :size 14)
@@ -100,11 +100,11 @@
 ;; avoid exit confirmation dialog
 (setq confirm-kill-emacs nil)
 
-;; Maximize frame at startup
+;; this ugly thing here is to make
+;; a black border dissapear under i3
 (when (display-graphic-p)
-  (setq frame-resize-pixelwise 't)
-  (add-hook 'after-init-hook (lambda ()
-                               (toggle-frame-maximized))))
+  (toggle-frame-fullscreen)
+  (toggle-frame-fullscreen))
 
 ;; key bindings
 (map! :leader
