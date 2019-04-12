@@ -151,20 +151,21 @@ label-indicator-background = ${colors.background}
 ;		     B A C K L I G H T
 ;----------------------------------------------------------
 
-[module/backlight]
+[module/xbacklight]
 type = internal/xbacklight
 ; To list available cards use: $ ls -1 /sys/class/backlight/
-;card = intel_backlight
+card = acpi_video0
 
-format = <ramp> <label>
+;format = <ramp> <label>
+format = <ramp>
 ;    
 label = %percentage%%
 
-ramp-0 = 🌕
-ramp-1 = 🌔
-ramp-2 = 🌓
-ramp-3 = 🌒
-ramp-4 = 🌑
+ramp-0 =" 🌕"
+ramp-1 =" 🌔"
+ramp-2 =" 🌓"
+ramp-3 =" 🌒"
+ramp-4 =" 🌑"
 
 
 ;----------------------------------------------------------
