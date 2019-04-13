@@ -203,7 +203,6 @@ exec --no-startup-id displaycal-apply-profiles --force
 #exec --no-startup-id pasystray -a
 # power management
 #exec --no-startup-id xfce4-power-manager
-exec --no-startup-id /usr/lib/gsd-power
 # numlock
 exec --no-startup-id numlockx on
 # start mpd
@@ -212,10 +211,8 @@ exec --no-startup-id numlockx on
 # fonts stuff
 exec --no-startup-id xset +fp ~/.local/share/fonts
 exec --no-startup-id xset fp rehash
-# gnome gsd-xsettings (to make flatpak apps use the right theme)
-#exec --no-startup-id /usr/libexec/gsd-xsettings
-exec --no-startup-id /usr/lib/gsd-xsettings
-#exec --no-startup-id xsettingsd
+# xsettings daemon (to make flatpak apps use the right theme)
+exec --no-startup-id xsettingsd
 # dunst notification daemon
 exec --no-startup-id dunst
 # redshift

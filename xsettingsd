@@ -1,10 +1,11 @@
 Net/ThemeName "Adwaita"
-#Net/IconThemeName "Papirus-Light"
+Net/IconThemeName "Adwaita"
 Xft/Antialias 1
 Xft/HintStyle "hintslight"
 Xft/Hinting 1
 Xft/RGBA "rgb"
-Xft/lcdfilter "lcddefault"
+Xft/lcdfilter "lcdlight"
 Gtk/ShellShowsAppMenu 0
 Gtk/FontName "Cantarell 11"
 Gtk/DecorationLayout "appmenu:close"
+Net/EnableEventSounds 0
