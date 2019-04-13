@@ -35,6 +35,9 @@ go get -u github.com/josharian/impl
 go get -u honnef.co/go/tools/cmd/keyify
 go get -u github.com/fatih/motion
 go get -u github.com/koron/iferr
+go get -u github.com/mdempsky/unconvert
+go get -u honnef.co/go/tools/cmd/staticcheck
+go get -u github.com/kisielk/errcheck
 
 # strip binaries
 cd $GOPATH/bin
