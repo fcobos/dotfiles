@@ -7,13 +7,13 @@ go get -u golang.org/x/tools/cmd/guru
 go get -u golang.org/x/lint/golint
 go get -u golang.org/x/mobile/cmd/gomobile
 #go get -u golang.org/x/tools/cmd/gopls
-mkdir ~/.cache/go-tools
-cd ~/.cache/go-tools
-git clone -b bingo https://github.com/saibing/tools.git
-cd tools/cmd/gopls
-go install
-cd ~/
-rm -rf ~/.cache/go-tools
+#mkdir ~/.cache/go-tools
+#cd ~/.cache/go-tools
+#git clone -b bingo https://github.com/saibing/tools.git
+#cd tools/cmd/gopls
+#go install
+#cd ~/
+#rm -rf ~/.cache/go-tools
 go get -u github.com/saibing/bingo
 
 go get -u github.com/rogpeppe/godef

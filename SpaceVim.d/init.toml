@@ -81,7 +81,7 @@ default_height = 30
   ]
   [layers.override_cmd]
     rust = ["rustup", "run", "stable", "rls"]
-    go = ["gopls", "-mode", "stdio"]
+    go = ["bingo", "-mode", "stdio"]
     c = ["ccls"]
     cpp = ["ccls"]
 
