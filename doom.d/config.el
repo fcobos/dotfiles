@@ -73,6 +73,10 @@
   (define-fringe-bitmap 'flycheck-fringe-bitmap-double-arrow
     [16 48 112 240 112 48 16] nil nil 'center))
 
+;; disable lsp-ui's flycheck live reporting
+(add-hook 'lsp-ui-mode-hook (lambda ()
+                              (setq lsp-ui-flycheck-live-reporting nil)))
+
 ;; eshell maximum lines of scrollback
 (setq eshell-buffer-maximum-lines 1000)
 (add-hook 'eshell-output-filter-functions #'eshell-truncate-buffer)

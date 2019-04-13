@@ -64,5 +64,7 @@
 ;; flycheck configuration
 (add-hook 'lsp-ui-mode-hook (lambda ()
                               (flycheck-add-next-checker 'lsp-ui 'go-gofmt)))
+(add-hook 'flycheck-after-syntax-check-hook (lambda()
+                                              (setq-local flycheck-idle-change-delay 10.0)))
 
 ;;; config.el ends here
