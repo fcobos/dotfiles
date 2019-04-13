@@ -220,7 +220,7 @@ exec --no-startup-id dunst
 # redshift
 #exec --no-startup-id redshift-gtk
 # start compton
-exec --no-startup-id env allow_rgb10_configs=false compton
+#exec --no-startup-id env allow_rgb10_configs=false compton
 # Xresources
 exec --no-startup-id xrdb ~/.Xresources
 
