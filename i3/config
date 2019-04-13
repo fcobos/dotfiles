@@ -353,6 +353,9 @@ for_window [title="Preferences$"] floating enable
 for_window [class="matplotlib"] floating enable
 for_window [class="Hydrogen" title="Mixer"] floating enable
 
+# disable floating
+for_window [class="Eog"] floating disable
+
 ## Manual management of external displays
 # Set the shortcuts and what they do
 #set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
