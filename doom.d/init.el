@@ -6,8 +6,9 @@
        eval              ; run code, run (also, repls)
        (evil +everywhere +commands); come to the dark side, we have cookies
        file-templates    ; auto-snippets for empty files
-       (lookup           ; helps you navigate your code and documentation
-        +docsets)        ; ...or in Dash docsets locally
+       (lookup)           ; helps you navigate your code and documentation
+       ;;+docsets        ; ...or in Dash docsets locally
+
        snippets          ; my elves. They type so I don't have to
        workspaces        ; tab emulation, persistence & separate workspaces
 
@@ -83,7 +84,7 @@
        ;;vterm             ; another terminals in Emacs
 
        :lang
-       assembly          ; assembly for fun or debugging
+       ;;assembly          ; assembly for fun or debugging
        (cc +lsp)         ; C/C++/Obj-C madness
        clojure           ; java with a lisp
        common-lisp       ; if you've seen one lisp, you've seen them all
@@ -108,7 +109,7 @@
        ;;ledger            ; an accounting system in Emacs
        lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
-       nim               ; python + lisp at the speed of c
+       ;;nim               ; python + lisp at the speed of c
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
        (org              ; organize your plain life in plain text
@@ -118,14 +119,14 @@
         +export          ; Exporting org to whatever you want
         +present        ; Emacs for presentations
         +protocol)       ; Support for org-protocol:// links
-       perl              ; write code no one else can comprehend
-       php               ; perl's insecure younger brother
+       ;;perl              ; write code no one else can comprehend
+       ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
-       purescript        ; javascript, but functional
+       ;;purescript        ; javascript, but functional
        (python           ; beautiful is better than ugly
         +lsp
         +pyenv)
-       qt                ; the 'cutest' gui framework ever
+       ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        rest              ; Emacs as a REST client
        ;;ruby              ; 1.step do {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
@@ -136,7 +137,7 @@
        ;;swift             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
        web               ; the tubes
-       vala              ; GObjective-C
+       ;;vala              ; GObjective-C
 
        ;; Applications are complex and opinionated modules that transform Emacs
        ;; toward a specific purpose. They may have additional dependencies and
