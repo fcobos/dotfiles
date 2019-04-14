@@ -7,10 +7,10 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = true
-        color_good = "#26a98b"
-        color_degraded = "#edb54b"
-        color_bad = "#c33027"
+#        colors = true
+#        color_good = "#26a98b"
+#        color_degraded = "#edb54b"
+#        color_bad = "#c33027"
         interval = 5
 }
 
@@ -21,8 +21,8 @@ order += "ethernet _first_"
 order += "battery all"
 order += "volume master"
 #order += "load"
-order += "cpu_temperature 0"
-order += "cpu_usage 0"
+#order += "cpu_temperature 0"
+#order += "cpu_usage 0"
 order += "tztime local"
 
 wireless _first_ {
@@ -55,7 +55,8 @@ battery all {
 tztime local {
         #format = "%Y-%m-%d %H:%M:%S"
 	#format = "%V  %A %e.%B  %H:%M"
-	format = " %a.%e.%b  %H:%M"
+	#format = "%a.%e.%b %H:%M"
+	format = "%a.%e.%b %H:%M"
 }
 
 load {
