@@ -355,7 +355,7 @@ c.colors.statusbar.passthrough.bg = base0C
 c.colors.statusbar.private.fg = base00
 
 # Background color of the statusbar in private browsing mode.
-c.colors.statusbar.private.bg = base03
+c.colors.statusbar.private.bg = base05
 
 # Foreground color of the statusbar in command mode.
 c.colors.statusbar.command.fg = base05
