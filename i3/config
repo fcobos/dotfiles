@@ -221,6 +221,8 @@ exec --no-startup-id dunst
 exec --no-startup-id env allow_rgb10_configs=false compton
 # Xresources
 exec --no-startup-id xrdb ~/.Xresources
+# apparmor notify
+exec --no-startup-id /usr/bin/aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 
 # Pulse Audio Controls
 #bindsym XF86AudioMute        exec --no-startup-id amixer set Master -q toggle
