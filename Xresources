@@ -15,10 +15,14 @@ Emacs*menuBar: 0
 Emacs*scrollBar: 0
 
 ! xst
-st.termname: xterm-256color
+st.termname: st-256color
 st.font: Iosevka SS04:size=11:antialias=true:autohint=true;
 st.bold_font: 1
 st.borderpx: 0
+! Kerning / character bounding-box height multiplier
+st.chscale:           0.9
+! Kerning / character bounding-box width multiplier
+st.cwscale:           1.0
 
 ! colors
 #define base00 #fbf1c7
