@@ -164,9 +164,9 @@ fi
       ;;
   esac
 
-  if [ $SSH_CLIENT ]; then
+  if [[ -n "$SSH_CLIENT" || -n "$SSH_TTY" ]]; then
     typeset -ga POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-        user host dir vcs)
+        ssh context dir vcs)
   else
     typeset -ga POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
         dir vcs)
