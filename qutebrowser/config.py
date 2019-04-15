@@ -466,7 +466,7 @@ c.content.canvas_reading = False
 c.content.webrtc_ip_handling_policy = "default-public-interface-only"
 
 # Hide window decoration
-c.window.hide_decoration = True
+c.window.hide_decoration = False
 
 # don't accept 3rd party cookies
 c.content.cookies.accept = "no-3rdparty"
