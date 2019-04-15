@@ -16,7 +16,7 @@ Emacs*scrollBar: 0
 
 ! xst
 st.termname: st-256color
-st.font: Iosevka SS04:size=11:antialias=true:autohint=true;
+st.font: Iosevka Term SS04:size=11:antialias=true:autohint=true;
 st.bold_font: 1
 st.borderpx: 0
 ! Kerning / character bounding-box height multiplier
