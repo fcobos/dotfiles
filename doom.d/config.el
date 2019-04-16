@@ -104,11 +104,11 @@
 ;; avoid exit confirmation dialog
 (setq confirm-kill-emacs nil)
 
-;; this ugly thing here is to make
-;; a black border dissapear under i3
 (when (display-graphic-p)
-  (toggle-frame-fullscreen)
-  (toggle-frame-fullscreen))
+  (setq window-resize-pixelwise t)
+  (setq frame-resize-pixelwise t)
+  (add-hook 'after-init-hook (lambda ()
+                               (toggle-frame-maximized))))
 
 ;; key bindings
 (map! :leader
