@@ -177,8 +177,6 @@ bindsym $mod+r mode "resize"
 #        }
 #}
 
-# start polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
 # start polkit auth agent
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1
@@ -221,6 +219,8 @@ exec --no-startup-id dunst
 exec --no-startup-id env allow_rgb10_configs=false compton
 # Xresources
 exec --no-startup-id xrdb ~/.Xresources
+# start polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 # apparmor notify
 exec --no-startup-id /usr/bin/aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 
