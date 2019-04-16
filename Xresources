@@ -13,6 +13,7 @@ Emacs.font: Iosevka SS04-11
 Emacs*toolBar: 0
 Emacs*menuBar: 0
 Emacs*scrollBar: 0
+Emacs.fullscreen : maximized
 
 ! xst
 st.termname: st-256color
@@ -23,6 +24,7 @@ st.borderpx: 0
 st.chscale:           0.9
 ! Kerning / character bounding-box width multiplier
 st.cwscale:           1.0
+st.mouseScrollLines:  3
 
 ! colors
 #define base00 #fbf1c7
