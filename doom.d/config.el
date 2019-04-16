@@ -108,6 +108,8 @@
   (setq window-resize-pixelwise t)
   (setq frame-resize-pixelwise t)
   (add-hook 'after-init-hook (lambda ()
+                               (toggle-frame-fullscreen)
+                               (toggle-frame-fullscreen)
                                (toggle-frame-maximized))))
 
 ;; key bindings
