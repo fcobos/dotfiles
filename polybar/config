@@ -177,7 +177,7 @@ type = internal/network
 ; To test interface: $ ls -1 /sys/class/net/
 interface = wls1
 ;interval = 0.3
-interval = 5
+interval = 10
 
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
@@ -234,7 +234,7 @@ label-disconnected-font = 2
 
 [module/date]
 type = internal/date
-interval = 1
+interval = 10
 
 format-foreground = ${colors.foreground}
 format-background = ${colors.dark_gray}
@@ -351,7 +351,7 @@ animation-charging-framerate = 750
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 65
-interval = 2
+interval = 10
 
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
