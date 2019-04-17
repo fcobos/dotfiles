@@ -48,7 +48,7 @@ line-size = 2
 ;			F O N T S
 ;----------------------------------------------------------
 
-font-0 = Hack:size=12;3
+font-0 = Iosevka SS04:size=11;3
 font-1 = Iosevka SS04:size=11;3
 font-2 = FontAwesome:size=11;3
 font-3 = fixed:pixelsize=11;3
@@ -77,7 +77,7 @@ tray-background = ${colors.dark_gray}
 ;----------------------------------------------------------
 
 modules-left = i3 xwindow
-modules-right = battery network volume date powermenu
+modules-right = network battery volume date powermenu
 
 ;----------------------------------------------------------
 ;		i3   M O D U L E
@@ -183,14 +183,16 @@ format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
 ;label-connected = "  %downspeed%"
-;label-connected = "  %essid%"
-label-connected = ""
+label-connected = "  %essid%"
+;label-connected = ""
 ;label-connected = "  %essid%  %local_ip%  %downspeed:8%  %upspeed:8%"
 label-connected-foreground = ${colors.foreground}
 label-connected-background = ${colors.dark_gray}
-label-disconnected = ""
+label-disconnected = " "
 label-disconnected-foreground = ${colors.foreground}
 label-disconnected-background = ${colors.dark_gray}
+label-connected-font = 2
+label-disconnected-font = 2
 
 ramp-signal-0 = ▁
 ramp-signal-1 = ▂
@@ -306,38 +308,38 @@ full-at = 100
 
 time-format = %H:%M
 
-;format-charging = <animation-charging> <label-charging>
-format-charging = <label-charging><animation-charging>
+format-charging = <animation-charging><label-charging>
+;format-charging = <label-charging><animation-charging>
 format-charging-foreground = ${colors.foreground}
 format-charging-background = ${colors.dark_gray}
-;format-discharging = <ramp-capacity> <label-discharging>
-format-discharging = <ramp-capacity>
+format-discharging = <ramp-capacity><label-discharging>
+;format-discharging = <ramp-capacity>
 format-discharging-foreground = ${colors.foreground}
 format-discharging-background = ${colors.dark_gray}
 format-full = <label-full>
 format-full-foreground = ${colors.foreground}
 format-full-background = ${colors.dark_gray}
 
-;label-charging = "%percentage%% "
-label-charging = " "
-;label-discharging = "%percentage%% "
-label-discharging = "%time% "
-label-discharging-foreground = ${colors.gray}
-;label-full = "  %percentage%% "
-label-full = "  "
+label-charging = " %percentage%%"
+;label-charging = " "
+label-discharging = " %percentage%%"
+;label-discharging = "%time% "
+label-discharging-foreground = ${colors.foreground}
+label-full = "  %percentage%%"
+;label-full = " "
 ; 
-ramp-capacity-0 = "  "
+ramp-capacity-0 = " "
 ramp-capacity-0-foreground = ${colors.red}
-ramp-capacity-1 = "  "
+ramp-capacity-1 = " "
 ramp-capacity-1-foreground = ${colors.yellow}
-ramp-capacity-2 = "  "
-ramp-capacity-3 = "  "
-ramp-capacity-4 = "  "
-animation-charging-0 = "  "
-animation-charging-1 = "  "
-animation-charging-2 = "  "
-animation-charging-3 = "  "
-animation-charging-4 = "  "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
+animation-charging-0 = " "
+animation-charging-1 = " "
+animation-charging-2 = " "
+animation-charging-3 = " "
+animation-charging-4 = " "
 animation-charging-framerate = 750
 
 
