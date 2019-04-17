@@ -8,7 +8,7 @@
 
 # Additional arguments to pass to Qt, without leading `--`.
 # With QtWebEngine, some Chromium arguments (see https://peter.sh/experiments/chromium-command-line-switches/ for a list) will work.
-c.qt.args = ["ignore-gpu-blacklist", "enable-gpu-rasterization", "enable-native-gpu-memory-buffers", "enable-features=CheckerImaging", "enable-zero-copy", "enable-accelerated-video", "enable-accelerated-mjpeg-decode"]
+c.qt.args = ["ignore-gpu-blacklist", "enable-gpu-rasterization", "enable-native-gpu-memory-buffers", "enable-features=CheckerImaging", "enable-zero-copy"]
 
 # Aliases for commands. The keys of the given dictionary are the
 # aliases, while the values are the commands they map to.
