@@ -161,22 +161,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#        status_command i3status
-#        position top
-#        colors {
-#               separator            #98d1ce
-#               background           #0a0f14
-#               statusline           #98d1ce
-#               focused_workspace    #195465 #195465 #98d1ce
-#               active_workspace     #26a98b #26a98a #0a0f14
-#               inactive_workspace   #0a0f15 #0a0f14 #98d1ce
-#               urgent_workspace     #c33027 #d26939 #98d1ce
-#        }
-#}
-
 # start polkit auth agent
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1
@@ -220,7 +204,7 @@ exec --no-startup-id env allow_rgb10_configs=false compton
 # Xresources
 exec --no-startup-id xrdb ~/.Xresources
 # start polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+#exec_always --no-startup-id ~/.config/polybar/launch.sh
 # apparmor notify
 exec --no-startup-id /usr/bin/aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 
@@ -306,6 +290,25 @@ client.unfocused        $base01 $base00 $base05 $base01 $base01
 client.urgent           $base08 $base08 $base00 $base08 $base08
 client.placeholder      $base00 $base00 $base05 $base00 $base00
 client.background       $base00
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+        status_command i3status
+        position top
+	colors {
+               background $base01
+               separator  $base02
+               statusline $base04
+
+               # State             Border  BG      Text
+               focused_workspace   $base05 $base0D $base00
+               active_workspace    $base05 $base03 $base00
+               inactive_workspace  $base03 $base01 $base05
+               urgent_workspace    $base08 $base08 $base00
+               binding_mode        $base00 $base0A $base00
+	}
+}
 
 # disable window title for certain programs
 #for_window [class="^Chromium-browser$" title=" - Chromium$"] border none

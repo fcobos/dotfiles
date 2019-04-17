@@ -7,11 +7,8 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-#        colors = true
-#        color_good = "#26a98b"
-#        color_degraded = "#edb54b"
-#        color_bad = "#c33027"
-        interval = 5
+	colors = false
+	interval = 5
 }
 
 #order += "ipv6"
@@ -32,31 +29,31 @@ wireless _first_ {
 }
 
 ethernet _first_ {
-        # if you use %speed, i3status requires root privileges
-        #format_up = "E: %ip (%speed)"
-        format_up = "🖧"
-        format_down = ""
+	# if you use %speed, i3status requires root privileges
+	#format_up = "E: %ip (%speed)"
+	format_up = "🖧"
+	format_down = ""
 }
 
 battery all {
-        format = "%status %percentage %remaining"
-        format_down = ""
+	format = "%status %percentage %remaining"
+	format_down = ""
 	last_full_capacity = true
 	integer_battery_capacity = true
-	low_threshold = 11
+	low_threshold = 15
 	threshold_type = percentage
 	hide_seconds = true
-	status_chr = " "
-	status_bat = " "
-	status_unk = " "
-	status_full = " "
+	status_chr = ""
+	status_bat = ""
+	status_unk = ""
+	status_full = ""
 }
 
 tztime local {
-        #format = "%Y-%m-%d %H:%M:%S"
+	#format = "%Y-%m-%d %H:%M:%S"
 	#format = "%V  %A %e.%B  %H:%M"
 	#format = "%a.%e.%b %H:%M"
-	format = "%a.%e.%b %H:%M"
+	format = "%a.%e.%b %H:%M "
 }
 
 load {
@@ -75,11 +72,11 @@ disk "/" {
 }
 
 volume master {
-    #format = "%volume  "
-    format = "%volume 🕪"
-    format_muted = " "
-    device = "default"
-    mixer = "Master"
-    mixer_idx = 0
+	#format = "%volume  "
+	format = " %volume"
+	format_muted = ""
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
 }
 
