@@ -209,9 +209,6 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id /usr/bin/aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 
 # Pulse Audio Controls
-#bindsym XF86AudioMute        exec --no-startup-id amixer set Master -q toggle
-#bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master -q 2%-
-#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master -q 2%+
 bindsym XF86AudioMute        exec --no-startup-id pamixer -t
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 2
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 2
@@ -249,22 +246,7 @@ bindsym --release Shift+Print exec --no-startup-id "scrot -m -s ~/Pictures/Scree
 set $Locker lock-screen
 bindsym $mod+Pause exec --no-startup-id $Locker
 
-## colors
-#set_from_resource $black          i3wm.color0 #101010
-#set_from_resource $focused        i3wm.color4 #61afef
-#set_from_resource $bright_black   i3wm.color8 #525252
-#set_from_resource $white          i3wm.color7 #b9b9b9
-#set_from_resource $unfocused      i3wm.color19 #383838
-#set_from_resource $unfocused_text i3wm.color7 #abb2bf
-#set_from_resource $urgent         i3wm.color1 #AB4642
-#
-##                       BORDER         BACKGROUND      TEXT              INDICATOR       CHILD_BORDER
-#client.focused          $focused       $focused        $black            $focused        $focused
-#client.unfocused        $unfocused     $unfocused      $unfocused_text   $unfocused      $unfocused
-#client.focused_inactive $bright_black  $bright_black   $white            $bright_black   $bright_black
-#client.urgent           $urgent        $urgent         $black            $urgent         $urgent
-#client.background       $black
-
+# colors
 set $base00 #fbf1c7
 set $base01 #ebdbb2
 set $base02 #d5c4a1
@@ -320,11 +302,6 @@ client.background       $base00
 #for_window [class="qutebrowser"] border none
 default_floating_border normal 2
 default_border pixel 2
-# firefox does not like that big border and fucks up right click menu.
-#for_window [class="^Firefox$" title=" - Mozilla Firefox$"] border none
-for_window [class="^Firefox$" title=" - Mozilla Firefox"] border none
-for_window [class="Nightly" title=" - Nightly"] border none
-for_window [class="Navigator" title=" - Nightly"] border none
 
 # hide window borders
 hide_edge_borders smart
