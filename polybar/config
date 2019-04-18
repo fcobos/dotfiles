@@ -393,7 +393,7 @@ label-separator-background = ${colors.dark_gray}
 
 ; lock
 menu-0-0 = ""
-menu-0-0-exec = i3lock -c 000000
+menu-0-0-exec = xset s activate
 menu-0-0-foreground = ${colors.foreground}
 menu-0-0-background = ${colors.dark_gray}
 ; logout
