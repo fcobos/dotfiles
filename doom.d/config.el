@@ -105,14 +105,6 @@
 ;; avoid exit confirmation dialog
 (setq confirm-kill-emacs nil)
 
-(when (display-graphic-p)
-  (setq window-resize-pixelwise t)
-  (setq frame-resize-pixelwise t)
-  (add-hook 'after-init-hook (lambda ()
-                               (toggle-frame-fullscreen)
-                               (toggle-frame-fullscreen)
-                               (toggle-frame-maximized))))
-
 ;; key bindings
 (map! :leader
       (:prefix "c"
