@@ -11,6 +11,6 @@ if [ -n $lock_pid ]; then
 	convert -scale 5% -scale 2000% -blur 0x5 $IMAGE $IMAGE
 	convert -composite -gravity center -depth 8 $IMAGE $LOCK $IMAGE
 	rm -f tile*
-	i3lock -t -e -c 282c34 -i $IMAGE
+	i3lock -t -e -c 000000 -i $IMAGE "$@"
 fi
 

@@ -207,6 +207,9 @@ exec --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 # apparmor notify
 exec --no-startup-id /usr/bin/aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
+# set up automatic screen lock
+exec --no-startup-id xset s 600
+exec --no-startup-id xss-lock -- i3lock -n -c 000000
 
 # Pulse Audio Controls
 bindsym XF86AudioMute        exec --no-startup-id pamixer -t
@@ -243,7 +246,7 @@ bindsym --release Shift+Print exec --no-startup-id "scrot -m -s ~/Pictures/Scree
 #}
 #
 #bindsym $mod+Pause mode "$mode_system"
-set $Locker lock-screen
+set $Locker i3lock -c 000000
 bindsym $mod+Pause exec --no-startup-id $Locker
 
 # colors

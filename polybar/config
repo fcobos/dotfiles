@@ -403,7 +403,7 @@ menu-0-1-foreground = ${colors.foreground}
 menu-0-1-background = ${colors.dark_gray}
 ; sleep
 menu-0-2 = ""
-menu-0-2-exec = zenity --question --text="Suspend?" --icon-name=media-playback-pause-symbolic --default-cancel && xflock4 && systemctl suspend
+menu-0-2-exec = zenity --question --text="Suspend?" --icon-name=media-playback-pause-symbolic --default-cancel && systemctl suspend
 menu-0-2-foreground = ${colors.foreground}
 menu-0-2-background = ${colors.dark_gray}
 ; reboot
