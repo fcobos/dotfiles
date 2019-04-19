@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+cd ~/
 
 go get -u golang.org/x/tools/cmd/godoc
 go get -u golang.org/x/tools/cmd/goimports
