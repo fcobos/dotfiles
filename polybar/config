@@ -77,7 +77,7 @@ tray-background = ${colors.dark_gray}
 ;----------------------------------------------------------
 
 modules-left = i3 xwindow
-modules-right = network battery volume date powermenu
+modules-right = network xkeyboard battery volume date powermenu
 
 ;----------------------------------------------------------
 ;		i3   M O D U L E
@@ -142,7 +142,7 @@ blacklist-0 = num lock
 format-foreground = ${colors.foreground}
 format-background = ${colors.dark_gray}
 
-label-layout =  %layout%
+label-layout = "  %layout%"
 label-indicator-padding = 1
 label-indicator-background = ${colors.background}
 
