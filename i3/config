@@ -211,7 +211,7 @@ exec --no-startup-id /usr/bin/aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.lo
 exec --no-startup-id xset s 600
 exec --no-startup-id xss-lock xsecurelock
 # udiskie
-exec --no-startup-id udiskie -naT
+exec --no-startup-id udiskie -nas
 
 # Pulse Audio Controls
 bindsym XF86AudioMute        exec --no-startup-id pamixer -t
