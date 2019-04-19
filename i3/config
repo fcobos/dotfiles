@@ -231,6 +231,17 @@ bindsym XF86Calculator exec --no-startup-id qalculate-gtk
 bindsym --release Print exec --no-startup-id "scrot -m ~/Pictures/ScreenShots/%s_%H%M_%d.%m.%Y_$wx$h.png"
 bindsym --release Shift+Print exec --no-startup-id "scrot -m -s ~/Pictures/ScreenShots/%s_%H%M_%d.%m.%Y_$wx$h.png"
 
+# Keyboard layout switcher
+set $keyboard_layout Keyboard Layout: (e) ES, (u) US
+mode "$keyboard_layout" {
+     bindsym e exec --no-startup-id setxkbmap es ,mode "default"
+     bindsym u exec --no-startup-id setxkbmap us -variant intl,mode "default"
+     # back to normal: Enter or Escape
+     bindsym Return mode "default"
+     bindsym Escape mode "default"
+}
+bindsym $mod+shift+Z mode "$keyboard_layout"
+
 # lock, shutdown, suspend, reboot
 #set $Locker lock-screen && sleep 1
 #
