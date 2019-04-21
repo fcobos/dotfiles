@@ -63,6 +63,6 @@
 
 ;; flycheck configuration
 (add-hook 'flycheck-after-syntax-check-hook (lambda()
-                                              (setq-local flycheck-idle-change-delay 10.0)))
+                                              (setq-local flycheck-idle-change-delay 4.0)))
 
 ;;; config.el ends here
