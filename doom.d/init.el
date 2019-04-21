@@ -1,5 +1,12 @@
 ;;; init.el -*- lexical-binding: t; -*-
-;; Copy me to ~/.doom.d/init.el or ~/.config/doom/init.el, then edit me!
+
+;; Copy this file to ~/.doom.d/init.el or ~/.config/doom/init.el ('doom
+;; quickstart' will do this for you). The `doom!' block below controls what
+;; modules are enabled and in what order they will be loaded. Remember to run
+;; 'doom refresh' after modifying it.
+;;
+;; More information about these modules (and what flags they support) can be
+;; found in modules/README.org.
 
 (doom! :feature
        ;;debugger          ; FIXME stepping through code, to help you add bugs
@@ -32,9 +39,9 @@
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
-       treemacs          ; a project drawer, like neotree but cooler
        ;;pretty-code       ; replace bits of code with pretty symbols
        ;;tabbar            ; FIXME an (incomplete) tab bar for Emacs
+       treemacs          ; a project drawer, like neotree but cooler
        ;;unicode           ; extended unicode support for various languages
        vc-gutter         ; vcs diff in the fringe
        ;;vi-tilde-fringe   ; fringe tildes to mark beyond EOB
@@ -97,7 +104,7 @@
        ;;elm               ; care for a cup of TEA?
        emacs-lisp        ; drown in parentheses
        ;;ess               ; emacs speaks statistics
-       (go +lsp)          ; the hipster dialect
+       (go     )          ; the hipster dialect
        ;;(haskell +intero) ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ;
