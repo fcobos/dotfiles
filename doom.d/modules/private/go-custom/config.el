@@ -61,12 +61,6 @@
   (map! :map go-mode-map
         :nv   "K"  #'godoc-at-point))
 
-;; flycheck configuration
-(add-hook 'flycheck-mode-hook (lambda ()
-                                (setq flycheck-checker 'go-errcheck)
-                                (add-to-list 'flycheck-disabled-checkers 'go-unconvert)
-                                (add-to-list 'flycheck-disabled-checkers 'go-staticcheck)
-                                (add-to-list 'flycheck-disabled-checkers 'go-megacheck)))
 (add-hook 'flycheck-after-syntax-check-hook (lambda()
                                               (setq-local flycheck-idle-change-delay 4.0)))
 
