@@ -32,10 +32,11 @@
 (setq gud-pdb-command-name "python -m pdb")
 
 ;; modeline config
-;;(setq doom-modeline-height 22)
-;;(setq doom-modeline-buffer-file-name-style 'relative-from-project)
-;;(setq doom-modeline-env-version nil)
-;;(setq doom-modeline-lsp nil)
+(setq doom-modeline-height 22)
+(setq doom-modeline-buffer-file-name-style 'relative-from-project)
+(setq doom-modeline-env-version nil)
+(setq doom-modeline-lsp nil)
+(setq doom-modeline-icon nil)
 
 ;; open *rc files as conf-mode
 (add-to-list 'auto-mode-alist '("\\rc$" . conf-mode))
