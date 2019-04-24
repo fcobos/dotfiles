@@ -20,8 +20,8 @@
 
        :completion
        company           ; the ultimate code completion backend
-       ;;helm             ; the *other* search engine for love and life
-       ;;ido              ; the other *other* search engine...
+       ;;helm              ; the *other* search engine for love and life
+       ;;ido               ; the other *other* search engine...
        (ivy +fuzzy)     ; a search engine for love and life
 
        :ui
@@ -57,8 +57,8 @@
 
        :emacs
        (dired            ; making dired pretty [functional]
-        ;;+ranger         ; bringing the goodness of ranger to dired
-        ;;+icons          ; colorful icons for dired-mode
+       ;;+ranger         ; bringing the goodness of ranger to dired
+       ;;+icons          ; colorful icons for dired-mode
         )
        electric          ; smarter, keyword-based electric-indent
        eshell            ; a consistent, cross-platform shell (WIP)
