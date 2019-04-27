@@ -19,7 +19,8 @@
   (defconst go-basic-types
     '("bool" "string" "int" "int8" "int16" "int32" "int64"
       "uint" "uint8" "uint16" "uint32" "uint64" "uintptr"
-      "rune" "float32" "float64" "complex64" "complex128"))
+      "rune" "float32" "float64" "complex64" "complex128"
+      "error"))
 
   (defun go--build-font-lock-keywords ()
     ;; we cannot use 'symbols in regexp-opt because GNU Emacs <24
