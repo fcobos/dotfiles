@@ -3,6 +3,7 @@ if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
 endif
 
 set nocompatible " Use Vim defaults (much better!)
+filetype plugin indent on
 set bs=indent,eol,start " allow backspacing over everything in insert mode
 set ai " always set autoindenting on
 set smartindent
@@ -149,3 +150,9 @@ let &t_EI = "\<Esc>[0 q"
 if has('mouse')
   set mouse=a
 endif
+
+" go config
+" Run goimports along gofmt on each save
+let g:go_fmt_command = "goimports"
+" Automatically get signature/type info for object under cursor
+let g:go_auto_type_info = 1
