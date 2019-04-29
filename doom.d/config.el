@@ -105,6 +105,10 @@
 ;; avoid exit confirmation dialog
 (setq confirm-kill-emacs nil)
 
+;; company config
+(setq company-dabbrev-ignore-case t)
+(setq company-idle-delay 0.2)
+
 ;; key bindings
 (map! :leader
       (:prefix "c"
