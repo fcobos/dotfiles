@@ -156,3 +156,11 @@ endif
 let g:go_fmt_command = "goimports"
 " Automatically get signature/type info for object under cursor
 let g:go_auto_type_info = 1
+" Autocompletion
+au filetype go inoremap <buffer> . .<C-x><C-o>
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+        \ "\<lt>C-n>" :
+        \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+        \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+        \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
