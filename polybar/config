@@ -310,8 +310,7 @@ full-at = 97
 
 time-format = %H:%M
 
-format-charging = <animation-charging><label-charging>
-;format-charging = <label-charging><animation-charging>
+format-charging = <label-charging><animation-charging>
 format-charging-foreground = ${colors.foreground}
 format-charging-background = ${colors.dark_gray}
 format-discharging = <label-discharging><ramp-capacity>

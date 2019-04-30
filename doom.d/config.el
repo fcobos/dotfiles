@@ -34,9 +34,9 @@
 ;; modeline config
 (setq doom-modeline-height 22)
 (setq doom-modeline-buffer-file-name-style 'relative-from-project)
-(setq doom-modeline-env-version nil)
-(setq doom-modeline-lsp nil)
-(setq doom-modeline-icon nil)
+;; (setq doom-modeline-env-version nil)
+;; (setq doom-modeline-lsp nil)
+;; (setq doom-modeline-icon nil)
 
 ;; open *rc files as conf-mode
 (add-to-list 'auto-mode-alist '("\\rc$" . conf-mode))
@@ -75,8 +75,8 @@
     [16 48 112 240 112 48 16] nil nil 'center))
 
 ;; disable lsp-ui live reporting
-(after! lsp-ui
-  (setq lsp-ui-flycheck-live-reporting nil))
+;; (after! lsp-ui
+;;   (setq lsp-ui-flycheck-live-reporting nil))
 
 ;; eshell maximum lines of scrollback
 (setq eshell-buffer-maximum-lines 1000)
