@@ -2,8 +2,17 @@
 
 ;; go configuration
 (after! go-mode
-  ;; use gogetdoc for go documentation
+  ;; debugger configuration
+  (require 'dap-go)
+  (dap-go-setup)
+
+  ;; use gogetdoc for documentation
   (setq godoc-at-point-function #'godoc-gogetdoc)
+
+  ;; key bindings
+  (map! :map go-mode-map
+        :nv   "gD"  #'go-guru-referrers
+        :nv   "K"  #'godoc-at-point)
 
   ;; format go buffers on save
   (setq gofmt-command "goimports")
@@ -56,13 +65,6 @@
        ;; fields. There, it was marked as to fix, but I grew quite
        ;; accustomed to it, so it'll stay for now.
        (,(concat "^[[:space:]]*\\(" go-label-regexp "\\)[[:space:]]*:\\(\\S.\\|$\\)") 1 font-lock-constant-face) ;; Labels and compound literal fields
-       (,(concat "\\_<\\(goto\\|break\\|continue\\)\\_>[[:space:]]*\\(" go-label-regexp "\\)") 2 font-lock-constant-face)))) ;; labels in goto/break/continue
-
-  ;; key bindings
-  (map! :map go-mode-map
-        :nv   "K"  #'godoc-at-point))
-
-(add-hook 'flycheck-after-syntax-check-hook (lambda()
-                                              (setq-local flycheck-idle-change-delay 4.0)))
+       (,(concat "\\_<\\(goto\\|break\\|continue\\)\\_>[[:space:]]*\\(" go-label-regexp "\\)") 2 font-lock-constant-face))))) ;; labels in goto/break/continue
 
 ;;; config.el ends here

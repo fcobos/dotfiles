@@ -109,6 +109,15 @@
 (setq company-dabbrev-ignore-case t)
 (setq company-idle-delay 0.2)
 
+;; longer flycheck idle-change-delay
+(add-hook 'flycheck-after-syntax-check-hook
+          (lambda()
+                 (setq-local flycheck-idle-change-delay 4.0)))
+
+;; dap-mode extensions location
+(after! dap-mode
+  (setq dap-utils-extension-path (concat doom-local-dir "extension")))
+
 ;; key bindings
 (map! :leader
       (:prefix "c"
