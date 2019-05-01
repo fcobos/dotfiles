@@ -15,13 +15,13 @@ go get -u golang.org/x/tools/cmd/gopls
 #go install
 #cd ~/
 #rm -rf ~/.cache/go-tools
-go get -u github.com/saibing/bingo
+#go get -u github.com/saibing/bingo
 
 go get -u github.com/rogpeppe/godef
 go get -u github.com/motemen/gore
-#go get -u github.com/mdempsky/gocode
+go get -u github.com/mdempsky/gocode
 #go get -u github.com/stamblerre/gocode
-go get -u github.com/visualfc/gocode
+#go get -u github.com/visualfc/gocode
 go get -u github.com/zmb3/gogetdoc
 go get -u github.com/elliotchance/c2go
 go get -u github.com/go-delve/delve/cmd/dlv
