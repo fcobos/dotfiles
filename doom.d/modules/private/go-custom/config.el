@@ -12,7 +12,20 @@
   ;; key bindings
   (map! :map go-mode-map
         :nv   "gD"  #'go-guru-referrers
-        :nv   "K"  #'godoc-at-point)
+        :nv   "K"  #'godoc-at-point
+        :localleader
+        (:prefix ("r" . "refactor")
+          "f" #'go-tag-add
+          "F" #'go-tag-remove
+          "d" #'godoctor-godoc
+          "e" #'godoctor-extract
+          "l" #'go-impl
+          "n" #'godoctor-rename
+          "t" #'godoctor-toggle)
+        (:prefix ("t" . "test")
+          "g" #'go-gen-test-dwim
+          "f" #'go-gen-test-exported
+          "F" #'go-gen-test-all))
 
   ;; format go buffers on save
   (setq gofmt-command "goimports")

@@ -38,6 +38,8 @@ go get -u github.com/koron/iferr
 go get -u github.com/mdempsky/unconvert
 go get -u honnef.co/go/tools/cmd/staticcheck
 #go get -u github.com/kisielk/errcheck
+go get -u github.com/godoctor/godoctor
+go get -u github.com/cweill/gotests/...
 
 # strip binaries
 cd $GOPATH/bin
