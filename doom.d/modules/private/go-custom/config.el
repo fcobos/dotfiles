@@ -1,5 +1,13 @@
 ;;; private/go-custom/config.el -*- lexical-binding: t; -*-
 
+;;;###autoload
+(defun go-guru-dumb-jump()
+  "Try to jump with go-guru-definition and if it fails use dumb-jump-go."
+  (interactive)
+  (condition-case nil
+      (go-guru-definition)
+    (error (dumb-jump-go))))
+
 ;; go configuration
 (after! go-mode
   ;; debugger configuration
@@ -10,15 +18,19 @@
   (setq godoc-at-point-function #'godoc-gogetdoc)
 
   ;; key bindings
+  (unless (featurep! +lsp)
+    (map! :map go-mode-map
+          :nv "gd" #'go-guru-dumb-jump
+          :nv "gD" #'go-guru-referrers
+          :nv "K"  #'godoc-at-point))
+
   (map! :map go-mode-map
-        :nv   "gD"  #'go-guru-referrers
-        :nv   "K"  #'godoc-at-point
         :localleader
         (:prefix ("r" . "refactor")
-          "f" #'go-tag-add
-          "F" #'go-tag-remove
           "d" #'godoctor-godoc
           "e" #'godoctor-extract
+          "f" #'go-tag-add
+          "F" #'go-tag-remove
           "l" #'go-impl
           "n" #'godoctor-rename
           "t" #'godoctor-toggle)
