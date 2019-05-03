@@ -173,5 +173,4 @@
 
        :private
        go-custom
-       java-lsp
-       cc-lsp)
+       java-lsp)
