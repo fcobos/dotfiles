@@ -183,23 +183,23 @@ context = mod4+shift+masculine
 
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#504945"
-separator_color = "#504945"
+frame_color = "#383a42"
+separator_color = "#383a42"
 
 [base16_low]
     msg_urgency = low
-    background = "#ebdbb2"
-    foreground = "#bdae93"
+    background = "#f0f0f1"
+    foreground = "#a0a1a7"
 
 [base16_normal]
     msg_urgency = normal
-    background = "#d5c4a1"
-    foreground = "#504945"
+    background = "#e5e5e6"
+    foreground = "#383a42"
 
 [base16_critical]
     msg_urgency = critical
-    background = "#9d0006"
-    foreground = "#3c3836"
+    background = "#ca1243"
+    foreground = "#202227"
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.

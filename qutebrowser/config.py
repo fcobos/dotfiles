@@ -195,22 +195,22 @@ c.fonts.statusbar = '11pt monospace'
 c.fonts.tabs = '11pt monospace'
 
 # colors
-base00 = "#fbf1c7"
-base01 = "#ebdbb2"
-base02 = "#d5c4a1"
-base03 = "#bdae93"
-base04 = "#665c54"
-base05 = "#504945"
-base06 = "#3c3836"
-base07 = "#282828"
-base08 = "#9d0006"
-base09 = "#af3a03"
-base0A = "#b57614"
-base0B = "#79740e"
-base0C = "#427b58"
-base0D = "#076678"
-base0E = "#8f3f71"
-base0F = "#d65d0e"
+base00 = "#fafafa"
+base01 = "#f0f0f1"
+base02 = "#e5e5e6"
+base03 = "#a0a1a7"
+base04 = "#696c77"
+base05 = "#383a42"
+base06 = "#202227"
+base07 = "#090a0b"
+base08 = "#ca1243"
+base09 = "#d75f00"
+base0A = "#c18401"
+base0B = "#50a14f"
+base0C = "#0184bc"
+base0D = "#4078f2"
+base0E = "#a626a4"
+base0F = "#986801"
 
 # set qutebrowser colors
 

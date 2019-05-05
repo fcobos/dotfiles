@@ -117,7 +117,7 @@ if &t_Co >= 256 || has('gui_running')
 endif
 
 set background=light
-colorscheme gruvbox
+colorscheme one
 
 " rainbow parentheses
 "autocmd VimEnter * RainbowParentheses

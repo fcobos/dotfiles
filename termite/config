@@ -41,51 +41,51 @@ scrollbar = off
 [colors]
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
-foreground          = #504945
-foreground_bold     = #3c3836
-cursor              = #3c3836
-cursor_foreground   = #fbf1c7
-background          = rgba(251, 241, 199)
+foreground          = #383a42
+foreground_bold     = #202227
+cursor              = #202227
+cursor_foreground   = #fafafa
+background          = rgba(250, 250, 250)
 
 # 16 color space
 
 # Black, Gray, Silver, White
-color0  = #fbf1c7
-color8  = #bdae93
-color7  = #504945
-color15 = #282828
+color0  = #fafafa
+color8  = #a0a1a7
+color7  = #383a42
+color15 = #090a0b
 
 # Red
-color1  = #9d0006
-color9  = #9d0006
+color1  = #ca1243
+color9  = #ca1243
 
 # Green
-color2  = #79740e
-color10 = #79740e
+color2  = #50a14f
+color10 = #50a14f
 
 # Yellow
-color3  = #b57614
-color11 = #b57614
+color3  = #c18401
+color11 = #c18401
 
 # Blue
-color4  = #076678
-color12 = #076678
+color4  = #4078f2
+color12 = #4078f2
 
 # Purple
-color5  = #8f3f71
-color13 = #8f3f71
+color5  = #a626a4
+color13 = #a626a4
 
 # Teal
-color6  = #427b58
-color14 = #427b58
+color6  = #0184bc
+color14 = #0184bc
 
 # Extra colors
-color16 = #af3a03
-color17 = #d65d0e
-color18 = #ebdbb2
-color19 = #d5c4a1
-color20 = #665c54
-color21 = #3c3836
+color16 = #d75f00
+color17 = #986801
+color18 = #f0f0f1
+color19 = #e5e5e6
+color20 = #696c77
+color21 = #202227
 
 [hints]
 font = Iosevka Term SS04 11
