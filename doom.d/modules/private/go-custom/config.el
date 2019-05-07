@@ -6,7 +6,8 @@
   (interactive)
   (condition-case nil
       (go-guru-definition)
-    (error (dumb-jump-go))))
+    (error (dumb-jump-go)))
+  (recenter))
 
 ;; go configuration
 (after! go-mode
