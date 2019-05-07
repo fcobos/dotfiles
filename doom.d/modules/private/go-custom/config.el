@@ -18,12 +18,10 @@
   ;; use gogetdoc for documentation
   (setq godoc-at-point-function #'godoc-gogetdoc)
 
-  ;; key bindings
-  (unless (featurep! +lsp)
-    (map! :map go-mode-map
-          :nv "gd" #'go-guru-dumb-jump
-          :nv "gD" #'go-guru-referrers
-          :nv "K"  #'godoc-at-point))
+  (map! :map go-mode-map
+        :nv "gd" #'go-guru-dumb-jump
+        :nv "gD" #'go-guru-referrers
+        :nv "K"  #'godoc-at-point)
 
   (map! :map go-mode-map
         :localleader
@@ -43,12 +41,6 @@
   ;; format go buffers on save
   (setq gofmt-command "goimports")
   (add-hook 'before-save-hook #'gofmt-before-save)
-
-  ;; lookup handlers
-  ;; (set-lookup-handlers! 'go-mode
-  ;;   :definition #'lsp-ui-peek-find-definitions
-  ;;   :references #'lsp-ui-peek-find-references
-  ;;   :documentation #'godoc-at-point)
 
   ;; font lock
   (defconst go-basic-types
