@@ -15,6 +15,18 @@
   (require 'dap-go)
   (dap-go-setup)
 
+  ;; flycheck config
+  (add-hook 'flycheck-mode-hook (lambda ()
+                                  (push 'go-errcheck flycheck-disabled-checkers)
+                                  (push 'go-fmt flycheck-disabled-checkers)
+                                  (push 'go-staticcheck flycheck-disabled-checkers)
+                                  (push 'go-unconvert flycheck-disabled-checkers)
+                                  (push 'go-build flycheck-disabled-checkers)
+
+                                  (push 'go-fmt flycheck-enabled-checkers)
+                                  (push 'go-golint flycheck-enabled-checkers)
+                                  (push 'go-vet flycheck-enabled-checkers)))
+
   ;; use gogetdoc for documentation
   (setq godoc-at-point-function #'godoc-gogetdoc)
 
