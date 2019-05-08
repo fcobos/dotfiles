@@ -19,8 +19,7 @@
   (add-hook 'flycheck-mode-hook (lambda ()
                                   (push 'go-errcheck flycheck-disabled-checkers)
                                   (push 'go-staticcheck flycheck-disabled-checkers)
-                                  (push 'go-unconvert flycheck-disabled-checkers)
-                                  (push 'go-build flycheck-disabled-checkers)))
+                                  (push 'go-unconvert flycheck-disabled-checkers)))
 
   ;; use gogetdoc for documentation
   (setq godoc-at-point-function #'godoc-gogetdoc)
