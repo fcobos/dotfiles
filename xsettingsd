@@ -1,4 +1,4 @@
-Net/ThemeName "Arc-solid"
+Net/ThemeName "Arc-Dark-solid"
 Net/IconThemeName "Adwaita"
 Xft/Antialias 1
 Xft/HintStyle "hintslight"
@@ -6,6 +6,6 @@ Xft/Hinting 1
 Xft/RGBA "rgb"
 Xft/lcdfilter "lcdlight"
 Gtk/ShellShowsAppMenu 0
-Gtk/FontName "Cantarell 11"
+Gtk/FontName "Noto Sans Display 11"
 Gtk/DecorationLayout "appmenu:close"
 Net/EnableEventSounds 0

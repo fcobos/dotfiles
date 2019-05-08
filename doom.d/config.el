@@ -10,7 +10,7 @@
 (setq-default line-spacing 1)
 
 ;; Set the theme
-(setq doom-theme 'doom-one-light)
+(setq doom-theme 'doom-one)
 
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
