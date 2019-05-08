@@ -208,7 +208,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # apparmor notify
 exec --no-startup-id /usr/bin/aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 # set up automatic screen lock
-exec --no-startup-id xset s 600
+#exec --no-startup-id xset s 600
 exec --no-startup-id xss-lock xsecurelock
 # udiskie
 exec --no-startup-id udiskie -nas
