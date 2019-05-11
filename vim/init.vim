@@ -151,22 +151,3 @@ let &t_EI = "\<Esc>[0 q"
 if has('mouse')
   set mouse=a
 endif
-
-" go config
-" Run goimports along gofmt on each save
-let g:go_fmt_command = "goimports"
-" Automatically get signature/type info for object under cursor
-let g:go_auto_type_info = 1
-" Autocompletion
-au filetype go inoremap <buffer> . .<C-x><C-o>
-inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
-        \ "\<lt>C-n>" :
-        \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
-        \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
-        \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
-imap <C-@> <C-Space>
-" ts - show existing tab with 4 spaces width
-" sw - when indenting with '>', use 4 spaces width
-" sts - control <tab> and <bs> keys to match tabstop
-autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
-autocmd Filetype go setlocal tabstop=4 shiftwidth=4 softtabstop=4
