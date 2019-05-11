@@ -2,7 +2,7 @@ configuration {
 	modi: "window,run,drun,combi";
 	width: 480;
 	font: "Iosevka SS04 11";
-	theme: "base16-nord";
+	theme: "onelight";
 	kb-remove-char-back: "BackSpace";
 	kb-remove-to-eol: "Control+p";
 	kb-accept-entry: "Control+m,Return,KP_Enter";

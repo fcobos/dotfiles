@@ -166,7 +166,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1
 # background
 #exec --no-startup-id ~/.fehbg
-exec --no-startup-id hsetroot -solid "#3b4252"
+exec --no-startup-id hsetroot -solid "#e5e5e6"
 # touchpad config
 exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Disable While Typing Enabled" 1
 exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
@@ -262,12 +262,22 @@ bindsym $mod+shift+Z mode "$keyboard_layout"
 bindsym $mod+Pause exec --no-startup-id xset s activate
 
 # colors
-set $base00 #2E3440
-set $base01 #4C566A
-set $base05 #D8DEE9
-set $base08 #BF616A
-set $base0A #EBCB8B
-set $base0D #81A1C1
+set $base00 #fafafa
+set $base01 #f0f0f1
+set $base02 #e5e5e6
+set $base03 #a0a1a7
+set $base04 #696c77
+set $base05 #383a42
+set $base06 #202227
+set $base07 #090a0b
+set $base08 #ca1243
+set $base09 #d75f00
+set $base0A #c18401
+set $base0B #50a14f
+set $base0C #0184bc
+set $base0D #4078f2
+set $base0E #a626a4
+set $base0F #986801
 
 # Basic color configuration using the Base16 variables for windows and borders.
 # Property Name         Border  BG      Text    Indicator Child Border

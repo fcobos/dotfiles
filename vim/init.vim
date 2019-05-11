@@ -116,11 +116,9 @@ if &t_Co >= 256 || has('gui_running')
   set termguicolors
 endif
 
-set background=dark
-let g:nord_italic = 1
-let g:nord_italic_comments = 1
-let g:nord_underline = 1
-colorscheme nord
+set background=light
+let g:one_allow_italics = 1
+colorscheme one
 
 " rainbow parentheses
 "autocmd VimEnter * RainbowParentheses

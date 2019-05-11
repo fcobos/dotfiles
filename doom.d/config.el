@@ -10,8 +10,7 @@
 (setq-default line-spacing 1)
 
 ;; Set the theme
-(setq doom-theme 'doom-nord)
-(add-hook 'after-change-major-mode-hook (lambda () (solaire-mode 0)))
+(setq doom-theme 'doom-one-light)
 
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)

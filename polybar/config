@@ -9,10 +9,8 @@ green = ${xrdb:color2:#98c379}
 blue = ${xrdb:color4:#61afef}
 yellow = ${xrdb:color3:#d19a66}
 white = ${xrdb:color7:#abb2bf}
-#black = #bbfafafa
-#black = #bb282c34
-black = #bb2e3440
-dark_gray = ${xrdb:color8:#282828}
+black = #bbfafafa
+dark_gray = ${xrdb:color18:#282828}
 background = ${colors.black}
 foreground = ${colors.white}
 
