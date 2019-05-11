@@ -24,10 +24,19 @@
   ;; use gogetdoc for documentation
   (setq godoc-at-point-function #'godoc-gogetdoc)
 
+  ;; (map! :map go-mode-map
+  ;;       :nv "gd" #'go-guru-dumb-jump
+  ;;       :nv "gD" #'go-guru-referrers
+  ;;       :nv "K"  #'godoc-at-point)
+
   (map! :map go-mode-map
-        :nv "gd" #'go-guru-dumb-jump
-        :nv "gD" #'go-guru-referrers
-        :nv "K"  #'godoc-at-point)
+        :nv "gd" #'lsp-ui-peek-find-definitions
+        :nv "gD" #'lsp-ui-peek-find-references
+        :nv "K"  #'lsp-describe-thing-at-point)
+
+  (setq company-lsp-cache-candidates nil
+        company-lsp-filter-candidates nil
+        company-lsp-async t)
 
   (map! :map go-mode-map
         :localleader
