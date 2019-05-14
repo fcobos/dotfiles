@@ -28,7 +28,7 @@ c.auto_save.session = True
 # host per line - A zip-file of any of the above, with either only one
 # file, or a file   named `hosts` (with any extension).
 # Type: List of Url
-c.content.host_blocking.lists = ['https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling/hosts', 'http://1hos.cf/', 'http://winhelp2002.mvps.org/hosts.zip', 'https://pgl.yoyo.org/adservers/serverlist.php?showintro=0;hostformat=hosts']
+#c.content.host_blocking.lists = ['https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling/hosts', 'https://1hos.cf/', 'https://winhelp2002.mvps.org/hosts.zip', 'https://pgl.yoyo.org/adservers/serverlist.php?showintro=0;hostformat=hosts']
 
 # Enable JavaScript.
 # Type: Bool
