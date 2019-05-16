@@ -12,6 +12,10 @@
 ;; Set the theme
 (setq doom-theme 'doom-one-light)
 
+;; faces configuration
+(custom-set-faces
+ '(font-lock-function-name-face ((t (:foreground "#0184bc")))))
+
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
 
@@ -98,7 +102,7 @@
 ;; longer flycheck idle-change-delay
 (add-hook 'flycheck-after-syntax-check-hook
           (lambda()
-                 (setq-local flycheck-idle-change-delay 4.0)))
+            (setq-local flycheck-idle-change-delay 4.0)))
 
 ;; dap-mode extensions location
 (after! dap-mode
