@@ -114,7 +114,4 @@
         :desc "Toggle comment"         "l" #'evil-commentary-line
         :desc "Copy and comment lines" "y" #'evil-commentary-yank-line))
 
-;; ugly hack to fix weird right border under i3
-(add-hook 'after-init-hook (lambda() (toggle-frame-fullscreen) (toggle-frame-fullscreen)))
-
 ;;; config.el ends here
