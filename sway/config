@@ -230,8 +230,7 @@ mode "$keyboard_layout" {
 bindsym $mod+shift+Z mode "$keyboard_layout"
 
 # lock screen
-set $Locker swaylock
-bindsym $mod+Pause exec --no-startup-id $Locker
+bindsym $mod+Pause exec --no-startup-id swaylock -f -c 000000
 
 # colors
 set $base00 #fafafa
