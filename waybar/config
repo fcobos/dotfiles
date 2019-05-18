@@ -8,21 +8,10 @@
     "modules-center": ["sway/mode"],
     "modules-right": ["network", "battery", "pulseaudio", "clock", "tray", "custom/power"],
     // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true
+    },
     "sway/mode": {
 	"tooltip": false,
         "format": "<span style=\"italic\">{}</span>"
