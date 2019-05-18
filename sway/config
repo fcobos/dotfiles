@@ -176,10 +176,6 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id blueberry-tray
 # NetworkManager applet
 #exec --no-startup-id nm-applet
-# xiccd
-exec --no-startup-id xiccd
-# apply color profile
-exec --no-startup-id displaycal-apply-profiles --force
 # numlock
 exec --no-startup-id numlockx on
 # fonts stuff
@@ -191,8 +187,6 @@ exec --no-startup-id xsettingsd
 exec --no-startup-id dunst
 # Xresources
 exec --no-startup-id xrdb ~/.Xresources
-# start waybar
-exec --no-startup-id waybar
 # apparmor notify
 exec --no-startup-id /usr/bin/aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 # udiskie
@@ -294,3 +288,8 @@ mouse_warping none
 #gaps inner 8
 #gaps outer 0
 #smart_gaps on
+
+# waybar
+bar {
+    swaybar_command waybar
+}
