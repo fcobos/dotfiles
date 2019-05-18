@@ -31,7 +31,7 @@
 
   (map! :map go-mode-map
         :nv "gd" #'lsp-ui-peek-find-definitions
-        :nv "gD" #'lsp-ui-peek-find-references
+        :nv "gD" #'go-guru-referrers
         :nv "K"  #'lsp-describe-thing-at-point)
 
   (setq company-lsp-cache-candidates nil
