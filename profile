@@ -38,14 +38,14 @@ if [ "$SSH_TTY" ]; then
 	export GPG_TTY=$SSH_TTY
 fi
 
-# qt themeing under i3 and gnome
-if [ "$XDG_CURRENT_DESKTOP" = "i3" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] ; then
+# qt theme
+if [ -n "$DESKTOP_SESSION" ]; then
 	export QT_QPA_PLATFORMTHEME="qt5ct"
 fi
 
-# gnome-keyring under i3 and plasma
-if [ "$XDG_CURRENT_DESKTOP" = "i3" ] || [ "$XDG_CURRENT_DESKTOP" = "KDE" ]; then
-	eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+# gnome-keyring
+if [ -n "$DESKTOP_SESSION" ]; then
+	eval $(/usr/bin/gnome-keyring-daemon --start)
 	export SSH_AUTH_SOCK
 fi
 
