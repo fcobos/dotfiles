@@ -43,6 +43,8 @@ window#waybar.solo {
 
 #workspaces button.urgent {
     background-color: #ca1243;
+    color: #fafafa;
+    border-bottom: 3px solid #ca1243;
 }
 
 #mode {
