@@ -165,7 +165,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # background
-output * bg "#e5e5e6" solid_color
+#output * bg "#e5e5e6" solid_color
+output * bg ~/.wallpaper fill "#e5e5e6"
 
 # start polkit auth agent
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
