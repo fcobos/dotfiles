@@ -125,7 +125,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # move to next workspace
 bindsym $mod+Tab workspace next
-bindsym Mod1+Tab exec "rofi -show window"
+bindsym Mod1+Tab workspace next
 # move back and forth
 bindsym $mod+Control+Left workspace prev
 bindsym Mod1+Control+Left workspace prev
