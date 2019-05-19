@@ -25,9 +25,6 @@
 ;; python debugger
 (setq gud-pdb-command-name "python -m pdb")
 
-;; modeline config
-(setq doom-modeline-lsp nil)
-
 ;; file associations
 (add-to-list 'auto-mode-alist '("\\rc$" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\vimrc$" . vimrc-mode))
