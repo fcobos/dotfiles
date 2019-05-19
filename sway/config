@@ -4,7 +4,10 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
-input * xkb_layout "es"
+input * xkb_layout "es,us"
+input * xkb_variant ",intl"
+input * xkb_options "grp:win_space_toggle"
+input * xkb_numlock enabled
 input "2:14:ETPS/2_Elantech_Touchpad" {
     natural_scroll enabled
 }
@@ -176,8 +179,6 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id blueberry-tray
 # NetworkManager applet
 #exec --no-startup-id nm-applet
-# numlock
-exec --no-startup-id numlockx on
 # fonts stuff
 exec --no-startup-id xset +fp ~/.local/share/fonts
 exec --no-startup-id xset fp rehash
@@ -211,17 +212,6 @@ bindsym XF86Calculator exec --no-startup-id qalculate-gtk
 # Screeshots
 bindsym --release Print exec --no-startup-id "grim ~/Pictures/ScreenShots/$(date '+%s_%H%M_%d.%m.%Y').png"
 bindsym --release Shift+Print exec --no-startup-id "grim $(slurp) ~/Pictures/ScreenShots/$(date '+%s_%H%M_%d.%m.%Y').png"
-
-# Keyboard layout switcher
-set $keyboard_layout Keyboard Layout: (e) ES, (u) US
-mode "$keyboard_layout" {
-     bindsym e exec --no-startup-id setxkbmap es ,mode "default"
-     bindsym u exec --no-startup-id setxkbmap us -variant intl,mode "default"
-     # back to normal: Enter or Escape
-     bindsym Return mode "default"
-     bindsym Escape mode "default"
-}
-bindsym $mod+shift+Z mode "$keyboard_layout"
 
 # lock screen
 bindsym $mod+Pause exec --no-startup-id swaylock -f -c 000000
