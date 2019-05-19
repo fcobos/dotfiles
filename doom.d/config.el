@@ -35,11 +35,6 @@
 (add-to-list 'auto-mode-alist '("Pipfile.lock" . json-mode))
 (add-to-list 'auto-mode-alist '("\\patch$" . diff-mode))
 
-;; make postframe stop moving my mouse pointer, kthxbai
-(defun disable-posframe-mouse-banish ()
-  (setq posframe-mouse-banish nil))
-(add-hook 'flycheck-mode-hook #'disable-posframe-mouse-banish)
-
 ;; enable rainbow delimiters for programming modes
 (defun set-rainbow-max-face-count ()
   (setq rainbow-delimiters-max-face-count 4))
@@ -54,32 +49,12 @@
 (after! doom-themes
   (setq doom-treemacs-enable-variable-pitch nil))
 
-;; show flycheck indicators on the right side
-(after! flycheck
-  (setq flycheck-indication-mode 'right-fringe)
-  ;; left arrow
-  (define-fringe-bitmap 'flycheck-fringe-bitmap-double-arrow
-    [16 48 112 240 112 48 16] nil nil 'center))
-
 ;; eshell maximum lines of scrollback
 (setq eshell-buffer-maximum-lines 1000)
 (add-hook 'eshell-output-filter-functions #'eshell-truncate-buffer)
 
 ;; use bash for terminals
 (setq multi-term-program "/bin/bash")
-
-;; setup default indentation
-(setq indent-tabs-mode 't)
-(setq-default tab-width 8)
-(setq default-tab-width 8)
-(setq c-basic-offset 8)
-(c-set-offset 'case-label '+)
-
-;; autodetect indentation settings
-(add-hook 'prog-mode-hook (lambda () (dtrt-indent-mode 1)))
-
-;; use eww to open urls
-(setq +lookup-open-url-fn 'eww)
 
 ;; format rust buffers on save
 (after! rust-mode
