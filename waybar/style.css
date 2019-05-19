@@ -36,7 +36,7 @@ window#waybar.solo {
 }
 
 #workspaces button.focused {
-    background: #fafafa;
+    background: #f0f0f1;
     color: #383a42;
     border-bottom: 3px solid #4078f2;
 }
