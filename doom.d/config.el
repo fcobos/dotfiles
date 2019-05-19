@@ -26,7 +26,6 @@
 (setq gud-pdb-command-name "python -m pdb")
 
 ;; modeline config
-(setq doom-modeline-height 22)
 (setq doom-modeline-lsp nil)
 
 ;; file associations
