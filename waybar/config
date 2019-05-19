@@ -38,7 +38,7 @@
     "clock": {
 	"tooltip": false,
         "tooltip-format": "{:%Y-%m-%d | %H:%M}",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%d %b - %a}"
     },
     "backlight": {
 	"tooltip": false,
