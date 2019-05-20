@@ -2,7 +2,7 @@
 
 (add-hook 'after-save-hook #'garbage-collect)
 (add-hook 'suspend-hook #'garbage-collect)
-(run-with-idle-timer 15 t (garbage-collect))
+(run-with-idle-timer 15 t (lambda () (garbage-collect)))
 
 ;; disable window decorations
 ;;(set-frame-parameter nil 'undecorated t)
