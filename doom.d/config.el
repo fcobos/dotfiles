@@ -1,5 +1,9 @@
 ;;; config.el -*- lexical-binding: t; -*-
 
+(add-hook 'after-save-hook #'garbage-collect)
+(add-hook 'suspend-hook #'garbage-collect)
+(run-with-idle-timer 15 t (garbage-collect))
+
 ;; disable window decorations
 ;;(set-frame-parameter nil 'undecorated t)
 
