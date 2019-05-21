@@ -1,5 +1,5 @@
 [global]
-font = Iosevka SS04 11
+font = IBM Plex Sans Condensed 11
 
 # Allow a small subset of html markup:
 #   <b>bold</b>

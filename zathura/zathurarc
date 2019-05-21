@@ -1,4 +1,4 @@
-set font "Iosevka SS04 11"
+set font "IBM Plex Sans Condensed 11"
 set selection-clipboard clipboard
 set smooth-scroll true
 set guioptions s

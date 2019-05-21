@@ -1,8 +1,8 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Iosevka SS04, Iosevka, Hack, monospace;
-    font-size: 14px;
+    font-family: 'IBM Plex Sans Condensed', Noto Sans, DejaVu Sans, sans;
+    font-size: 15px;
     min-height: 0;
 }
 
@@ -36,7 +36,7 @@ window#waybar.solo {
 }
 
 #workspaces button.focused {
-    background: #f0f0f1;
+    background: #e5e5e6;
     color: #383a42;
     border-bottom: 3px solid #4078f2;
 }
