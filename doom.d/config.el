@@ -14,12 +14,12 @@
 (setq-default line-spacing 1)
 
 ;; Set the theme
-(setq doom-theme 'doom-one-light)
+(setq doom-theme 'doom-one)
 
 ;; faces configuration
-(custom-set-faces
- '(lsp-face-highlight-read ((t (:background "#e5e5e6"))))
- '(font-lock-function-name-face ((t (:foreground "#0184bc")))))
+;;(custom-set-faces
+;; '(lsp-face-highlight-read ((t (:background "#e5e5e6"))))
+;; '(font-lock-function-name-face ((t (:foreground "#0184bc")))))
 
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
@@ -79,6 +79,12 @@
 ;; dap-mode extensions location
 (after! dap-mode
   (setq dap-utils-extension-path (concat doom-local-dir "extension")))
+
+;; map SPC o i to lsp-ui-imenu
+(after! lsp-ui
+  (map! :leader
+	(:prefix "o"
+	  :desc "Toggle lsp-ui-imenu" "i" #'lsp-ui-imenu)))
 
 ;; key bindings
 (map! :leader
