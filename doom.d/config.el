@@ -83,8 +83,8 @@
 ;; map SPC o i to lsp-ui-imenu
 (after! lsp-ui
   (map! :leader
-	(:prefix "o"
-	  :desc "Toggle lsp-ui-imenu" "i" #'lsp-ui-imenu)))
+        (:prefix "o"
+          :desc "Toggle lsp-ui-imenu" "i" #'lsp-ui-imenu)))
 
 ;; key bindings
 (map! :leader
