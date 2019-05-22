@@ -317,7 +317,6 @@ for_window [class="Blueberry.py"] floating enable
 for_window [class="Arandr"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
 for_window [class="Google-musicmanager"] floating enable
-#for_window [class="Emacs" title="Helm"] floating enable
 for_window [title="About Nightly"] floating enable
 for_window [title="About Mozilla Firefox"] floating enable
 for_window [class="Qalculate-gtk"] floating enable
@@ -328,6 +327,7 @@ for_window [title="Preferences$"] floating enable
 for_window [class="matplotlib"] floating enable
 for_window [class="Hydrogen" title="Mixer"] floating enable
 for_window [class="Xsane"] floating enable
+for_window [class="Emacs"] floating enable
 
 # disable floating
 for_window [class="Eog"] floating disable
