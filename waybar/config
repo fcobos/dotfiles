@@ -19,8 +19,8 @@
     "sway/window": {
 	"tooltip": false,
 	"all-outputs": true,
-        "format": " {}",
-        "max-length": 42
+        "format": "{}",
+        "max-length": 50
     },
     "idle_inhibitor": {
 	"tooltip": false,

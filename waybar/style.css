@@ -46,6 +46,10 @@ window#waybar.solo {
     border-bottom: 3px solid #e06c75;
 }
 
+#window {
+    padding: 0 6px;
+}
+
 #mode {
     background: #282c34;
     color: #abb2bf;
