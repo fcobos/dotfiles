@@ -15,10 +15,6 @@
     padding: 10;
 }
 
-#listview {
-    lines: 8;
-}
-
 inputbar {
     children: [ textbox-prompt-colon, entry, case-indicator];
 }

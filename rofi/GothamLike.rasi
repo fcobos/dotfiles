@@ -13,7 +13,3 @@
     border: 2;
     padding: 10;
 }
-
-#listview {
-    lines: 8;
-}
