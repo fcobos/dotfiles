@@ -41,8 +41,7 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -fn "Iosevka-9" -nf \#98d1ce -nb \#0a0f14 -sb \#195465'
-set $rofi_command "rofi -combi-modi drun,run -show combi -modi combi -show-icons"
+set $rofi_command "rofi -combi-modi drun,run -show combi -modi combi -show-icons -lines 8"
 bindsym $mod+d exec --no-startup-id $rofi_command
 bindsym Mod1+space exec --no-startup-id $rofi_command
 
