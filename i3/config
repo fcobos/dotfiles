@@ -326,7 +326,6 @@ for_window [title="Preferences$"] floating enable
 for_window [class="matplotlib"] floating enable
 for_window [class="Hydrogen" title="Mixer"] floating enable
 for_window [class="Xsane"] floating enable
-for_window [class="Emacs"] floating enable
 
 # disable floating
 for_window [class="Eog"] floating disable
