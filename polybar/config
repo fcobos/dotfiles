@@ -55,7 +55,7 @@ font-2 = FontAwesome:size=11;3
 font-3 = fixed:pixelsize=11;3
 font-4 = unifont:fontformat=truetype:size=11:antialias=true;3
 font-5 = siji:pixelsize=11;3
-font-6 = IBM Plex Sans Condensed:size=11:weight=bold;3
+font-6 = IBM Plex Sans Condensed:size=11;3
 font-7 = IBM Plex Sans Condensed:size=6;0
 
 
