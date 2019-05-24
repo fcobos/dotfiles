@@ -1,7 +1,7 @@
 configuration {
 	modi: "window,run,drun,combi";
 	width: 480;
-	font: "IBM Plex Sans Condensed 11";
+	font: "Cantarell 11";
 	theme: "onedark";
 	kb-remove-char-back: "BackSpace";
 	kb-remove-to-eol: "Control+p";

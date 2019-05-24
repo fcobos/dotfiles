@@ -1,4 +1,4 @@
-set font "IBM Plex Sans Condensed 11"
+set font "Cantarell 11"
 set selection-clipboard clipboard
 set smooth-scroll true
 set guioptions s
