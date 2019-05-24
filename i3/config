@@ -318,6 +318,7 @@ for_window [class="Nm-connection-editor"] floating enable
 for_window [class="Google-musicmanager"] floating enable
 for_window [title="About Nightly"] floating enable
 for_window [title="About Mozilla Firefox"] floating enable
+for_window [title="About Firefox Developer Edition"] floating enable
 for_window [class="Qalculate-gtk"] floating enable
 for_window [class="Displaycal"] floating enable
 for_window [class="Corebird"] floating enable
