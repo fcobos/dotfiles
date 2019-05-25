@@ -1,5 +1,5 @@
 [global]
-font = Cantarell 11
+font = Roboto 11
 
 # Allow a small subset of html markup:
 #   <b>bold</b>

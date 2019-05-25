@@ -10,7 +10,7 @@
 ;; Set the font
 (setq doom-font (font-spec :family "Iosevka SS04" :size 14)
       doom-big-font (font-spec :family "Iosevka SS04" :size 24)
-      doom-variable-pitch-font (font-spec :family "Cantarell" :size 14))
+      doom-variable-pitch-font (font-spec :family "Roboto" :size 14))
 (setq-default line-spacing 1)
 
 ;; Set the theme
