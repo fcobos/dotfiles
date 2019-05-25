@@ -54,3 +54,6 @@ r = reset
 # Slideshow control
 t = slideshow_duration +1
 <Shift+t> = slideshow_duration -1
+
+# Set as wallpaper
+<Shift+w> = exec ln -sf "$imv_current_file" ~/.cache/wallpaper && swaymsg output "*" background ~/.cache/wallpaper fill
