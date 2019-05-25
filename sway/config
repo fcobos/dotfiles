@@ -168,7 +168,7 @@ bindsym $mod+r mode "resize"
 
 # background
 #output * bg "#e5e5e6" solid_color
-output * bg ~/.wallpaper fill "#e5e5e6"
+output * bg ~/.cache/wallpaper fill
 
 # fonts stuff
 exec --no-startup-id xset +fp ~/.local/share/fonts
