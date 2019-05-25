@@ -1,8 +1,6 @@
 # Default config for imv
 
 [options]
-width = 800
-height = 600
 background = checks
 scaling_mode = shrink
 # Suppress built-in key bindings, and specify them explicitly in this
