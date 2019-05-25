@@ -2,13 +2,13 @@
     border: none;
     border-radius: 0;
     font-family: Cantarell, DejaVu Sans, sans;
-    font-size: 15px;
+    font-size: 14px;
     min-height: 0;
 }
 
 window#waybar {
-    background: rgba(40, 44, 52, 0.8);
-    color: #abb2bf;
+    background: rgba(250, 250, 250, 0.8);
+    color: #383a42;
     transition-property: background, background-color;
     transition-duration: .5s;
 }
@@ -29,21 +29,21 @@ window#waybar.solo {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button {
     padding: 0 2px;
-    background: #282c34;
-    color: #abb2bf;
-    border-bottom: 3px solid #282c34;
+    background: #fafafa;
+    color: #383a42;
+    border-bottom: 3px solid #fafafa;
 }
 
 #workspaces button.focused {
-    background: #353b45;
-    color: #abb2bf;
-    border-bottom: 3px solid #61afef;
+    background: #e5e5e6;
+    color: #383a42;
+    border-bottom: 3px solid #4078f2;
 }
 
 #workspaces button.urgent {
-    background-color: #e06c75;
-    color: #282c34;
-    border-bottom: 3px solid #e06c75;
+    background-color: #ca1243;
+    color: #fafafa;
+    border-bottom: 3px solid #ca1243;
 }
 
 #window {
@@ -51,39 +51,39 @@ window#waybar.solo {
 }
 
 #mode {
-    background: #282c34;
-    color: #abb2bf;
-    border-bottom: 3px solid #282c34;
+    background: #fafafa;
+    color: #383a42;
+    border-bottom: 3px solid #fafafa;
 }
 
 #clock, #battery, #cpu, #memory, #temperature, #backlight, #network,
 #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #custom-power {
     padding: 0 5px;
     margin: 0 0px;
-    color: #abb2bf;
-    background-color: #282c34;
+    color: #383a42;
+    background-color: #fafafa;
 }
 
 #battery {
-    background-color: #282c34;
-    color: #abb2bf;
+    background-color: #fafafa;
+    color: #383a42;
 }
 
 #battery.charging {
-    color: #abb2bf;
-    background-color: #282c34;
+    color: #383a42;
+    background-color: #fafafa;
 }
 
 @keyframes blink {
     to {
-        background-color: #282c34;
-        color: #abb2bf;
+        background-color: #fafafa;
+        color: #383a42;
     }
 }
 
 #battery.critical:not(.charging) {
-    background: #282c34;
-    color: #e06c75;
+    background: #fafafa;
+    color: #ca1243;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -92,5 +92,5 @@ window#waybar.solo {
 }
 
 label:focus {
-    background-color: #282c34;
+    background-color: #fafafa;
 }

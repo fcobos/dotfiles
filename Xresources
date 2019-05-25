@@ -28,38 +28,38 @@ st.mouseScrollLines:  3
 
 ! colors
 ! special
-*.foreground:   #abb2bf
-*.background:   #282c34
-*.cursorColor:  #abb2bf
+*.foreground:   #383a42
+*.background:   #fafafa
+*.cursorColor:  #383a42
 
 ! black
-*.color0:       #282c34
-*.color8:       #545862
+*.color0:       #fafafa
+*.color8:       #a0a1a7
 
 ! red
-*.color1:       #e06c75
-*.color9:       #e06c75
+*.color1:       #ca1243
+*.color9:       #ca1243
 
 ! green
-*.color2:       #98c379
-*.color10:      #98c379
+*.color2:       #50a14f
+*.color10:      #50a14f
 
 ! yellow
-*.color3:       #e5c07b
-*.color11:      #e5c07b
+*.color3:       #c18401
+*.color11:      #c18401
 
 ! blue
-*.color4:       #61afef
-*.color12:      #61afef
+*.color4:       #4078f2
+*.color12:      #4078f2
 
 ! magenta
-*.color5:       #c678dd
-*.color13:      #c678dd
+*.color5:       #a626a4
+*.color13:      #a626a4
 
 ! cyan
-*.color6:       #56b6c2
-*.color14:      #56b6c2
+*.color6:       #0184bc
+*.color14:      #0184bc
 
 ! white
-*.color7:       #abb2bf
-*.color15:      #c8ccd4
+*.color7:       #383a42
+*.color15:      #090a0b

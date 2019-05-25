@@ -14,12 +14,12 @@
 (setq-default line-spacing 1)
 
 ;; Set the theme
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-one-light)
 
 ;; faces configuration
-;;(custom-set-faces
-;; '(lsp-face-highlight-read ((t (:background "#e5e5e6"))))
-;; '(font-lock-function-name-face ((t (:foreground "#0184bc")))))
+(custom-set-faces
+ '(lsp-face-highlight-read ((t (:background "#e5e5e6"))))
+ '(font-lock-function-name-face ((t (:foreground "#0184bc")))))
 
 ;; Set line numbers style
 (setq display-line-numbers-type 'relative)
