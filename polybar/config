@@ -3,15 +3,15 @@
 ;----------------------------------------------------------
 
 [colors]
-gray = ${xrdb:color8:#545862}
-red = ${xrdb:color1:#e06c75}
-green = ${xrdb:color2:#98c379}
-blue = ${xrdb:color4:#61afef}
-yellow = ${xrdb:color3:#d19a66}
-white = ${xrdb:color7:#abb2bf}
+gray = ${xrdb:color8:545862}
+red = ${xrdb:color1:e06c75}
+green = ${xrdb:color2:98c379}
+blue = ${xrdb:color4:61afef}
+yellow = ${xrdb:color3:d19a66}
+white = ${xrdb:color7:abb2bf}
 black = #bbfafafa
 #black = #bb282c34
-dark_gray = ${xrdb:color18:#282828}
+dark_gray = ${xrdb:color18:f0f0f1}
 background = ${colors.black}
 foreground = ${colors.white}
 
