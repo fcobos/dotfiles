@@ -88,7 +88,9 @@
     },
     "custom/power":{
 	"tooltip": false,
-        "format":"",
+        "format": "{}",
+	"exec": "echo ",
+	"interval": "once",
         "on-click": "~/dotfiles/scripts/rofi-logout"
      }
 }
