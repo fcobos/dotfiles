@@ -37,7 +37,7 @@ font pango:Roboto 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id termite
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -48,8 +48,8 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 set $rofi_command "rofi -combi-modi drun,run -show combi -modi combi -show-icons -lines 8"
-bindsym $mod+d exec --no-startup-id $rofi_command
-bindsym Mod1+space exec --no-startup-id $rofi_command
+bindsym $mod+d exec $rofi_command
+bindsym Mod1+space exec $rofi_command
 
 # change focus
 bindsym $mod+h focus left
@@ -171,41 +171,41 @@ bindsym $mod+r mode "resize"
 output * bg ~/.cache/wallpaper fill
 
 # fonts stuff
-exec --no-startup-id xset +fp ~/.local/share/fonts
-exec --no-startup-id xset fp rehash
+exec xset +fp ~/.local/share/fonts
+exec xset fp rehash
 # xsettings (java apps need it)
-exec --no-startup-id xsettingsd
+exec xsettingsd
 # start polkit auth agent
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # mako notification daemon
-exec --no-startup-id mako
+exec mako
 # apparmor notify
-exec --no-startup-id /usr/bin/aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
+exec /usr/bin/aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
 # udiskie
-exec --no-startup-id udiskie -nas
+exec udiskie -nas
 # swayidle
-exec --no-startup-id swayidle -w before-sleep 'swaylock -f -c 000000'
+exec swayidle -w before-sleep 'swaylock -f -c 000000'
 
 # Pulse Audio Controls
-bindsym XF86AudioMute        exec --no-startup-id pamixer -t
-bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 2
-bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 2
+bindsym XF86AudioMute        exec pamixer -t
+bindsym XF86AudioLowerVolume exec pamixer -d 2
+bindsym XF86AudioRaiseVolume exec pamixer -i 2
 
 # Media Player Controls
-bindsym XF86AudioPlay exec --no-startup-id "mpris-ctl pp"
-bindsym XF86AudioStop exec --no-startup-id "mpris-ctl stop"
-bindsym XF86AudioNext exec --no-startup-id "mpris-ctl next"
-bindsym XF86AudioPrev exec --no-startup-id "mpris-ctl prev"
+bindsym XF86AudioPlay exec "mpris-ctl pp"
+bindsym XF86AudioStop exec "mpris-ctl stop"
+bindsym XF86AudioNext exec "mpris-ctl next"
+bindsym XF86AudioPrev exec "mpris-ctl prev"
 
 # calculator
-bindsym XF86Calculator exec --no-startup-id qalculate-gtk
+bindsym XF86Calculator exec qalculate-gtk
 
 # Screeshots
-bindsym --release Print exec --no-startup-id "grim ~/Pictures/ScreenShots/$(date '+%s_%H%M_%d.%m.%Y').png"
-bindsym --release Shift+Print exec --no-startup-id "grim $(slurp) ~/Pictures/ScreenShots/$(date '+%s_%H%M_%d.%m.%Y').png"
+bindsym --release Print exec "grim ~/Pictures/ScreenShots/$(date '+%s_%H%M_%d.%m.%Y').png"
+bindsym --release Shift+Print exec "grim $(slurp) ~/Pictures/ScreenShots/$(date '+%s_%H%M_%d.%m.%Y').png"
 
 # lock screen
-bindsym $mod+Pause exec --no-startup-id swaylock -f -c 000000
+bindsym $mod+Pause exec swaylock -f -c 000000
 
 # colors
 set $base00 #fafafa
