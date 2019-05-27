@@ -272,6 +272,7 @@ mouse_warping none
 #smart_gaps on
 
 # waybar
+set $waybar_command "env XDG_CURRENT_DESKTOP=Unity waybar"
 bar {
-    swaybar_command waybar
+    swaybar_command $waybar_command
 }
