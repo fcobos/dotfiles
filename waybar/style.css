@@ -35,14 +35,14 @@ window#waybar.solo {
 }
 
 #workspaces button.focused {
-    background: #e5e5e6;
-    color: #383a42;
+    background: #fafafa;
+    color: #4078f2;
     border-bottom: 3px solid #4078f2;
 }
 
 #workspaces button.urgent {
-    background-color: #ca1243;
-    color: #fafafa;
+    background-color: #fafafa;
+    color: #ca1243;
     border-bottom: 3px solid #ca1243;
 }
 
