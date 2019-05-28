@@ -11,7 +11,7 @@
 (setq doom-font (font-spec :family "Iosevka SS04" :size 14)
       doom-big-font (font-spec :family "Iosevka SS04" :size 24)
       doom-variable-pitch-font (font-spec :family "Roboto" :size 14))
-(setq-default line-spacing 1)
+(setq-default line-spacing nil)
 
 ;; Set the theme
 (setq doom-theme 'doom-one-light)
