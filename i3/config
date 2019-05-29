@@ -176,6 +176,7 @@ exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natura
 #exec --no-startup-id nm-applet
 # nvidia-settings
 exec --no-startup-id nvidia-settings --load-config-only
+exec --no-startup-id nvFanControl 
 # xiccd
 exec --no-startup-id xiccd
 # apply color profile
