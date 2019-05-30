@@ -213,8 +213,8 @@ exec --no-startup-id xss-lock xsecurelock
 # udiskie
 exec --no-startup-id udiskie -nas
 # disable screen blanking
-xset dpms 0 0 0
-xset s off
+exec --no-startup-id xset dpms 0 0 0
+exec --no-startup-id xset s off
 
 # Pulse Audio Controls
 bindsym XF86AudioMute        exec --no-startup-id pamixer -t
