@@ -212,6 +212,9 @@ exec --no-startup-id /usr/bin/aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.lo
 exec --no-startup-id xss-lock xsecurelock
 # udiskie
 exec --no-startup-id udiskie -nas
+# disable screen blanking
+xset dpms 0 0 0
+xset s off
 
 # Pulse Audio Controls
 bindsym XF86AudioMute        exec --no-startup-id pamixer -t
