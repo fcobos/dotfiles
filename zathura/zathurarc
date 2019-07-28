@@ -3,7 +3,7 @@ set selection-clipboard clipboard
 set smooth-scroll true
 set guioptions s
 #set recolor-keephue true
-set recolor true
+#set recolor true
 
 set default-bg                  "#fafafa"
 set default-fg                  "#f0f0f1"
