@@ -274,6 +274,7 @@ mouse_warping none
 
 # waybar
 set $waybar_command "env XDG_CURRENT_DESKTOP=Unity waybar"
-bar {
-    swaybar_command $waybar_command
-}
+#bar {
+#    swaybar_command $waybar_command
+#}
+exec $waybar_command
