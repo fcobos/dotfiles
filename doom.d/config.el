@@ -5,7 +5,7 @@
 (run-with-idle-timer 15 t (lambda () (garbage-collect)))
 
 ;; disable window decorations
-;;(set-frame-parameter nil 'undecorated t)
+(set-frame-parameter nil 'undecorated t)
 
 ;; Set the font
 (setq doom-font (font-spec :family "Iosevka SS04" :size 14)
