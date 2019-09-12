@@ -15,4 +15,4 @@
 
 (when (package! glsl-mode)
   (when (featurep! :completion company)
-    (package! company-glsl :recipe (:fetcher github :repo "Kaali/company-glsl"))))
+    (package! company-glsl)))
