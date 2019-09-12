@@ -79,6 +79,9 @@
 ;; dap-mode extensions location
 (after! dap-mode
   (setq dap-utils-extension-path (concat doom-local-dir "extension")))
+;; dap-mode breakpoints file location
+(after! dap-mode
+  (setq dap-breakpoints-file (concat doom-cache-dir ".dap-breakpoints")))
 
 ;; map SPC o i to lsp-ui-imenu
 (after! lsp-ui
