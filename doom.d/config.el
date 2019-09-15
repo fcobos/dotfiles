@@ -18,6 +18,7 @@
 
 ;; faces configuration
 (custom-set-faces
+ '(variable-pitch ((t (:family "Roboto"))))
  '(lsp-face-highlight-read ((t (:background "#e5e5e6"))))
  '(font-lock-function-name-face ((t (:foreground "#0184bc")))))
 
