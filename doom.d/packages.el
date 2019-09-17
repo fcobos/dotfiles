@@ -5,3 +5,5 @@
 (package! pkgbuild-mode)
 ;; vimrc-mode
 (package! vimrc-mode)
+;; anaconda-mode seems to require posframe
+(package! posframe)

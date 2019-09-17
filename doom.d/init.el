@@ -18,8 +18,7 @@
        ;;ido               ; the other *other* search engine...
        (ivy +fuzzy
 	    +icons
-	    +prescient
-	    +childframe)               ; a search engine for love and life
+	    +prescient)               ; a search engine for love and life
 
        :ui
        ;;deft              ; notational velocity for Emacs
