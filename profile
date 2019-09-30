@@ -4,6 +4,7 @@
 #[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && export XDG_CURRENT_DESKTOP=i3 && \
 #	export XDG_SESSION_DESKTOP=i3 && startx > /dev/null 2>&1 && reset
 
+PAGER=less
 # gcc colors
 export GCC_COLORS=error="01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
 export EDITOR=nvim
