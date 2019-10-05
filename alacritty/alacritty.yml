@@ -125,7 +125,7 @@ font:
   #scale_with_dpi: true
 
 # Display the time it takes to redraw each frame.
-render_timer: false
+debug.render_timer: false
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
@@ -134,43 +134,43 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '0xfbf1c7'
-    foreground: '0x504945'
+    background: '0xfafafa'
+    foreground: '0x383a42'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0xfbf1c7'
-    cursor: '0x504945'
+    text: '0xfafafa'
+    cursor: '0x383a42'
 
   # Normal colors
   normal:
-    black:   '0xfbf1c7'
-    red:     '0x9d0006'
-    green:   '0x79740e'
-    yellow:  '0xb57614'
-    blue:    '0x076678'
-    magenta: '0x8f3f71'
-    cyan:    '0x427b58'
-    white:   '0x504945'
+    black:   '0xfafafa'
+    red:     '0xca1243'
+    green:   '0x50a14f'
+    yellow:  '0xc18401'
+    blue:    '0x4078f2'
+    magenta: '0xa626a4'
+    cyan:    '0x0184bc'
+    white:   '0x383a42'
 
   # Bright colors
   bright:
-    black:   '0xbdae93'
-    red:     '0x9d0006'
-    green:   '0x79740e'
-    yellow:  '0xb57614'
-    blue:    '0x076678'
-    magenta: '0x8f3f71'
-    cyan:    '0x427b58'
-    white:   '0x282828'
+    black:   '0xa0a1a7'
+    red:     '0xca1243'
+    green:   '0x50a14f'
+    yellow:  '0xc18401'
+    blue:    '0x4078f2'
+    magenta: '0xa626a4'
+    cyan:    '0x0184bc'
+    white:   '0x090a0b'
 
   indexed_colors:
-    - { index: 16, color: '0xaf3a03' }
-    - { index: 17, color: '0xd65d0e' }
-    - { index: 18, color: '0xebdbb2' }
-    - { index: 19, color: '0xd5c4a1' }
-    - { index: 20, color: '0x665c54' }
-    - { index: 21, color: '0x3c3836' }
+    - { index: 16, color: '0xd75f00' }
+    - { index: 17, color: '0x986801' }
+    - { index: 18, color: '0xf0f0f1' }
+    - { index: 19, color: '0xe5e5e6' }
+    - { index: 20, color: '0x696c77' }
+    - { index: 21, color: '0x202227' }
 
   # Dim colors
   #
