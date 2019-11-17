@@ -14,7 +14,7 @@
 (setq-default line-spacing nil)
 
 ;; Set the theme
-(setq doom-theme 'doom-one-light)
+(setq doom-theme 'doom-one)
 
 ;; faces configuration
 (custom-set-faces
