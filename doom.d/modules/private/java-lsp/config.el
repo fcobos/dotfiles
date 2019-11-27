@@ -1,6 +1,6 @@
 ;;; private/java/config.el -*- lexical-binding: t; -*-
 
-(def-package! lsp-mode
+(use-package! lsp-mode
   :commands (lsp-mode lsp-define-stdio-client)
   :init
   (setq lsp-response-timeout 30
@@ -10,7 +10,7 @@
         lsp-session-file (concat doom-etc-dir "lsp-session")
         lsp-enable-completion-at-point t))
 
-(def-package! lsp-java
+(use-package! lsp-java
   :init
   (add-hook 'java-mode-hook #'lsp)
   (setq lsp-java-server-install-dir (concat doom-etc-dir "eclipse.jdt.ls/server/")
@@ -19,7 +19,7 @@
   :config
   (add-hook 'java-mode-hook 'flycheck-mode))
 
-(def-package! lsp-ui
+(use-package! lsp-ui
   :hook (lsp-mode . lsp-ui-mode)
   :config
   (set-lookup-handlers! 'lsp-ui-mode
@@ -32,7 +32,7 @@
         lsp-ui-sideline-enable nil
         lsp-ui-doc-enable nil))
 
-(def-package! company-lsp
+(use-package! company-lsp
   :after lsp-mode
   :config
   (set-company-backend! 'lsp-mode '(company-lsp))
@@ -41,13 +41,13 @@
         company-lsp-async t
         company-lsp-enable-recompletion t))
 
-(def-package! dap-mode
+(use-package! dap-mode
   :after lsp-mode
   :config
   (dap-mode t)
   (dap-ui-mode t))
 
-(def-package! dap-java
+(use-package! dap-java
   :after lsp-java)
 
 (after! lsp-java
