@@ -7,7 +7,7 @@ go get -u -ldflags "-s -w" golang.org/x/tools/cmd/gorename
 go get -u -ldflags "-s -w" golang.org/x/tools/cmd/guru
 go get -u -ldflags "-s -w" golang.org/x/lint/golint
 go get -u -ldflags "-s -w" golang.org/x/mobile/cmd/gomobile
-GO111MODULE=on go get -ldflags "-s -w" golang.org/x/tools/cmd/gopls@latest
+GO111MODULE=on go get -ldflags "-s -w" golang.org/x/tools/gopls@latest
 #mkdir ~/.cache/go-tools
 #cd ~/.cache/go-tools
 #git clone -b bingo https://github.com/saibing/tools.git
@@ -18,7 +18,7 @@ GO111MODULE=on go get -ldflags "-s -w" golang.org/x/tools/cmd/gopls@latest
 #go get -u -ldflags "-s -w" github.com/saibing/bingo
 
 go get -u -ldflags "-s -w" github.com/rogpeppe/godef
-go get -u -ldflags "-s -w" github.com/motemen/gore
+go get -u -ldflags "-s -w" github.com/motemen/gore/cmd/gore
 #go get -u -ldflags "-s -w" github.com/mdempsky/gocode
 #go get -u -ldflags "-s -w" github.com/stamblerre/gocode
 go get -u -ldflags "-s -w" github.com/visualfc/gocode
