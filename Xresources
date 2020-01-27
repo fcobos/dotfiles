@@ -9,7 +9,7 @@ Xft.embeddedbitmap: 0
 
 ! emacs
 Emacs.FontBackend: xft
-Emacs.font: Source Code Pro-11
+Emacs.font: JetBrains Mono-11
 Emacs*toolBar: 0
 Emacs*menuBar: 0
 Emacs*scrollBar: 0

@@ -8,8 +8,8 @@
 (set-frame-parameter nil 'undecorated t)
 
 ;; Set the font
-(setq doom-font (font-spec :family "Source Code Pro" :size 14)
-      doom-big-font (font-spec :family "Source Code Pro" :size 24)
+(setq doom-font (font-spec :family "JetBrains Mono" :size 14)
+      doom-big-font (font-spec :family "JetBrains Mono" :size 24)
       doom-variable-pitch-font (font-spec :family "Cantarell" :size 14))
 (setq-default line-spacing nil)
 
