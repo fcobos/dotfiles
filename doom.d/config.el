@@ -6,6 +6,8 @@
 
 ;; disable window decorations
 (set-frame-parameter nil 'undecorated t)
+;; disable scroll bar
+(set-scroll-bar-mode nil)
 
 ;; Set the font
 (setq doom-font (font-spec :family "JetBrains Mono" :size 14)
