@@ -9,12 +9,6 @@
 ;; disable scroll bar
 (set-scroll-bar-mode nil)
 
-;; Set the font
-(setq doom-font (font-spec :family "JetBrains Mono" :size 14)
-      doom-big-font (font-spec :family "JetBrains Mono" :size 24)
-      doom-variable-pitch-font (font-spec :family "Cantarell" :size 14))
-(setq-default line-spacing 0.25)
-
 ;; Set the theme
 (setq doom-theme 'doom-one-light)
 
