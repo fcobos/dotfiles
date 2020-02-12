@@ -39,17 +39,6 @@ if [ "$SSH_TTY" ]; then
 	export GPG_TTY=$SSH_TTY
 fi
 
-# qt theme
-if [ -n "$DESKTOP_SESSION" ]; then
-	export QT_QPA_PLATFORMTHEME="qt5ct"
-fi
-
-# gnome-keyring
-if [ -n "$DESKTOP_SESSION" ]; then
-	eval $(/usr/bin/gnome-keyring-daemon --start)
-	export SSH_AUTH_SOCK
-fi
-
 # ruby path
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 
