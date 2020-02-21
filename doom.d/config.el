@@ -3,6 +3,7 @@
 (add-hook 'after-save-hook #'garbage-collect)
 (add-hook 'suspend-hook #'garbage-collect)
 (run-with-idle-timer 15 t (lambda () (garbage-collect)))
+(setq read-process-output-max (* 1024 1024)) ;; 1mb
 
 ;; disable window decorations
 (set-frame-parameter nil 'undecorated t)
@@ -72,6 +73,11 @@
 (add-hook 'flycheck-after-syntax-check-hook
           (lambda()
             (setq-local flycheck-idle-change-delay 4.0)))
+
+;; lsp tuning
+(after! lsp-mode
+  (setq lsp-prefer-capf t)
+  (setq lsp-idle-delay 0.250))
 
 ;; dap-mode extensions location
 (after! dap-mode
