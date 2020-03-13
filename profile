@@ -24,6 +24,7 @@ export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 # node npm configuration
 export NPM_PACKAGES="/home/felix/.npm-packages"
 export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+export PATH="$HOME/devel/node/bin:$PATH"
 export PATH="$NPM_PACKAGES/bin:$PATH"
 
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -43,6 +44,7 @@ fi
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 
 # go paths
+export PATH="$HOME/devel/go/bin:$PATH"
 GO_BINARY=$(which go)
 if [ -f "$GO_BINARY" ]; then
 	export GOPATH="$(go env GOPATH)"
