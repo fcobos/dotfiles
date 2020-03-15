@@ -44,7 +44,7 @@ fi
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 
 # go paths
-export PATH="$HOME/devel/go/bin:$PATH"
+#export PATH="$HOME/devel/go/bin:$PATH"
 GO_BINARY=$(which go)
 if [ -f "$GO_BINARY" ]; then
 	export GOPATH="$(go env GOPATH)"
