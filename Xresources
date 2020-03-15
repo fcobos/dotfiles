@@ -5,10 +5,8 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 Xft.embeddedbitmap: 0
-!Xft.dpi: 96
 
 ! emacs
-Emacs.FontBackend: xft
 Emacs*toolBar: 0
 Emacs*menuBar: 0
 Emacs*scrollBar: 0
