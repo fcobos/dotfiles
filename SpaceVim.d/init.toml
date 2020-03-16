@@ -53,6 +53,9 @@
   name = "denite"
 
 [[layers]]
+  name = "VersionControl"
+
+[[layers]]
   name = "git"
 
 [[layers]]
