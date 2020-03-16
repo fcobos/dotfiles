@@ -127,3 +127,7 @@
       "-data",
       "~/.cache/javalsp"
     ]
+
+[[custom_plugins]]
+  name = "jceb/vim-orgmode"
+  merged = false
