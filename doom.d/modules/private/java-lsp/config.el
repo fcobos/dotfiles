@@ -58,40 +58,36 @@
         :nv  "gd" #'lsp-ui-peek-find-definitions
         :nv  "gD" #'lsp-ui-peek-find-references
         :localleader
-        (:desc "Refactor"
-          :prefix "r"
+        (:prefix ("r" . "Refactor")
           :desc "Add import"
-          :n "ai" #'lsp-java-add-import
+          :n "i" #'lsp-java-add-import
           :desc "Add unimplemented methods"
-          :n "au" #'lsp-java-add-unimplemented-methods
+          :n "u" #'lsp-java-add-unimplemented-methods
           :desc "Create field"
-          :n "cf" #'lsp-java-create-field
+          :n "e" #'lsp-java-create-field
           :desc "Create local"
-          :n "cl" #'lsp-java-create-local
+          :n "l" #'lsp-java-create-local
           :desc "Create parameter"
-          :n "cp" #'lsp-java-create-parameter
+          :n "p" #'lsp-java-create-parameter
           :desc "Extract to constant"
-          :n "ec" #'lsp-java-extract-to-constant
+          :n "c" #'lsp-java-extract-to-constant
           :desc "Extract method"
-          :n "em" #'lsp-java-extract-method
+          :n "m" #'lsp-java-extract-method
           :desc "Organize imports"
-          :n "oi" #'lsp-java-organize-imports
+          :n "o" #'lsp-java-organize-imports
           :desc "Format buffer"
           :n "f"  #'lsp-format-buffer
           :desc "Rename"
           :n "r"  #'lsp-rename)
-        (:desc "Help"
-          :prefix "h"
+        (:prefix ("h" . "Help")
           :desc "Describe thing at point"
           :n "."  #'lsp-describe-thing-at-point)
-        (:desc "Navigation"
-          :prefix "g"
+        (:prefix ("g" . "Navigation")
           :desc "Go to type definition"
           :n "d" #'lsp-goto-type-definition
           :desc "Go to implementation"
           :n "i" #'lsp-goto-implementation)
-        (:desc "Debugging"
-          :prefix "d"
+        (:prefix ("d" . "Debug")
           :desc "Toggle breakpoint"
           :n "k" #'dap-breakpoint-toggle
           :desc "Eval"
@@ -114,8 +110,7 @@
           :n "c" #'dap-java-run-test-class
           :desc "Debug test class"
           :n "x" #'dap-java-debug-test-class)
-        (:desc "Build"
-          :prefix "b"
+        (:prefix ("b" . "Build")
           :desc "Build project"
           :n "b"  #'lsp-java-build-project
           :desc "Update project configuration"
