@@ -9,17 +9,8 @@ PAGER=less
 export GCC_COLORS=error="01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
 export EDITOR=nvim
 export BROWSER=xdg-open
-export ANDROID_HOME="$HOME/devel/android-sdk"
-export ANDROID_SDK="$ANDROID_HOME"
-export ANDROID_NDK_HOME="$HOME/devel/android-ndk"
-export ANDROID_NDK="$ANDROID_NDK_HOME"
-export NDK_ROOT="$ANDROID_NDK_HOME"
-export NDKROOT="$ANDROID_NDK_HOME"
-PATH="$HOME/bin:$HOME/.local/bin:$ANDROID_SDK/emulator:$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools:$ANDROID_NDK:$PATH"
+PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export PATH
-
-# fix for android emulator's old libstdc++
-export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 
 # node npm configuration
 export NPM_PACKAGES="/home/felix/.npm-packages"
