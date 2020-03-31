@@ -1,7 +1,6 @@
 ;;; private/cc-lsp/config.el -*- lexical-binding: t; -*-
 
-(after! ccls
-  (setq ccls-sem-highlight-method 'font-lock)
+(after! cc-mode
   (add-hook 'c-mode-hook 'flycheck-mode)
   (add-hook 'c++-mode-hook 'flycheck-mode)
   (add-hook 'objc-mode-hook 'flycheck-mode)
