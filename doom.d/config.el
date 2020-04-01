@@ -10,6 +10,9 @@
 ;; disable scroll bar
 (set-scroll-bar-mode nil)
 
+;; enable fill column indicator
+(add-hook 'prog-mode-hook (lambda () (display-fill-column-indicator-mode 1)))
+
 ;; Set the theme
 (setq doom-theme 'doom-one-light)
 
@@ -17,6 +20,7 @@
 (custom-set-faces
  '(variable-pitch ((t (:family "Cantarell"))))
  '(lsp-face-highlight-read ((t (:background "#e5e5e6"))))
+ '(fill-column-indicator ((t (:foreground "#e5e5e6"))))
  '(font-lock-function-name-face ((t (:foreground "#0184bc")))))
 
 ;; Set line numbers style
