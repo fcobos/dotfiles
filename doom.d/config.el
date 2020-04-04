@@ -61,6 +61,7 @@
 
 ;; use bash for terminals
 (setq multi-term-program "/bin/bash")
+(setq vterm-shell "/bin/bash")
 
 ;; format rust buffers on save
 (after! rust-mode
