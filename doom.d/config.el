@@ -11,7 +11,7 @@
 (set-scroll-bar-mode nil)
 
 ;; enable fill column indicator
-(add-hook 'prog-mode-hook (lambda () (display-fill-column-indicator-mode 1)))
+(add-hook! '(text-mode-hook prog-mode-hook conf-mode-hook) (display-fill-column-indicator-mode 1))
 
 ;; Set the theme
 (setq doom-theme 'doom-one-light)
