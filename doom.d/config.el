@@ -64,8 +64,8 @@
 (setq vterm-shell "/bin/bash")
 
 ;; format rust buffers on save
-(after! rust-mode
-  (setq rust-format-on-save t))
+(after! rustic
+  (setq rustic-format-on-save t))
 
 ;; avoid exit confirmation dialog
 (setq confirm-kill-emacs nil)
@@ -102,5 +102,12 @@
       (:prefix "c"
         :desc "Toggle comment"         "l" #'evil-commentary-line
         :desc "Copy and comment lines" "y" #'evil-commentary-yank-line))
+
+;; fix rust documentation keybind
+(after! rustic
+  (when (featurep 'evil)
+    (add-hook 'lsp-mode-hook #'evil-normalize-keymaps))
+  (map! :map (rustic-mode-map)
+        :n   "K"  #'lsp-describe-thing-at-point))
 
 ;;; config.el ends here
