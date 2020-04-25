@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1=$'\n''\[\e[38;5;39m\]\u\[\e[0m\]@\[\e[38;5;208m\]\H \[\e[38;5;39m\]\W
+PS1=$'\[\e[38;5;39m\]\u\[\e[0m\]@\[\e[38;5;208m\]\H \[\e[38;5;39m\]\W
 \[\e[38;5;39m\]$ \[\e[0;0m\]'
 case ${TERM} in
 	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|alacritty*|tmux*|screen*|st*)
