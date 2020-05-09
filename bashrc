@@ -29,6 +29,10 @@ eval $(dircolors ~/.dircolors)
 # case insensitive tab completion
 bind "set completion-ignore-case on"
 
+set colored-stats on
+set completion-ignore-case on
+set skip-completed-text on
+
 # vim keybindings
 #set -o vi
 
