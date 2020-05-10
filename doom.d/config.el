@@ -9,6 +9,8 @@
 (set-frame-parameter nil 'undecorated t)
 ;; disable scroll bar
 (set-scroll-bar-mode nil)
+;; start maximized
+(add-hook 'window-setup-hook 'toggle-frame-maximized t)
 
 ;; enable fill column indicator
 (when EMACS27+
