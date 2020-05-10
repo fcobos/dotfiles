@@ -1,11 +1,3 @@
-Xft.autohint: 0
-Xft.hintstyle:  hintslight
-Xft.lcdfilter: lcddefault
-Xft.hinting: 1
-Xft.antialias: 1
-Xft.rgba: rgb
-Xft.embeddedbitmap: 0
-
 ! emacs
 Emacs*toolBar: 0
 Emacs*menuBar: 0
