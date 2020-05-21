@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-export QT_QPA_PLATFORMTHEME=""
-export QT_STYLE_OVERRIDE=kvantum
-/usr/bin/qutebrowser --loglines 0 --loglevel critical --logfilter qt,init "$@"
