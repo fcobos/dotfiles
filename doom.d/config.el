@@ -26,7 +26,7 @@
  '(font-lock-function-name-face ((t (:foreground "#0184bc")))))
 
 ;; Set line numbers style
-(setq display-line-numbers-type 'relative)
+(setq display-line-numbers-type t)
 
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
