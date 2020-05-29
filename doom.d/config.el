@@ -65,10 +65,6 @@
 (setq multi-term-program "/bin/bash")
 (setq vterm-shell "/bin/bash")
 
-;; format rust buffers on save
-(after! rustic
-  (setq rustic-format-on-save t))
-
 ;; avoid exit confirmation dialog
 (setq confirm-kill-emacs nil)
 
@@ -99,11 +95,9 @@
         (:prefix "o"
           :desc "Toggle lsp-ui-imenu" "i" #'lsp-ui-imenu)))
 
-;; key bindings
-(map! :leader
-      (:prefix "c"
-        :desc "Toggle comment"         "l" #'evil-commentary-line
-        :desc "Copy and comment lines" "y" #'evil-commentary-yank-line))
+;; format rust buffers on save
+(after! rustic
+  (setq rustic-format-on-save t))
 
 ;; fix rust documentation keybind
 (after! rustic
@@ -111,5 +105,8 @@
     (add-hook 'lsp-mode-hook #'evil-normalize-keymaps))
   (map! :map (rustic-mode-map)
         :n   "K"  #'lsp-describe-thing-at-point))
+
+;; set rust-analyzer as server for rust
+(setq rustic-lsp-server 'rust-analyzer)
 
 ;;; config.el ends here
