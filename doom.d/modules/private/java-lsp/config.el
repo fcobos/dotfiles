@@ -32,15 +32,6 @@
         lsp-ui-sideline-enable nil
         lsp-ui-doc-enable nil))
 
-(use-package! company-lsp
-  :after lsp-mode
-  :config
-  (set-company-backend! 'lsp-mode '(company-lsp))
-  (setq company-lsp-cache-candidates t
-        company-lsp-enable-snippet t
-        company-lsp-async t
-        company-lsp-enable-recompletion t))
-
 (use-package! dap-mode
   :after lsp-mode
   :config
