@@ -18,7 +18,7 @@ go get -u -ldflags "-s -w" github.com/jstemmer/gotags
 go get -u -ldflags "-s -w" github.com/klauspost/asmfmt/cmd/asmfmt
 go get -u -ldflags "-s -w" github.com/davidrjenni/reftools/cmd/fillstruct
 go get -u -ldflags "-s -w" github.com/alecthomas/gometalinter
-GO111MODULE=on go get -ldflags "-s -w" github.com/golangci/golangci-lint/cmd/golangci-lint@v1.27.0
+GO111MODULE=on go get -ldflags "-s -w" github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 go get -u -ldflags "-s -w" github.com/fatih/gomodifytags
 go get -u -ldflags "-s -w" github.com/josharian/impl
 go get -u -ldflags "-s -w" honnef.co/go/tools/cmd/keyify
