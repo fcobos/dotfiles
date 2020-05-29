@@ -111,7 +111,7 @@
   ]
   [layers.override_cmd]
     go = ["gopls"]
-    rust = ["rustup", "run", "stable", "rls"]
+    rust = ["rust-analyzer"]
     java = [
       "java",
       "-Declipse.application=org.eclipse.jdt.ls.core.id1",
