@@ -1,8 +1,6 @@
 ;; -*- no-byte-compile: t; -*-
 ;;; private/cc-lsp/packages.el
 
-(package! lsp-mode)
-
 ;; extra stuff
 (package! cmake-mode)
 (package! cuda-mode)
