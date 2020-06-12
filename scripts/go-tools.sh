@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 cd ~/ || exit
 
+export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw"
+
 go get -u -ldflags "-s -w" golang.org/x/tools/cmd/godoc
 go get -u -ldflags "-s -w" golang.org/x/tools/cmd/goimports
 go get -u -ldflags "-s -w" golang.org/x/tools/cmd/gorename
