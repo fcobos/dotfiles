@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 cd ~/ || exit
 
+export CFLAGS="-march=native -O3 -pipe -fstack-protector-strong -fno-plt"
+export CXXFLAGS="${CFLAGS}"
+export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro"
+export CGO_CPPFLAGS="${CPPFLAGS}"
+export CGO_CFLAGS="${CFLAGS}"
+export CGO_CXXFLAGS="${CXXFLAGS}"
+export CGO_LDFLAGS="${LDFLAGS}"
 export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw"
 
 go get -u -ldflags "-s -w" golang.org/x/tools/cmd/godoc
