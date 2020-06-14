@@ -8,7 +8,8 @@ chmod 700 get_helm.sh
 rm -f ./get_helm.sh
 
 # kubectl
-curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+kubectl_version=$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)
+curl -LO https://storage.googleapis.com/kubernetes-release/release/"$kubectl_version"/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 mv kubectl ~/bin/
 
@@ -17,10 +18,15 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-
 mv minikube-linux-amd64 ~/bin/minikube
 chmod +x ~/bin/minikube
 
+# kompose
+curl -L https://github.com/kubernetes/kompose/releases/latest/download/kompose-linux-amd64 -o kompose
+chmod +x kompose
+mv kompose ~/bin/
+
 # minishift
-VERSION=$(curl -s https://github.com/minishift/minishift/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
-echo version: "$VERSION"
-wget https://github.com/minishift/minishift/releases/latest/download/minishift-"$VERSION"-linux-amd64.tgz
-tar xf minishift-"$VERSION"-linux-amd64.tgz
-mv minishift-"$VERSION"-linux-amd64/minishift ~/bin/
-rm -rf minishift-"$VERSION"-linux-amd64*
+minishift_version=$(curl -s https://github.com/minishift/minishift/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
+echo version: "$minishift_version"
+wget https://github.com/minishift/minishift/releases/latest/download/minishift-"$minishift_version"-linux-amd64.tgz
+tar xf minishift-"$minishift_version"-linux-amd64.tgz
+mv minishift-"$minishift_version"-linux-amd64/minishift ~/bin/
+rm -rf minishift-"$minishift_version"-linux-amd64*
