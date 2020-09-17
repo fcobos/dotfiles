@@ -79,7 +79,6 @@
 
 ;; lsp tuning
 (after! lsp-mode
-  (setq lsp-prefer-capf t)
   (setq lsp-idle-delay 0.250))
 
 ;; dap-mode extensions location
