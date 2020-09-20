@@ -29,12 +29,14 @@
 (setq display-line-numbers-type t)
 
 ;; custom dashboard banner
-(defconst banner-text (concat "EMACS " emacs-version))
+(defvar dashboard-banner-text (concat "EMACS " emacs-version "\n\n\n\n\n\n\n\n"))
+(defvar dashboard-banner-list '())
+(add-to-list 'dashboard-banner-list dashboard-banner-text)
 (defun doom-dashboard-widget-banner ()
   (mapc (lambda (line)
           (insert (propertize (+doom-dashboard--center +doom-dashboard--width line)
                               'face 'doom-dashboard-banner) " "))
-        '("EMACS" "\n\n\n\n\n\n")))
+        dashboard-banner-list))
 
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
