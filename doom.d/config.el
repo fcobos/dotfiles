@@ -29,8 +29,9 @@
 (setq display-line-numbers-type t)
 
 ;; custom dashboard banner
-(defvar dashboard-banner-text (concat "Welcome to Emacs " emacs-version " (" (system-name) " - " system-configuration ")" "\n\n\n\n\n\n"))
+(defvar dashboard-banner-text (concat "Welcome to Emacs " emacs-version " (" (system-name) " - " system-configuration ")"))
 (defvar dashboard-banner-list '())
+(add-to-list 'dashboard-banner-list "\n\n\n\n\n\n\n\n")
 (add-to-list 'dashboard-banner-list dashboard-banner-text)
 (defun doom-dashboard-widget-banner ()
   (mapc (lambda (line)
