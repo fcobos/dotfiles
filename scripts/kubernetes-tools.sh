@@ -42,4 +42,4 @@ chmod +x ansible-operator-"${operator_version}"-x86_64-linux-gnu && cp ansible-o
 chmod +x helm-operator-"${operator_version}"-x86_64-linux-gnu && cp helm-operator-"${operator_version}"-x86_64-linux-gnu $operator_install_dir/helm-operator && rm helm-operator-"${operator_version}"-x86_64-linux-gnu
 
 # kustomize
-GO111MODULE=on go get -u sigs.k8s.io/kustomize/kustomize/v3
+GO111MODULE=on go get sigs.k8s.io/kustomize/kustomize/v3
