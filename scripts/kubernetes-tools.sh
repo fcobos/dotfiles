@@ -30,3 +30,13 @@ wget https://github.com/minishift/minishift/releases/latest/download/minishift-"
 tar xf minishift-"$minishift_version"-linux-amd64.tgz
 mv minishift-"$minishift_version"-linux-amd64/minishift ~/bin/
 rm -rf minishift-"$minishift_version"-linux-amd64*
+
+# operator sdk
+operator_version=v$(curl -s https://github.com/operator-framework/operator-sdk/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
+operator_install_dir=~/bin/
+curl -LO https://github.com/operator-framework/operator-sdk/releases/download/"${operator_version}"/operator-sdk-"${operator_version}"-x86_64-linux-gnu
+curl -LO https://github.com/operator-framework/operator-sdk/releases/download/"${operator_version}"/ansible-operator-"${operator_version}"-x86_64-linux-gnu
+curl -LO https://github.com/operator-framework/operator-sdk/releases/download/"${operator_version}"/helm-operator-"${operator_version}"-x86_64-linux-gnu
+chmod +x operator-sdk-"${operator_version}"-x86_64-linux-gnu && cp operator-sdk-"${operator_version}"-x86_64-linux-gnu $operator_install_dir/operator-sdk && rm operator-sdk-"${operator_version}"-x86_64-linux-gnu
+chmod +x ansible-operator-"${operator_version}"-x86_64-linux-gnu && cp ansible-operator-"${operator_version}"-x86_64-linux-gnu $operator_install_dir/ansible-operator && rm ansible-operator-"${operator_version}"-x86_64-linux-gnu
+chmod +x helm-operator-"${operator_version}"-x86_64-linux-gnu && cp helm-operator-"${operator_version}"-x86_64-linux-gnu $operator_install_dir/helm-operator && rm helm-operator-"${operator_version}"-x86_64-linux-gnu
