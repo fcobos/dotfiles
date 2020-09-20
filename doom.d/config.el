@@ -60,7 +60,6 @@
   (setq rainbow-delimiters-max-face-count 4))
 (add-hook 'rainbow-delimiters-mode-hook #'set-rainbow-max-face-count)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'parinfer-mode-hook 'rainbow-delimiters-mode)
 
 ;; use treemacs git deferred mode
 (after! treemacs
