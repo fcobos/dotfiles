@@ -28,6 +28,14 @@
 ;; Set line numbers style
 (setq display-line-numbers-type t)
 
+;; custom dashboard banner
+(defconst banner-text (concat "EMACS " emacs-version))
+(defun doom-dashboard-widget-banner ()
+  (mapc (lambda (line)
+          (insert (propertize (+doom-dashboard--center +doom-dashboard--width line)
+                              'face 'doom-dashboard-banner) " "))
+        '("EMACS" "\n\n\n\n\n\n")))
+
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
 ;; python debugger
@@ -92,7 +100,7 @@
 (after! lsp-ui
   (map! :leader
         (:prefix "o"
-          :desc "Toggle lsp-ui-imenu" "i" #'lsp-ui-imenu)))
+         :desc "Toggle lsp-ui-imenu" "i" #'lsp-ui-imenu)))
 
 ;; format rust buffers on save
 (after! rustic
