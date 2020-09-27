@@ -119,14 +119,4 @@
 ;; set rust-analyzer as server for rust
 (setq rustic-lsp-server 'rust-analyzer)
 
-;; fix go documentation keybind
-(after! go-mode
-  (when (featurep 'evil)
-    (add-hook 'lsp-mode-hook #'evil-normalize-keymaps))
-  (map! :map (go-mode-map)
-        :n   "K"  #'lsp-describe-thing-at-point))
-
-;; fix go+lsp
-(add-hook 'go-mode-hook #'lsp!)
-
 ;;; config.el ends here
