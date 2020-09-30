@@ -92,13 +92,6 @@
 (after! lsp-mode
   (setq lsp-idle-delay 0.250))
 
-;; dap-mode extensions location
-(after! dap-mode
-  (setq dap-utils-extension-path (concat doom-local-dir "extension")))
-;; dap-mode breakpoints file location
-(after! dap-mode
-  (setq dap-breakpoints-file (concat doom-cache-dir ".dap-breakpoints")))
-
 ;; map SPC o i to lsp-ui-imenu
 (after! lsp-ui
   (map! :leader
