@@ -16,7 +16,7 @@
 (when EMACS27+
   (add-hook! '(text-mode-hook prog-mode-hook conf-mode-hook) (display-fill-column-indicator-mode 1)))
 ;; Set the theme
-(setq doom-theme 'tango-plus)
+(setq doom-theme 'whiteboard)
 
 ;; faces configuration
 (custom-set-faces
@@ -88,22 +88,18 @@
 (after! lsp-mode
   (setq lsp-idle-delay 0.250))
 
-;; map SPC o i to lsp-ui-imenu
 (after! lsp-ui
+  ;; map SPC o i to lsp-ui-imenu
   (map! :leader
         (:prefix "o"
-         :desc "Toggle lsp-ui-imenu" "i" #'lsp-ui-imenu)))
-
-;; map SPC o i to lsp-ui-imenu
-(after! lsp-ui
+         :desc "Toggle lsp-ui-imenu" "i" #'lsp-ui-imenu))
+  ;; map SPC o i to lsp-ui-imenu
   (setq lsp-ui-sideline-enable 'nil))
 
-;; format rust buffers on save
 (after! rustic
-  (setq rustic-format-on-save t))
-
-;; fix rust documentation keybind
-(after! rustic
+  ;; format rust buffers on save
+  (setq rustic-format-on-save t)
+  ;; fix rust documentation keybind
   (when (featurep 'evil)
     (add-hook 'lsp-mode-hook #'evil-normalize-keymaps))
   (map! :map (rustic-mode-map)
