@@ -72,10 +72,6 @@
 (setq eshell-buffer-maximum-lines 1000)
 (add-hook 'eshell-output-filter-functions #'eshell-truncate-buffer)
 
-;; use bash for terminals
-(setq multi-term-program "/bin/bash")
-(setq vterm-shell "/bin/bash")
-
 ;; avoid exit confirmation dialog
 (setq confirm-kill-emacs nil)
 
