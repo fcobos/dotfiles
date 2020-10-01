@@ -5,13 +5,6 @@
 (run-with-idle-timer 15 t (lambda () (garbage-collect)))
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
 
-;; disable window decorations
-(set-frame-parameter nil 'undecorated t)
-;; disable scroll bar
-(set-scroll-bar-mode nil)
-;; start maximized
-(add-hook 'window-setup-hook 'toggle-frame-maximized t)
-
 ;; enable fill column indicator
 (when EMACS27+
   (add-hook! '(text-mode-hook prog-mode-hook conf-mode-hook) (display-fill-column-indicator-mode 1)))
