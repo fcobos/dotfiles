@@ -79,6 +79,8 @@
 
 ;; lsp tuning
 (after! lsp-mode
+  (setq lsp-enable-on-type-formatting nil)
+  (setq lsp-java-format-on-type-enabled nil)
   (setq lsp-idle-delay 0.250))
 
 (after! lsp-ui
