@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+cd "$HOME" || exit
+
 # helm
 export USE_SUDO=false
 export HELM_INSTALL_DIR=~/bin/
@@ -43,3 +46,6 @@ chmod +x helm-operator-"${operator_version}"-x86_64-linux-gnu && cp helm-operato
 
 # kustomize
 GO111MODULE=on go get sigs.k8s.io/kustomize/kustomize/v3
+
+# kind (kubernetes in docker)
+GO111MODULE="on" go get sigs.k8s.io/kind@latest
