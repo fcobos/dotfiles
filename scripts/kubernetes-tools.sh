@@ -49,3 +49,8 @@ GO111MODULE=on go get sigs.k8s.io/kustomize/kustomize/v3
 
 # kind (kubernetes in docker)
 GO111MODULE="on" go get sigs.k8s.io/kind@latest
+
+# stern
+curl -L https://github.com/wercker/stern/releases/download/1.6.0/stern_linux_amd64 -o stern
+chmod +x stern
+mv stern ~/bin/
