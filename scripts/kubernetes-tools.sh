@@ -51,6 +51,13 @@ GO111MODULE=on go get sigs.k8s.io/kustomize/kustomize/v3
 GO111MODULE="on" go get sigs.k8s.io/kind@latest
 
 # stern
-curl -L https://github.com/wercker/stern/releases/download/1.6.0/stern_linux_amd64 -o stern
+stern_version=$(curl -s https://github.com/wercker/stern/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
+curl -L https://github.com/wercker/stern/releases/download/"${stern_version}"/stern_linux_amd64 -o stern
 chmod +x stern
 mv stern ~/bin/
+
+# docker-machine
+docker_machine_version=v$(curl -s https://github.com/docker/machine/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
+curl -L https://github.com/docker/machine/releases/download/"${docker_machine_version}"/docker-machine-"$(uname -s)"-"$(uname -m)" -o docker-machine
+chmod +x docker-machine
+mv docker-machine ~/bin/
