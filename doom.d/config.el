@@ -30,7 +30,7 @@
 (defvar dashboard-banner-list '())
 (add-to-list 'dashboard-banner-list "\n\n\n\n\n\n")
 (add-to-list 'dashboard-banner-list (concat " (" (system-name) " - " system-configuration ")"))
-(add-to-list 'dashboard-banner-list (concat "Welcome to Emacs " emacs-version))
+(add-to-list 'dashboard-banner-list (concat "Welcome to GNU Emacs " emacs-version))
 (defun doom-dashboard-widget-banner ()
   (mapc (lambda (line)
           (insert (propertize (+doom-dashboard--center +doom-dashboard--width line)
