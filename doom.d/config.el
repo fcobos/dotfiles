@@ -17,7 +17,7 @@
 (setq doom-theme 'doom-one-light)
 
 ;; configure mode-line
-(setq doom-modeline-buffer-file-name-style 'truncate-upto-root)
+(setq doom-modeline-buffer-file-name-style 'truncate-all)
 
 ;; faces configuration
 (set-face-attribute 'default nil :height 105 :weight 'normal)
