@@ -56,14 +56,14 @@ curl -L https://github.com/wercker/stern/releases/download/"${stern_version}"/st
 chmod +x stern
 mv stern ~/bin/
 
-# docker-machine
-docker_machine_version=v$(curl -s https://github.com/docker/machine/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
-curl -L https://github.com/docker/machine/releases/download/"${docker_machine_version}"/docker-machine-"$(uname -s)"-"$(uname -m)" -o docker-machine
-chmod +x docker-machine
-mv docker-machine ~/bin/
-
-# k3d
-k3d_version=$(curl -s https://github.com/rancher/k3d/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
-curl -L https://github.com/rancher/k3d/releases/download/v"${k3d_version}"/k3d-linux-amd64 -o k3d
-chmod +x k3d
-mv k3d ~/bin/
+## docker-machine
+#docker_machine_version=v$(curl -s https://github.com/docker/machine/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
+#curl -L https://github.com/docker/machine/releases/download/"${docker_machine_version}"/docker-machine-"$(uname -s)"-"$(uname -m)" -o docker-machine
+#chmod +x docker-machine
+#mv docker-machine ~/bin/
+#
+## k3d
+#k3d_version=$(curl -s https://github.com/rancher/k3d/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
+#curl -L https://github.com/rancher/k3d/releases/download/v"${k3d_version}"/k3d-linux-amd64 -o k3d
+#chmod +x k3d
+#mv k3d ~/bin/
