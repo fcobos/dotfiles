@@ -16,6 +16,9 @@
 ;; Set the theme
 (setq doom-theme 'doom-one-light)
 
+;; configure mode-line
+(setq doom-modeline-buffer-file-name-style 'truncate-upto-root)
+
 ;; faces configuration
 (custom-set-faces
  '(variable-pitch ((t (:family "Cantarell"))))
