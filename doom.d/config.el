@@ -57,12 +57,6 @@
 (add-to-list 'auto-mode-alist '("Pipfile.lock" . json-mode))
 (add-to-list 'auto-mode-alist '("\\patch$" . diff-mode))
 
-;; enable rainbow delimiters for programming modes
-(defun set-rainbow-max-face-count ()
-  (setq rainbow-delimiters-max-face-count 4))
-(add-hook 'rainbow-delimiters-mode-hook #'set-rainbow-max-face-count)
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-
 ;; use treemacs git deferred mode
 (after! treemacs
   (treemacs-git-mode 'deferred))
