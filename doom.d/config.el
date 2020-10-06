@@ -20,9 +20,8 @@
 (setq doom-modeline-buffer-file-name-style 'filename)
 
 ;; faces configuration
-(set-face-attribute 'default nil :height 105 :weight 'normal)
 (custom-set-faces
- '(variable-pitch ((t (:family "Cantarell" :height 110))))
+ '(variable-pitch ((t (:family "Cantarell"))))
  '(lsp-face-highlight-read ((t (:background "#e5e5e6"))))
  '(fill-column-indicator ((t (:foreground "#e5e5e6" :distant-foreground "#e5e5e6"))))
  '(font-lock-function-name-face ((t (:foreground "#0184bc")))))
