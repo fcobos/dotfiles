@@ -2,6 +2,17 @@
 
 cd "$HOME" || exit
 
+gh_version() {
+	_url="https://github.com/$1/$2/releases/latest/download"
+	_version=$(curl -s "$_url" 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
+
+	echo "$_version"
+}
+
+gh_download() {
+	curl -L "https://github.com/$1/$2/releases/download/$3/$4" -o "$5"
+}
+
 # helm
 export USE_SUDO=false
 export HELM_INSTALL_DIR=~/bin/
@@ -27,7 +38,7 @@ chmod +x kompose
 mv kompose ~/bin/
 
 # minishift
-minishift_version=$(curl -s https://github.com/minishift/minishift/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
+minishift_version=$(gh_version minishift minishift)
 echo version: "$minishift_version"
 wget https://github.com/minishift/minishift/releases/latest/download/minishift-"$minishift_version"-linux-amd64.tgz
 tar xf minishift-"$minishift_version"-linux-amd64.tgz
@@ -35,7 +46,7 @@ mv minishift-"$minishift_version"-linux-amd64/minishift ~/bin/
 rm -rf minishift-"$minishift_version"-linux-amd64*
 
 # operator sdk
-operator_version=v$(curl -s https://github.com/operator-framework/operator-sdk/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
+operator_version=v$(gh_version operator-framework operator-sdk)
 operator_install_dir=~/bin/
 curl -LO https://github.com/operator-framework/operator-sdk/releases/download/"${operator_version}"/operator-sdk-"${operator_version}"-x86_64-linux-gnu
 curl -LO https://github.com/operator-framework/operator-sdk/releases/download/"${operator_version}"/ansible-operator-"${operator_version}"-x86_64-linux-gnu
@@ -51,26 +62,23 @@ GO111MODULE=on go get sigs.k8s.io/kustomize/kustomize/v3
 GO111MODULE=on go get sigs.k8s.io/kind@latest
 
 # stern
-stern_version=$(curl -s https://github.com/wercker/stern/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
-curl -L https://github.com/wercker/stern/releases/download/"${stern_version}"/stern_linux_amd64 -o stern
+gh_download wercker stern "$(gh_version wercker stern)" stern_linux_amd64 stern
 chmod +x stern
 mv stern ~/bin/
 
 ## docker-machine
-#docker_machine_version=v$(curl -s https://github.com/docker/machine/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
-#curl -L https://github.com/docker/machine/releases/download/"${docker_machine_version}"/docker-machine-"$(uname -s)"-"$(uname -m)" -o docker-machine
+#docker_machine_version=v$(gh_version docker machine)
+#gh_download docker machine "v$(gh_version docker machine)" docker-machine-"$(uname -s)"-"$(uname -m)" docker-machine
 #chmod +x docker-machine
 #mv docker-machine ~/bin/
-#
+
 ## k3d
-#k3d_version=$(curl -s https://github.com/rancher/k3d/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
-#curl -L https://github.com/rancher/k3d/releases/download/v"${k3d_version}"/k3d-linux-amd64 -o k3d
+#gh_download rancher k3d "$(gh_version rancher k3d)" k3d-linux-amd64 k3d
 #chmod +x k3d
 #mv k3d ~/bin/
 
 # k9s
-k9s_version=$(curl -s https://github.com/derailed/k9s/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
-curl -L https://github.com/derailed/k9s/releases/download/v"${k9s_version}"/k9s_Linux_x86_64.tar.gz -o k9s.tar.gz
+gh_download derailed k9s "v$(gh_version derailed k9s)" k9s_Linux_x86_64.tar.gz k9s.tar.gz
 tar -zxf k9s.tar.gz k9s
 chmod +x k9s
 mv k9s ~/bin/
