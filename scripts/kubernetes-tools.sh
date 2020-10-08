@@ -48,7 +48,7 @@ chmod +x helm-operator-"${operator_version}"-x86_64-linux-gnu && cp helm-operato
 GO111MODULE=on go get sigs.k8s.io/kustomize/kustomize/v3
 
 # kind (kubernetes in docker)
-GO111MODULE="on" go get sigs.k8s.io/kind@latest
+GO111MODULE=on go get sigs.k8s.io/kind@latest
 
 # stern
 stern_version=$(curl -s https://github.com/wercker/stern/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
@@ -67,3 +67,11 @@ mv stern ~/bin/
 #curl -L https://github.com/rancher/k3d/releases/download/v"${k3d_version}"/k3d-linux-amd64 -o k3d
 #chmod +x k3d
 #mv k3d ~/bin/
+
+# k9s
+k9s_version=$(curl -s https://github.com/derailed/k9s/releases/latest/download 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
+curl -L https://github.com/derailed/k9s/releases/download/v"${k9s_version}"/k9s_Linux_x86_64.tar.gz -o k9s.tar.gz
+tar -zxf k9s.tar.gz k9s
+chmod +x k9s
+mv k9s ~/bin/
+rm -f k9s.tar.gz
