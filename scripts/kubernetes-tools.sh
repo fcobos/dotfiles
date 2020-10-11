@@ -11,7 +11,7 @@ fi
 function update_version() {
 	current_value=$(grep "$1" "$versions_file")
 	if [ -n "$current_value" ]; then
-		sed "'s/$current_value/$1:$2/g'" "$versions_file"
+		sed -i "s/$current_value/$1:$2/g" "$versions_file"
 	else
 		echo "$1:$2" >> "$versions_file"
 	fi
@@ -58,7 +58,7 @@ if version_gt "$latest" "$current"; then
 fi
 
 # minikube
-latest=$(gh_version kubernetes minikube)
+latest=v$(gh_version kubernetes minikube)
 current=$(get_current_version minikube)
 if version_gt "$latest" "$current"; then
 	gh_download kubernetes minikube "$latest" minikube-linux-amd64 ~/bin/minikube
@@ -66,7 +66,7 @@ if version_gt "$latest" "$current"; then
 fi
 
 # kompose
-latest=$(gh_version kubernetes kompose)
+latest=v$(gh_version kubernetes kompose)
 current=$(get_current_version kompose)
 if version_gt "$latest" "$current"; then
 	gh_download kubernetes kompose "$latest" kompose-linux-amd64 ~/bin/kompose
@@ -101,7 +101,7 @@ GO111MODULE=on go get sigs.k8s.io/kustomize/kustomize/v3
 GO111MODULE=on go get sigs.k8s.io/kind@latest
 
 # stern
-latest=v$(gh_version wercker stern)
+latest=$(gh_version wercker stern)
 current=$(get_current_version stern)
 if version_gt "$latest" "$current"; then
 	gh_download wercker stern "$latest" stern_linux_amd64 ~/bin/stern
