@@ -2,15 +2,42 @@
 
 cd "$HOME" || exit
 
-gh_version() {
+versions_file="$HOME/.cache/kubernetes-tools-versions"
+
+if [ ! -f "$versions_file" ]; then
+	touch "$versions_file"
+fi
+
+function update_version() {
+	current_value=$(grep "$1" "$versions_file")
+	if [ -n "$current_value" ]; then
+		sed "'s/$current_value/$1:$2/g'" "$versions_file"
+	else
+		echo "$1:$2" >> "$versions_file"
+	fi
+}
+
+function version_gt() { test "$(printf '%s\n' "$@" | sort -V | head -n 1)" != "$1"; }
+
+function get_current_version() {
+	current=$(grep "$1" "$versions_file" | cut -d ':' -f 2)
+	if [ -z "$current" ]; then
+		current="0.0.0"
+	fi
+
+	echo "$current"
+}
+
+function gh_version() {
 	_url="https://github.com/$1/$2/releases/latest/download"
 	_version=$(curl -s "$_url" 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
 
 	echo "$_version"
 }
 
-gh_download() {
+function gh_download() {
 	curl -L "https://github.com/$1/$2/releases/download/$3/$4" -o "$5"
+	chmod +x "$5"
 }
 
 # helm
@@ -22,38 +49,50 @@ chmod 700 get_helm.sh
 rm -f ./get_helm.sh
 
 # kubectl
-kubectl_version=$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)
-curl -LO https://storage.googleapis.com/kubernetes-release/release/"$kubectl_version"/bin/linux/amd64/kubectl
-chmod +x ./kubectl
-mv kubectl ~/bin/
+latest=$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)
+current=$(get_current_version kubectl)
+if version_gt "$latest" "$current"; then
+	curl -L https://storage.googleapis.com/kubernetes-release/release/"$latest"/bin/linux/amd64/kubectl -o ~/bin/kubectl
+	chmod +x ~/bin/kubectl
+	update_version kubectl "$latest"
+fi
 
 # minikube
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-mv minikube-linux-amd64 ~/bin/minikube
-chmod +x ~/bin/minikube
+latest=$(gh_version kubernetes minikube)
+current=$(get_current_version minikube)
+if version_gt "$latest" "$current"; then
+	gh_download kubernetes minikube "$latest" minikube-linux-amd64 ~/bin/minikube
+	update_version minikube "$latest"
+fi
 
 # kompose
-curl -L https://github.com/kubernetes/kompose/releases/latest/download/kompose-linux-amd64 -o kompose
-chmod +x kompose
-mv kompose ~/bin/
+latest=$(gh_version kubernetes kompose)
+current=$(get_current_version kompose)
+if version_gt "$latest" "$current"; then
+	gh_download kubernetes kompose "$latest" kompose-linux-amd64 ~/bin/kompose
+	update_version kompose "$latest"
+fi
 
 # minishift
-minishift_version=$(gh_version minishift minishift)
-echo version: "$minishift_version"
-wget https://github.com/minishift/minishift/releases/latest/download/minishift-"$minishift_version"-linux-amd64.tgz
-tar xf minishift-"$minishift_version"-linux-amd64.tgz
-mv minishift-"$minishift_version"-linux-amd64/minishift ~/bin/
-rm -rf minishift-"$minishift_version"-linux-amd64*
+latest=$(gh_version minishift minishift)
+current=$(get_current_version minishift)
+if version_gt "$latest" "$current"; then
+	curl -LO https://github.com/minishift/minishift/releases/latest/download/minishift-"$latest"-linux-amd64.tgz
+	tar xf minishift-"$latest"-linux-amd64.tgz
+	mv minishift-"$latest"-linux-amd64/minishift ~/bin/
+	rm -rf minishift-"$latest"-linux-amd64*
+	update_version minishift "$latest"
+fi
 
 # operator sdk
-operator_version=v$(gh_version operator-framework operator-sdk)
-operator_install_dir=~/bin/
-curl -LO https://github.com/operator-framework/operator-sdk/releases/download/"${operator_version}"/operator-sdk-"${operator_version}"-x86_64-linux-gnu
-curl -LO https://github.com/operator-framework/operator-sdk/releases/download/"${operator_version}"/ansible-operator-"${operator_version}"-x86_64-linux-gnu
-curl -LO https://github.com/operator-framework/operator-sdk/releases/download/"${operator_version}"/helm-operator-"${operator_version}"-x86_64-linux-gnu
-chmod +x operator-sdk-"${operator_version}"-x86_64-linux-gnu && cp operator-sdk-"${operator_version}"-x86_64-linux-gnu $operator_install_dir/operator-sdk && rm operator-sdk-"${operator_version}"-x86_64-linux-gnu
-chmod +x ansible-operator-"${operator_version}"-x86_64-linux-gnu && cp ansible-operator-"${operator_version}"-x86_64-linux-gnu $operator_install_dir/ansible-operator && rm ansible-operator-"${operator_version}"-x86_64-linux-gnu
-chmod +x helm-operator-"${operator_version}"-x86_64-linux-gnu && cp helm-operator-"${operator_version}"-x86_64-linux-gnu $operator_install_dir/helm-operator && rm helm-operator-"${operator_version}"-x86_64-linux-gnu
+latest=v$(gh_version operator-framework operator-sdk)
+current=$(get_current_version operator-sdk)
+if version_gt "$latest" "$current"; then
+	gh_download operator-framework operator-sdk "$latest" operator-sdk-"${latest}"-x86_64-linux-gnu ~/bin/operator-sdk
+	gh_download operator-framework operator-sdk "$latest" ansible-operator-"${latest}"-x86_64-linux-gnu ~/bin/ansible-operator
+	gh_download operator-framework operator-sdk "$latest" helm-operator-"${latest}"-x86_64-linux-gnu ~/bin/helm-operator
+	update_version operator-sdk "$latest"
+fi
 
 # kustomize
 GO111MODULE=on go get sigs.k8s.io/kustomize/kustomize/v3
@@ -62,24 +101,21 @@ GO111MODULE=on go get sigs.k8s.io/kustomize/kustomize/v3
 GO111MODULE=on go get sigs.k8s.io/kind@latest
 
 # stern
-gh_download wercker stern "$(gh_version wercker stern)" stern_linux_amd64 stern
-chmod +x stern
-mv stern ~/bin/
-
-## docker-machine
-#docker_machine_version=v$(gh_version docker machine)
-#gh_download docker machine "v$(gh_version docker machine)" docker-machine-"$(uname -s)"-"$(uname -m)" docker-machine
-#chmod +x docker-machine
-#mv docker-machine ~/bin/
-
-## k3d
-#gh_download rancher k3d "$(gh_version rancher k3d)" k3d-linux-amd64 k3d
-#chmod +x k3d
-#mv k3d ~/bin/
+latest=v$(gh_version wercker stern)
+current=$(get_current_version stern)
+if version_gt "$latest" "$current"; then
+	gh_download wercker stern "$latest" stern_linux_amd64 ~/bin/stern
+	update_version stern "$latest"
+fi
 
 # k9s
-gh_download derailed k9s "v$(gh_version derailed k9s)" k9s_Linux_x86_64.tar.gz k9s.tar.gz
-tar -zxf k9s.tar.gz k9s
-chmod +x k9s
-mv k9s ~/bin/
-rm -f k9s.tar.gz
+latest=v$(gh_version derailed k9s)
+current=$(get_current_version k9s)
+if version_gt "$latest" "$current"; then
+	gh_download derailed k9s "$latest" k9s_Linux_x86_64.tar.gz k9s.tar.gz
+	tar -zxf k9s.tar.gz k9s
+	chmod +x k9s
+	mv k9s ~/bin/
+	rm -f k9s.tar.gz
+	update_version k9s "$latest"
+fi
