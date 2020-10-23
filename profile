@@ -12,6 +12,9 @@ export BROWSER=xdg-open
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export PATH
 
+# brew
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
 # node npm configuration
 export NPM_PACKAGES="/home/felix/.npm-packages"
 export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
@@ -42,9 +45,6 @@ fi
 # pyenv configuration
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-
-# brew
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 # remove duplicates from PATH
 export PATH=$(printf "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
