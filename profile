@@ -13,7 +13,7 @@ PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export PATH
 
 # brew
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+#eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 # node npm configuration
 export NPM_PACKAGES="/home/felix/.npm-packages"
