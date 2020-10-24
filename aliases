@@ -43,8 +43,8 @@ alias zegrep='zegrep --color=auto'
 alias zfgrep='zfgrep --color=auto'
 alias zgrep='zgrep --color=auto'
 alias glances='glances --disable-bg'
-#alias docker=podman
-#alias docker-compose=podman-compose
+alias docker=podman
+alias docker-compose=podman-compose
 alias el='exa -laH --git'
 alias et='exa -lH --git -T'
 alias e='emacs -nw'
