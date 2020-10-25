@@ -26,11 +26,6 @@ alias ll='ls -lh'
 alias ls='ls --color=tty'
 alias lsa='ls -lah'
 alias md='mkdir -p'
-alias please=sudo
-alias po=popd
-alias pu=pushd
-alias rd=rmdir
-alias run-help=man
 alias vi=nvim
 alias vim=nvim
 alias vimdiff='nvim -d'
@@ -42,7 +37,6 @@ alias xzgrep='xzgrep --color=auto'
 alias zegrep='zegrep --color=auto'
 alias zfgrep='zfgrep --color=auto'
 alias zgrep='zgrep --color=auto'
-alias glances='glances --disable-bg'
 alias docker=podman
 alias docker-compose=podman-compose
 alias el='exa -laH --git'
@@ -58,3 +52,12 @@ function ediff() {
 	fi
 }
 
+if ! [ -x "$(command -v htop)" ]; then
+	alias htop='toolbox run htop'
+fi
+
+if ! [ -x "$(command -v glances)" ]; then
+	alias glances='toolbox run glances --disable-bg'
+else
+	alias glances='glances --disable-bg'
+fi
