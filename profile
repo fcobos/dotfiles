@@ -1,19 +1,10 @@
 # User specific environment and startup programs
 
-# start X session
-#[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && export XDG_CURRENT_DESKTOP=i3 && \
-#	export XDG_SESSION_DESKTOP=i3 && startx > /dev/null 2>&1 && reset
-
 PAGER=less
-# gcc colors
-export GCC_COLORS=error="01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
 export EDITOR=nvim
 export BROWSER=xdg-open
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export PATH
-
-# brew
-#eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 # node npm configuration
 export NPM_PACKAGES="/home/felix/.npm-packages"
@@ -45,6 +36,17 @@ fi
 # pyenv configuration
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+
+# android tools
+export ANDROID_HOME=$HOME/devel/android/sdk
+export ANDROID_SDK=$ANDROID_HOME
+export ANDROID_NDK_HOME=$HOME/devel/android/sdk/ndk-bundle
+export ANDROID_NDK=$ANDROID_NDK_HOME
+export NDK_ROOT=$ANDROID_NDK_HOME
+export NDKROOT=$ANDROID_NDK_HOME
+# fix for android emulator's old libstdc++
+export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
+export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$NDKROOT:$PATH"
 
 # remove duplicates from PATH
 export PATH=$(printf "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
