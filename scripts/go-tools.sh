@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 cd ~/ || exit
 
+shopt -s expand_aliases
+# go paths
+if ! [ -x "$(command -v go)" ]; then
+	alias go='toolbox run /usr/bin/go'
+fi
+export GOPATH="$(go env GOPATH)"
+export PATH="$GOPATH/bin:$PATH"
+
 export CFLAGS="-march=native -O3 -pipe -fstack-protector-strong -fno-plt"
 export CXXFLAGS="${CFLAGS}"
 export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro"
