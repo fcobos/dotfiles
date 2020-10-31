@@ -26,9 +26,9 @@ alias ll='ls -lh'
 alias ls='ls --color=tty'
 alias lsa='ls -lah'
 alias md='mkdir -p'
-alias vi=nvim
-alias vim=nvim
-alias vimdiff='nvim -d'
+#alias vim=nvim
+#alias vimdiff='nvim -d'
+alias vi=vim
 alias which-command=whence
 alias grep='grep --color=auto'
 alias xzegrep='xzegrep --color=auto'
