@@ -41,6 +41,7 @@ alias docker=podman
 alias docker-compose=podman-compose
 alias el='exa -laH --git'
 alias et='exa -lH --git -T'
+alias kafkacat='podman run -it --rm --network=host edenhill/kafkacat:1.6.0'
 alias e='emacs -nw'
 # emacs ediff
 function ediff() {
