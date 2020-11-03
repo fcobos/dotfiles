@@ -6,7 +6,7 @@
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
 
 ;; disable window decorations
-;;(set-frame-parameter nil 'undecorated t)
+(set-frame-parameter nil 'undecorated t)
 ;; start maximized
 (add-hook 'window-setup-hook 'toggle-frame-maximized t)
 
