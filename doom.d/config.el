@@ -14,7 +14,7 @@
 (when EMACS27+
   (add-hook! '(text-mode-hook prog-mode-hook conf-mode-hook) (display-fill-column-indicator-mode 1)))
 ;; Set the theme
-(setq doom-theme 'tango)
+;;(setq doom-theme 'tango)
 
 ;; configure mode-line
 (setq doom-modeline-buffer-file-name-style 'filename)
