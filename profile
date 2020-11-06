@@ -1,7 +1,7 @@
 # User specific environment and startup programs
 
 PAGER=less
-export EDITOR=vim
+export EDITOR=vi
 export BROWSER=xdg-open
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export PATH
