@@ -139,6 +139,15 @@ if version_gt "$latest" "$current"; then
 	update_version k9s "$latest"
 fi
 
+# kubectx/kubens
+latest=v$(gh_version ahmetb kubectx)
+current=$(get_current_version kubectx)
+if version_gt "$latest" "$current"; then
+	gh_download ahmetb kubectx "$latest" kubectx ~/bin/kubectx
+	gh_download ahmetb kubectx "$latest" kubens ~/bin/kubens
+	update_version kubectx "$latest"
+fi
+
 # go tools
 cd ~/ || exit
 
