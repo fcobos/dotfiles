@@ -148,6 +148,15 @@ if version_gt "$latest" "$current"; then
 	update_version kubectx "$latest"
 fi
 
+# github.com/genuinetools/img
+latest=v$(gh_version genuinetools img)
+current=$(get_current_version img)
+if version_gt "$latest" "$current"; then
+	gh_download genuinetools img "$latest" img-linux-amd64 ~/bin/img
+	chmod +x ~/bin/img
+	update_version img "$latest"
+fi
+
 # go tools
 cd ~/ || exit
 
