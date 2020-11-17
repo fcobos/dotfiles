@@ -159,6 +159,8 @@ fi
 
 # k3sup
 GO111MODULE=on go get -ldflags "-s -w" github.com/alexellis/k3sup@latest
+# arkade
+GO111MODULE=on go get -ldflags "-s -w" github.com/alexellis/arkade@latest
 
 # go tools
 cd ~/ || exit
