@@ -157,6 +157,9 @@ if version_gt "$latest" "$current"; then
 	update_version img "$latest"
 fi
 
+# k3sup
+GO111MODULE=on go get -ldflags "-s -w" github.com/alexellis/k3sup@latest
+
 # go tools
 cd ~/ || exit
 
