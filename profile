@@ -31,6 +31,8 @@ export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 if [ -x "$(command -v go)" ]; then
 	export GOPATH="$(go env GOPATH)"
 	export PATH="$GOPATH/bin:$PATH"
+else
+	export PATH="$HOME/go/bin:$PATH"
 fi
 
 # pyenv configuration
