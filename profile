@@ -50,6 +50,9 @@ export NDKROOT=$ANDROID_NDK_HOME
 export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$NDKROOT:$PATH"
 
+# krew path
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 # remove duplicates from PATH
 export PATH=$(printf "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
 
