@@ -9,13 +9,6 @@ GOPATH="$(go env GOPATH)"
 export GOPATH
 export PATH="$GOPATH/bin:$PATH"
 
-export CFLAGS="-march=native -O3 -pipe -fstack-protector-strong -fno-plt"
-export CXXFLAGS="${CFLAGS}"
-export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro"
-export CGO_CPPFLAGS="${CPPFLAGS}"
-export CGO_CFLAGS="${CFLAGS}"
-export CGO_CXXFLAGS="${CXXFLAGS}"
-export CGO_LDFLAGS="${LDFLAGS}"
 export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw"
 
 # kubernetes tools
@@ -205,3 +198,8 @@ go get -u -ldflags "-s -w" github.com/cweill/gotests/...
 go get -u -ldflags "-s -w" github.com/securego/gosec/cmd/gosec
 go get -u -ldflags "-s -w" github.com/cpuguy83/go-md2man
 
+
+# minio client
+wget https://dl.min.io/client/mc/release/linux-amd64/mc
+chmod +x mc
+mv mc ~/bin/
