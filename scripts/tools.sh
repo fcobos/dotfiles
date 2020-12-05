@@ -200,6 +200,6 @@ go get -u -ldflags "-s -w" github.com/cpuguy83/go-md2man
 
 
 # minio client
-wget https://dl.min.io/client/mc/release/linux-amd64/mc
-chmod +x mc
-mv mc ~/bin/
+#wget https://dl.min.io/client/mc/release/linux-amd64/mc
+#chmod +x mc
+#mv mc ~/bin/
