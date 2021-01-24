@@ -159,6 +159,15 @@ if version_gt "$latest" "$current"; then
 	update_version img "$latest"
 fi
 
+# docker-compose
+latest=$(gh_version docker compose)
+current=$(get_current_version docker-compose)
+if version_gt "$latest" "$current"; then
+	gh_download docker compose "$latest" docker-compose-Linux-x86_64 ~/bin/docker-compose
+	chmod +x ~/bin/docker-compose
+	update_version docker-compose "$latest"
+fi
+
 # k3sup
 GO111MODULE=on go get -ldflags "-s -w" github.com/alexellis/k3sup@latest
 # arkade
