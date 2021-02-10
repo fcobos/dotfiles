@@ -206,6 +206,7 @@ go get -u -ldflags "-s -w" github.com/godoctor/godoctor
 go get -u -ldflags "-s -w" github.com/cweill/gotests/...
 go get -u -ldflags "-s -w" github.com/securego/gosec/cmd/gosec
 go get -u -ldflags "-s -w" github.com/cpuguy83/go-md2man
+go get -u -ldflags "-s -w" github.com/shurcooL/goexec
 
 
 # minio client
