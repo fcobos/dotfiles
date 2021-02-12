@@ -97,6 +97,13 @@
   ;; map SPC o i to lsp-ui-imenu
   (setq lsp-ui-sideline-enable 'nil))
 
+(after! go-mode
+  ;; fix go documentation keybind
+  (when (featurep 'evil)
+    (add-hook 'lsp-mode-hook #'evil-normalize-keymaps))
+  (map! :map (go-mode-map)
+        :n   "K"  #'lsp-describe-thing-at-point))
+
 (after! rustic
   ;; format rust buffers on save
   (setq rustic-format-on-save t)
