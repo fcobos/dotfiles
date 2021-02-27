@@ -213,3 +213,10 @@ go get -u -ldflags "-s -w" github.com/shurcooL/goexec
 #wget https://dl.min.io/client/mc/release/linux-amd64/mc
 #chmod +x mc
 #mv mc ~/bin/
+
+# shfmt
+go get -u -ldflags "-s -w" mvdan.cc/sh/cmd/shfmt
+# torrent
+go get -u -ldflags "-s -w" github.com/anacrolix/torrent/cmd/torrent
+# gopass
+GO111MODULE=on go get -u -ldflags "-s -w" github.com/gopasspw/gopass@latest
