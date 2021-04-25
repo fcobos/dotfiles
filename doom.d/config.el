@@ -25,6 +25,8 @@
  '(lsp-face-highlight-read ((t (:background "#e5e5e6"))))
  '(fill-column-indicator ((t (:foreground "gray70"))))
  '(font-lock-function-name-face ((t (:foreground "#0184bc")))))
+(when (eq doom-theme 'doom-one)
+  (custom-set-faces '(fill-column-indicator ((t (:foreground "gray30"))))))
 
 ;; Set line numbers style
 (setq display-line-numbers-type t)
