@@ -172,6 +172,8 @@ fi
 GO111MODULE=on go get -ldflags "-s -w" github.com/alexellis/k3sup@latest
 # arkade
 GO111MODULE=on go get -ldflags "-s -w" github.com/alexellis/arkade@latest
+# popeye
+GO111MODULE=on go get -ldflags "-s -w" github.com/derailed/popeye@latest
 
 # go tools
 cd ~/ || exit
