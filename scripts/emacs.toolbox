@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-if test -f /usr/bin/emacs; then
-	/usr/bin/emacs "$@"
-else
-	#toolbox run /bin/bash -l -c "env GTK_THEME=Adwaita:dark /usr/bin/emacs $*"
-	toolbox run /bin/bash -l -c "env /usr/bin/emacs $*"
-fi

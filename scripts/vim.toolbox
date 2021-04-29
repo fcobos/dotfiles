@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-if test -f /usr/bin/vim; then
-	/usr/bin/vim "$@"
-else
-	toolbox run /bin/bash -l -c "/usr/bin/vim $*"
-fi
