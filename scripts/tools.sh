@@ -221,3 +221,8 @@ go get -u -ldflags "-s -w" mvdan.cc/sh/cmd/shfmt
 go get -u -ldflags "-s -w" github.com/anacrolix/torrent/cmd/torrent
 # gopass
 GO111MODULE=on go get -u -ldflags "-s -w" github.com/gopasspw/gopass@latest
+
+# rust-analyzer
+curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux \
+	-o ~/bin/rust-analyzer
+chmod +x ~/bin/rust-analyzer
