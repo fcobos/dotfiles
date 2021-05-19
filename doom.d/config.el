@@ -97,7 +97,8 @@
         (:prefix "o"
          :desc "Toggle lsp-ui-imenu" "i" #'lsp-ui-imenu))
   ;; map SPC o i to lsp-ui-imenu
-  (setq lsp-ui-sideline-enable 'nil))
+  (setq lsp-ui-sideline-enable 'nil)
+  (setq lsp-ui-doc-enable 'nil))
 
 (after! go-mode
   ;; fix go documentation keybind
