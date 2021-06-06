@@ -110,6 +110,7 @@
     "javascript"
   ]
   [layers.override_cmd]
+    python = ["pylsp"]
     go = ["gopls"]
     rust = ["rust-analyzer"]
 #    java = [
