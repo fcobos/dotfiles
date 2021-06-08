@@ -42,7 +42,14 @@ function get_current_version() {
 
 function gh_version() {
 	_url="https://github.com/$1/$2/releases/latest/download"
-	_version=$(curl -s "$_url" 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
+	_version=$(curl -s "$_url" 2>&1 | grep -Eo "[0-9]+\.[0-9]+\.[0-9]+")
+
+	echo "$_version"
+}
+
+function gh_version_date() {
+	_url="https://github.com/$1/$2/releases/latest/download"
+	_version=$(curl -s "$_url" 2>&1 | grep -Eo "[0-9]+\-[0-9]+\-[0-9]+")
 
 	echo "$_version"
 }
@@ -64,7 +71,7 @@ rm -f ./get_helm.sh
 latest=$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)
 current=$(get_current_version kubectl)
 if version_gt "$latest" "$current"; then
-	curl -L https://storage.googleapis.com/kubernetes-release/release/"$latest"/bin/linux/amd64/kubectl -o ~/bin/kubectl
+	curl -L https://storage.googleapis.com/kubernetes-release/release/"$latest"/bin/darwin/arm64/kubectl -o ~/bin/kubectl
 	chmod +x ~/bin/kubectl
 	update_version kubectl "$latest"
 fi
@@ -73,7 +80,7 @@ fi
   cd "$(mktemp -d)" &&
   curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/krew.tar.gz" &&
   tar zxvf krew.tar.gz &&
-  KREW=./krew-"$(uname | tr '[:upper:]' '[:lower:]')_$(uname -m | sed -e 's/x86_64/amd64/' -e 's/arm.*$/arm/')" &&
+  KREW=./krew-"$(uname | tr '[:upper:]' '[:lower:]')_$(uname -m | sed -e 's/x86_64/amd64/' -e 's/arm64.*$/arm64/')" &&
   "$KREW" install krew
 )
 
@@ -82,7 +89,7 @@ fi
 latest=v$(gh_version kubernetes minikube)
 current=$(get_current_version minikube)
 if version_gt "$latest" "$current"; then
-	gh_download kubernetes minikube "$latest" minikube-linux-amd64 ~/bin/minikube
+	gh_download kubernetes minikube "$latest" minikube-darwin-arm64 ~/bin/minikube
 	update_version minikube "$latest"
 fi
 
@@ -90,7 +97,7 @@ fi
 latest=v$(gh_version kubernetes kompose)
 current=$(get_current_version kompose)
 if version_gt "$latest" "$current"; then
-	gh_download kubernetes kompose "$latest" kompose-linux-amd64 ~/bin/kompose
+	gh_download kubernetes kompose "$latest" kompose-darwin-amd64 ~/bin/kompose
 	update_version kompose "$latest"
 fi
 
@@ -98,10 +105,10 @@ fi
 latest=$(gh_version minishift minishift)
 current=$(get_current_version minishift)
 if version_gt "$latest" "$current"; then
-	curl -LO https://github.com/minishift/minishift/releases/latest/download/minishift-"$latest"-linux-amd64.tgz
-	tar xf minishift-"$latest"-linux-amd64.tgz
-	mv minishift-"$latest"-linux-amd64/minishift ~/bin/
-	rm -rf minishift-"$latest"-linux-amd64*
+	curl -LO https://github.com/minishift/minishift/releases/latest/download/minishift-"$latest"-darwin-amd64.tgz
+	tar xf minishift-"$latest"-darwin-amd64.tgz
+	mv minishift-"$latest"-darwin-amd64/minishift ~/bin/
+	rm -rf minishift-"$latest"-darwin-amd64*
 	update_version minishift "$latest"
 fi
 
@@ -109,9 +116,9 @@ fi
 latest=v$(gh_version operator-framework operator-sdk)
 current=$(get_current_version operator-sdk)
 if version_gt "$latest" "$current"; then
-	gh_download operator-framework operator-sdk "$latest" operator-sdk-"${latest}"-x86_64-linux-gnu ~/bin/operator-sdk
-	gh_download operator-framework operator-sdk "$latest" ansible-operator-"${latest}"-x86_64-linux-gnu ~/bin/ansible-operator
-	gh_download operator-framework operator-sdk "$latest" helm-operator-"${latest}"-x86_64-linux-gnu ~/bin/helm-operator
+	gh_download operator-framework operator-sdk "$latest" operator-sdk_darwin_amd64 ~/bin/operator-sdk
+	gh_download operator-framework operator-sdk "$latest" ansible-operator_darwin_amd64 ~/bin/ansible-operator
+	gh_download operator-framework operator-sdk "$latest" helm-operator_darwin_amd64 ~/bin/helm-operator
 	update_version operator-sdk "$latest"
 fi
 
@@ -125,7 +132,7 @@ GO111MODULE=on go get sigs.k8s.io/kind@latest
 latest=$(gh_version wercker stern)
 current=$(get_current_version stern)
 if version_gt "$latest" "$current"; then
-	gh_download wercker stern "$latest" stern_linux_amd64 ~/bin/stern
+	gh_download wercker stern "$latest" stern_darwin_amd64 ~/bin/stern
 	update_version stern "$latest"
 fi
 
@@ -133,7 +140,7 @@ fi
 latest=v$(gh_version derailed k9s)
 current=$(get_current_version k9s)
 if version_gt "$latest" "$current"; then
-	gh_download derailed k9s "$latest" k9s_"$latest"_Linux_x86_64.tar.gz k9s.tar.gz
+	gh_download derailed k9s "$latest" k9s_"$latest"_Darwin_arm64.tar.gz k9s.tar.gz
 	tar -zxf k9s.tar.gz k9s
 	chmod +x k9s
 	mv k9s ~/bin/
@@ -150,20 +157,20 @@ if version_gt "$latest" "$current"; then
 	update_version kubectx "$latest"
 fi
 
-# github.com/genuinetools/img
-latest=v$(gh_version genuinetools img)
-current=$(get_current_version img)
-if version_gt "$latest" "$current"; then
-	gh_download genuinetools img "$latest" img-linux-amd64 ~/bin/img
-	chmod +x ~/bin/img
-	update_version img "$latest"
-fi
+## github.com/genuinetools/img
+#latest=v$(gh_version genuinetools img)
+#current=$(get_current_version img)
+#if version_gt "$latest" "$current"; then
+#	gh_download genuinetools img "$latest" img-linux-amd64 ~/bin/img
+#	chmod +x ~/bin/img
+#	update_version img "$latest"
+#fi
 
 # docker-compose
 latest=$(gh_version docker compose)
 current=$(get_current_version docker-compose)
 if version_gt "$latest" "$current"; then
-	gh_download docker compose "$latest" docker-compose-Linux-x86_64 ~/bin/docker-compose
+	gh_download docker compose "$latest" docker-compose-Darwin-x86_64 ~/bin/docker-compose
 	chmod +x ~/bin/docker-compose
 	update_version docker-compose "$latest"
 fi
@@ -223,6 +230,15 @@ go get -u -ldflags "-s -w" github.com/anacrolix/torrent/cmd/torrent
 GO111MODULE=on go get -u -ldflags "-s -w" github.com/gopasspw/gopass@latest
 
 # rust-analyzer
-curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux \
-	-o ~/bin/rust-analyzer
-chmod +x ~/bin/rust-analyzer
+set -x
+latest=$(gh_version_date rust-analyzer rust-analyzer)
+current=$(get_current_version rust-analyzer)
+if version_gt "$latest" "$current"; then
+	gh_download rust-analyzer rust-analyzer "$latest" rust-analyzer-aarch64-apple-darwin.gz rust-analyzer.gz
+	gunzip rust-analyzer.gz
+	chmod +x rust-analyzer
+	mv rust-analyzer ~/bin/
+	rm -f ra.tar.gz
+	update_version rust-analyzer "$latest"
+fi
+

@@ -20,10 +20,10 @@ if [ -n "$ZSH_VERSION" ]; then
 	alias history='fc -il 1'
 fi
 alias l='ls -lah'
-alias l.='ls -d .* --color=auto'
+alias l.='ls -d .* -G'
 alias la='ls -lAh'
 alias ll='ls -lh'
-alias ls='ls --color=tty'
+alias ls='ls -G'
 alias lsa='ls -lah'
 alias md='mkdir -p'
 #alias vim=nvim
@@ -61,12 +61,3 @@ function ediff() {
 	fi
 }
 
-if ! [ -x "$(command -v htop)" ]; then
-	alias htop='toolbox run htop'
-fi
-
-if ! [ -x "$(command -v glances)" ]; then
-	alias glances='toolbox run glances --disable-bg'
-else
-	alias glances='glances --disable-bg'
-fi
