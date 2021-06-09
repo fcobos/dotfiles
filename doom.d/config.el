@@ -32,20 +32,20 @@
 (setq display-line-numbers-type t)
 
 ;; custom dashboard banner
-;;(if (display-graphic-p)
-;;  (progn
-;;    (setq fancy-splash-image "~/.doom.d/Emacs-logo.svg"))
-;;
-;;  (defvar dashboard-banner-list '())
-;;  (add-to-list 'dashboard-banner-list "\n\n\n\n\n\n")
-;;  (add-to-list 'dashboard-banner-list (concat " (" (system-name) " - " system-configuration ")"))
-;;  (add-to-list 'dashboard-banner-list (concat "Welcome to GNU Emacs " emacs-version))
-;;  (defun doom-dashboard-widget-banner ()
-;;    (mapc (lambda (line)
-;;            (insert (propertize (+doom-dashboard--center +doom-dashboard--width line)
-;;                      'face 'doom-dashboard-banner) " ")
-;;            (insert "\n"))
-;;      dashboard-banner-list)))
+(if (display-graphic-p)
+  (progn
+    (setq fancy-splash-image "~/.doom.d/Emacs-logo.svg"))
+
+  (defvar dashboard-banner-list '())
+  (add-to-list 'dashboard-banner-list "\n\n\n\n\n\n")
+  (add-to-list 'dashboard-banner-list (concat " (" (system-name) " - " system-configuration ")"))
+  (add-to-list 'dashboard-banner-list (concat "Welcome to GNU Emacs " emacs-version))
+  (defun doom-dashboard-widget-banner ()
+    (mapc (lambda (line)
+            (insert (propertize (+doom-dashboard--center +doom-dashboard--width line)
+                      'face 'doom-dashboard-banner) " ")
+            (insert "\n"))
+      dashboard-banner-list)))
 
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
