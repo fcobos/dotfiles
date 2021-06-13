@@ -230,7 +230,6 @@ go get -u -ldflags "-s -w" github.com/anacrolix/torrent/cmd/torrent
 GO111MODULE=on go get -u -ldflags "-s -w" github.com/gopasspw/gopass@latest
 
 # rust-analyzer
-set -x
 latest=$(gh_version_date rust-analyzer rust-analyzer)
 current=$(get_current_version rust-analyzer)
 if version_gt "$latest" "$current"; then
