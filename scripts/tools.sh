@@ -23,7 +23,7 @@ fi
 function update_version() {
 	current_value=$(grep "$1" "$versions_file")
 	if [ -n "$current_value" ]; then
-		sed -i "s/$current_value/$1:$2/g" "$versions_file"
+		sed -i '' -e "s/$current_value/$1:$2/g" "$versions_file"
 	else
 		echo "$1:$2" >> "$versions_file"
 	fi
@@ -80,8 +80,7 @@ fi
   cd "$(mktemp -d)" &&
   curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/krew.tar.gz" &&
   tar zxvf krew.tar.gz &&
-  KREW=./krew-"$(uname | tr '[:upper:]' '[:lower:]')_$(uname -m | sed -e 's/x86_64/amd64/' -e 's/arm64.*$/arm64/')" &&
-  "$KREW" install krew
+  KREW=./krew-"$(uname | tr '[:upper:]' '[:lower:]')_$(uname -m | sed -e 's/x86_64/amd64/' -e 's/arm64.*$/arm64/')" && "$KREW" install krew
 )
 
 
