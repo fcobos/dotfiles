@@ -32,7 +32,7 @@ eval $(dircolors ~/dotfiles/dir_colors)
 
 # Autoload auto completion
 autoload -U compinit
-compinit -i
+compinit -u
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 # Color completion for some things.
@@ -171,11 +171,6 @@ source $HOME/dotfiles/aliases
 # pipenv config
 if command -v pyenv 1>/dev/null 2>&1; then
 	eval "$(pyenv init -)"
-fi
-
-# https://gnunn1.github.io/tilix-web/manual/vteconfig/
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-	source /etc/profile.d/vte.sh
 fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
