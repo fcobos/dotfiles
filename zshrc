@@ -28,7 +28,7 @@ unsetopt NO_HUP
 setopt INTERACTIVE_COMMENTS
 
 # ls colors
-eval $(dircolors ~/dotfiles/dir_colors)
+[[ ! -f $(which gdircolors) ]] || eval $(gdircolors ~/dotfiles/dir_colors)
 
 # Autoload auto completion
 autoload -U compinit
