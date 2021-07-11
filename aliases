@@ -41,7 +41,7 @@ alias zgrep='zgrep --color=auto'
 #alias docker-compose=podman-compose
 alias el='exa -laH --git'
 alias et='exa -lH --git -T'
-alias kafkacat='podman run -it --rm --network=host edenhill/kafkacat:1.6.0'
+
 if [ "$TERM" = "alacritty" ]; then
 	alias e="TERM=alacritty-direct emacs -nw"
 elif [ "$TERM" = "st-256color" ]; then
