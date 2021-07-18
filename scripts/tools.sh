@@ -23,7 +23,7 @@ fi
 function update_version() {
 	current_value=$(grep "$1" "$versions_file")
 	if [ -n "$current_value" ]; then
-		sed -i "s/$current_value/$1:$2/g" "$versions_file"
+		sed -i '' -e "s/$current_value/$1:$2/g" "$versions_file"
 	else
 		echo "$1:$2" >> "$versions_file"
 	fi
@@ -42,7 +42,14 @@ function get_current_version() {
 
 function gh_version() {
 	_url="https://github.com/$1/$2/releases/latest/download"
-	_version=$(curl -s "$_url" 2>&1 | grep -Po "[0-9]+\.[0-9]+\.[0-9]+")
+	_version=$(curl -s "$_url" 2>&1 | grep -Eo "[0-9]+\.[0-9]+\.[0-9]+")
+
+	echo "$_version"
+}
+
+function gh_version_date() {
+	_url="https://github.com/$1/$2/releases/latest/download"
+	_version=$(curl -s "$_url" 2>&1 | grep -Eo "[0-9]+\-[0-9]+\-[0-9]+")
 
 	echo "$_version"
 }
@@ -73,8 +80,7 @@ fi
   cd "$(mktemp -d)" &&
   curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/krew.tar.gz" &&
   tar zxvf krew.tar.gz &&
-  KREW=./krew-"$(uname | tr '[:upper:]' '[:lower:]')_$(uname -m | sed -e 's/x86_64/amd64/' -e 's/arm.*$/arm/')" &&
-  "$KREW" install krew
+  KREW=./krew-"$(uname | tr '[:upper:]' '[:lower:]')_$(uname -m | sed -e 's/x86_64/amd64/' -e 's/arm64.*$/arm64/')" && "$KREW" install krew
 )
 
 
@@ -133,8 +139,8 @@ fi
 latest=v$(gh_version derailed k9s)
 current=$(get_current_version k9s)
 if version_gt "$latest" "$current"; then
-	gh_download derailed k9s "$latest" k9s_"$latest"_Linux_x86_64.tar.gz k9s.tar.gz
-	tar -zxf k9s.tar.gz k9s
+	gh_download derailed k9s "$latest" k9s_Linux_x86_64.tar.gz k9s.tar.gz
+	tar -xf k9s.tar.gz k9s
 	chmod +x k9s
 	mv k9s ~/bin/
 	rm -f k9s.tar.gz
@@ -223,6 +229,14 @@ go get -u -ldflags "-s -w" github.com/anacrolix/torrent/cmd/torrent
 GO111MODULE=on go get -u -ldflags "-s -w" github.com/gopasspw/gopass@latest
 
 # rust-analyzer
-curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux \
-	-o ~/bin/rust-analyzer
-chmod +x ~/bin/rust-analyzer
+latest=$(gh_version_date rust-analyzer rust-analyzer)
+current=$(get_current_version rust-analyzer)
+if version_gt "$latest" "$current"; then
+	gh_download rust-analyzer rust-analyzer "$latest" rust-analyzer-x86_64-unknown-linux-gnu.gz rust-analyzer.gz
+	gunzip rust-analyzer.gz
+	chmod +x rust-analyzer
+	mv rust-analyzer ~/bin/
+	rm -f ra.tar.gz
+	update_version rust-analyzer "$latest"
+fi
+
