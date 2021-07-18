@@ -139,7 +139,7 @@ fi
 latest=v$(gh_version derailed k9s)
 current=$(get_current_version k9s)
 if version_gt "$latest" "$current"; then
-	gh_download derailed k9s "$latest" k9s_"$latest"_Darwin_arm64.tar.gz k9s.tar.gz
+	gh_download derailed k9s "$latest" k9s_Darwin_arm64.tar.gz k9s.tar.gz
 	tar -zxf k9s.tar.gz k9s
 	chmod +x k9s
 	mv k9s ~/bin/
