@@ -43,6 +43,7 @@ brew "terraform"
 brew "vim"
 brew "watch"
 brew "wget"
+brew "wimlib"
 brew "youtube-dl"
 brew "coursier/formulas/coursier"
 brew "d12frosted/emacs-plus/emacs-plus@28", args: ["with-native-comp", "with-nobu417-big-sur-icon", "with-xwidgets"]
