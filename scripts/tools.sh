@@ -115,9 +115,9 @@ fi
 latest=v$(gh_version operator-framework operator-sdk)
 current=$(get_current_version operator-sdk)
 if version_gt "$latest" "$current"; then
-	gh_download operator-framework operator-sdk "$latest" operator-sdk-"${latest}"-x86_64-linux-gnu ~/bin/operator-sdk
-	gh_download operator-framework operator-sdk "$latest" ansible-operator-"${latest}"-x86_64-linux-gnu ~/bin/ansible-operator
-	gh_download operator-framework operator-sdk "$latest" helm-operator-"${latest}"-x86_64-linux-gnu ~/bin/helm-operator
+	gh_download operator-framework operator-sdk "$latest" operator-sdk_linux_amd64 ~/bin/operator-sdk
+	gh_download operator-framework operator-sdk "$latest" ansible-operator_linux_amd64 ~/bin/ansible-operator
+	gh_download operator-framework operator-sdk "$latest" helm-operator_linux_amd64 ~/bin/helm-operator
 	update_version operator-sdk "$latest"
 fi
 
