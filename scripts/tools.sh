@@ -2,9 +2,6 @@
 
 shopt -s expand_aliases
 # go paths
-if ! [ -x "$(command -v go)" ]; then
-	alias go='toolbox run /usr/bin/go'
-fi
 GOPATH="$(go env GOPATH)"
 export GOPATH
 export PATH="$GOPATH/bin:$PATH"
@@ -122,10 +119,10 @@ if version_gt "$latest" "$current"; then
 fi
 
 # kustomize
-GO111MODULE=on go get sigs.k8s.io/kustomize/kustomize/v3
+GO111MODULE=on go get -ldflags "-s -w" sigs.k8s.io/kustomize/kustomize/v3
 
 # kind (kubernetes in docker)
-GO111MODULE=on go get sigs.k8s.io/kind@latest
+go install sigs.k8s.io/kind@latest
 
 # stern
 latest=$(gh_version wercker stern)
@@ -175,45 +172,45 @@ if version_gt "$latest" "$current"; then
 fi
 
 # k3sup
-GO111MODULE=on go get -ldflags "-s -w" github.com/alexellis/k3sup@latest
+go install -ldflags "-s -w" github.com/alexellis/k3sup@latest
 # arkade
-GO111MODULE=on go get -ldflags "-s -w" github.com/alexellis/arkade@latest
+go install -ldflags "-s -w" github.com/alexellis/arkade@latest
 # popeye
-GO111MODULE=on go get -ldflags "-s -w" github.com/derailed/popeye@latest
+go install -ldflags "-s -w" github.com/derailed/popeye@latest
 
 # go tools
 cd ~/ || exit
 
-go get -u -ldflags "-s -w" golang.org/x/tools/cmd/godoc
-go get -u -ldflags "-s -w" golang.org/x/tools/cmd/goimports
-go get -u -ldflags "-s -w" golang.org/x/tools/cmd/gorename
-go get -u -ldflags "-s -w" golang.org/x/tools/cmd/guru
-go get -u -ldflags "-s -w" golang.org/x/lint/golint
-go get -u -ldflags "-s -w" golang.org/x/mobile/cmd/gomobile
-GO111MODULE=on go get -ldflags "-s -w" golang.org/x/tools/gopls@latest
-go get -u -ldflags "-s -w" github.com/rogpeppe/godef
-go get -u -ldflags "-s -w" github.com/motemen/gore/cmd/gore
-go get -u -ldflags "-s -w" github.com/visualfc/gocode
-go get -u -ldflags "-s -w" github.com/zmb3/gogetdoc
-go get -u -ldflags "-s -w" github.com/elliotchance/c2go
-go get -u -ldflags "-s -w" github.com/go-delve/delve/cmd/dlv
-go get -u -ldflags "-s -w" github.com/jstemmer/gotags
-go get -u -ldflags "-s -w" github.com/klauspost/asmfmt/cmd/asmfmt
-go get -u -ldflags "-s -w" github.com/davidrjenni/reftools/cmd/fillstruct
-GO111MODULE=on go get -ldflags "-s -w" github.com/golangci/golangci-lint/cmd/golangci-lint@latest
-go get -u -ldflags "-s -w" github.com/fatih/gomodifytags
-go get -u -ldflags "-s -w" github.com/josharian/impl
-go get -u -ldflags "-s -w" honnef.co/go/tools/cmd/keyify
-go get -u -ldflags "-s -w" github.com/fatih/motion
-go get -u -ldflags "-s -w" github.com/koron/iferr
-go get -u -ldflags "-s -w" github.com/mdempsky/unconvert
-go get -u -ldflags "-s -w" honnef.co/go/tools/cmd/staticcheck
-go get -u -ldflags "-s -w" github.com/kisielk/errcheck
-go get -u -ldflags "-s -w" github.com/godoctor/godoctor
-go get -u -ldflags "-s -w" github.com/cweill/gotests/...
-go get -u -ldflags "-s -w" github.com/securego/gosec/v2/cmd/gosec
-go get -u -ldflags "-s -w" github.com/cpuguy83/go-md2man
-go get -u -ldflags "-s -w" github.com/shurcooL/goexec
+go install -ldflags "-s -w" golang.org/x/tools/cmd/godoc@latest
+go install -ldflags "-s -w" golang.org/x/tools/cmd/goimports@latest
+go install -ldflags "-s -w" golang.org/x/tools/cmd/gorename@latest
+go install -ldflags "-s -w" golang.org/x/tools/cmd/guru@latest
+go install -ldflags "-s -w" golang.org/x/lint/golint@latest
+go install -ldflags "-s -w" golang.org/x/mobile/cmd/gomobile@latest
+go install -ldflags "-s -w" golang.org/x/tools/gopls@latest
+go install -ldflags "-s -w" github.com/rogpeppe/godef@latest
+go install -ldflags "-s -w" github.com/x-motemen/gore/cmd/gore@latest
+go install -ldflags "-s -w" github.com/visualfc/gocode@latest
+go install -ldflags "-s -w" github.com/zmb3/gogetdoc@latest
+go install -ldflags "-s -w" github.com/elliotchance/c2go@latest
+go install -ldflags "-s -w" github.com/go-delve/delve/cmd/dlv@latest
+go install -ldflags "-s -w" github.com/jstemmer/gotags@latest
+go install -ldflags "-s -w" github.com/klauspost/asmfmt/cmd/asmfmt@latest
+go install -ldflags "-s -w" github.com/davidrjenni/reftools/cmd/fillstruct@latest
+go install -ldflags "-s -w" github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+go install -ldflags "-s -w" github.com/fatih/gomodifytags@latest
+go install -ldflags "-s -w" github.com/josharian/impl@latest
+go install -ldflags "-s -w" honnef.co/go/tools/cmd/keyify@latest
+go install -ldflags "-s -w" github.com/fatih/motion@latest
+go install -ldflags "-s -w" github.com/koron/iferr@latest
+go install -ldflags "-s -w" github.com/mdempsky/unconvert@latest
+go install -ldflags "-s -w" honnef.co/go/tools/cmd/staticcheck@latest
+go install -ldflags "-s -w" github.com/kisielk/errcheck@latest
+go install -ldflags "-s -w" github.com/godoctor/godoctor@latest
+go install -ldflags "-s -w" github.com/cweill/gotests/...@latest
+go install -ldflags "-s -w" github.com/securego/gosec/v2/cmd/gosec@latest
+go install -ldflags "-s -w" github.com/cpuguy83/go-md2man@latest
+go install -ldflags "-s -w" github.com/shurcooL/goexec@latest
 
 
 # minio client
@@ -222,11 +219,11 @@ go get -u -ldflags "-s -w" github.com/shurcooL/goexec
 #mv mc ~/bin/
 
 # shfmt
-go get -u -ldflags "-s -w" mvdan.cc/sh/cmd/shfmt
+go install -ldflags "-s -w" mvdan.cc/sh/cmd/shfmt@latest
 # torrent
-go get -u -ldflags "-s -w" github.com/anacrolix/torrent/cmd/torrent
+go get -ldflags "-s -w" github.com/anacrolix/torrent/cmd/torrent@latest
 # gopass
-GO111MODULE=on go get -u -ldflags "-s -w" github.com/gopasspw/gopass@latest
+go install -ldflags "-s -w" github.com/gopasspw/gopass@latest
 
 # rust-analyzer
 latest=$(gh_version_date rust-analyzer rust-analyzer)
