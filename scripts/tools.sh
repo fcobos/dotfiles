@@ -163,7 +163,7 @@ if version_gt "$latest" "$current"; then
 fi
 
 # docker-compose
-latest=$(gh_version docker compose)
+latest=v$(gh_version docker compose)
 current=$(get_current_version docker-compose)
 if version_gt "$latest" "$current"; then
 	gh_download docker compose "$latest" docker-compose-linux-x86_64 ~/.docker/cli-plugins/docker-compose
