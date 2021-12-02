@@ -73,13 +73,14 @@ if version_gt "$latest" "$current"; then
 	update_version kubectl "$latest"
 fi
 # krew
-(
-  cd "$(mktemp -d)" &&
-  curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/krew.tar.gz" &&
+latest=v$(gh_version kubernetes-sigs krew)
+current=$(get_current_version krew)
+if version_gt "$latest" "$current"; then
+	gh_download kubernetes-sigs krew "$latest" krew-darwin_arm64.tar.gz krew.tar.gz
   tar zxvf krew.tar.gz &&
   KREW=./krew-"$(uname | tr '[:upper:]' '[:lower:]')_$(uname -m | sed -e 's/x86_64/amd64/' -e 's/arm64.*$/arm64/')" && "$KREW" install krew
-)
-
+	update_version krew "$latest"
+fi
 
 # minikube
 latest=v$(gh_version kubernetes minikube)
