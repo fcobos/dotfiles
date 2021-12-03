@@ -165,7 +165,7 @@ fi
 #fi
 
 # docker-compose
-latest=$(gh_version docker compose)
+latest=1.29.2
 current=$(get_current_version docker-compose)
 if version_gt "$latest" "$current"; then
 	gh_download docker compose "$latest" docker-compose-Darwin-x86_64 ~/bin/docker-compose
