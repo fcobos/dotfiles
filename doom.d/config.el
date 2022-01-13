@@ -13,7 +13,7 @@
 ;; enable fill column indicator
 (add-hook! '(text-mode-hook prog-mode-hook conf-mode-hook) (display-fill-column-indicator-mode 1))
 ;; Set the theme
-;;(setq doom-theme 'doom-one-light)
+(setq doom-theme 'doom-one-light)
 
 ;; configure mode-line
 (setq doom-modeline-buffer-file-name-style 'filename)
