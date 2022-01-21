@@ -9,7 +9,7 @@ export PATH="$GOPATH/bin:$PATH"
 export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw"
 
 # kubernetes tools
-cd "$HOME" || exit
+cd /tmp || exit
 
 versions_file="$HOME/.cache/kubernetes-tools-versions"
 
