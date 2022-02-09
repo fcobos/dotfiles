@@ -24,6 +24,9 @@ export PATH="$NPM_PACKAGES/bin:$PATH"
 
 export PATH="${PATH}:${HOME}/.krew/bin"
 
+# set default dictionary
+export DICTIONARY=en_GB
+
 . "$HOME/.cargo/env"
 #export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 #export PATH="/Library/Developer/CommandLineTools/usr/bin:$PATH"
