@@ -56,6 +56,22 @@
 
 (add-hook 'ns-system-appearance-change-functions #'my/apply-theme)
 
+(defun my/console-apply-theme ()
+  "Load theme, taking current system APPEARANCE into consideration."
+  (when (not (display-graphic-p))
+    (setq style
+        (substring
+         (shell-command-to-string "defaults read -g AppleInterfaceStyle")
+         0 -1))
+    (mapc #'disable-theme custom-enabled-themes)
+    (if (string= style "Dark")
+        (load-theme 'doom-one t)
+      (load-theme 'doom-one-light t))))
+
+(if IS-MAC
+  (add-hook 'after-init-hook (lambda () (run-with-timer 0 10 #'my/console-apply-theme))))
+
+
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
 ;; python debugger
