@@ -38,15 +38,15 @@ function get_current_version() {
 }
 
 function gh_version() {
-	_url="https://github.com/$1/$2/releases/latest/download"
-	_version=$(curl -s "$_url" 2>&1 | grep -Eo "[0-9]+\.[0-9]+\.[0-9]+")
+	_url="https://api.github.com/repos/$1/$2/releases/latest"
+	_version=$(curl -s "$_url" 2>&1 | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 
 	echo "$_version"
 }
 
 function gh_version_date() {
-	_url="https://github.com/$1/$2/releases/latest/download"
-	_version=$(curl -s "$_url" 2>&1 | grep -Eo "[0-9]+\-[0-9]+\-[0-9]+")
+	_url="https://api.github.com/repos/$1/$2/releases/latest"
+	_version=$(curl -s "$_url" 2>&1 | grep '"tag_name":' | grep -Eo "[0-9]+\-[0-9]+\-[0-9]+")
 
 	echo "$_version"
 }
@@ -73,7 +73,7 @@ if version_gt "$latest" "$current"; then
 	update_version kubectl "$latest"
 fi
 # krew
-latest=v$(gh_version kubernetes-sigs krew)
+latest=$(gh_version kubernetes-sigs krew)
 current=$(get_current_version krew)
 if version_gt "$latest" "$current"; then
 	gh_download kubernetes-sigs krew "$latest" krew-darwin_arm64.tar.gz krew.tar.gz
@@ -84,7 +84,7 @@ if version_gt "$latest" "$current"; then
 fi
 
 # minikube
-latest=v$(gh_version kubernetes minikube)
+latest=$(gh_version kubernetes minikube)
 current=$(get_current_version minikube)
 if version_gt "$latest" "$current"; then
 	gh_download kubernetes minikube "$latest" minikube-darwin-arm64 ~/bin/minikube
@@ -92,26 +92,26 @@ if version_gt "$latest" "$current"; then
 fi
 
 # kompose
-latest=v$(gh_version kubernetes kompose)
+latest=$(gh_version kubernetes kompose)
 current=$(get_current_version kompose)
 if version_gt "$latest" "$current"; then
 	gh_download kubernetes kompose "$latest" kompose-darwin-amd64 ~/bin/kompose
 	update_version kompose "$latest"
 fi
 
-# minishift
-latest=$(gh_version minishift minishift)
-current=$(get_current_version minishift)
-if version_gt "$latest" "$current"; then
-	curl -LO https://github.com/minishift/minishift/releases/latest/download/minishift-"$latest"-darwin-amd64.tgz
-	tar xf minishift-"$latest"-darwin-amd64.tgz
-	mv minishift-"$latest"-darwin-amd64/minishift ~/bin/
-	rm -rf minishift-"$latest"-darwin-amd64*
-	update_version minishift "$latest"
-fi
+## minishift
+#latest=$(gh_version minishift minishift)
+#current=$(get_current_version minishift)
+#if version_gt "$latest" "$current"; then
+#	curl -LO https://github.com/minishift/minishift/releases/latest/download/minishift-"$latest"-darwin-amd64.tgz
+#	tar xf minishift-"$latest"-darwin-amd64.tgz
+#	mv minishift-"$latest"-darwin-amd64/minishift ~/bin/
+#	rm -rf minishift-"$latest"-darwin-amd64*
+#	update_version minishift "$latest"
+#fi
 
 # operator sdk
-latest=v$(gh_version operator-framework operator-sdk)
+latest=$(gh_version operator-framework operator-sdk)
 current=$(get_current_version operator-sdk)
 if version_gt "$latest" "$current"; then
 	gh_download operator-framework operator-sdk "$latest" operator-sdk_darwin_amd64 ~/bin/operator-sdk
@@ -135,7 +135,7 @@ if version_gt "$latest" "$current"; then
 fi
 
 # k9s
-latest=v$(gh_version derailed k9s)
+latest=$(gh_version derailed k9s)
 current=$(get_current_version k9s)
 if version_gt "$latest" "$current"; then
 	gh_download derailed k9s "$latest" k9s_Darwin_arm64.tar.gz k9s.tar.gz
@@ -147,7 +147,7 @@ if version_gt "$latest" "$current"; then
 fi
 
 # kubectx/kubens
-latest=v$(gh_version ahmetb kubectx)
+latest=$(gh_version ahmetb kubectx)
 current=$(get_current_version kubectx)
 if version_gt "$latest" "$current"; then
 	gh_download ahmetb kubectx "$latest" kubectx ~/bin/kubectx
@@ -156,7 +156,7 @@ if version_gt "$latest" "$current"; then
 fi
 
 ## github.com/genuinetools/img
-#latest=v$(gh_version genuinetools img)
+#latest=$(gh_version genuinetools img)
 #current=$(get_current_version img)
 #if version_gt "$latest" "$current"; then
 #	gh_download genuinetools img "$latest" img-linux-amd64 ~/bin/img
@@ -228,10 +228,10 @@ go get -ldflags "-s -w" github.com/anacrolix/torrent/cmd/torrent@latest
 go install -ldflags "-s -w" github.com/gopasspw/gopass@latest
 
 # rust-analyzer
-latest=$(gh_version_date rust-analyzer rust-analyzer)
+latest=$(gh_version_date rust-lang rust-analyzer)
 current=$(get_current_version rust-analyzer)
 if version_gt "$latest" "$current"; then
-	gh_download rust-analyzer rust-analyzer "$latest" rust-analyzer-aarch64-apple-darwin.gz rust-analyzer.gz
+	gh_download rust-lang rust-analyzer "$latest" rust-analyzer-aarch64-apple-darwin.gz rust-analyzer.gz
 	gunzip rust-analyzer.gz
 	chmod +x rust-analyzer
 	mv rust-analyzer ~/bin/
