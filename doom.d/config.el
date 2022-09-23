@@ -54,7 +54,8 @@
     ('light (load-theme 'doom-one-light t))
     ('dark (load-theme 'doom-one t))))
 
-(add-hook 'ns-system-appearance-change-functions #'my/apply-theme)
+(if IS-MAC
+    (add-hook 'ns-system-appearance-change-functions #'my/apply-theme))
 
 (defun my/console-apply-theme ()
   "Load theme, taking current system APPEARANCE into consideration."
@@ -69,7 +70,8 @@
       (load-theme 'doom-one-light t))))
 
 (if IS-MAC
-  (add-hook 'after-init-hook (lambda () (run-with-timer 0 10 #'my/console-apply-theme))))
+    (when (not (display-graphic-p))
+      (add-hook 'after-init-hook (lambda () (run-with-timer 0 10 #'my/console-apply-theme)))))
 
 
 ;; Enable gdb many windows.
