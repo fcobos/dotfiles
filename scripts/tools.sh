@@ -6,7 +6,7 @@ GOPATH="$(go env GOPATH)"
 export GOPATH
 export PATH="$GOPATH/bin:$PATH"
 
-export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw"
+export GOFLAGS="-buildmode=pie -trimpath"
 
 # kubernetes tools
 cd /tmp || exit
@@ -121,10 +121,10 @@ if version_gt "$latest" "$current"; then
 fi
 
 # kustomize
-GO111MODULE=on go get -ldflags "-s -w" sigs.k8s.io/kustomize/kustomize/v3
+GO111MODULE=on go install -ldflags "-s -w" sigs.k8s.io/kustomize/kustomize/v4@latest
 
 # kind (kubernetes in docker)
-go install sigs.k8s.io/kind@latest
+go install -ldflags "-s -w" sigs.k8s.io/kind@latest
 
 # stern
 latest=$(gh_version wercker stern)
@@ -223,7 +223,7 @@ go install -ldflags "-s -w" github.com/shurcooL/goexec@latest
 # shfmt
 go install -ldflags "-s -w" mvdan.cc/sh/cmd/shfmt@latest
 # torrent
-go get -ldflags "-s -w" github.com/anacrolix/torrent/cmd/torrent@latest
+go install -ldflags "-s -w" github.com/anacrolix/torrent/cmd/torrent@latest
 # gopass
 go install -ldflags "-s -w" github.com/gopasspw/gopass@latest
 
