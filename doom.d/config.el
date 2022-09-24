@@ -11,8 +11,7 @@
 (add-hook 'window-setup-hook 'toggle-frame-maximized t)
 
 ;; enable fill column indicator
-;;(when EMACS27+
-(add-hook! '(text-mode-hook prog-mode-hook conf-mode-hook) (display-fill-column-indicator-mode 1));;)
+(add-hook! '(text-mode-hook prog-mode-hook conf-mode-hook) (display-fill-column-indicator-mode 1))
 ;; Set the theme
 (setq doom-theme 'doom-one-light)
 
@@ -46,6 +45,34 @@
                       'face 'doom-dashboard-banner) " ")
             (insert "\n"))
       dashboard-banner-list)))
+
+;; macOS - change theme on system appearance change
+(defun my/apply-theme (appearance)
+  "Load theme, taking current system APPEARANCE into consideration."
+  (mapc #'disable-theme custom-enabled-themes)
+  (pcase appearance
+    ('light (load-theme 'doom-one-light t))
+    ('dark (load-theme 'doom-one t))))
+
+(if IS-MAC
+    (add-hook 'ns-system-appearance-change-functions #'my/apply-theme))
+
+(defun my/console-apply-theme ()
+  "Load theme, taking current system APPEARANCE into consideration."
+  (when (not (display-graphic-p))
+    (setq style
+        (substring
+         (shell-command-to-string "defaults read -g AppleInterfaceStyle")
+         0 -1))
+    (mapc #'disable-theme custom-enabled-themes)
+    (if (string= style "Dark")
+        (load-theme 'doom-one t)
+      (load-theme 'doom-one-light t))))
+
+(if IS-MAC
+    (when (not (display-graphic-p))
+      (add-hook 'after-init-hook (lambda () (run-with-timer 0 10 #'my/console-apply-theme)))))
+
 
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
