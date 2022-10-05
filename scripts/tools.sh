@@ -235,7 +235,6 @@ if version_gt "$latest" "$current"; then
 	gunzip rust-analyzer.gz
 	chmod +x rust-analyzer
 	mv rust-analyzer ~/bin/
-	rm -f ra.tar.gz
 	update_version rust-analyzer "$latest"
 fi
 
