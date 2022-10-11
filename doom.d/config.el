@@ -73,6 +73,18 @@
     (when (not (display-graphic-p))
       (add-hook 'after-init-hook (lambda () (run-with-timer 0 10 #'my/console-apply-theme)))))
 
+;; gtk - change theme on system appearance change
+(defun my/gtk-apply-theme ()
+  (setq gtk-color-scheme
+        (substring
+         (shell-command-to-string "gsettings get org.gnome.desktop.interface color-scheme") 0 -1))
+  (mapc #'disable-theme custom-enabled-themes)
+  (if (string= gtk-color-scheme "'prefer-dark'")
+      (load-theme 'doom-one t)
+    (load-theme 'doom-one-light t)))
+
+(if IS-LINUX
+    (add-hook 'after-init-hook (lambda () (run-with-timer 0 10 #'my/gtk-apply-theme))))
 
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
