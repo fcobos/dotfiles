@@ -6,9 +6,6 @@ if [ "$SSH_TTY" ]; then
 	export GPG_TTY=$SSH_TTY
 fi
 
-# brew
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 # go paths
 if [ -x "$(command -v go)" ]; then
 	export GOPATH="$(go env GOPATH)"
@@ -28,9 +25,11 @@ export PATH="${PATH}:${HOME}/.krew/bin"
 export DICTIONARY=en_GB
 
 . "$HOME/.cargo/env"
-#export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-#export PATH="/Library/Developer/CommandLineTools/usr/bin:$PATH"
+
 export PATH="$(xcode-select -p)/usr/bin:$PATH"
+
+# brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
