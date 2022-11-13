@@ -19,6 +19,9 @@ export PATH="$HOME/.nimble/bin:$PATH"
 # Stop wine from creating .desktop entries
 export WINEDLLOVERRIDES=winemenubuilder.exe=d
 
+# GPG_TTY
+export GPG_TTY=$TTY
+
 # needed to show passphrase dialog under a ssh session
 if [ "$SSH_TTY" ]; then
 	export GPG_TTY=$SSH_TTY
