@@ -56,6 +56,10 @@ export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-t
 # krew path
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+# vagrant from wsl
+export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
+export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
+
 # remove duplicates from PATH
 export PATH=$(printf "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
 
