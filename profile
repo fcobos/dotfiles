@@ -60,6 +60,10 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
 
+# ssh agent - keychain
+keychain -q --nogui
+source $HOME/.keychain/$HOST-sh
+
 # remove duplicates from PATH
 export PATH=$(printf "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
 
