@@ -64,9 +64,6 @@ export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
 keychain -q --nogui
 source $HOME/.keychain/$HOST-sh
 
-# remove duplicates from PATH
-export PATH=$(printf "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
