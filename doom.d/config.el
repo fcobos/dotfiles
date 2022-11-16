@@ -20,7 +20,8 @@
 
 ;; faces configuration
 (custom-set-faces
- '(variable-pitch ((t (:family "Cantarell"))))
+ '(default ((t (:family "JetBrains Mono" :height 80))))
+ '(variable-pitch ((t (:family "Segoe UI"))))
  '(lsp-face-highlight-read ((t (:background "#e5e5e6"))))
  '(fill-column-indicator ((t (:foreground "gray70"))))
  '(font-lock-function-name-face ((t (:foreground "#0184bc")))))
