@@ -42,17 +42,18 @@ alias zgrep='zgrep --color=auto'
 alias el='exa -laH --git'
 alias et='exa -lH --git -T'
 alias kafkacat='podman run -it --rm --network=host edenhill/kafkacat:1.6.0'
-if [ "$TERM" = "alacritty" ]; then
-	alias e="TERM=alacritty-direct emacs -nw"
-elif [ "$TERM" = "st-256color" ]; then
-	alias e="TERM=st-direct emacs -nw"
-elif [ "$TERM" = "xterm-256color" ]; then
-	alias e="TERM=xterm-24bit emacs -nw"
-elif [ "$TERM" = "xterm-kitty" ]; then
-	alias e="TERM=xterm-24bit emacs -nw"
-else
-	alias e="emacs -nw"
-fi
+#if [ "$TERM" = "alacritty" ]; then
+#	alias e="TERM=alacritty-direct emacs -nw"
+#elif [ "$TERM" = "st-256color" ]; then
+#	alias e="TERM=st-direct emacs -nw"
+#elif [ "$TERM" = "xterm-256color" ]; then
+#	alias e="TERM=xterm-24bit emacs -nw"
+#elif [ "$TERM" = "xterm-kitty" ]; then
+#	alias e="TERM=xterm-24bit emacs -nw"
+#else
+#	alias e="emacs -nw"
+#fi
+alias e="emacs -nw"
 # emacs ediff
 function ediff() {
 	if [ "X${2}" = "X" ]; then
