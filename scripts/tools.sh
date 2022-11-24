@@ -11,7 +11,7 @@ export GOFLAGS="-buildmode=pie -trimpath"
 # kubernetes tools
 cd /tmp || exit
 
-versions_file="~/.cache/kubernetes-tools-versions"
+versions_file="$HOME/.cache/kubernetes-tools-versions"
 
 if [ ! -f "$versions_file" ]; then
 	touch "$versions_file"
