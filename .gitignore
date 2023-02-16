@@ -13,3 +13,4 @@ qutebrowser/quickmarks
 qutebrowser/autoconfig.yml
 # mpv watch later
 mpv/watch_later
+kitty/*.bak
