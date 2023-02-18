@@ -32,9 +32,9 @@
 
 # Enable autocomplete layer
 [[layers]]
-  name = 'autocomplete'
-  auto-completion-return-key-behavior = "complete"
-  auto-completion-tab-key-behavior = "cycle"
+  name = "autocomplete"
+  auto_completion_return_key_behavior = "complete"
+  auto_completion_tab_key_behavior = "cycle"
 
 [[layers]]
   name = 'shell'
@@ -64,6 +64,7 @@
 
 [[layers]]
   name = "lang#go"
+  format_on_save = true
 
 [[layers]]
   name = "lang#rust"
