@@ -33,7 +33,7 @@
 ;; custom dashboard banner
 (if (display-graphic-p)
   (progn
-    (setq fancy-splash-image "~/.doom.d/Emacs-logo.svg"))
+    (setq fancy-splash-image "~/.doom.d/Emacs-logo.png"))
 
   (defvar dashboard-banner-list '())
   (add-to-list 'dashboard-banner-list "\n\n\n\n\n\n")
