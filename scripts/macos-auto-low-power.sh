@@ -4,7 +4,7 @@ while [ 0 == 0 ]
 do
 	batt_pct=$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)
 
-	if [ $batt_pct -lt 35 ]; then
+	if [ $batt_pct -lt 25 ]; then
 		pmset -a lowpowermode 1
 	fi
 
