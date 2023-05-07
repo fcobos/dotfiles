@@ -15,3 +15,4 @@ qutebrowser/autoconfig.yml
 mpv/watch_later
 kitty/*.bak
 lvim/plugin
+lvim/lazy-lock.json
