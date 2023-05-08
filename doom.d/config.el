@@ -19,8 +19,9 @@
 (setq doom-modeline-buffer-file-name-style 'filename)
 
 ;; faces configuration
+(setq doom-font (font-spec :family "SF Mono"))
 (custom-set-faces
- '(variable-pitch ((t (:family "Cantarell"))))
+;; '(variable-pitch ((t (:family "Cantarell"))))
  '(lsp-face-highlight-read ((t (:background "#e5e5e6"))))
  '(fill-column-indicator ((t (:foreground "gray70"))))
  '(font-lock-function-name-face ((t (:foreground "#0184bc")))))
