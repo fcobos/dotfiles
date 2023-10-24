@@ -30,8 +30,20 @@ export PATH="$(xcode-select -p)/usr/bin:$PATH"
 
 # brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+export CPATH=/opt/homebrew/include
+export LIBRARY_PATH=/opt/homebrew/lib
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+
+###CPCTELERA_START
+##
+## These lines configure CPCtelera in your system
+##
+
+export CPCT_PATH=/Users/felix/software/cpctelera/cpctelera
+export PATH=${PATH}:/Users/felix/software/cpctelera/cpctelera/tools/scripts
+
+###CPCTELERA_END
