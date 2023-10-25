@@ -62,6 +62,7 @@ brew "googletest"
 brew "gping"
 brew "htop"
 brew "hugo"
+brew "imagemagick"
 brew "jdtls"
 brew "jpeg", link: true
 brew "jq"
