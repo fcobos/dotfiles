@@ -101,6 +101,7 @@
 (add-to-list 'auto-mode-alist '("Pipfile" . toml-mode))
 (add-to-list 'auto-mode-alist '("Pipfile.lock" . json-mode))
 (add-to-list 'auto-mode-alist '("\\patch$" . diff-mode))
+(add-to-list 'auto-mode-alist '("\\.bas\\'" . basic-generic-mode))
 
 ;; use treemacs git deferred mode
 (after! treemacs
