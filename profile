@@ -38,6 +38,9 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
+# AgDev - Agon Light C compiler
+export PATH="$HOME/software/AgDev/bin:$PATH"
+
 ###CPCTELERA_START
 ##
 ## These lines configure CPCtelera in your system
