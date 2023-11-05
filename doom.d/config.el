@@ -101,8 +101,7 @@
 (add-to-list 'auto-mode-alist '("Pipfile" . toml-mode))
 (add-to-list 'auto-mode-alist '("Pipfile.lock" . json-mode))
 (add-to-list 'auto-mode-alist '("\\patch$" . diff-mode))
-(add-to-list 'auto-mode-alist '("\\.bas\\'" . basic-mode))
-(add-to-list 'auto-mode-alist '("\\.bbc\\'" . basic-mode))
+(add-to-list 'auto-mode-alist '("\\.bas\\'" . basic-bbc-mode))
 
 ;; Use CRLF for Basic files
 (add-to-list 'file-coding-system-alist '("\\.bas\\'" . ascii-dos))
