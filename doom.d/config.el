@@ -164,4 +164,8 @@
 ;; set rust-analyzer as server for rust
 (setq rustic-lsp-server 'rust-analyzer)
 
+;; platformio config
+(add-hook 'c++-mode-hook (lambda () (platformio-conditionally-enable)))
+(add-hook 'c-mode-hook (lambda () (platformio-conditionally-enable)))
+
 ;;; config.el ends here
