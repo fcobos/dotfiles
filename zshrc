@@ -30,22 +30,31 @@ setopt INTERACTIVE_COMMENTS
 # ls colors
 [[ ! -f $(which gdircolors) ]] || eval $(gdircolors ~/dotfiles/dir_colors)
 
-# Autoload auto completion
-autoload -U compinit
-compinit -u
-zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-# Color completion for some things.
-# http://linuxshellaccount.blogspot.com/2008/12/color-completion-using-zsh-modules-on.html
+## Autoload auto completion
+#autoload -U compinit
+#compinit -u
+#zstyle ':completion:*' menu select
+#zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+## Color completion for some things.
+## http://linuxshellaccount.blogspot.com/2008/12/color-completion-using-zsh-modules-on.html
+#zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+#setopt COMPLETE_IN_WORD
+#setopt ALWAYS_TO_END
+#unsetopt MENU_COMPLETE
+#setopt COMPLETE_ALIASES
+#setopt LIST_ROWS_FIRST
+#setopt NO_CASE_GLOB
+#setopt EXTENDED_GLOB
+#setopt NUMERIC_GLOB_SORT
+
+# Autocomplete plugin
+zstyle '*:compinit' arguments -D -i -u -C -w
+source ~/dotfiles/zsh-plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
+bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
+zstyle ':autocomplete:*' add-space \
+    executables aliases functions builtins reserved-words commands
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-setopt COMPLETE_IN_WORD
-setopt ALWAYS_TO_END
-unsetopt MENU_COMPLETE
-setopt COMPLETE_ALIASES
-setopt LIST_ROWS_FIRST
-setopt NO_CASE_GLOB
-setopt EXTENDED_GLOB
-setopt NUMERIC_GLOB_SORT
 
 # key bindings
 # http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html
