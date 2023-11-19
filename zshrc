@@ -48,7 +48,7 @@ setopt INTERACTIVE_COMMENTS
 #setopt NUMERIC_GLOB_SORT
 
 # Autocomplete plugin
-zstyle '*:compinit' arguments -D -i -u -C -w
+zstyle '*:compinit' arguments -u
 source ~/dotfiles/zsh-plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 # good ol' history
 () {
@@ -62,10 +62,10 @@ source ~/dotfiles/zsh-plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
       bindkey "$key" down-line-or-history
    done
 }
-#zle -A {.,}history-incremental-search-backward
-#zle -A {.,}vi-history-search-backward
-#bindkey -M emacs '^S' history-incremental-search-forward
-#bindkey -M vicmd '/' vi-history-search-forward
+zle -A {.,}history-incremental-search-backward
+zle -A {.,}vi-history-search-backward
+bindkey -M emacs '^S' history-incremental-search-forward
+bindkey -M vicmd '/' vi-history-search-forward
 # more config
 bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
 bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
