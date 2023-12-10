@@ -31,47 +31,47 @@ setopt INTERACTIVE_COMMENTS
 [[ ! -f $(which gdircolors) ]] || eval $(gdircolors ~/dotfiles/dir_colors)
 
 ## Autoload auto completion
-#autoload -U compinit
-#compinit -u
-#zstyle ':completion:*' menu select
-#zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-## Color completion for some things.
-## http://linuxshellaccount.blogspot.com/2008/12/color-completion-using-zsh-modules-on.html
-#zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-#setopt COMPLETE_IN_WORD
-#setopt ALWAYS_TO_END
-#unsetopt MENU_COMPLETE
-#setopt COMPLETE_ALIASES
-#setopt LIST_ROWS_FIRST
-#setopt NO_CASE_GLOB
-#setopt EXTENDED_GLOB
-#setopt NUMERIC_GLOB_SORT
+autoload -U compinit
+compinit -u
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+# Color completion for some things.
+# http://linuxshellaccount.blogspot.com/2008/12/color-completion-using-zsh-modules-on.html
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+setopt COMPLETE_IN_WORD
+setopt ALWAYS_TO_END
+unsetopt MENU_COMPLETE
+setopt COMPLETE_ALIASES
+setopt LIST_ROWS_FIRST
+setopt NO_CASE_GLOB
+setopt EXTENDED_GLOB
+setopt NUMERIC_GLOB_SORT
 
 # Autocomplete plugin
-zstyle '*:compinit' arguments -u
-source ~/dotfiles/zsh-plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-# good ol' history
-() {
-   local -a prefix=( '\e'{\[,O} )
-   local -a up=( ${^prefix}A ) down=( ${^prefix}B )
-   local key=
-   for key in $up[@]; do
-      bindkey "$key" up-line-or-history
-   done
-   for key in $down[@]; do
-      bindkey "$key" down-line-or-history
-   done
-}
-zle -A {.,}history-incremental-search-backward
-zle -A {.,}vi-history-search-backward
+#zstyle '*:compinit' arguments -u
+#source ~/dotfiles/zsh-plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+## good ol' history
+#() {
+#   local -a prefix=( '\e'{\[,O} )
+#   local -a up=( ${^prefix}A ) down=( ${^prefix}B )
+#   local key=
+#   for key in $up[@]; do
+#      bindkey "$key" up-line-or-history
+#   done
+#   for key in $down[@]; do
+#      bindkey "$key" down-line-or-history
+#   done
+#}
+#zle -A {.,}history-incremental-search-backward
+#zle -A {.,}vi-history-search-backward
 bindkey -M emacs '^S' history-incremental-search-forward
 bindkey -M vicmd '/' vi-history-search-forward
 # more config
-bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
-bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
-zstyle ':autocomplete:*' add-space \
-    executables aliases functions builtins reserved-words commands
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+#bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
+#bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
+#zstyle ':autocomplete:*' add-space \
+#    executables aliases functions builtins reserved-words commands
+#zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # key bindings
 # http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html
