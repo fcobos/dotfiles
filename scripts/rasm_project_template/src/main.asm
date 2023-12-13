@@ -6,15 +6,16 @@ RELEASE_TAPE   = 1
 
   org #100
 
+progBegin
 
-theEnd
+progEnd
 
-save"build/PROJECT_NAME.bin",#100,theEnd-#100
+save"build/PROJECT_NAME.bin",progBegin,progEnd-progBegin
 
 if RELEASE_DSK
-save"PROJECT_NAME.bin",#100,theEnd-#100,DSK,"build/PROJECT_NAME.dsk"
+save"PROJECT_NAME.bin",progBegin,progEnd-progBegin,DSK,"build/PROJECT_NAME.dsk"
 endif
 
 if RELEASE_TAPE
-save"PROJECT_NAME.bin",#100,theEnd-#100,TAPE,"build/PROJECT_NAME.cdt"
+save"PROJECT_NAME.bin",progBegin,progEnd-progBegin,TAPE,"build/PROJECT_NAME.cdt"
 endif
