@@ -50,23 +50,6 @@ eval $(dircolors ~/dotfiles/dir_colors)
 # Autocomplete plugin
 zstyle '*:compinit' arguments -D -i -u -C -w
 source ~/dotfiles/zsh-plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-# good ol' history
-() {
-   local -a prefix=( '\e'{\[,O} )
-   local -a up=( ${^prefix}A ) down=( ${^prefix}B )
-   local key=
-   for key in $up[@]; do
-      bindkey "$key" up-line-or-history
-   done
-   for key in $down[@]; do
-      bindkey "$key" down-line-or-history
-   done
-}
-#zle -A {.,}history-incremental-search-backward
-#zle -A {.,}vi-history-search-backward
-#bindkey -M emacs '^S' history-incremental-search-forward
-#bindkey -M vicmd '/' vi-history-search-forward
-# more config
 bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
 bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 zstyle ':autocomplete:*' add-space \
@@ -96,26 +79,26 @@ bindkey -e # Use emacs key bindings
 
 bindkey '\ew' kill-region
 bindkey -s '\el' 'ls\n'
-#bindkey '^r' history-incremental-search-backward
-#if [[ "${terminfo[kpp]}" != "" ]]; then
-#	bindkey "${terminfo[kpp]}" up-line-or-history
-#fi
-#if [[ "${terminfo[knp]}" != "" ]]; then
-#	bindkey "${terminfo[knp]}" down-line-or-history
-#fi
-#
-## start typing + [Up-Arrow] - fuzzy find history forward
-#if [[ "${terminfo[kcuu1]}" != "" ]]; then
-#	autoload -U up-line-or-beginning-search
-#	zle -N up-line-or-beginning-search
-#	bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
-#fi
-## start typing + [Down-Arrow] - fuzzy find history backward
-#if [[ "${terminfo[kcud1]}" != "" ]]; then
-#	autoload -U down-line-or-beginning-search
-#	zle -N down-line-or-beginning-search
-#	bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
-#fi
+bindkey '^r' history-incremental-search-backward
+if [[ "${terminfo[kpp]}" != "" ]]; then
+	bindkey "${terminfo[kpp]}" up-line-or-history
+fi
+if [[ "${terminfo[knp]}" != "" ]]; then
+	bindkey "${terminfo[knp]}" down-line-or-history
+fi
+
+# start typing + [Up-Arrow] - fuzzy find history forward
+if [[ "${terminfo[kcuu1]}" != "" ]]; then
+	autoload -U up-line-or-beginning-search
+	zle -N up-line-or-beginning-search
+	bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+fi
+# start typing + [Down-Arrow] - fuzzy find history backward
+if [[ "${terminfo[kcud1]}" != "" ]]; then
+	autoload -U down-line-or-beginning-search
+	zle -N down-line-or-beginning-search
+	bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+fi
 
 if [[ "${terminfo[khome]}" != "" ]]; then
 	bindkey "${terminfo[khome]}" beginning-of-line
