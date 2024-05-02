@@ -179,6 +179,9 @@ lvim.plugins = {
     "folke/lsp-colors.nvim",
     event = "BufRead",
   },
+  {
+    "vim-scripts/rgbasm.vim"
+  },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
