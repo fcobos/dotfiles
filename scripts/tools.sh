@@ -226,7 +226,7 @@ go install -ldflags "-s -w" mvdan.cc/sh/cmd/shfmt@latest
 # torrent
 go install -ldflags "-s -w" github.com/anacrolix/torrent/cmd/torrent@latest
 # gopass
-go install -ldflags "-s -w" github.com/gopasspw/gopass@latest
+#go install -ldflags "-s -w" github.com/gopasspw/gopass@latest
 
 # rust-analyzer
 latest=$(gh_version_date rust-lang rust-analyzer)
