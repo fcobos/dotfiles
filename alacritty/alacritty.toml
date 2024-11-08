@@ -1,6 +1,8 @@
-import = [
-"~/.config/alacritty/base16-one-light-256.toml",
-]
 
 [font]
 size=10.0
+
+[general]
+import = [
+"~/.config/alacritty/base16-one-light-256.toml",
+]
