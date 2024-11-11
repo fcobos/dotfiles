@@ -53,6 +53,9 @@ export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-t
 # krew path
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+# hombrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 # remove duplicates from PATH
 export PATH=$(printf "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
 
