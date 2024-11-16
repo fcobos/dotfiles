@@ -41,7 +41,7 @@ alias zgrep='zgrep --color=auto'
 #alias docker-compose=podman-compose
 alias el='exa -laH --git'
 alias et='exa -lH --git -T'
-alias kcat='docker run -it --network=host edenhill/kcat:1.7.1'
+#alias kcat='docker run -it --network=host edenhill/kcat:1.7.1'
 if [ "$TERM" = "alacritty" ]; then
 	alias e="TERM=alacritty emacs -nw"
 elif [ "$TERM" = "st-256color" ]; then
@@ -62,4 +62,8 @@ function ediff() {
 		e --eval "(ediff-files \"$1\" \"$2\")"
 	fi
 }
+
+if [ -n "${CONTAINER_ID}" ]; then
+	alias podman='distrobox-host-exec podman'
+fi
 
