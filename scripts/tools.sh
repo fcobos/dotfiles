@@ -227,14 +227,3 @@ go install -ldflags "-s -w" github.com/anacrolix/torrent/cmd/torrent@latest
 # gopass
 go install -ldflags "-s -w" github.com/gopasspw/gopass@latest
 
-# rust-analyzer
-latest=$(gh_version_date rust-lang rust-analyzer)
-current=$(get_current_version rust-analyzer)
-if version_gt "$latest" "$current"; then
-	gh_download rust-lang rust-analyzer "$latest" rust-analyzer-x86_64-unknown-linux-gnu.gz rust-analyzer.gz
-	gunzip rust-analyzer.gz
-	chmod +x rust-analyzer
-	mv rust-analyzer ~/bin/
-	update_version rust-analyzer "$latest"
-fi
-
