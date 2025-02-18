@@ -134,18 +134,6 @@ if version_gt "$latest" "$current"; then
 	update_version stern "$latest"
 fi
 
-# k9s
-latest=$(gh_version derailed k9s)
-current=$(get_current_version k9s)
-if version_gt "$latest" "$current"; then
-	gh_download derailed k9s "$latest" k9s_Linux_x86_64.tar.gz k9s.tar.gz
-	tar -xf k9s.tar.gz k9s
-	chmod +x k9s
-	mv k9s ~/bin/
-	rm -f k9s.tar.gz
-	update_version k9s "$latest"
-fi
-
 # kubectx/kubens
 latest=$(gh_version ahmetb kubectx)
 current=$(get_current_version kubectx)
