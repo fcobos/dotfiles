@@ -1,4 +1,3 @@
-tap "homebrew/bundle"
 brew "gcc"
 brew "arduino-cli"
 brew "argyll-cms"
