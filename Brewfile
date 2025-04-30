@@ -176,7 +176,6 @@ brew "randomplum/gtkwave/gtkwave", args: ["HEAD"]
 cask "adobe-dng-converter"
 cask "aldente"
 cask "amazon-photos"
-cask "android-platform-tools"
 cask "appcleaner"
 cask "arduino-ide"
 cask "audacity"
