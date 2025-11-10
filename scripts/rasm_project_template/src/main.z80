@@ -4,7 +4,9 @@ RELEASE_DSK    = 1
 RELEASE_TAPE   = 1
 
 
-  org #4000
+; CPC+ ASIC registers are paged to the range #4000-#7fff.
+; The code should not be in that range when using CPC+ features.
+  org #8000
 
 progBegin
 
