@@ -239,3 +239,9 @@ if version_gt "$latest" "$current"; then
 	update_version rust-analyzer "$latest"
 fi
 
+
+# retroasm
+go install github.com/retroenv/retroasm/cmd/retroasm@latest
+# retrodisasm
+go install github.com/retroenv/retrodisasm@latest
+
