@@ -102,6 +102,8 @@
 (add-to-list 'auto-mode-alist '("Pipfile.lock" . json-mode))
 (add-to-list 'auto-mode-alist '("\\patch$" . diff-mode))
 (add-to-list 'auto-mode-alist '("\\.bas\\'" . basic-bbc-mode))
+(add-to-list 'auto-mode-alist '("\\.fab\\'" . nesfab-mode))
+(add-to-list 'auto-mode-alist '("\\.macrofab\\'" . nesfab-mode))
 
 ;; Use CRLF for Basic files
 (add-to-list 'file-coding-system-alist '("\\.bas\\'" . ascii-dos))
@@ -167,5 +169,9 @@
 ;; platformio config
 (add-hook 'c++-mode-hook (lambda () (platformio-conditionally-enable)))
 (add-hook 'c-mode-hook (lambda () (platformio-conditionally-enable)))
+
+;; nesfab-mode
+(add-to-list 'load-path "~/dotfiles/doom.d/modes/")
+(require 'nesfab-mode)
 
 ;;; config.el ends here
