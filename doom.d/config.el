@@ -83,8 +83,8 @@
       (load-theme 'doom-one t)
     (load-theme 'doom-one-light t)))
 
-(if IS-LINUX
-    (add-hook 'after-init-hook (lambda () (run-with-timer 0 10 #'my/gtk-apply-theme))))
+;(if IS-LINUX
+;    (add-hook 'after-init-hook (lambda () (run-with-timer 0 10 #'my/gtk-apply-theme))))
 
 ;; Enable gdb many windows.
 (setq gdb-many-windows t)
