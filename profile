@@ -54,3 +54,8 @@ export CPCT_PATH=/Users/felix/software/cpctelera/cpctelera
 export PATH=${PATH}:/Users/felix/software/cpctelera/cpctelera/tools/scripts
 
 ###CPCTELERA_END
+
+# MacPorts Installer addition on 2026-04-15_at_15:17:06: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
